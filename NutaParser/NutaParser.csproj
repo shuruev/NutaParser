@@ -72,6 +72,16 @@
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Diagnostic\PpMessage.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Diagnostic\PpMessage2.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Diagnostic\PpMessage1.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\LineIndicator.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\LineIndicator1.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\FileName.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\FileNameCharacter.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\FileNameCharacters.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\PpLine.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\PpLine1.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\PpLine2.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\PpLine3.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\PpLine4.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\PpDirective.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Pragma\PpPragma.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Pragma\PpPragma4.cs" />
@@ -103,6 +113,9 @@
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Region\PpEndRegion.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Character\CommaTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Character\SharpTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Word\LineTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Word\HiddenTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Word\DefaultTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Word\EndRegionTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Word\RegionTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Word\PragmaTerminal.cs" />

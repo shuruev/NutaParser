@@ -10,7 +10,7 @@
 				state,
 				// TODO: PpDeclaration
 				// TODO: PpConditional
-				// TODO: PpLine
+				PpLine.S,
 				// TODO: PpDiagnostic
 				PpRegion.S,
 				PpPragma.S);

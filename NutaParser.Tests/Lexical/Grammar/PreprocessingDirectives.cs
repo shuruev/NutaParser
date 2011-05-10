@@ -20,6 +20,31 @@ namespace NutaParser.Tests.Lexical.Grammar
 		}
 
 		[TestMethod]
+		public void Is_Conditional_Section()
+		{
+			Check(true, ConditionalSection.S, "_1abc \r\n void \r\n");
+			Check(true, ConditionalSection.S, "\r\n\r\n");
+			Check(true, ConditionalSection.S, "abc\r\n#pragma warning disable 1591\r\n");
+			Check(true, ConditionalSection.S, "#region A\r\n#region B\r\nCCC\r\n#endregion\r\n#endregion\r\n");
+		}
+
+		[TestMethod]
+		public void Is_Skipped_Section()
+		{
+			Check(true, SkippedSection.S, "abc\r\n#pragma warning disable 1591\r\n");
+			Check(true, SkippedSection.S, "#region A\r\n#region B\r\nCCC\r\n#endregion\r\n#endregion\r\n");
+			Check(false, SkippedSection.S, "#region A\r\n#region B\r\nCCC\r\n#endregion\r\n");
+		}
+
+		[TestMethod]
+		public void Is_Skipped_Section_Part()
+		{
+			Check(true, SkippedSectionPart.S, "abc\r\n");
+			Check(true, SkippedSectionPart.S, "#pragma warning disable 1591\r\n");
+			Check(false, SkippedSectionPart.S, "#\r\n");
+		}
+
+		[TestMethod]
 		public void Is_Skipped_Characters()
 		{
 			Check(true, SkippedCharacters.S, " abc");
@@ -77,6 +102,54 @@ namespace NutaParser.Tests.Lexical.Grammar
 		}
 
 		[TestMethod]
+		public void Is_Pp_Line()
+		{
+			Check(true, PpLine.S, " # line default\r\n");
+			Check(true, PpLine.S, " #line default\r\n");
+			Check(true, PpLine.S, "# line default\r\n");
+			Check(true, PpLine.S, " # line default\r\n");
+			Check(true, PpLine.S, "  # line default\r\n");
+			Check(true, PpLine.S, " #  line default\r\n");
+			Check(true, PpLine.S, " # line default \r\n");
+			Check(false, PpLine.S, " # line default");
+		}
+
+		[TestMethod]
+		public void Is_Line_Indicator()
+		{
+			Check(true, LineIndicator.S, "123 \"abc\"");
+			Check(true, LineIndicator.S, "123");
+			Check(true, LineIndicator.S, "default");
+			Check(true, LineIndicator.S, "hidden");
+			Check(false, LineIndicator.S, "123\"abc\"");
+			Check(false, LineIndicator.S, "123 ");
+			Check(false, LineIndicator.S, "Default");
+		}
+
+		[TestMethod]
+		public void Is_File_Name()
+		{
+			Check(true, FileName.S, "\"abc\"");
+			Check(false, FileName.S, "\"abc");
+			Check(false, FileName.S, "abc\"");
+		}
+
+		[TestMethod]
+		public void Is_File_Name_Characters()
+		{
+			Check(true, FileNameCharacters.S, "abc");
+			Check(false, FileNameCharacters.S, "ab\"c");
+		}
+
+		[TestMethod]
+		public void Is_File_Name_Character()
+		{
+			Check(true, FileNameCharacter.S, "a");
+			Check(false, FileNameCharacter.S, "\"");
+			Check(false, FileNameCharacter.S, "\n");
+		}
+
+		[TestMethod]
 		public void Is_Pp_Pragma()
 		{
 			Check(true, PpPragma.S, " # pragma warning disable 1591\r\n");
@@ -85,6 +158,7 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpPragma.S, " # pragma warning disable 1591\r\n");
 			Check(true, PpPragma.S, "  # pragma warning disable 1591\r\n");
 			Check(true, PpPragma.S, " #  pragma warning disable 1591\r\n");
+			Check(true, PpPragma.S, " # pragma warning disable 1591 \r\n");
 			Check(false, PpPragma.S, " # pragma warning disable 1591");
 		}
 
