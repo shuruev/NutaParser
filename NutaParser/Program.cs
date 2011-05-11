@@ -35,7 +35,7 @@ namespace NutaParser
 				sw.Stop();
 				Console.Write(sw.ElapsedMilliseconds + "\t");
 
-				Console.WriteLine(state.IsEndOfFile ? "OK" : "ERROR");
+				Console.WriteLine(state.IsEndOfData ? "OK" : "ERROR");
 			}
 
 			Console.WriteLine("Done.");

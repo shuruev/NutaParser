@@ -2,8 +2,16 @@
 
 namespace NutaParser.Lexical
 {
+	/// <summary>
+	/// Represents an entity from a lexical grammar.
+	/// </summary>
 	public abstract class LexicalItem
 	{
+		#region Properties
+
+		/// <summary>
+		/// Gets entity key.
+		/// </summary>
 		public string Key
 		{
 			get
@@ -12,11 +20,26 @@ namespace NutaParser.Lexical
 			}
 		}
 
+		#endregion
+
+		#region Parsing methods
+
+		/// <summary>
+		/// Tries to parse an entity from the specified lexical machine state.
+		/// In case of success returns true and advances parsing position.
+		/// </summary>
 		public abstract bool Parse(LexicalState state);
 
+		#endregion
+
+		#region Common parsing methods
+
+		/// <summary>
+		/// Tries to parse any of specified words.
+		/// </summary>
 		public bool ParseWord(LexicalState state, params string[] words)
 		{
-			if (state.IsEndOfFile)
+			if (state.IsEndOfData)
 				return false;
 
 			foreach (string word in words)
@@ -34,14 +57,20 @@ namespace NutaParser.Lexical
 			return false;
 		}
 
+		/// <summary>
+		/// Tries to parse a single specified character.
+		/// </summary>
 		public bool ParseCharacter(LexicalState state, char character)
 		{
 			return ParseCharacter(state, c => c == character);
 		}
 
+		/// <summary>
+		/// Tries to parse a single character using specified function.
+		/// </summary>
 		public bool ParseCharacter(LexicalState state, Func<char, bool> check)
 		{
-			if (state.IsEndOfFile)
+			if (state.IsEndOfData)
 				return false;
 
 			if (!check(state.Data[state.Position]))
@@ -51,14 +80,20 @@ namespace NutaParser.Lexical
 			return true;
 		}
 
+		/// <summary>
+		/// Tries to parse a batch of similar lexical items.
+		/// </summary>
 		public bool ParseMany(LexicalState state, LexicalItem part)
 		{
 			return ParseMany(state, part, null);
 		}
 
+		/// <summary>
+		/// Tries to parse a batch of similar lexical items with specified delimiter.
+		/// </summary>
 		public bool ParseMany(LexicalState state, LexicalItem part, LexicalItem delimiter)
 		{
-			if (state.IsEndOfFile)
+			if (state.IsEndOfData)
 				return false;
 
 			int index = state.Position;
@@ -81,9 +116,12 @@ namespace NutaParser.Lexical
 			return true;
 		}
 
+		/// <summary>
+		/// Tries to parse a consequent number of specified lexical items.
+		/// </summary>
 		public bool ParseAll(LexicalState state, params LexicalItem[] parts)
 		{
-			if (state.IsEndOfFile)
+			if (state.IsEndOfData)
 				return false;
 
 			int index = state.Position;
@@ -108,9 +146,12 @@ namespace NutaParser.Lexical
 			return true;
 		}
 
+		/// <summary>
+		/// Tries to parse any of specified lexical items.
+		/// </summary>
 		public bool ParseAny(LexicalState state, params LexicalItem[] parts)
 		{
-			if (state.IsEndOfFile)
+			if (state.IsEndOfData)
 				return false;
 
 			int index = state.Position;
@@ -126,5 +167,7 @@ namespace NutaParser.Lexical
 
 			return false;
 		}
+
+		#endregion
 	}
 }

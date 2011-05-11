@@ -18,8 +18,8 @@ namespace NutaParser.Tests.Lexical
 			bool parsed = item.Parse(state);
 
 			bool correct = expected
-				? parsed && state.IsEndOfFile
-				: !state.IsEndOfFile;
+				? parsed && state.IsEndOfData
+				: !state.IsEndOfData;
 
 			if (!correct)
 				throw new AssertFailedException(

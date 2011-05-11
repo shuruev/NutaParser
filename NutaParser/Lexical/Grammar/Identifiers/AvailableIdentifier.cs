@@ -16,7 +16,7 @@
 			LexicalState check = new LexicalState(identifier);
 			if (Keyword.S.Parse(check))
 			{
-				if (check.IsEndOfFile)
+				if (check.IsEndOfData)
 				{
 					state.Reset(index);
 					return false;

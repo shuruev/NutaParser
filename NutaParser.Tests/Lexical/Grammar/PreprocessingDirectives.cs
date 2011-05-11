@@ -20,6 +20,46 @@ namespace NutaParser.Tests.Lexical.Grammar
 		}
 
 		[TestMethod]
+		public void Is_Pp_Else_Section()
+		{
+			Check(true, PpElseSection.S, " # else // comment\r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, " #else // comment\r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, "# else // comment\r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, "#else // comment\r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, "  #else // comment\r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, "#  else // comment\r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, "#else // comment \r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, "#else\r\nabc\r\nvoid\r\n");
+			Check(true, PpElseSection.S, "#else//comment\r\nabc\r\nvoid\r\n");
+
+			Check(true, PpElseSection.S, " # else // comment\r\n");
+			Check(true, PpElseSection.S, " #else // comment\r\n");
+			Check(true, PpElseSection.S, "# else // comment\r\n");
+			Check(true, PpElseSection.S, "#else // comment\r\n");
+			Check(true, PpElseSection.S, "  #else // comment\r\n");
+			Check(true, PpElseSection.S, "#  else // comment\r\n");
+			Check(true, PpElseSection.S, "#else // comment \r\n");
+			Check(true, PpElseSection.S, "#else\r\n");
+			Check(true, PpElseSection.S, "#else//comment\r\n");
+			Check(false, PpElseSection.S, "#else // comment");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Endif()
+		{
+			Check(true, PpEndif.S, " # endif // comment\r\n");
+			Check(true, PpEndif.S, " #endif // comment\r\n");
+			Check(true, PpEndif.S, "# endif // comment\r\n");
+			Check(true, PpEndif.S, "#endif // comment\r\n");
+			Check(true, PpEndif.S, "  #endif // comment\r\n");
+			Check(true, PpEndif.S, "#  endif // comment\r\n");
+			Check(true, PpEndif.S, "#endif // comment \r\n");
+			Check(true, PpEndif.S, "#endif\r\n");
+			Check(true, PpEndif.S, "#endif//comment\r\n");
+			Check(false, PpEndif.S, "#endif // comment");
+		}
+
+		[TestMethod]
 		public void Is_Conditional_Section()
 		{
 			Check(true, ConditionalSection.S, "_1abc \r\n void \r\n");
@@ -64,6 +104,30 @@ namespace NutaParser.Tests.Lexical.Grammar
 		}
 
 		[TestMethod]
+		public void Is_Pp_Diagnostic()
+		{
+			Check(true, PpDiagnostic.S, " # error abc\r\n");
+			Check(true, PpDiagnostic.S, " #error abc\r\n");
+			Check(true, PpDiagnostic.S, "# error abc\r\n");
+			Check(true, PpDiagnostic.S, "#error abc\r\n");
+			Check(true, PpDiagnostic.S, "  #error abc\r\n");
+			Check(true, PpDiagnostic.S, "#  error abc\r\n");
+			Check(true, PpDiagnostic.S, "#error abc \r\n");
+			Check(false, PpDiagnostic.S, "#error abc");
+			Check(false, PpDiagnostic.S, "#errorabc");
+
+			Check(true, PpDiagnostic.S, " # warning abc\r\n");
+			Check(true, PpDiagnostic.S, " #warning abc\r\n");
+			Check(true, PpDiagnostic.S, "# warning abc\r\n");
+			Check(true, PpDiagnostic.S, "#warning abc\r\n");
+			Check(true, PpDiagnostic.S, "  #warning abc\r\n");
+			Check(true, PpDiagnostic.S, "#  warning abc\r\n");
+			Check(true, PpDiagnostic.S, "#warning abc \r\n");
+			Check(false, PpDiagnostic.S, "#warning abc");
+			Check(false, PpDiagnostic.S, "#warningabc");
+		}
+
+		[TestMethod]
 		public void Is_Pp_Message()
 		{
 			Check(true, PpMessage.S, "\r\n");
@@ -79,12 +143,12 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpStartRegion.S, " # region Abc\r\n");
 			Check(true, PpStartRegion.S, " #region Abc\r\n");
 			Check(true, PpStartRegion.S, "# region Abc\r\n");
-			Check(true, PpStartRegion.S, " # region Abc\r\n");
+			Check(true, PpStartRegion.S, "#region Abc\r\n");
 			Check(true, PpStartRegion.S, "#region\r\n");
-			Check(true, PpStartRegion.S, "  # region Abc\r\n");
-			Check(true, PpStartRegion.S, " #  region Abc\r\n");
-			Check(false, PpStartRegion.S, " # regionAbc\r\n");
-			Check(false, PpStartRegion.S, " # region Abc");
+			Check(true, PpStartRegion.S, "  #region Abc\r\n");
+			Check(true, PpStartRegion.S, "#  region Abc\r\n");
+			Check(false, PpStartRegion.S, "#regionAbc\r\n");
+			Check(false, PpStartRegion.S, "#region Abc");
 		}
 
 		[TestMethod]
@@ -93,12 +157,12 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpEndRegion.S, " # endregion Abc\r\n");
 			Check(true, PpEndRegion.S, " #endregion Abc\r\n");
 			Check(true, PpEndRegion.S, "# endregion Abc\r\n");
-			Check(true, PpEndRegion.S, " # endregion Abc\r\n");
+			Check(true, PpEndRegion.S, "#endregion Abc\r\n");
 			Check(true, PpEndRegion.S, "#endregion\r\n");
-			Check(true, PpEndRegion.S, "  # endregion Abc\r\n");
-			Check(true, PpEndRegion.S, " #  endregion Abc\r\n");
-			Check(false, PpEndRegion.S, " # endregionAbc\r\n");
-			Check(false, PpEndRegion.S, " # endregion Abc");
+			Check(true, PpEndRegion.S, "  #endregion Abc\r\n");
+			Check(true, PpEndRegion.S, "#  endregion Abc\r\n");
+			Check(false, PpEndRegion.S, "#endregionAbc\r\n");
+			Check(false, PpEndRegion.S, "#endregion Abc");
 		}
 
 		[TestMethod]
@@ -107,11 +171,11 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpLine.S, " # line default\r\n");
 			Check(true, PpLine.S, " #line default\r\n");
 			Check(true, PpLine.S, "# line default\r\n");
-			Check(true, PpLine.S, " # line default\r\n");
-			Check(true, PpLine.S, "  # line default\r\n");
-			Check(true, PpLine.S, " #  line default\r\n");
-			Check(true, PpLine.S, " # line default \r\n");
-			Check(false, PpLine.S, " # line default");
+			Check(true, PpLine.S, "#line default\r\n");
+			Check(true, PpLine.S, "  #line default\r\n");
+			Check(true, PpLine.S, "#  line default\r\n");
+			Check(true, PpLine.S, "#line default \r\n");
+			Check(false, PpLine.S, "#line default");
 		}
 
 		[TestMethod]
@@ -155,11 +219,11 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpPragma.S, " # pragma warning disable 1591\r\n");
 			Check(true, PpPragma.S, " #pragma warning disable 1591\r\n");
 			Check(true, PpPragma.S, "# pragma warning disable 1591\r\n");
-			Check(true, PpPragma.S, " # pragma warning disable 1591\r\n");
-			Check(true, PpPragma.S, "  # pragma warning disable 1591\r\n");
-			Check(true, PpPragma.S, " #  pragma warning disable 1591\r\n");
-			Check(true, PpPragma.S, " # pragma warning disable 1591 \r\n");
-			Check(false, PpPragma.S, " # pragma warning disable 1591");
+			Check(true, PpPragma.S, "#pragma warning disable 1591\r\n");
+			Check(true, PpPragma.S, "  #pragma warning disable 1591\r\n");
+			Check(true, PpPragma.S, "#  pragma warning disable 1591\r\n");
+			Check(true, PpPragma.S, "#pragma warning disable 1591 \r\n");
+			Check(false, PpPragma.S, "#pragma warning disable 1591");
 		}
 
 		[TestMethod]
