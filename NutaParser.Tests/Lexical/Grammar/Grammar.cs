@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NutaParser.Lexical.Grammar;
 
 namespace NutaParser.Tests.Lexical.Grammar
@@ -6,6 +7,15 @@ namespace NutaParser.Tests.Lexical.Grammar
 	[TestClass]
 	public class Grammar : GrammarTest
 	{
+		[TestMethod]
+		public void Is_Input()
+		{
+			Check(true, Input.S, "_1abc \r\n void \r\n");
+			Check(true, Input.S, "\r\n\r\n");
+			Check(true, Input.S, String.Empty);
+			Check(false, Input.S, "   ");
+		}
+
 		[TestMethod]
 		public void Is_Input_Section()
 		{

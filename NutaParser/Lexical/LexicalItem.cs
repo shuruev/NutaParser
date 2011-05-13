@@ -32,7 +32,7 @@ namespace NutaParser.Lexical
 
 		#endregion
 
-		#region Common parsing methods
+		#region Parsing terminal symbols
 
 		/// <summary>
 		/// Tries to parse any of specified words.
@@ -80,6 +80,10 @@ namespace NutaParser.Lexical
 			return true;
 		}
 
+		#endregion
+
+		#region Parsing other lexical items
+
 		/// <summary>
 		/// Tries to parse a batch of similar lexical items.
 		/// </summary>
@@ -93,9 +97,6 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public bool ParseMany(LexicalState state, LexicalItem part, LexicalItem delimiter)
 		{
-			if (state.IsEndOfData)
-				return false;
-
 			int index = state.Position;
 			while (true)
 			{
@@ -121,9 +122,6 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public bool ParseAll(LexicalState state, params LexicalItem[] parts)
 		{
-			if (state.IsEndOfData)
-				return false;
-
 			int index = state.Position;
 
 			bool parsed = true;
@@ -151,9 +149,6 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public bool ParseAny(LexicalState state, params LexicalItem[] parts)
 		{
-			if (state.IsEndOfData)
-				return false;
-
 			int index = state.Position;
 
 			foreach (LexicalItem part in parts)

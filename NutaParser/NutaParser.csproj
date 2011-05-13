@@ -40,6 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Lexical\Grammar\Input.cs" />
+    <Compile Include="Lexical\Service\ParseMany.cs" />
+    <Compile Include="Lexical\Service\Empty.cs" />
+    <Compile Include="Lexical\Service\Optional.cs" />
+    <Compile Include="Lexical\Service\ParseAny.cs" />
+    <Compile Include="Lexical\Service\ParseAll.cs" />
     <Compile Include="Lexical\Grammar\Comments\Delimited\Asterisks.cs" />
     <Compile Include="Lexical\Grammar\Comments\Comment.cs" />
     <Compile Include="Lexical\Grammar\Comments\SingleLine\SingleLineComment.cs" />
@@ -52,11 +58,11 @@
     <Compile Include="Lexical\Grammar\Comments\Delimited\DelimitedComment1.cs" />
     <Compile Include="Lexical\Grammar\InputSection.cs" />
     <Compile Include="Lexical\Grammar\InputSectionPart.cs" />
-    <Compile Include="Lexical\Grammar\InputSectionPart1.cs" />
     <Compile Include="Lexical\Grammar\InputElements.cs" />
     <Compile Include="Lexical\Grammar\InputElement.cs" />
     <Compile Include="Lexical\Grammar\Literals\Literal.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Conditional\ConditionalSection.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Conditional\ConditionalSymbol.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Conditional\PpElseSection5.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Conditional\PpElseSection6.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Conditional\PpElseSection7.cs" />
@@ -95,6 +101,11 @@
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Diagnostic\PpDiagnostic2.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Diagnostic\PpDiagnostic3.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Diagnostic\PpDiagnostic4.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Expressions\PpEqualityExpression.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Expressions\PpUnaryExpression.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Expressions\PpUnaryExpression2.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Expressions\PpUnaryExpression1.cs" />
+    <Compile Include="Lexical\Grammar\PreprocessingDirectives\Expressions\PpPrimaryExpression.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\LineIndicator.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\LineIndicator1.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Line\FileName.cs" />
@@ -135,7 +146,14 @@
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Region\PpEndRegion1.cs" />
     <Compile Include="Lexical\Grammar\PreprocessingDirectives\Region\PpEndRegion.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Character\CommaTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Character\ExclamationTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Character\SharpTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Operator\AndOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Operator\OrOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Operator\NotEqualOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Operator\EqualOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Word\FalseTerminal.cs" />
+    <Compile Include="Lexical\Grammar\TerminalSymbols\Word\TrueTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Word\ElifTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Word\ElseTerminal.cs" />
     <Compile Include="Lexical\Grammar\TerminalSymbols\Word\EndifTerminal.cs" />
@@ -256,6 +274,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

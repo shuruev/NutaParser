@@ -1,16 +1,15 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class InputElement : LexicalItem
+	public class InputElement : ParseAny
 	{
 		public static readonly InputElement S = new InputElement();
 
-		public override bool Parse(LexicalState state)
-		{
-			return ParseAny(
-				state,
+		public InputElement()
+			: base(
 				Whitespace.S,
 				Comment.S,
-				Token.S);
+				Token.S)
+		{
 		}
 	}
 }

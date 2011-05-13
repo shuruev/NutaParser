@@ -7,6 +7,53 @@ namespace NutaParser.Tests.Lexical.Grammar
 	public class PreprocessingDirectives : GrammarTest
 	{
 		[TestMethod]
+		public void Is_Conditional_Symbol()
+		{
+			Check(true, ConditionalSymbol.S, "abc");
+			Check(true, ConditionalSymbol.S, "void");
+			Check(true, ConditionalSymbol.S, "true1");
+			Check(true, ConditionalSymbol.S, "false2");
+			Check(false, ConditionalSymbol.S, " abc");
+			Check(false, ConditionalSymbol.S, "true");
+			Check(false, ConditionalSymbol.S, "false");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Equality_Expression()
+		{
+			Check(true, PpEqualityExpression.S, "a == true ==true== true==true");
+			Check(true, PpEqualityExpression.S, "b == false ==false== false==false");
+			Check(true, PpEqualityExpression.S, "!a ==!! true");
+			Check(false, PpEqualityExpression.S, "a = true");
+			Check(false, PpEqualityExpression.S, "a = true!");
+			Check(false, PpEqualityExpression.S, "a =! true");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Unary_Expression()
+		{
+			Check(true, PpUnaryExpression.S, "true");
+			Check(true, PpUnaryExpression.S, "!abc");
+			Check(true, PpUnaryExpression.S, "! abc");
+			Check(true, PpUnaryExpression.S, "!  abc");
+			Check(true, PpUnaryExpression.S, "!!  !   !!!false");
+			Check(false, PpUnaryExpression.S, "true ");
+			Check(false, PpUnaryExpression.S, " abc");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Primary_Expression()
+		{
+			Check(true, PpPrimaryExpression.S, "abc");
+			Check(true, PpPrimaryExpression.S, "void");
+			Check(true, PpPrimaryExpression.S, "true1");
+			Check(true, PpPrimaryExpression.S, "false2");
+			Check(true, PpPrimaryExpression.S, "true");
+			Check(true, PpPrimaryExpression.S, "false");
+			Check(false, PpPrimaryExpression.S, " abc");
+		}
+
+		[TestMethod]
 		public void Is_Pp_New_Line()
 		{
 			Check(true, PpNewLine.S, " // comment\r\n");
