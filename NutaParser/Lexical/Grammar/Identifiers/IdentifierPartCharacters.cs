@@ -1,12 +1,13 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class IdentifierPartCharacters : LexicalItem
+	public class IdentifierPartCharacters : ParseMany
 	{
 		public static readonly IdentifierPartCharacters S = new IdentifierPartCharacters();
+		public static readonly Optional O = new Optional(S);
 
-		public override bool Parse(LexicalState state)
+		public IdentifierPartCharacters()
+			: base(IdentifierPartCharacter.S)
 		{
-			return ParseMany(state, IdentifierPartCharacter.S);
 		}
 	}
 }

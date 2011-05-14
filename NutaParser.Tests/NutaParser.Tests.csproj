@@ -50,16 +50,13 @@
     <Compile Include="Lexical\Grammar\Tokens.cs" />
     <Compile Include="Lexical\Grammar\Identifiers.cs" />
     <Compile Include="Lexical\Grammar\OperatorsAndPunctuators.cs" />
-    <Compile Include="Lexical\Grammar\LineTerminators.cs" />
     <Compile Include="Lexical\Lexical.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lexical.resx</DependentUpon>
     </Compile>
-    <Compile Include="Lexical\Grammar\UnicodeCharacterEscapeSequences.cs" />
     <Compile Include="Lexical\Grammar\Literals.cs" />
     <Compile Include="Lexical\Grammar\Keywords.cs" />
-    <Compile Include="Lexical\Grammar\WhiteSpace.cs" />
     <Compile Include="Lexical\GrammarTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lexical\Grammar\Comments.cs" />

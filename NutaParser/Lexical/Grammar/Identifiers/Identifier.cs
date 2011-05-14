@@ -1,15 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class Identifier : LexicalItem
+	public class Identifier : ParseAny
 	{
 		public static readonly Identifier S = new Identifier();
 
-		public override bool Parse(LexicalState state)
+		public Identifier()
+			: base(
+				new ParseAll(AtSignTerminal.S, IdentifierOrKeyword.S),
+				AvailableIdentifier.S)
 		{
-			return ParseAny(
-				state,
-				Identifier1.S,
-				AvailableIdentifier.S);
 		}
 	}
 }

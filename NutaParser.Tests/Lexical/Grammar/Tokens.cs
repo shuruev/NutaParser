@@ -21,5 +21,31 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(false, Token.S, "---");
 			Check(false, Token.S, ":::");
 		}
+
+		[TestMethod]
+		public void Is_New_Line()
+		{
+			Check(true, NewLine.S, "\r\n");
+			Check(true, NewLine.S, "\r");
+			Check(true, NewLine.S, "\n");
+			Check(false, NewLine.S, "\n\r");
+		}
+
+		[TestMethod]
+		public void Is_Whitespace()
+		{
+			Check(true, Whitespace.S, "  \t\t  \v\v  ");
+			Check(false, Whitespace.S, "  \t\t \r\n \v\v  ");
+		}
+
+		[TestMethod]
+		public void Is_Whitespace_Character()
+		{
+			Check(true, WhitespaceCharacter.S, " ");
+			Check(true, WhitespaceCharacter.S, "\t");
+			Check(true, WhitespaceCharacter.S, "\v");
+			Check(false, WhitespaceCharacter.S, "\r");
+			Check(false, WhitespaceCharacter.S, "\n");
+		}
 	}
 }

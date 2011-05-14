@@ -7,6 +7,17 @@ namespace NutaParser.Tests.Lexical.Grammar
 	public class Literals : GrammarTest
 	{
 		[TestMethod]
+		public void Is_Unicode_Escape_Sequence()
+		{
+			Check(true, UnicodeEscapeSequence.S, @"\u005C");
+			Check(true, UnicodeEscapeSequence.S, @"\u005c");
+			Check(true, UnicodeEscapeSequence.S, @"\U0000006A");
+			Check(true, UnicodeEscapeSequence.S, @"\U0000006a");
+			Check(false, UnicodeEscapeSequence.S, @"\U005C");
+			Check(false, UnicodeEscapeSequence.S, @"\u0000006a");
+		}
+
+		[TestMethod]
 		public void Is_Literal()
 		{
 			Check(true, Literal.S, "\"hello\"");

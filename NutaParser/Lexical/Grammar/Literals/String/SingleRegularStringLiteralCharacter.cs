@@ -1,16 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class SingleRegularStringLiteralCharacter : LexicalItem
+	public class SingleRegularStringLiteralCharacter : ParseExcept
 	{
 		public static readonly SingleRegularStringLiteralCharacter S = new SingleRegularStringLiteralCharacter();
 
-		public override bool Parse(LexicalState state)
+		public SingleRegularStringLiteralCharacter()
+			: base(
+				AnyCharacterTerminal.S,
+				new ParseAny(QuoteTerminal.S, BackslashTerminal.S, NewLineCharacter.S))
 		{
-			return ParseCharacter(
-				state,
-				c => c != '"'
-					&& c != '\\'
-					&& !NewLineCharacter.Check(c));
 		}
 	}
 }

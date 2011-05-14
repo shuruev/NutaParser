@@ -77,6 +77,52 @@ namespace NutaParser.Lexical
 		#region Parsing other lexical items
 
 		/// <summary>
+		/// Tries to parse any of specified lexical items.
+		/// </summary>
+		public bool ParseAny(LexicalState state, params LexicalItem[] parts)
+		{
+			int index = state.Position;
+
+			foreach (LexicalItem part in parts)
+			{
+				if (part.Parse(state))
+				{
+					state.AddBack(Key, index);
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+		/// <summary>
+		/// Tries to parse a consequent number of specified lexical items.
+		/// </summary>
+		public bool ParseAll(LexicalState state, params LexicalItem[] parts)
+		{
+			int index = state.Position;
+
+			bool parsed = true;
+			foreach (LexicalItem part in parts)
+			{
+				if (!part.Parse(state))
+				{
+					parsed = false;
+					break;
+				}
+			}
+
+			if (!parsed)
+			{
+				state.Reset(index);
+				return false;
+			}
+
+			state.AddBack(Key, index);
+			return true;
+		}
+
+		/// <summary>
 		/// Tries to parse a batch of similar lexical items.
 		/// </summary>
 		public bool ParseMany(LexicalState state, LexicalItem part)
@@ -111,49 +157,29 @@ namespace NutaParser.Lexical
 		}
 
 		/// <summary>
-		/// Tries to parse a consequent number of specified lexical items.
+		/// Tries to parse all specified items except some others.
 		/// </summary>
-		public bool ParseAll(LexicalState state, params LexicalItem[] parts)
+		public bool ParseExcept(LexicalState state, LexicalItem main, LexicalItem exception)
 		{
 			int index = state.Position;
 
-			bool parsed = true;
-			foreach (LexicalItem part in parts)
-			{
-				if (!part.Parse(state))
-				{
-					parsed = false;
-					break;
-				}
-			}
-
-			if (!parsed)
-			{
-				state.Reset(index);
+			if (!main.Parse(state))
 				return false;
+
+			string parsed = state.Get(main.Key, index);
+
+			LexicalState check = new LexicalState(parsed);
+			if (exception.Parse(check))
+			{
+				if (check.IsEndOfData)
+				{
+					state.Reset(index);
+					return false;
+				}
 			}
 
 			state.AddBack(Key, index);
 			return true;
-		}
-
-		/// <summary>
-		/// Tries to parse any of specified lexical items.
-		/// </summary>
-		public bool ParseAny(LexicalState state, params LexicalItem[] parts)
-		{
-			int index = state.Position;
-
-			foreach (LexicalItem part in parts)
-			{
-				if (part.Parse(state))
-				{
-					state.AddBack(Key, index);
-					return true;
-				}
-			}
-
-			return false;
 		}
 
 		#endregion

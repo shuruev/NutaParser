@@ -1,15 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class IdentifierStartCharacter : LexicalItem
+	public class IdentifierStartCharacter : ParseAny
 	{
 		public static readonly IdentifierStartCharacter S = new IdentifierStartCharacter();
 
-		public override bool Parse(LexicalState state)
+		public IdentifierStartCharacter()
+			: base(LetterCharacter.S, UnderscoreTerminal.S)
 		{
-			return ParseAny(
-				state,
-				LetterCharacter.S,
-				UnderscoreTerminal.S);
 		}
 	}
 }
