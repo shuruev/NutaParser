@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class CommaTerminal : LexicalItem
+	public class CommaTerminal : SingleCharacterTerminal
 	{
 		public static readonly CommaTerminal S = new CommaTerminal();
 
-		public override bool Parse(LexicalState state)
+		public CommaTerminal()
+			: base(',')
 		{
-			return ParseCharacter(state, ',');
 		}
 	}
 }

@@ -8,7 +8,7 @@
 		{
 			return ParseAll(
 				state,
-				AtTerminal.S,
+				AtSignTerminal.S,
 				QuoteTerminal.S,
 				VerbatimStringLiteralCharacters.S,
 				QuoteTerminal.S);

@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class ApostropheTerminal : LexicalItem
+	public class ApostropheTerminal : SingleCharacterTerminal
 	{
 		public static readonly ApostropheTerminal S = new ApostropheTerminal();
 
-		public override bool Parse(LexicalState state)
+		public ApostropheTerminal()
+			: base('\'')
 		{
-			return ParseCharacter(state, '\'');
 		}
 	}
 }

@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class QuoteTerminal : LexicalItem
+	public class QuoteTerminal : SingleCharacterTerminal
 	{
 		public static readonly QuoteTerminal S = new QuoteTerminal();
 
-		public override bool Parse(LexicalState state)
+		public QuoteTerminal()
+			: base('"')
 		{
-			return ParseCharacter(state, '"');
 		}
 	}
 }

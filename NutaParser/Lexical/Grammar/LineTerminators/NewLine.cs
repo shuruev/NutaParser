@@ -1,19 +1,18 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class NewLine : LexicalItem
+	public class NewLine : ParseAny
 	{
 		public static readonly NewLine S = new NewLine();
 
-		public override bool Parse(LexicalState state)
+		public NewLine()
+			: base(
+				new ParseAll(CarriageReturnTerminal.S, LineFeedTerminal.S),
+				CarriageReturnTerminal.S,
+				LineFeedTerminal.S,
+				NextLineTerminal.S,
+				LineSeparatorTerminal.S,
+				ParagraphSeparatorTerminal.S)
 		{
-			return ParseWord(
-				state,
-				"\x000D\x000A",
-				"\x000D",
-				"\x000A",
-				"\x0085",
-				"\x2028",
-				"\x2029");
 		}
 	}
 }

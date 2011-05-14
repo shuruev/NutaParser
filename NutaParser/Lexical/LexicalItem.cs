@@ -58,14 +58,6 @@ namespace NutaParser.Lexical
 		}
 
 		/// <summary>
-		/// Tries to parse a single specified character.
-		/// </summary>
-		public bool ParseCharacter(LexicalState state, char character)
-		{
-			return ParseCharacter(state, c => c == character);
-		}
-
-		/// <summary>
 		/// Tries to parse a single character using specified function.
 		/// </summary>
 		public bool ParseCharacter(LexicalState state, Func<char, bool> check)
@@ -89,6 +81,7 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public bool ParseMany(LexicalState state, LexicalItem part)
 		{
+			// TODO: remove method
 			return ParseMany(state, part, null);
 		}
 

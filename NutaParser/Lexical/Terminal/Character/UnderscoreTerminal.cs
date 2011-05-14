@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class UnderscoreTerminal : LexicalItem
+	public class UnderscoreTerminal : SingleCharacterTerminal
 	{
 		public static readonly UnderscoreTerminal S = new UnderscoreTerminal();
 
-		public override bool Parse(LexicalState state)
+		public UnderscoreTerminal()
+			: base('_')
 		{
-			return ParseCharacter(state, '_');
 		}
 	}
 }

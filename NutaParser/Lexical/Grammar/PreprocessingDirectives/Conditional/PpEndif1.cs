@@ -9,7 +9,7 @@
 			return ParseAll(
 				state,
 				Whitespace.S,
-				SharpTerminal.S,
+				NumberSignTerminal.S,
 				Whitespace.S,
 				EndifTerminal.S,
 				PpNewLine.S);

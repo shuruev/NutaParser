@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class SlashTerminal : LexicalItem
+	public class SlashTerminal : SingleCharacterTerminal
 	{
 		public static readonly SlashTerminal S = new SlashTerminal();
 
-		public override bool Parse(LexicalState state)
+		public SlashTerminal()
+			: base('/')
 		{
-			return ParseCharacter(state, '/');
 		}
 	}
 }

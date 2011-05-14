@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class ExclamationTerminal : LexicalItem
+	public class ExclamationTerminal : SingleCharacterTerminal
 	{
 		public static readonly ExclamationTerminal S = new ExclamationTerminal();
 
-		public override bool Parse(LexicalState state)
+		public ExclamationTerminal()
+			: base('!')
 		{
-			return ParseCharacter(state, '!');
 		}
 	}
 }

@@ -1,13 +1,13 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class Whitespace : LexicalItem
+	public class Whitespace : ParseMany
 	{
 		public static readonly Whitespace S = new Whitespace();
 		public static readonly Optional O = new Optional(S);
 
-		public override bool Parse(LexicalState state)
+		public Whitespace()
+			: base(WhitespaceCharacter.S)
 		{
-			return ParseMany(state, WhitespaceCharacter.S);
 		}
 	}
 }

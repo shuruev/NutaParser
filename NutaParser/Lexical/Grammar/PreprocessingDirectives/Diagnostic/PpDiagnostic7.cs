@@ -8,7 +8,7 @@
 		{
 			return ParseAll(
 				state,
-				SharpTerminal.S,
+				NumberSignTerminal.S,
 				Whitespace.S,
 				WarningTerminal.S,
 				PpMessage.S);

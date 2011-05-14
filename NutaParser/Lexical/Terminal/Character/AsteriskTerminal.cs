@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class AsteriskTerminal : LexicalItem
+	public class AsteriskTerminal : SingleCharacterTerminal
 	{
 		public static readonly AsteriskTerminal S = new AsteriskTerminal();
 
-		public override bool Parse(LexicalState state)
+		public AsteriskTerminal()
+			: base('*')
 		{
-			return ParseCharacter(state, '*');
 		}
 	}
 }
