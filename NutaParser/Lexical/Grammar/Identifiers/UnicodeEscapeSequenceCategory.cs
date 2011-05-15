@@ -1,16 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 
 namespace NutaParser.Lexical.Grammar
 {
 	public class UnicodeEscapeSequenceCategory : LexicalItem
 	{
-		private readonly UnicodeCategory[] m_categories;
+		private readonly HashSet<UnicodeCategory> m_categories;
 
 		public UnicodeEscapeSequenceCategory(params UnicodeCategory[] categories)
 		{
-			m_categories = categories;
+			m_categories = new HashSet<UnicodeCategory>(categories);
 		}
 
 		public override bool Parse(LexicalState state)

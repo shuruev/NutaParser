@@ -1,24 +1,16 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class RealLiteral : LexicalItem
+	public class RealLiteral : ParseAny
 	{
 		public static readonly RealLiteral S = new RealLiteral();
 
-		public override bool Parse(LexicalState state)
+		public RealLiteral()
+			: base(
+				new ParseAll(DecimalDigits.S, PeriodTerminal.S, DecimalDigits.S, ExponentPart.O, RealTypeSuffix.O),
+				new ParseAll(PeriodTerminal.S, DecimalDigits.S, ExponentPart.O, RealTypeSuffix.O),
+				new ParseAll(DecimalDigits.S, ExponentPart.S, RealTypeSuffix.O),
+				new ParseAll(DecimalDigits.S, RealTypeSuffix.S))
 		{
-			return ParseAny(
-				state,
-				RealLiteral1.S,
-				RealLiteral2.S,
-				RealLiteral3.S,
-				RealLiteral4.S,
-				RealLiteral5.S,
-				RealLiteral6.S,
-				RealLiteral7.S,
-				RealLiteral8.S,
-				RealLiteral9.S,
-				RealLiteral10.S,
-				RealLiteral11.S);
 		}
 	}
 }

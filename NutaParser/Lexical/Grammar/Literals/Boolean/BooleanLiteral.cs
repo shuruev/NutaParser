@@ -1,15 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class BooleanLiteral : LexicalItem
+	public class BooleanLiteral : ParseAny
 	{
 		public static readonly BooleanLiteral S = new BooleanLiteral();
 
-		public override bool Parse(LexicalState state)
+		public BooleanLiteral()
+			: base(
+				TrueTerminal.S,
+				FalseTerminal.S)
 		{
-			return ParseWord(
-				state,
-				"true",
-				"false");
 		}
 	}
 }

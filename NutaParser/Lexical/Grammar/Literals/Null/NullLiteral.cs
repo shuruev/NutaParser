@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class NullLiteral : LexicalItem
+	public class NullLiteral : ParseAll
 	{
 		public static readonly NullLiteral S = new NullLiteral();
 
-		public override bool Parse(LexicalState state)
+		public NullLiteral()
+			: base(NullTerminal.S)
 		{
-			return ParseWord(state, "null");
 		}
 	}
 }

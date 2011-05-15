@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class HexDigits : LexicalItem
+	public class HexDigits : ParseMany
 	{
 		public static readonly HexDigits S = new HexDigits();
 
-		public override bool Parse(LexicalState state)
+		public HexDigits()
+			: base(HexDigit.S)
 		{
-			return ParseMany(state, HexDigit.S);
 		}
 	}
 }

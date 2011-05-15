@@ -1,14 +1,13 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class Sign : LexicalItem
+	public class Sign : SingleCharacterTerminal
 	{
 		public static readonly Sign S = new Sign();
+		public static readonly Optional O = new Optional(S);
 
-		public override bool Parse(LexicalState state)
+		public Sign()
+			: base('+', '-')
 		{
-			return ParseCharacter(
-				state,
-				c => c == '+' || c == '-');
 		}
 	}
 }

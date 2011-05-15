@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class DecimalDigits : LexicalItem
+	public class DecimalDigits : ParseMany
 	{
 		public static readonly DecimalDigits S = new DecimalDigits();
 
-		public override bool Parse(LexicalState state)
+		public DecimalDigits()
+			: base(DecimalDigit.S)
 		{
-			return ParseMany(state, DecimalDigit.S);
 		}
 	}
 }

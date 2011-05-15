@@ -1,15 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class VerbatimStringLiteralCharacter : LexicalItem
+	public class VerbatimStringLiteralCharacter : ParseAny
 	{
 		public static readonly VerbatimStringLiteralCharacter S = new VerbatimStringLiteralCharacter();
 
-		public override bool Parse(LexicalState state)
-		{
-			return ParseAny(
-				state,
+		public VerbatimStringLiteralCharacter()
+			: base(
 				SingleVerbatimStringLiteralCharacter.S,
-				QuoteEscapeSequence.S);
+				QuoteEscapeSequence.S)
+		{
 		}
 	}
 }

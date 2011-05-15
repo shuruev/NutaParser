@@ -1,15 +1,17 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class HexadecimalIntegerLiteral : LexicalItem
+	public class HexadecimalIntegerLiteral : ParseAll
 	{
 		public static readonly HexadecimalIntegerLiteral S = new HexadecimalIntegerLiteral();
 
-		public override bool Parse(LexicalState state)
+		public HexadecimalIntegerLiteral()
+			: base(
+				new SingleCharacterTerminal('0'),
+				new SingleCharacterTerminal('x', 'X'),
+				HexDigits.S,
+				IntegerTypeSuffix.O)
+				
 		{
-			return ParseAny(
-				state,
-				HexadecimalIntegerLiteral1.S,
-				HexadecimalIntegerLiteral2.S);
 		}
 	}
 }

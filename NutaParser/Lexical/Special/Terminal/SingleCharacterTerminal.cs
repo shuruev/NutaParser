@@ -1,18 +1,20 @@
-﻿namespace NutaParser.Lexical
+﻿using System.Collections.Generic;
+
+namespace NutaParser.Lexical
 {
 	/// <summary>
 	/// Parses specified character.
 	/// </summary>
 	public class SingleCharacterTerminal : LexicalItem
 	{
-		private readonly char m_character;
+		private readonly HashSet<char> m_characters;
 
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public SingleCharacterTerminal(char character)
+		public SingleCharacterTerminal(params char[] characters)
 		{
-			m_character = character;
+			m_characters = new HashSet<char>(characters);
 		}
 
 		/// <summary>
@@ -21,7 +23,7 @@
 		/// </summary>
 		public override bool Parse(LexicalState state)
 		{
-			return ParseCharacter(state, c => c == m_character);
+			return ParseCharacter(state, c => m_characters.Contains(c));
 		}
 	}
 }

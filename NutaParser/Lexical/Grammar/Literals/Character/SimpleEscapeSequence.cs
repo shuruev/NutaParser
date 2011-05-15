@@ -1,24 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class SimpleEscapeSequence : LexicalItem
+	public class SimpleEscapeSequence : ParseAll
 	{
 		public static readonly SimpleEscapeSequence S = new SimpleEscapeSequence();
 
-		public override bool Parse(LexicalState state)
+		public SimpleEscapeSequence()
+			: base(
+				BackslashTerminal.S,
+				new SingleCharacterTerminal('\'', '"', '\\', '0', 'a', 'b', 'f', 'n', 'r', 't', 'v'))
 		{
-			return ParseWord(
-				state,
-				@"\'",
-				"\\\"",
-				@"\\",
-				@"\0",
-				@"\a",
-				@"\b",
-				@"\f",
-				@"\n",
-				@"\r",
-				@"\t",
-				@"\v");
 		}
 	}
 }

@@ -1,35 +1,16 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class HexDigit : LexicalItem
+	public class HexDigit : SingleCharacterTerminal
 	{
 		public static readonly HexDigit S = new HexDigit();
+		public static readonly Optional O = new Optional(S);
 
-		public override bool Parse(LexicalState state)
+		public HexDigit()
+			: base(
+				'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+				'A', 'B', 'C', 'D', 'E', 'F',
+				'a', 'b', 'c', 'd', 'e', 'f')
 		{
-			return ParseCharacter(
-				state,
-				c => c == '0'
-					|| c == '1'
-					|| c == '2'
-					|| c == '3'
-					|| c == '4'
-					|| c == '5'
-					|| c == '6'
-					|| c == '7'
-					|| c == '8'
-					|| c == '9'
-					|| c == 'A'
-					|| c == 'B'
-					|| c == 'C'
-					|| c == 'D'
-					|| c == 'E'
-					|| c == 'F'
-					|| c == 'a'
-					|| c == 'b'
-					|| c == 'c'
-					|| c == 'd'
-					|| c == 'e'
-					|| c == 'f');
 		}
 	}
 }

@@ -1,15 +1,16 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class ExponentPart : LexicalItem
+	public class ExponentPart : ParseAll
 	{
 		public static readonly ExponentPart S = new ExponentPart();
+		public static readonly Optional O = new Optional(S);
 
-		public override bool Parse(LexicalState state)
+		public ExponentPart()
+			: base(
+				new SingleCharacterTerminal('e', 'E'),
+				Sign.O,
+				DecimalDigits.S)
 		{
-			return ParseAny(
-				state,
-				ExponentPart1.S,
-				ExponentPart2.S);
 		}
 	}
 }

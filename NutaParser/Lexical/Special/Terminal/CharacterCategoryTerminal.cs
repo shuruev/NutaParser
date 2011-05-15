@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace NutaParser.Lexical
@@ -9,14 +9,14 @@ namespace NutaParser.Lexical
 	/// </summary>
 	public class CharacterCategoryTerminal : LexicalItem
 	{
-		private readonly UnicodeCategory[] m_categories;
+		private readonly HashSet<UnicodeCategory> m_categories;
 
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
 		public CharacterCategoryTerminal(params UnicodeCategory[] categories)
 		{
-			m_categories = categories;
+			m_categories = new HashSet<UnicodeCategory>(categories);
 		}
 
 		/// <summary>

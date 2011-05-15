@@ -1,25 +1,16 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class IntegerTypeSuffix : LexicalItem
+	public class IntegerTypeSuffix : ParseAny
 	{
 		public static readonly IntegerTypeSuffix S = new IntegerTypeSuffix();
+		public static readonly Optional O = new Optional(S);
 
-		public override bool Parse(LexicalState state)
+		public IntegerTypeSuffix()
+			: base(
+				new ParseAll(new SingleCharacterTerminal('U', 'u'), new SingleCharacterTerminal('L', 'l')),
+				new ParseAll(new SingleCharacterTerminal('L', 'l'), new SingleCharacterTerminal('U', 'u')),
+				new SingleCharacterTerminal('U', 'u', 'L', 'l'))
 		{
-			return ParseWord(
-				state,
-				"UL",
-				"Ul",
-				"uL",
-				"ul",
-				"LU",
-				"Lu",
-				"lU",
-				"lu",
-				"U",
-				"u",
-				"L",
-				"l");
 		}
 	}
 }

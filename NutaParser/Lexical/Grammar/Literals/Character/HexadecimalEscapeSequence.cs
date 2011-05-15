@@ -1,17 +1,18 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class HexadecimalEscapeSequence : LexicalItem
+	public class HexadecimalEscapeSequence : ParseAll
 	{
 		public static readonly HexadecimalEscapeSequence S = new HexadecimalEscapeSequence();
 
-		public override bool Parse(LexicalState state)
+		public HexadecimalEscapeSequence()
+			: base(
+					BackslashTerminal.S,
+					new SingleCharacterTerminal('x'),
+					HexDigit.S,
+					HexDigit.O,
+					HexDigit.O,
+					HexDigit.O)
 		{
-			return ParseAny(
-				state,
-				HexadecimalEscapeSequence1.S,
-				HexadecimalEscapeSequence2.S,
-				HexadecimalEscapeSequence3.S,
-				HexadecimalEscapeSequence4.S);
 		}
 	}
 }

@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class SingleVerbatimStringLiteralCharacter : LexicalItem
+	public class SingleVerbatimStringLiteralCharacter : ParseExcept
 	{
 		public static readonly SingleVerbatimStringLiteralCharacter S = new SingleVerbatimStringLiteralCharacter();
 
-		public override bool Parse(LexicalState state)
+		public SingleVerbatimStringLiteralCharacter()
+			: base(AnyCharacterTerminal.S, QuoteTerminal.S)
 		{
-			return ParseCharacter(state, c => c != '"');
 		}
 	}
 }

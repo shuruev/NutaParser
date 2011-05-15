@@ -1,16 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class CharacterLiteral : LexicalItem
+	public class CharacterLiteral : ParseAll
 	{
 		public static readonly CharacterLiteral S = new CharacterLiteral();
 
-		public override bool Parse(LexicalState state)
+		public CharacterLiteral()
+			: base(ApostropheTerminal.S, Character.S, ApostropheTerminal.S)
 		{
-			return ParseAll(
-				state,
-				ApostropheTerminal.S,
-				Character.S,
-				ApostropheTerminal.S);
 		}
 	}
 }

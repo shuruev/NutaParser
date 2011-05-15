@@ -1,19 +1,13 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class RealTypeSuffix : LexicalItem
+	public class RealTypeSuffix : SingleCharacterTerminal
 	{
 		public static readonly RealTypeSuffix S = new RealTypeSuffix();
+		public static readonly Optional O = new Optional(S);
 
-		public override bool Parse(LexicalState state)
+		public RealTypeSuffix()
+			: base('F', 'f', 'D', 'd', 'M', 'm')
 		{
-			return ParseCharacter(
-				state,
-				c => c == 'F'
-					|| c == 'f'
-					|| c == 'D'
-					|| c == 'd'
-					|| c == 'M'
-					|| c == 'm');
 		}
 	}
 }

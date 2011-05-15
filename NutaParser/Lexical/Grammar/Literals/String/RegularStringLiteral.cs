@@ -1,15 +1,15 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class RegularStringLiteral : LexicalItem
+	public class RegularStringLiteral : ParseAll
 	{
 		public static readonly RegularStringLiteral S = new RegularStringLiteral();
 
-		public override bool Parse(LexicalState state)
+		public RegularStringLiteral()
+			: base(
+				QuoteTerminal.S,
+				RegularStringLiteralCharacters.O,
+				QuoteTerminal.S)
 		{
-			return ParseAny(
-				state,
-				RegularStringLiteral1.S,
-				RegularStringLiteral2.S);
 		}
 	}
 }

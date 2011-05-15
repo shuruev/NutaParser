@@ -14,8 +14,8 @@ namespace NutaParser
 		public static void Main(string[] args)
 		{
 			//Parse(@"D:\OLEG\Dropbox\My Documents\Visual Studio 2010\Projects\NutaParser\NutaParser\Class1.cs");
-			Parse(@"D:\OLEG\Git\My\StyleCop\Source\4.4.0.14\StyleCop\CodeLocation.cs");
-			return;
+			//Parse(@"D:\OLEG\Git\My\StyleCop\Source\4.4.0.14\StyleCop\CodeLocation.cs");
+			//return;
 
 			ParseAll(@"D:\OLEG\Dropbox");
 			ParseAll(@"D:\OLEG\Git");
