@@ -61,6 +61,95 @@ namespace NutaParser.Tests.Lexical {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #if Debug
+        ///         CheckConsistency();
+        ///         #if Trace
+        ///            WriteToLog(this.ToString());
+        ///         #endif
+        ///      #endif
+        ///.
+        /// </summary>
+        internal static string PpConditional1 {
+            get {
+                return ResourceManager.GetString("PpConditional1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #if Debug
+        ///         CheckConsistency();
+        ///      #else
+        ///         /* Do something else
+        ///      #endif
+        ///.
+        /// </summary>
+        internal static string PpConditional2 {
+            get {
+                return ResourceManager.GetString("PpConditional2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #if Debug
+        ///      world
+        ///#else
+        ///      Nebraska
+        ///#endif
+        ///.
+        /// </summary>
+        internal static string PpConditional3 {
+            get {
+                return ResourceManager.GetString("PpConditional3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #if X
+        ///   /*
+        ///#else
+        ///   /* */ class Q { }
+        ///#endif
+        ///.
+        /// </summary>
+        internal static string PpConditional4 {
+            get {
+                return ResourceManager.GetString("PpConditional4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #if Debug
+        ///      world
+        ///#elif Trace
+        ///      Alabama
+        ///#else
+        ///      Nebraska
+        ///#endif
+        ///.
+        /// </summary>
+        internal static string PpConditional5 {
+            get {
+                return ResourceManager.GetString("PpConditional5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #if Debug
+        ///      world
+        ///#else
+        ///      Nebraska
+        ///#elif Trace
+        ///      Alabama
+        ///#endif
+        ///.
+        /// </summary>
+        internal static string PpConditional6 {
+            get {
+                return ResourceManager.GetString("PpConditional6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;hello, world&quot;.
         /// </summary>
         internal static string StringLiteral1 {

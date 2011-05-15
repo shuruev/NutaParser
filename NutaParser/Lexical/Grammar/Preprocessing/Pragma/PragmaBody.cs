@@ -1,14 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class PragmaBody : LexicalItem
+	public class PragmaBody : ParseAny
 	{
 		public static readonly PragmaBody S = new PragmaBody();
 
-		public override bool Parse(LexicalState state)
+		public PragmaBody()
+			: base(PragmaWarningBody.S)
 		{
-			return ParseAny(
-				state,
-				PragmaWarningBody.S);
 		}
 	}
 }

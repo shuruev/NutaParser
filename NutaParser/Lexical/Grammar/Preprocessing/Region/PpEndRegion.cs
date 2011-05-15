@@ -1,17 +1,17 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class PpEndRegion : LexicalItem
+	public class PpEndRegion : ParseAll
 	{
 		public static readonly PpEndRegion S = new PpEndRegion();
 
-		public override bool Parse(LexicalState state)
+		public PpEndRegion()
+			: base(
+				Whitespace.O,
+				NumberSignTerminal.S,
+				Whitespace.O,
+				EndregionTerminal.S,
+				PpMessage.S)
 		{
-			return ParseAny(
-				state,
-				PpEndRegion1.S,
-				PpEndRegion2.S,
-				PpEndRegion3.S,
-				PpEndRegion4.S);
 		}
 	}
 }

@@ -95,6 +95,19 @@ namespace NutaParser.Tests.Lexical.Grammar
 		}
 
 		[TestMethod]
+		public void Is_Pp_Declaration()
+		{
+			Check(true, PpDeclaration.S, "#define abc // comment\r\n");
+			Check(true, PpDeclaration.S, " #define abc // comment\r\n");
+			Check(true, PpDeclaration.S, "# define abc // comment\r\n");
+			Check(true, PpDeclaration.S, " # define abc // comment\r\n");
+			Check(true, PpDeclaration.S, "#undef abc\r\n");
+			Check(false, PpDeclaration.S, "#define // comment\r\n");
+			Check(false, PpDeclaration.S, "#undef\r\n");
+			Check(false, PpDeclaration.S, "#undef abc");
+		}
+
+		[TestMethod]
 		public void Is_Pp_New_Line()
 		{
 			Check(true, PpNewLine.S, " // comment\r\n");
@@ -105,6 +118,17 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpNewLine.S, "  // comment\r\n");
 			Check(true, PpNewLine.S, "  \r\n");
 			Check(false, PpNewLine.S, "  abc\r\n");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Conditional()
+		{
+			// TODO: Check(true, PpConditional.S, Lexical.PpConditional1);
+			Check(true, PpConditional.S, Lexical.PpConditional2);
+			Check(true, PpConditional.S, Lexical.PpConditional3);
+			Check(true, PpConditional.S, Lexical.PpConditional4);
+			Check(true, PpConditional.S, Lexical.PpConditional5);
+			Check(false, PpConditional.S, Lexical.PpConditional6);
 		}
 
 		[TestMethod]

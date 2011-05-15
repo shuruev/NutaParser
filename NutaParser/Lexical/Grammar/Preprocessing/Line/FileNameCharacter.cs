@@ -1,24 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class FileNameCharacter : LexicalItem
+	public class FileNameCharacter : ParseExcept
 	{
 		public static readonly FileNameCharacter S = new FileNameCharacter();
 
-		public override bool Parse(LexicalState state)
+		public FileNameCharacter()
+			: base(InputCharacter.S, QuoteTerminal.S)
 		{
-			int index = state.Position;
-
-			if (!InputCharacter.S.Parse(state))
-				return false;
-
-			string input = state.Get(InputCharacter.S.Key, index);
-			if (input == "\"")
-			{
-				state.Reset(index);
-				return false;
-			}
-
-			return true;
 		}
 	}
 }

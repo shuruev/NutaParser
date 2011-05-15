@@ -1,12 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class WarningAction : LexicalItem
+	public class WarningAction : ParseAny
 	{
 		public static readonly WarningAction S = new WarningAction();
 
-		public override bool Parse(LexicalState state)
+		public WarningAction()
+			: base(
+				DisableTerminal.S,
+				RestoreTerminal.S)
 		{
-			return ParseWord(state, "disable", "restore");
 		}
 	}
 }

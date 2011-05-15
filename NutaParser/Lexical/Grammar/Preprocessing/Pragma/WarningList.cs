@@ -1,12 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class WarningList : LexicalItem
+	public class WarningList : ParseMany
 	{
 		public static readonly WarningList S = new WarningList();
 
-		public override bool Parse(LexicalState state)
+		public WarningList()
+			: base(
+				DecimalDigits.S,
+				new ParseAll(Whitespace.O, CommaTerminal.S, Whitespace.O))
 		{
-			return ParseMany(state, DecimalDigits.S, WarningListDelimiter.S);
 		}
 	}
 }

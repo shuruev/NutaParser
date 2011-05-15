@@ -117,6 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="PpConditional1" xml:space="preserve">
+    <value>#if Debug
+         CheckConsistency();
+         #if Trace
+            WriteToLog(this.ToString());
+         #endif
+      #endif
+</value>
+  </data>
+  <data name="PpConditional2" xml:space="preserve">
+    <value>#if Debug
+         CheckConsistency();
+      #else
+         /* Do something else
+      #endif
+</value>
+  </data>
+  <data name="PpConditional3" xml:space="preserve">
+    <value>#if Debug
+      world
+#else
+      Nebraska
+#endif
+</value>
+  </data>
+  <data name="PpConditional4" xml:space="preserve">
+    <value>#if X
+   /*
+#else
+   /* */ class Q { }
+#endif
+</value>
+  </data>
+  <data name="PpConditional5" xml:space="preserve">
+    <value>#if Debug
+      world
+#elif Trace
+      Alabama
+#else
+      Nebraska
+#endif
+</value>
+  </data>
+  <data name="PpConditional6" xml:space="preserve">
+    <value>#if Debug
+      world
+#else
+      Nebraska
+#elif Trace
+      Alabama
+#endif
+</value>
+  </data>
   <data name="StringLiteral1" xml:space="preserve">
     <value>"hello, world"</value>
   </data>

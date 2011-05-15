@@ -1,8 +1,8 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class EndRegionTerminal : LexicalItem
+	public class EndregionTerminal : LexicalItem
 	{
-		public static readonly EndRegionTerminal S = new EndRegionTerminal();
+		public static readonly EndregionTerminal S = new EndregionTerminal();
 
 		public override bool Parse(LexicalState state)
 		{

@@ -1,16 +1,14 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class PpMessage : LexicalItem
+	public class PpMessage : ParseAny
 	{
 		public static readonly PpMessage S = new PpMessage();
 
-		public override bool Parse(LexicalState state)
+		public PpMessage()
+			: base(
+				new ParseAll(Whitespace.S, InputCharacters.O, NewLine.S),
+				NewLine.S)
 		{
-			return ParseAny(
-				state,
-				PpMessage1.S,
-				PpMessage2.S,
-				NewLine.S);
 		}
 	}
 }

@@ -1,16 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class FileName : LexicalItem
+	public class FileName : ParseAll
 	{
 		public static readonly FileName S = new FileName();
 
-		public override bool Parse(LexicalState state)
+		public FileName()
+			: base(QuoteTerminal.S, FileNameCharacters.S, QuoteTerminal.S)
 		{
-			return ParseAll(
-				state,
-				QuoteTerminal.S,
-				FileNameCharacters.S,
-				QuoteTerminal.S);
 		}
 	}
 }

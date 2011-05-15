@@ -123,15 +123,6 @@ namespace NutaParser.Lexical
 		}
 
 		/// <summary>
-		/// Tries to parse a batch of similar lexical items.
-		/// </summary>
-		public bool ParseMany(LexicalState state, LexicalItem part)
-		{
-			// TODO: remove method
-			return ParseMany(state, part, null);
-		}
-
-		/// <summary>
 		/// Tries to parse a batch of similar lexical items with specified delimiter.
 		/// </summary>
 		public bool ParseMany(LexicalState state, LexicalItem part, LexicalItem delimiter)
