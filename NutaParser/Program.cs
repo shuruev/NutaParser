@@ -36,6 +36,8 @@ namespace NutaParser
 				Console.Write(sw.ElapsedMilliseconds + "\t");
 
 				Console.WriteLine(state.IsEndOfData ? "OK" : "ERROR");
+				if (!state.IsEndOfData)
+					throw new InvalidOperationException();
 			}
 
 			Console.WriteLine("Done.");
@@ -58,7 +60,7 @@ namespace NutaParser
 			}
 
 			LexicalState state = new LexicalState(data);
-			InputSection.S.Parse(state);
+			Input.S.Parse(state);
 
 			return state;
 		}
