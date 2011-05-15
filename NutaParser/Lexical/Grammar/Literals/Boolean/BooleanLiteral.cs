@@ -5,9 +5,7 @@
 		public static readonly BooleanLiteral S = new BooleanLiteral();
 
 		public BooleanLiteral()
-			: base(
-				TrueTerminal.S,
-				FalseTerminal.S)
+			: base(TrueTerminal.S, FalseTerminal.S)
 		{
 		}
 	}

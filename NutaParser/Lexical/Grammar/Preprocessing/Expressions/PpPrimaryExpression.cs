@@ -8,10 +8,12 @@
 		{
 			return ParseAny(
 				state,
-				// TODO: PpPrimaryExpression1.S,
-				// TODO: PpPrimaryExpression2.S,
-				// TODO: PpPrimaryExpression3.S,
-				// TODO: PpPrimaryExpression4.S,
+				new ParseAll(
+					LeftRoundBracket.S,
+					Whitespace.O,
+					PpExpression.S,
+					Whitespace.O,
+					RightRoundBracket.S),
 				ConditionalSymbol.S,
 				TrueTerminal.S,
 				FalseTerminal.S);

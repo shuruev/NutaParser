@@ -4,7 +4,7 @@ using NutaParser.Lexical.Grammar;
 namespace NutaParser.Tests.Lexical.Grammar
 {
 	[TestClass]
-	public class PreprocessingDirectives : GrammarTest
+	public class Preprocessing : GrammarTest
 	{
 		[TestMethod]
 		public void Is_Conditional_Symbol()
@@ -16,6 +16,40 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(false, ConditionalSymbol.S, " abc");
 			Check(false, ConditionalSymbol.S, "true");
 			Check(false, ConditionalSymbol.S, "false");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Expression()
+		{
+			Check(true, PpExpression.S, "a || b && (c != (d == e))");
+			Check(true, PpExpression.S, "a || b && c");
+			Check(true, PpExpression.S, " a || b && c");
+			Check(true, PpExpression.S, "a || b && c ");
+			Check(true, PpExpression.S, " a || b && c ");
+			Check(false, PpExpression.S, "a || b b && c");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Or_Expression()
+		{
+			Check(true, PpOrExpression.S, "a || b");
+			Check(true, PpOrExpression.S, "a == b && c != d || a != b");
+			Check(true, PpOrExpression.S, "a == b && c != d ||a != b");
+			Check(true, PpOrExpression.S, "a == b && c != d|| a != b");
+			Check(true, PpOrExpression.S, "a == b && c != d||a != b");
+			Check(true, PpOrExpression.S, "a == b || c != d");
+			Check(false, PpOrExpression.S, "a == b ||| c != d");
+		}
+
+		[TestMethod]
+		public void Is_Pp_And_Expression()
+		{
+			Check(true, PpAndExpression.S, "a && b");
+			Check(true, PpAndExpression.S, "a == b != false && !c != !d");
+			Check(true, PpAndExpression.S, "a == b != false &&!c != !d");
+			Check(true, PpAndExpression.S, "a == b != false&& !c != !d");
+			Check(true, PpAndExpression.S, "a == b != false&&!c != !d");
+			Check(false, PpAndExpression.S, "a == b || c != d");
 		}
 
 		[TestMethod]
@@ -51,6 +85,13 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpPrimaryExpression.S, "true");
 			Check(true, PpPrimaryExpression.S, "false");
 			Check(false, PpPrimaryExpression.S, " abc");
+
+			Check(true, PpPrimaryExpression.S, "(a == true && b != false)");
+			Check(true, PpPrimaryExpression.S, "( a == true && b != false)");
+			Check(true, PpPrimaryExpression.S, "(a == true && b != false )");
+			Check(true, PpPrimaryExpression.S, "( a == true && b != false )");
+			Check(false, PpPrimaryExpression.S, "(a b)");
+			Check(false, PpPrimaryExpression.S, "(a, b)");
 		}
 
 		[TestMethod]
@@ -64,6 +105,67 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpNewLine.S, "  // comment\r\n");
 			Check(true, PpNewLine.S, "  \r\n");
 			Check(false, PpNewLine.S, "  abc\r\n");
+		}
+
+		[TestMethod]
+		public void Is_Pp_If_Section()
+		{
+			Check(true, PpIfSection.S, " # if a == b && c != d\r\nvoid\r\n");
+			Check(true, PpIfSection.S, " #if a == b && c != d\r\nvoid\r\n");
+			Check(true, PpIfSection.S, "# if a == b && c != d\r\nvoid\r\n");
+			Check(true, PpIfSection.S, "#if a == b && c != d\r\nvoid\r\n");
+			Check(true, PpIfSection.S, "  #if a == b && c != d\r\nvoid\r\n");
+			Check(true, PpIfSection.S, " #  if a == b && c != d\r\nvoid\r\n");
+			Check(true, PpIfSection.S, "#if a == b && c != d \r\nvoid\r\n");
+			Check(true, PpIfSection.S, "#if a == b // comment\r\nvoid\r\n");
+			Check(false, PpIfSection.S, " # if \r\nvoid\r\n");
+			Check(false, PpIfSection.S, " # if //comment\r\nvoid\r\n");
+
+			Check(true, PpIfSection.S, " # if a == b && c != d\r\n");
+			Check(true, PpIfSection.S, " #if a == b && c != d\r\n");
+			Check(true, PpIfSection.S, "# if a == b && c != d\r\n");
+			Check(true, PpIfSection.S, "#if a == b && c != d\r\n");
+			Check(true, PpIfSection.S, "  #if a == b && c != d\r\n");
+			Check(true, PpIfSection.S, " #  if a == b && c != d\r\n");
+			Check(true, PpIfSection.S, "#if a == b && c != d \r\n");
+			Check(true, PpIfSection.S, "#if a == b // comment\r\n");
+			Check(false, PpIfSection.S, " # if \r\n");
+			Check(false, PpIfSection.S, " # if //comment\r\n");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Elif_Sections()
+		{
+			Check(true, PpElifSections.S, "#elif a == b\r\nDo1()\r\n");
+			Check(true, PpElifSections.S, "#elif a == b\r\nDo1()\r\n#elif a == c\r\nDo2()\r\n");
+			Check(false, PpElifSections.S, "#elif a == b\r\nDo1()\r\n#elif a == c\r\nDo2()");
+			Check(false, PpElifSections.S, "#elif\r\n#elif a == c\r\nDo2()\r\n");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Elif_Section()
+		{
+			Check(true, PpElifSection.S, " # elif a == b && c != d\r\nvoid\r\n");
+			Check(true, PpElifSection.S, " #elif a == b && c != d\r\nvoid\r\n");
+			Check(true, PpElifSection.S, "# elif a == b && c != d\r\nvoid\r\n");
+			Check(true, PpElifSection.S, "#elif a == b && c != d\r\nvoid\r\n");
+			Check(true, PpElifSection.S, "  #elif a == b && c != d\r\nvoid\r\n");
+			Check(true, PpElifSection.S, " #  elif a == b && c != d\r\nvoid\r\n");
+			Check(true, PpElifSection.S, "#elif a == b && c != d \r\nvoid\r\n");
+			Check(true, PpElifSection.S, "#elif a == b // comment\r\nvoid\r\n");
+			Check(false, PpElifSection.S, " # elif \r\nvoid\r\n");
+			Check(false, PpElifSection.S, " # elif //comment\r\nvoid\r\n");
+
+			Check(true, PpElifSection.S, " # elif a == b && c != d\r\n");
+			Check(true, PpElifSection.S, " #elif a == b && c != d\r\n");
+			Check(true, PpElifSection.S, "# elif a == b && c != d\r\n");
+			Check(true, PpElifSection.S, "#elif a == b && c != d\r\n");
+			Check(true, PpElifSection.S, "  #elif a == b && c != d\r\n");
+			Check(true, PpElifSection.S, " #  elif a == b && c != d\r\n");
+			Check(true, PpElifSection.S, "#elif a == b && c != d \r\n");
+			Check(true, PpElifSection.S, "#elif a == b // comment\r\n");
+			Check(false, PpElifSection.S, " # elif \r\n");
+			Check(false, PpElifSection.S, " # elif //comment\r\n");
 		}
 
 		[TestMethod]
@@ -137,7 +239,8 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, SkippedCharacters.S, " abc");
 			Check(true, SkippedCharacters.S, "abc");
 			Check(true, SkippedCharacters.S, "a");
-			Check(true, SkippedCharacters.S, " #abc");
+			Check(true, SkippedCharacters.S, " a#bc");
+			Check(false, SkippedCharacters.S, " #abc");
 			Check(false, SkippedCharacters.S, "#abc");
 			Check(false, SkippedCharacters.S, "#");
 		}
