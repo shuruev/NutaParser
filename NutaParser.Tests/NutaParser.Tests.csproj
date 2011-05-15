@@ -45,7 +45,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lexical\Grammar\Preprocessing.cs" />
+    <Compile Include="Lexical\Grammar\Directives.cs" />
     <Compile Include="Lexical\Grammar\Grammar.cs" />
     <Compile Include="Lexical\Grammar\Tokens.cs" />
     <Compile Include="Lexical\Grammar\Identifiers.cs" />

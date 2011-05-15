@@ -4,8 +4,19 @@ using NutaParser.Lexical.Grammar;
 namespace NutaParser.Tests.Lexical.Grammar
 {
 	[TestClass]
-	public class Preprocessing : GrammarTest
+	public class Directives : GrammarTest
 	{
+		[TestMethod]
+		public void Is_Pp_Directive()
+		{
+			Check(true, PpDirective.S, "#define abc // comment\r\n");
+			Check(true, PpDirective.S, "#if abc\r\n1\r\n#endif\r\n");
+			Check(true, PpDirective.S, "#line default\r\n");
+			Check(true, PpDirective.S, "#error abc\r\n");
+			Check(true, PpDirective.S, "#region abc\r\n#endregion\r\n");
+			Check(true, PpDirective.S, "#pragma warning disable 1591\r\n");
+		}
+
 		[TestMethod]
 		public void Is_Conditional_Symbol()
 		{
@@ -123,7 +134,7 @@ namespace NutaParser.Tests.Lexical.Grammar
 		[TestMethod]
 		public void Is_Pp_Conditional()
 		{
-			// TODO: Check(true, PpConditional.S, Lexical.PpConditional1);
+			Check(true, PpConditional.S, Lexical.PpConditional1);
 			Check(true, PpConditional.S, Lexical.PpConditional2);
 			Check(true, PpConditional.S, Lexical.PpConditional3);
 			Check(true, PpConditional.S, Lexical.PpConditional4);
@@ -309,6 +320,16 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpMessage.S, " \r\n");
 			Check(false, PpMessage.S, "xy\r\n");
 			Check(false, PpMessage.S, "\n\r\n");
+		}
+
+		[TestMethod]
+		public void Is_Pp_Region()
+		{
+			Check(true, PpRegion.S, "#region\r\n#endregion\r\n");
+			Check(true, PpRegion.S, "#region abc\r\n#endregion\r\n");
+			Check(true, PpRegion.S, "#region abc\r\n#endregion cde\r\n");
+			Check(false, PpRegion.S, "#region\r\n#endregion");
+			Check(false, PpRegion.S, "#regionabc\r\n#endregion\r\n");
 		}
 
 		[TestMethod]

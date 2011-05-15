@@ -8,10 +8,10 @@
 		{
 			return ParseAny(
 				state,
-				// TODO: PpDeclaration
-				// TODO: PpConditional
+				PpDeclaration.S,
+				PpConditional.S,
 				PpLine.S,
-				// TODO: PpDiagnostic
+				PpDiagnostic.S,
 				PpRegion.S,
 				PpPragma.S);
 		}
