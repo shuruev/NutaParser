@@ -44,10 +44,10 @@ namespace NutaParser.Lexical
 
 			foreach (string word in words)
 			{
-				if (state.Position + word.Length > state.Data.Length)
+				if (state.Position + word.Length > state.Length)
 					continue;
 
-				if (state.Data.Substring(state.Position, word.Length) == word)
+				if (state.Get(state.Position, word.Length) == word)
 				{
 					state.AddIncrement(Key, word.Length);
 					return true;
@@ -65,7 +65,7 @@ namespace NutaParser.Lexical
 			if (state.IsEndOfData)
 				return false;
 
-			if (!check(state.Data[state.Position]))
+			if (!check(state.Get(state.Position)))
 				return false;
 
 			state.AddIncrement(Key, 1);

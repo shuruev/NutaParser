@@ -11,15 +11,8 @@ namespace NutaParser.Lexical
 	{
 		private readonly Dictionary<int, List<LexicalEntry>> m_entriesByIndex;
 
-		/// <summary>
-		/// Gets parsed data.
-		/// </summary>
-		public string Data { get; private set; }
-
-		/// <summary>
-		/// Gets current parsing position.
-		/// </summary>
-		public int Position { get; private set; }
+		private readonly string m_data;
+		private int m_position;
 
 		/// <summary>
 		/// Initializes a new instance.
@@ -31,21 +24,78 @@ namespace NutaParser.Lexical
 
 			m_entriesByIndex = new Dictionary<int, List<LexicalEntry>>();
 
-			Data = data;
-			Position = 0;
+			m_data = data;
+			m_position = 0;
 		}
 
 		#region Properties
 
 		/// <summary>
-		/// Gets a value indicating whether parsing position is at the end of the data string.
+		/// Gets current parsing position.
+		/// </summary>
+		public int Position
+		{
+			get
+			{
+				return m_position;
+			}
+		}
+
+		/// <summary>
+		/// Gets input data length.
+		/// </summary>
+		public int Length
+		{
+			get
+			{
+				return m_data.Length;
+			}
+		}
+
+		/// <summary>
+		/// Gets a value indicating whether parsing position is at the end of the input data.
 		/// </summary>
 		public bool IsEndOfData
 		{
 			get
 			{
-				return Position >= Data.Length;
+				return Position >= Length;
 			}
+		}
+
+		#endregion
+
+		#region Reading input data
+
+		/// <summary>
+		/// Gets input character at specified position.
+		/// </summary>
+		public char Get(int index)
+		{
+			return m_data[index];
+		}
+
+		/// <summary>
+		/// Gets input string of specified length starting from specified position.
+		/// </summary>
+		public string Get(int startIndex, int length)
+		{
+			return m_data.Substring(startIndex, length);
+		}
+
+		/// <summary>
+		/// Gets parsed entity of specified key starting with specified position.
+		/// </summary>
+		public string Get(string key, int index)
+		{
+			if (!m_entriesByIndex.ContainsKey(index))
+				return null;
+
+			var entry = m_entriesByIndex[index]
+				.Where(i => i.Key == key)
+				.FirstOrDefault();
+
+			return m_data.Substring(entry.StartPosition, entry.Length);
 		}
 
 		#endregion
@@ -68,8 +118,8 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public void AddAbsolute(string key, int endIndex)
 		{
-			Add(new LexicalEntry(key, Position, endIndex));
-			Position = endIndex;
+			Add(new LexicalEntry(key, m_position, endIndex));
+			m_position = endIndex;
 		}
 
 		/// <summary>
@@ -78,7 +128,7 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public void AddIncrement(string key, int indexIncrement)
 		{
-			AddAbsolute(key, Position + indexIncrement);
+			AddAbsolute(key, m_position + indexIncrement);
 		}
 
 		/// <summary>
@@ -87,7 +137,7 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public void AddBack(string key, int startIndex)
 		{
-			Add(new LexicalEntry(key, startIndex, Position));
+			Add(new LexicalEntry(key, startIndex, m_position));
 		}
 
 		/// <summary>
@@ -96,28 +146,13 @@ namespace NutaParser.Lexical
 		/// </summary>
 		public void Reset(int index)
 		{
-			if (Position == index)
+			if (m_position == index)
 				return;
 
-			for (int i = Position; i >= index; i--)
+			for (int i = m_position; i >= index; i--)
 				m_entriesByIndex.Remove(i);
 
-			Position = index;
-		}
-
-		/// <summary>
-		/// Gets parsed entity of specified key starting with specified position.
-		/// </summary>
-		public string Get(string key, int index)
-		{
-			if (!m_entriesByIndex.ContainsKey(index))
-				return null;
-
-			var entry = m_entriesByIndex[index]
-				.Where(i => i.Key == key)
-				.FirstOrDefault();
-
-			return Data.Substring(entry.StartPosition, entry.Length);
+			m_position = index;
 		}
 
 		#endregion

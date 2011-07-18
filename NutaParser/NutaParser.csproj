@@ -198,6 +198,15 @@
     <Compile Include="Lexical\Grammar\Tokens\WhitespaceCharacter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\Grammar\DoubleTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\FloatingPointType.cs" />
+    <Compile Include="Syntactic\Grammar\FloatTerminal.cs" />
+    <Compile Include="Syntactic\Special\Terminal\LexicalTerminal.cs" />
+    <Compile Include="Syntactic\SyntacticItem.cs" />
+    <Compile Include="Syntactic\Special\ParseAll.cs" />
+    <Compile Include="Syntactic\Special\ParseAny.cs" />
+    <Compile Include="Syntactic\SyntacticState.cs" />
+    <Compile Include="Syntactic\SyntacticEntry.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

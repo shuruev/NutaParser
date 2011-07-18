@@ -60,6 +60,7 @@
     <Compile Include="Lexical\GrammarTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lexical\Grammar\Comments.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Lexical\Lexical.resx">
