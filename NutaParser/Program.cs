@@ -13,6 +13,8 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
+			Class1 z = new Class1();
+			z.a = null;
 			Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
 			return;
 

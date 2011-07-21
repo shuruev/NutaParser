@@ -39,7 +39,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Class1.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\UnicodeEscapeSequenceCategory.cs" />
     <Compile Include="Lexical\Grammar\Directives\Conditional\PpConditional.cs" />
     <Compile Include="Lexical\Grammar\Directives\Conditional\PpIfSection.cs" />
@@ -198,7 +198,16 @@
     <Compile Include="Lexical\Grammar\Tokens\WhitespaceCharacter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Syntactic\Grammar\Terminal\Operator\QuestionTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Basic\NamespaceName.cs" />
+    <Compile Include="Syntactic\Grammar\Basic\TypeName.cs" />
+    <Compile Include="Syntactic\Grammar\Basic\NamespaceOrTypeName.cs" />
+    <Compile Include="Syntactic\Grammar\Namespaces\QualifiedAliasMember.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\CommaTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\PeriodTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\DoubleColonTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\LeftAngleBracketTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\QuestionTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\RightAngleBracketTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\ByteTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\CharTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\BoolTerminal.cs" />
@@ -211,6 +220,10 @@
     <Compile Include="Syntactic\Grammar\Terminal\Word\ShortTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\SbyteTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\DoubleTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArgumentList.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArguments.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArgument.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Type.cs" />
     <Compile Include="Syntactic\Grammar\Types\Value\ValueType.cs" />
     <Compile Include="Syntactic\Grammar\Types\Value\StructType.cs" />
     <Compile Include="Syntactic\Grammar\Types\Value\SimpleType.cs" />
@@ -223,6 +236,9 @@
     <Compile Include="Syntactic\Grammar\Terminal\Word\FloatTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Lexical\LiteralTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Lexical\IdentifierTerminal.cs" />
+    <Compile Include="Syntactic\Special\Empty.cs" />
+    <Compile Include="Syntactic\Special\Optional.cs" />
+    <Compile Include="Syntactic\Special\ParseMany.cs" />
     <Compile Include="Syntactic\Special\Terminal\TextTerminal.cs" />
     <Compile Include="Syntactic\Special\Terminal\LexicalTerminal.cs" />
     <Compile Include="Syntactic\SyntacticItem.cs" />

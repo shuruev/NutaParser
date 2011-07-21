@@ -16,6 +16,8 @@ namespace NutaParser.Syntactic
 		private int m_innerPosition;
 		private int m_outerPosition;
 
+		internal int Deep;
+
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
@@ -33,6 +35,8 @@ namespace NutaParser.Syntactic
 			m_outerData = outerData;
 			m_innerPosition = 0;
 			m_outerPosition = 0;
+
+			Deep = 0;
 		}
 
 		#region Properties

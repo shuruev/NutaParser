@@ -5,6 +5,8 @@
 	/// </summary>
 	public abstract class SyntacticItem
 	{
+		private const int c_maxResearchDeep = 100;
+
 		#region Properties
 
 		/// <summary>
@@ -33,9 +35,42 @@
 		#region Parsing other syntactic items
 
 		/// <summary>
+		/// Delegate used for parsing methods.
+		/// </summary>
+		private delegate bool ParseDelegate(SyntacticState state, params object[] args);
+
+		/// <summary>
+		/// Execute parsing method checking research deep.
+		/// </summary>
+		private static bool Parse(ParseDelegate action, SyntacticState state, object[] args)
+		{
+			state.Deep++;
+
+			bool parsed = false;
+			if (state.Deep < c_maxResearchDeep)
+			{
+				parsed = action.Invoke(state, args);
+			}
+
+			state.Deep--;
+			return parsed;
+		}
+
+		/// <summary>
 		/// Tries to parse any of specified syntactic items.
 		/// </summary>
 		public bool ParseAny(SyntacticState state, params SyntacticItem[] parts)
+		{
+			return Parse(
+				(syntacticState, args) => ParseAnyInternal(syntacticState, parts),
+				state,
+				parts);
+		}
+
+		/// <summary>
+		/// Tries to parse any of specified syntactic items.
+		/// </summary>
+		private bool ParseAnyInternal(SyntacticState state, params SyntacticItem[] parts)
 		{
 			int innerIndex = state.InnerPosition;
 			int outerIndex = state.OuterPosition;
@@ -56,6 +91,17 @@
 		/// Tries to parse a consequent number of specified syntactic items.
 		/// </summary>
 		public bool ParseAll(SyntacticState state, params SyntacticItem[] parts)
+		{
+			return Parse(
+				(syntacticState, args) => ParseAllInternal(syntacticState, parts),
+				state,
+				parts);
+		}
+
+		/// <summary>
+		/// Tries to parse a consequent number of specified syntactic items.
+		/// </summary>
+		private bool ParseAllInternal(SyntacticState state, params SyntacticItem[] parts)
 		{
 			int innerIndex = state.InnerPosition;
 			int outerIndex = state.OuterPosition;
@@ -85,7 +131,18 @@
 		/// </summary>
 		public bool ParseMany(SyntacticState state, SyntacticItem part, SyntacticItem delimiter)
 		{
-			/*xxxint index = state.Position;
+			return Parse(
+				(syntacticState, args) => ParseManyInternal(syntacticState, part, delimiter),
+				state,
+				new[] { part, delimiter });
+		}
+
+		/// <summary>
+		/// Tries to parse a batch of similar syntactic items with specified delimiter.
+		/// </summary>
+		private bool ParseManyInternal(SyntacticState state, SyntacticItem part, SyntacticItem delimiter)
+		{
+			int innerIndex = state.InnerPosition;
 			while (true)
 			{
 				if (!part.Parse(state))
@@ -98,10 +155,10 @@
 					break;
 			}
 
-			if (index == state.Position)
+			if (innerIndex == state.InnerPosition)
 				return false;
 
-			state.AddAbsolute(Key, state.Position);*/
+			state.AddAbsolute(Key, state.InnerPosition, state.OuterPosition);
 			return true;
 		}
 
