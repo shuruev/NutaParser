@@ -9,11 +9,8 @@
 			return ParseAny(
 				state,
 				Identifier.S,
+				Literal.S,
 				Keyword.S,
-				StringLiteral.S,
-				CharacterLiteral.S,
-				RealLiteral.S,
-				IntegerLiteral.S,
 				OperatorOrPunctuator.S);
 		}
 	}

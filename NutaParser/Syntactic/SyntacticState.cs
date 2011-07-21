@@ -11,21 +11,26 @@ namespace NutaParser.Syntactic
 	{
 		private readonly Dictionary<int, List<SyntacticEntry>> m_entriesByIndex;
 
-		private readonly List<LexicalEntry> m_data;
+		private readonly List<LexicalEntry> m_innerData;
+		private readonly string m_outerData;
 		private int m_innerPosition;
 		private int m_outerPosition;
 
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public SyntacticState(IEnumerable<LexicalEntry> data)
+		public SyntacticState(IEnumerable<LexicalEntry> innerData, string outerData)
 		{
-			if (data == null)
-				throw new ArgumentNullException("data");
+			if (innerData == null)
+				throw new ArgumentNullException("innerData");
+
+			if (outerData == null)
+				throw new ArgumentNullException("outerData");
 
 			m_entriesByIndex = new Dictionary<int, List<SyntacticEntry>>();
 
-			m_data = new List<LexicalEntry>(data);
+			m_innerData = new List<LexicalEntry>(innerData);
+			m_outerData = outerData;
 			m_innerPosition = 0;
 			m_outerPosition = 0;
 		}
@@ -55,13 +60,24 @@ namespace NutaParser.Syntactic
 		}
 
 		/// <summary>
-		/// Gets input data length.
+		/// Gets input data length expressed in lexical terms.
 		/// </summary>
-		public int Length
+		public int InnerLength
 		{
 			get
 			{
-				return m_data.Count;
+				return m_innerData.Count;
+			}
+		}
+
+		/// <summary>
+		/// Gets input data length expressed in outer characters.
+		/// </summary>
+		public int OuterLength
+		{
+			get
+			{
+				return m_outerData.Length;
 			}
 		}
 
@@ -72,7 +88,7 @@ namespace NutaParser.Syntactic
 		{
 			get
 			{
-				return InnerPosition >= Length;
+				return InnerPosition >= InnerLength;
 			}
 		}
 
@@ -83,9 +99,17 @@ namespace NutaParser.Syntactic
 		/// <summary>
 		/// Gets input entry at specified position.
 		/// </summary>
-		public LexicalEntry Get(int innerIndex)
+		public LexicalEntry GetInner(int innerIndex)
 		{
-			return m_data[innerIndex];
+			return m_innerData[innerIndex];
+		}
+
+		/// <summary>
+		/// Gets input data related to specified entry.
+		/// </summary>
+		public string GetOuter(LexicalEntry entry)
+		{
+			return m_outerData.Substring(entry.StartPosition, entry.Length);
 		}
 
 		#endregion
@@ -114,18 +138,6 @@ namespace NutaParser.Syntactic
 
 			m_innerPosition = innerEndIndex;
 			m_outerPosition = outerEndIndex;
-		}
-
-		/// <summary>
-		/// Adds new syntactic item and moves parsing position forward
-		/// by specified number of characters.
-		/// </summary>
-		public void AddIncrement(string key, int innerIndexIncrement, int outerIndexIncrement)
-		{
-			AddAbsolute(
-				key,
-				m_innerPosition + innerIndexIncrement,
-				m_outerPosition + outerIndexIncrement);
 		}
 
 		/// <summary>

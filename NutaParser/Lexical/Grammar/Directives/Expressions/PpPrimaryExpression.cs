@@ -9,11 +9,11 @@
 			return ParseAny(
 				state,
 				new ParseAll(
-					LeftRoundBracket.S,
+					LeftRoundBracketTerminal.S,
 					Whitespace.O,
 					PpExpression.S,
 					Whitespace.O,
-					RightRoundBracket.S),
+					RightRoundBracketTerminal.S),
 				ConditionalSymbol.S,
 				TrueTerminal.S,
 				FalseTerminal.S);

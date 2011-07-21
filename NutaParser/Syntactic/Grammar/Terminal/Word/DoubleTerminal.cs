@@ -1,11 +1,11 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class DoubleTerminal : LexicalTerminal
+	public class DoubleTerminal : TextTerminal
 	{
 		public static readonly DoubleTerminal S = new DoubleTerminal();
 
 		public DoubleTerminal()
-			: base("DDD")
+			: base("double")
 		{
 		}
 	}

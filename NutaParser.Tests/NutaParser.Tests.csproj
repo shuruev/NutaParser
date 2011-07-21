@@ -60,6 +60,8 @@
     <Compile Include="Lexical\GrammarTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lexical\Grammar\Comments.cs" />
+    <Compile Include="Syntactic\GrammarTest.cs" />
+    <Compile Include="Syntactic\Grammar\Types.cs" />
     <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +76,7 @@
       <Name>NutaParser</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

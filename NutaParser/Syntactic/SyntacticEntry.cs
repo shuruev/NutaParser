@@ -1,4 +1,6 @@
-﻿namespace NutaParser.Syntactic
+﻿using System;
+
+namespace NutaParser.Syntactic
 {
 	/// <summary>
 	/// Represents an entry of a syntactic entity.
@@ -41,6 +43,22 @@
 			{
 				return EndPosition - StartPosition;
 			}
+		}
+
+		#endregion
+
+		#region Service methods
+
+		/// <summary>
+		/// Returns a string that represents the current object.
+		/// </summary>
+		public override string ToString()
+		{
+			return String.Format(
+				"{0} [{1}:{2}]",
+				Key,
+				StartPosition,
+				EndPosition);
 		}
 
 		#endregion

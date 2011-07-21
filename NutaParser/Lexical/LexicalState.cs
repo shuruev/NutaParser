@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NutaParser.Lexical.Grammar;
 
 namespace NutaParser.Lexical
 {
@@ -153,6 +154,25 @@ namespace NutaParser.Lexical
 				m_entriesByIndex.Remove(i);
 
 			m_position = index;
+		}
+
+		#endregion
+
+		#region Extracting result
+
+		/// <summary>
+		/// Extracts all tokens from parsed results.
+		/// </summary>
+		public List<LexicalEntry> ExtractTokens()
+		{
+			return m_entriesByIndex.Values
+				.SelectMany(list => list)
+				.Where(entry =>
+					entry.Key == Identifier.S.Key
+					|| entry.Key == Literal.S.Key
+					|| entry.Key == Keyword.S.Key
+					|| entry.Key == OperatorOrPunctuator.S.Key)
+				.ToList();
 		}
 
 		#endregion

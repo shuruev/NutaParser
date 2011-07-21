@@ -13,8 +13,8 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			//Parse(@"D:\OLEG\Dropbox\My Documents\Visual Studio 2010\Projects\NutaParser\NutaParser\Class1.cs");
-			//return;
+			Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
+			return;
 
 			ParseAll(@"D:\OLEG\Dropbox");
 			ParseAll(@"D:\OLEG\Git");
@@ -45,6 +45,16 @@ namespace NutaParser
 		public static LexicalState Parse(string filePath)
 		{
 			string data = File.ReadAllText(filePath);
+			data = PrepareEndOfFile(data);
+
+			LexicalState state = new LexicalState(data);
+			Input.S.Parse(state);
+
+			return state;
+		}
+
+		public static string PrepareEndOfFile(string data)
+		{
 			data = data.TrimEnd('\x001A');
 			if (data.Length > 0)
 			{
@@ -58,10 +68,7 @@ namespace NutaParser
 				}
 			}
 
-			LexicalState state = new LexicalState(data);
-			Input.S.Parse(state);
-
-			return state;
+			return data;
 		}
 	}
 }

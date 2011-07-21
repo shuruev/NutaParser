@@ -3,18 +3,18 @@
 namespace NutaParser.Syntactic
 {
 	/// <summary>
-	/// Parses lexical terminal.
+	/// Parses text terminal.
 	/// </summary>
-	public class LexicalTerminal : SyntacticItem
+	public class TextTerminal : SyntacticItem
 	{
-		private readonly LexicalItem m_item;
+		private readonly string m_text;
 
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public LexicalTerminal(LexicalItem item)
+		public TextTerminal(string text)
 		{
-			m_item = item;
+			m_text = text;
 		}
 
 		/// <summary>
@@ -27,7 +27,8 @@ namespace NutaParser.Syntactic
 				return false;
 
 			LexicalEntry entry = state.GetInner(state.InnerPosition);
-			if (entry.Key != m_item.Key)
+			string text = state.GetOuter(entry);
+			if (text != m_text)
 				return false;
 
 			state.AddAbsolute(

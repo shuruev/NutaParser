@@ -14,20 +14,34 @@ namespace NutaParser.Tests.Lexical
 		/// </summary>
 		public static void Check(bool expected, LexicalItem item, string data)
 		{
-			LexicalState state = new LexicalState(data);
-			bool parsed = item.Parse(state);
+			bool result = Parse(item, data);
 
-			bool correct = expected
-				? parsed && state.IsEndOfData
-				: !state.IsEndOfData;
-
-			if (!correct)
+			if (expected != result)
+			{
 				throw new AssertFailedException(
 					String.Format(
 						"Checking for [{0}] failed. Expected:<{1}>. Actual:<{2}>.",
 						data.Replace("\r", "\v").Replace("\n", "\v"),
 						expected,
 						!expected));
+			}
+		}
+
+		/// <summary>
+		/// Tries to parses specified data string into lexical item.
+		/// </summary>
+		private static bool Parse(LexicalItem item, string data)
+		{
+			LexicalState state = new LexicalState(data);
+			bool parsed = item.Parse(state);
+
+			if (!parsed)
+				return false;
+
+			if (!state.IsEndOfData)
+				return false;
+
+			return true;
 		}
 	}
 }
