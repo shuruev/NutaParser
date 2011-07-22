@@ -116,6 +116,20 @@ namespace NutaParser.Syntactic
 			return m_outerData.Substring(entry.StartPosition, entry.Length);
 		}
 
+		/// <summary>
+		/// Gets input data starting from current position.
+		/// </summary>
+		internal string GetOuterDebug()
+		{
+			//xxx 10 is a bug
+			return m_outerData
+				.Substring(m_outerPosition, 10)
+				.Replace("\r", String.Empty)
+				.Replace("\n", String.Empty)
+				.Replace("\t", String.Empty)
+				.Replace("\v", String.Empty);
+		}
+
 		#endregion
 
 		#region State machine methods

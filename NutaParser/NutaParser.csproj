@@ -203,6 +203,8 @@
     <Compile Include="Syntactic\Grammar\Basic\NamespaceOrTypeName.cs" />
     <Compile Include="Syntactic\Grammar\Namespaces\QualifiedAliasMember.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\CommaTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\RightSquareBracketTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\LeftSquareBracketTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\PeriodTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\DoubleColonTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\LeftAngleBracketTerminal.cs" />
@@ -211,6 +213,9 @@
     <Compile Include="Syntactic\Grammar\Terminal\Word\ByteTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\CharTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\BoolTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Word\StringTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Word\DynamicTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Word\ObjectTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\DecimalTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\UlongTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\LongTerminal.cs" />
@@ -223,6 +228,16 @@
     <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArgumentList.cs" />
     <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArguments.cs" />
     <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArgument.cs" />
+    <Compile Include="Syntactic\Grammar\Types\TypeParameter.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\ArrayType.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\ClassType.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\ReferenceType.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\InterfaceType.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\RankSpecifiers.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\RankSpecifier.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\DelegateType.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\DimSeparators.cs" />
+    <Compile Include="Syntactic\Grammar\Types\Reference\NonArrayType.cs" />
     <Compile Include="Syntactic\Grammar\Types\Type.cs" />
     <Compile Include="Syntactic\Grammar\Types\Value\ValueType.cs" />
     <Compile Include="Syntactic\Grammar\Types\Value\StructType.cs" />

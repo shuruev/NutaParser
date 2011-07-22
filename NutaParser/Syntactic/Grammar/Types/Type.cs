@@ -1,8 +1,5 @@
-﻿using System;
-
-namespace NutaParser.Syntactic.Grammar
+﻿namespace NutaParser.Syntactic.Grammar
 {
-	/*xxx no tests yet */
 	public class Type : SyntacticItem
 	{
 		public static readonly Type S = new Type();
@@ -11,9 +8,9 @@ namespace NutaParser.Syntactic.Grammar
 		{
 			return ParseAny(
 				state,
-				ValueType.S/*xxx,
 				ReferenceType.S,
-				TypeParameter.S*/);
+				ValueType.S,
+				TypeParameter.S);
 		}
 	}
 }

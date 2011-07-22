@@ -7,6 +7,21 @@ namespace NutaParser.Tests.Syntactic.Grammar
 	public class Types : GrammarTest
 	{
 		[TestMethod]
+		public void Is_Type()
+		{
+			Check(true, Type.S, "global::abc");
+			Check(true, Type.S, "abc[][][]");
+			Check(true, Type.S, "abc<bool?>[]");
+			Check(true, Type.S, "bool");
+			Check(true, Type.S, "bool?");
+			Check(true, Type.S, "string");
+			Check(true, Type.S, "object");
+			Check(true, Type.S, "abc");
+			Check(false, Type.S, "void");
+			Check(false, Type.S, "null");
+		}
+
+		[TestMethod]
 		public void Is_Value_Type()
 		{
 			Check(true, ValueType.S, "global::abc");
@@ -103,6 +118,109 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, EnumType.S, "State");
 			Check(true, EnumType.S, "State<bool>");
+			Check(false, EnumType.S, "object");
+			Check(false, EnumType.S, "null");
+		}
+
+		[TestMethod]
+		public void Is_Reference_Type()
+		{
+			Check(true, ReferenceType.S, "abc");
+			Check(true, ReferenceType.S, "abc[]");
+			Check(true, ReferenceType.S, "abc<bool>");
+			Check(true, ReferenceType.S, "abc<bool?>");
+			Check(true, ReferenceType.S, "abc<bool>[]");
+			Check(true, ReferenceType.S, "object");
+			Check(false, ReferenceType.S, "bool");
+			Check(false, ReferenceType.S, "bool?");
+			Check(false, ReferenceType.S, "abc[]<bool>");
+			Check(false, ReferenceType.S, "null");
+		}
+
+		[TestMethod]
+		public void Is_Class_Type()
+		{
+			Check(true, ClassType.S, "Class1");
+			Check(true, ClassType.S, "Class1<bool>");
+			Check(true, ClassType.S, "object");
+			Check(true, ClassType.S, "dynamic");
+			Check(true, ClassType.S, "string");
+			Check(false, ClassType.S, "null");
+		}
+
+		[TestMethod]
+		public void Is_Interface_Type()
+		{
+			Check(true, InterfaceType.S, "IEnumerable");
+			Check(true, InterfaceType.S, "IEnumerable<bool>");
+			Check(false, InterfaceType.S, "object");
+			Check(false, InterfaceType.S, "null");
+		}
+
+		[TestMethod]
+		public void Is_Array_Type()
+		{
+			//xxx
+			Check(true, ArrayType.S, "abc[][][]");
+
+			Check(false, ArrayType.S, "bool");
+			Check(true, ArrayType.S, "bool[]");
+			Check(true, ArrayType.S, "int[][]");
+			Check(true, ArrayType.S, "abc[][][]");
+			Check(false, ArrayType.S, "void");
+			Check(false, ArrayType.S, "void[]");
+		}
+
+		[TestMethod]
+		public void Is_Non_Array_Type()
+		{
+			Check(true, NonArrayType.S, "bool");
+			Check(true, NonArrayType.S, "bool[]");
+			Check(true, NonArrayType.S, "int[][]");
+			Check(false, NonArrayType.S, "void");
+			Check(false, NonArrayType.S, "void[]");
+		}
+
+		[TestMethod]
+		public void Is_Rank_Specifiers()
+		{
+			Check(true, RankSpecifiers.S, "[]");
+			Check(true, RankSpecifiers.S, "[][]");
+			Check(true, RankSpecifiers.S, "[,][,]");
+			Check(false, RankSpecifiers.S, "[,],[,]");
+			Check(false, RankSpecifiers.S, "[.][.]");
+		}
+
+		[TestMethod]
+		public void Is_Rank_Specifier()
+		{
+			Check(true, RankSpecifier.S, "[]");
+			Check(true, RankSpecifier.S, "[ ]");
+			Check(true, RankSpecifier.S, "[,]");
+			Check(true, RankSpecifier.S, "[ , , ]");
+			Check(false, RankSpecifier.S, "[,.]");
+			Check(false, RankSpecifier.S, "[,]]");
+			Check(false, RankSpecifier.S, "[");
+			Check(false, RankSpecifier.S, "]");
+			Check(false, RankSpecifier.S, ",");
+		}
+
+		[TestMethod]
+		public void Is_Dim_Separators()
+		{
+			Check(true, DimSeparators.S, ",");
+			Check(true, DimSeparators.S, ",,,");
+			Check(true, DimSeparators.S, " , , , ");
+			Check(false, DimSeparators.S, " , . , ");
+		}
+
+		[TestMethod]
+		public void Is_Delegate_Type()
+		{
+			Check(true, DelegateType.S, "Action");
+			Check(true, DelegateType.S, "Action<bool>");
+			Check(false, DelegateType.S, "object");
+			Check(false, DelegateType.S, "null");
 		}
 
 		[TestMethod]
@@ -134,6 +252,13 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, TypeArgument.S, "bool");
 			Check(false, TypeArgument.S, "void");
 			Check(false, TypeArgument.S, "false");
+		}
+
+		[TestMethod]
+		public void Is_Type_Parameters()
+		{
+			Check(true, TypeParameter.S, " Abc1 ");
+			Check(false, TypeParameter.S, " 1Abc ");
 		}
 	}
 }

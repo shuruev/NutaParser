@@ -1,11 +1,15 @@
-﻿namespace NutaParser.Syntactic
+﻿using System;
+using System.Diagnostics;
+using System.Linq;
+
+namespace NutaParser.Syntactic
 {
 	/// <summary>
 	/// Represents an entity from a syntactic grammar.
 	/// </summary>
 	public abstract class SyntacticItem
 	{
-		private const int c_maxResearchDeep = 100;
+		private const int c_maxResearchDeep = 10;
 
 		#region Properties
 
@@ -37,14 +41,40 @@
 		/// <summary>
 		/// Delegate used for parsing methods.
 		/// </summary>
-		private delegate bool ParseDelegate(SyntacticState state, params object[] args);
+		private delegate bool ParseDelegate(SyntacticState state, params SyntacticItem[] args);
 
 		/// <summary>
 		/// Execute parsing method checking research deep.
 		/// </summary>
-		private static bool Parse(ParseDelegate action, SyntacticState state, object[] args)
+		private static bool Parse(ParseDelegate action, SyntacticState state, SyntacticItem[] args)
 		{
 			state.Deep++;
+
+#if DEBUG
+			Debug.WriteLine(String.Empty);
+			Debug.WriteLine("...{0}...", new[] { state.GetOuterDebug() });
+
+			SyntacticItem debugItem = (SyntacticItem)action.Target;
+			Debug.WriteLine("[{0}] ({1})", debugItem.Key, state.Deep);
+
+			string debugMethod = action.Method.Name;
+			debugMethod = debugMethod
+				.Split(
+					new[] { "Parse", "Internal", "<", ">" },
+					StringSplitOptions.RemoveEmptyEntries)
+				.First()
+				.ToUpperInvariant();
+
+			Debug.Write(debugMethod);
+			Debug.Write(" =");
+			foreach (var arg in args.Where(arg => arg != null))
+			{
+				Debug.Write(" | ");
+				Debug.Write(arg.Key);
+			}
+
+			Debug.WriteLine(String.Empty);
+#endif
 
 			bool parsed = false;
 			if (state.Deep < c_maxResearchDeep)
@@ -62,7 +92,7 @@
 		public bool ParseAny(SyntacticState state, params SyntacticItem[] parts)
 		{
 			return Parse(
-				(syntacticState, args) => ParseAnyInternal(syntacticState, parts),
+				ParseAnyInternal,
 				state,
 				parts);
 		}
@@ -93,7 +123,7 @@
 		public bool ParseAll(SyntacticState state, params SyntacticItem[] parts)
 		{
 			return Parse(
-				(syntacticState, args) => ParseAllInternal(syntacticState, parts),
+				ParseAllInternal,
 				state,
 				parts);
 		}
@@ -132,7 +162,7 @@
 		public bool ParseMany(SyntacticState state, SyntacticItem part, SyntacticItem delimiter)
 		{
 			return Parse(
-				(syntacticState, args) => ParseManyInternal(syntacticState, part, delimiter),
+				(syntacticState, args) => ParseManyInternal(syntacticState, args[0], args[1]),
 				state,
 				new[] { part, delimiter });
 		}
