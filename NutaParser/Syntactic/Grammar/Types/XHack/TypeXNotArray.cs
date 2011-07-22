@@ -1,15 +1,15 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class Type : SyntacticItem
+	public class TypeXNotArray : SyntacticItem
 	{
-		public static readonly Type S = new Type();
+		public static readonly TypeXNotArray S = new TypeXNotArray();
 
 		public override bool Parse(SyntacticState state)
 		{
 			return ParseAny(
 				state,
 				ValueType.S,
-				ReferenceType.S,
+				ReferenceTypeXNotArray.S,
 				TypeParameter.S);
 		}
 	}

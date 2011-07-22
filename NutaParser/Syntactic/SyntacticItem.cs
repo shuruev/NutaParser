@@ -9,7 +9,7 @@ namespace NutaParser.Syntactic
 	/// </summary>
 	public abstract class SyntacticItem
 	{
-		private const int c_maxResearchDeep = 10;
+		private const int c_maxResearchDeep = 1000;
 
 		#region Properties
 
@@ -52,7 +52,7 @@ namespace NutaParser.Syntactic
 
 #if DEBUG
 			Debug.WriteLine(String.Empty);
-			Debug.WriteLine("...{0}...", new[] { state.GetOuterDebug() });
+			Debug.WriteLine(state.GetOuterDebug());
 
 			SyntacticItem debugItem = (SyntacticItem)action.Target;
 			Debug.WriteLine("[{0}] ({1})", debugItem.Key, state.Deep);

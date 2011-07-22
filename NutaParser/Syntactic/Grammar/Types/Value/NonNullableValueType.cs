@@ -5,7 +5,7 @@
 		public static readonly NonNullableValueType S = new NonNullableValueType();
 
 		public NonNullableValueType()
-			: base(Type.S)
+			: base(ValueTypeXNonNullable.S)
 		{
 		}
 	}

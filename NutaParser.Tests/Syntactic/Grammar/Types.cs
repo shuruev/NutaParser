@@ -10,15 +10,23 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Type()
 		{
 			Check(true, Type.S, "global::abc");
-			Check(true, Type.S, "abc[][][]");
 			Check(true, Type.S, "abc<bool?>[]");
 			Check(true, Type.S, "bool");
 			Check(true, Type.S, "bool?");
 			Check(true, Type.S, "string");
 			Check(true, Type.S, "object");
 			Check(true, Type.S, "abc");
+			Check(true, Type.S, "abc[][][]");
+			Check(true, Type.S, "abc?[][][]");
+			Check(true, Type.S, "List<List<List<bool>>>");
+			Check(true, Type.S, "List<List<List<bool?>?>?>?");
+			Check(true, Type.S, "List<bool?>?[][][]");
+			Check(true, Type.S, "List<List<bool?[]>[][]>");
+			Check(true, Type.S, "Dictionary<List<bool?>?[][][], List<bool?>?[][][]>");
 			Check(false, Type.S, "void");
 			Check(false, Type.S, "null");
+			Check(false, Type.S, "abc[][][]?");
+			Check(false, Type.S, "abc[][]?[]");
 		}
 
 		[TestMethod]
@@ -100,6 +108,12 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(false, NullableType.S, "bool");
 			Check(true, NullableType.S, "bool?");
+			Check(false, NullableType.S, "bool??");
+			Check(true, NullableType.S, "abc?");
+			Check(false, NullableType.S, "List<abc>");
+			Check(false, NullableType.S, "List<abc?>");
+			Check(true, NullableType.S, "List<abc>?");
+			Check(true, NullableType.S, "List<abc?>?");
 			Check(false, NullableType.S, "null");
 			Check(false, NullableType.S, "null?");
 		}
@@ -109,6 +123,12 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, NonNullableValueType.S, "bool");
 			Check(false, NonNullableValueType.S, "bool?");
+			Check(false, NonNullableValueType.S, "bool??");
+			Check(false, NonNullableValueType.S, "abc?");
+			Check(true, NonNullableValueType.S, "List<abc>");
+			Check(true, NonNullableValueType.S, "List<abc?>");
+			Check(false, NonNullableValueType.S, "List<abc>?");
+			Check(false, NonNullableValueType.S, "List<abc?>?");
 			Check(false, NonNullableValueType.S, "null");
 			Check(false, NonNullableValueType.S, "null?");
 		}
@@ -160,13 +180,14 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		[TestMethod]
 		public void Is_Array_Type()
 		{
-			//xxx
-			Check(true, ArrayType.S, "abc[][][]");
-
 			Check(false, ArrayType.S, "bool");
 			Check(true, ArrayType.S, "bool[]");
 			Check(true, ArrayType.S, "int[][]");
 			Check(true, ArrayType.S, "abc[][][]");
+			Check(true, ArrayType.S, "abc?[][][]");
+			Check(true, ArrayType.S, "List<abc?>[][][]");
+			Check(true, ArrayType.S, "List<abc>?[][][]");
+			Check(true, ArrayType.S, "List<abc?>?[][][]");
 			Check(false, ArrayType.S, "void");
 			Check(false, ArrayType.S, "void[]");
 		}
@@ -175,8 +196,12 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Non_Array_Type()
 		{
 			Check(true, NonArrayType.S, "bool");
-			Check(true, NonArrayType.S, "bool[]");
-			Check(true, NonArrayType.S, "int[][]");
+			Check(false, NonArrayType.S, "bool[]");
+			Check(true, NonArrayType.S, "abc");
+			Check(true, NonArrayType.S, "abc?");
+			Check(true, NonArrayType.S, "List<abc?>");
+			Check(true, NonArrayType.S, "List<abc>?");
+			Check(true, NonArrayType.S, "List<abc?>?");
 			Check(false, NonArrayType.S, "void");
 			Check(false, NonArrayType.S, "void[]");
 		}

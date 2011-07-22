@@ -5,7 +5,7 @@
 		public static readonly NonArrayType S = new NonArrayType();
 
 		public NonArrayType()
-			: base(Type.S)
+			: base(TypeXNotArray.S)
 		{
 		}
 	}

@@ -121,9 +121,8 @@ namespace NutaParser.Syntactic
 		/// </summary>
 		internal string GetOuterDebug()
 		{
-			//xxx 10 is a bug
 			return m_outerData
-				.Substring(m_outerPosition, 10)
+				.Substring(m_outerPosition, Math.Min(30, m_outerData.Length - m_outerPosition))
 				.Replace("\r", String.Empty)
 				.Replace("\n", String.Empty)
 				.Replace("\t", String.Empty)

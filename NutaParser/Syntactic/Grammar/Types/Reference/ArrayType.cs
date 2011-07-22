@@ -6,7 +6,7 @@
 
 		public ArrayType()
 			: base(
-				/*xxxNonArrayType.S*/Type.S,
+				NonArrayType.S,
 				RankSpecifiers.S)
 		{
 		}
