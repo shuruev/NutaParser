@@ -8,8 +8,12 @@
 		{
 			return ParseAny(
 				state,
-				ValueType.S,
-				ReferenceTypeXNotArray.S,
+				NullableType.S,
+				ClassType.S,
+				InterfaceType.S,
+				DelegateType.S,
+				StructType.S,
+				EnumType.S,
 				TypeParameter.S);
 		}
 	}

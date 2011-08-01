@@ -6,7 +6,6 @@
 
 		public StructType()
 			: base(
-				NullableType.S,
 				TypeName.S,
 				SimpleType.S)
 		{

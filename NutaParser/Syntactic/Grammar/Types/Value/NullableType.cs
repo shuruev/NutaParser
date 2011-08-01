@@ -6,7 +6,7 @@
 
 		public NullableType()
 			: base(
-				NonNullableValueType.S,
+				new ParseAny(StructType.S, EnumType.S),
 				QuestionTerminal.S)
 		{
 		}

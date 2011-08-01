@@ -10,34 +10,63 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Type()
 		{
 			Check(true, Type.S, "global::abc");
-			Check(true, Type.S, "abc<bool?>[]");
 			Check(true, Type.S, "bool");
 			Check(true, Type.S, "bool?");
+			Check(false, Type.S, "bool??");
 			Check(true, Type.S, "string");
 			Check(true, Type.S, "object");
+			Check(false, Type.S, "void");
+			Check(false, Type.S, "null");
+			Check(false, Type.S, "null?");
+
+			Check(true, Type.S, "a[]");
+			Check(true, Type.S, "a<b>");
+			Check(true, Type.S, "a<b>[]");
+			Check(true, Type.S, "a<b<c>>");
+
 			Check(true, Type.S, "abc");
+			Check(true, Type.S, "abc[]");
+			Check(true, Type.S, "abc?");
 			Check(true, Type.S, "abc[][][]");
 			Check(true, Type.S, "abc?[][][]");
+			Check(true, Type.S, "abc");
+			Check(true, Type.S, "abc<bool>");
+			Check(true, Type.S, "abc<bool?>");
+			Check(true, Type.S, "abc<bool>[]");
+			Check(true, Type.S, "abc<bool?>[]");
+			Check(false, Type.S, "abc[][][]?");
+			Check(false, Type.S, "abc[][]?[]");
+			Check(false, Type.S, "abc[]<bool>");
+
+			Check(true, Type.S, "List<abc>");
+			Check(true, Type.S, "List<abc?>");
+			Check(true, Type.S, "List<abc>?");
+			Check(true, Type.S, "List<abc?>?");
 			Check(true, Type.S, "List<List<List<bool>>>");
 			Check(true, Type.S, "List<List<List<bool?>?>?>?");
 			Check(true, Type.S, "List<bool?>?[][][]");
 			Check(true, Type.S, "List<List<bool?[]>[][]>");
 			Check(true, Type.S, "Dictionary<List<bool?>?[][][], List<bool?>?[][][]>");
-			Check(false, Type.S, "void");
-			Check(false, Type.S, "null");
-			Check(false, Type.S, "abc[][][]?");
-			Check(false, Type.S, "abc[][]?[]");
 		}
 
 		[TestMethod]
-		public void Is_Value_Type()
+		public void Is_Type_Extremal_Deep()
 		{
-			Check(true, ValueType.S, "global::abc");
-			Check(true, ValueType.S, "byte");
-			Check(true, ValueType.S, "bool?");
-			Check(false, ValueType.S, "string");
-			Check(false, ValueType.S, "object");
-			Check(false, ValueType.S, "null");
+			/*xxxstring test = @"
+				HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<
+				HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<
+				int
+				>>>>>>>>>>
+				>>>>>>>>>>
+				";*/
+
+			string test = @"
+				HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<
+				int
+				>>>>>>>>>>
+				";
+
+			Check(true, Type.S, test);
 		}
 
 		[TestMethod]
@@ -45,7 +74,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, StructType.S, "global::abc");
 			Check(true, StructType.S, "byte");
-			Check(true, StructType.S, "bool?");
+			Check(false, StructType.S, "bool?");
 			Check(false, StructType.S, "string");
 			Check(false, StructType.S, "object");
 			Check(false, StructType.S, "null");
@@ -119,42 +148,12 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		}
 
 		[TestMethod]
-		public void Is_Non_Nullable_Value_Type()
-		{
-			Check(true, NonNullableValueType.S, "bool");
-			Check(false, NonNullableValueType.S, "bool?");
-			Check(false, NonNullableValueType.S, "bool??");
-			Check(false, NonNullableValueType.S, "abc?");
-			Check(true, NonNullableValueType.S, "List<abc>");
-			Check(true, NonNullableValueType.S, "List<abc?>");
-			Check(false, NonNullableValueType.S, "List<abc>?");
-			Check(false, NonNullableValueType.S, "List<abc?>?");
-			Check(false, NonNullableValueType.S, "null");
-			Check(false, NonNullableValueType.S, "null?");
-		}
-
-		[TestMethod]
 		public void Is_Enum_Type()
 		{
 			Check(true, EnumType.S, "State");
 			Check(true, EnumType.S, "State<bool>");
 			Check(false, EnumType.S, "object");
 			Check(false, EnumType.S, "null");
-		}
-
-		[TestMethod]
-		public void Is_Reference_Type()
-		{
-			Check(true, ReferenceType.S, "abc");
-			Check(true, ReferenceType.S, "abc[]");
-			Check(true, ReferenceType.S, "abc<bool>");
-			Check(true, ReferenceType.S, "abc<bool?>");
-			Check(true, ReferenceType.S, "abc<bool>[]");
-			Check(true, ReferenceType.S, "object");
-			Check(false, ReferenceType.S, "bool");
-			Check(false, ReferenceType.S, "bool?");
-			Check(false, ReferenceType.S, "abc[]<bool>");
-			Check(false, ReferenceType.S, "null");
 		}
 
 		[TestMethod]
@@ -254,6 +253,9 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, TypeArgumentList.S, "< byte >");
 			Check(true, TypeArgumentList.S, "<byte>");
 			Check(true, TypeArgumentList.S, "<byte, bool>");
+			Check(true, TypeArgumentList.S, "<List<bool>>");
+			Check(true, TypeArgumentList.S, "<List<bool?>>");
+			Check(true, TypeArgumentList.S, "<List<bool>?>");
 			Check(false, TypeArgumentList.S, "byte, bool>");
 			Check(false, TypeArgumentList.S, "<<byte, bool>");
 			Check(false, TypeArgumentList.S, "<byte, bool");
