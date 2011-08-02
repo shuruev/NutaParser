@@ -462,6 +462,11 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(false, WarningList.S, " 123, 456");
 			Check(false, WarningList.S, "123, 456 ");
 			Check(false, WarningList.S, "123 456");
+
+			Check(false, WarningList.S, ",1");
+			Check(false, WarningList.S, ", 1");
+			Check(false, WarningList.S, "1,");
+			Check(false, WarningList.S, "1, ");
 		}
 	}
 }

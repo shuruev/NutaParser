@@ -10,7 +10,6 @@
 				new SingleCharacterTerminal('x', 'X'),
 				HexDigits.S,
 				IntegerTypeSuffix.O)
-				
 		{
 		}
 	}

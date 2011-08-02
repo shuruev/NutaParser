@@ -45,6 +45,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestHelper.cs" />
     <Compile Include="Lexical\Grammar\Directives.cs" />
     <Compile Include="Lexical\Grammar\Grammar.cs" />
     <Compile Include="Lexical\Grammar\Tokens.cs" />
@@ -58,12 +59,14 @@
     <Compile Include="Lexical\Grammar\Literals.cs" />
     <Compile Include="Lexical\Grammar\Keywords.cs" />
     <Compile Include="Lexical\GrammarTest.cs" />
+    <Compile Include="Lexical\MissedCoverage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lexical\Grammar\Comments.cs" />
     <Compile Include="Syntactic\GrammarTest.cs" />
     <Compile Include="Syntactic\Grammar\Basic.cs" />
     <Compile Include="Syntactic\Grammar\Namespaces.cs" />
     <Compile Include="Syntactic\Grammar\Types.cs" />
+    <Compile Include="Syntactic\MissedCoverage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Lexical\Lexical.resx">

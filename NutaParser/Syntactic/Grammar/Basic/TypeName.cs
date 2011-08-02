@@ -6,18 +6,8 @@
 
 		public TypeName()
 			: base(
-				new ParseAny(
-					QualifiedAliasMember.S,
-					new ParseAll(
-						IdentifierTerminal.S,
-						TypeArgumentList.O)),
-				new ParseAny(
-					new ParseMany(
-						new ParseAll(
-							PeriodTerminal.S,
-							IdentifierTerminal.S,
-							TypeArgumentList.O)),
-					Empty.S))
+				QualifiedAliasPrefix.O,
+				new ParseMany(TypeNamePart.S, PeriodTerminal.S))
 		{
 		}
 	}

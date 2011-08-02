@@ -7,7 +7,52 @@ namespace NutaParser.Tests.Syntactic.Grammar
 	public class Types : GrammarTest
 	{
 		[TestMethod]
-		public void Is_Type()
+		public void Is_Type_Common()
+		{
+			Check(true, Type.S, "a");
+			Check(true, Type.S, "a::b");
+			Check(true, Type.S, "a.b.c");
+			Check(true, Type.S, "a::b.c");
+			Check(false, Type.S, "1.2.3");
+
+			Check(true, Type.S, "a<b>");
+			Check(false, Type.S, "a<>");
+			Check(true, Type.S, "a.b<c>");
+			Check(true, Type.S, "a<b>.c<d>");
+			Check(false, Type.S, "a<b>.c<>");
+			Check(true, Type.S, "a<b, c>");
+			Check(true, Type.S, "a<b, c<d>>");
+			Check(true, Type.S, "a<b, c<d, e>>");
+
+			Check(true, Type.S, "a[]");
+			Check(true, Type.S, "a[][]");
+			Check(false, Type.S, "a[]b[]");
+			Check(true, Type.S, "a<b>[]");
+			Check(true, Type.S, "a<b[]>");
+			Check(false, Type.S, "a[]<b>");
+			Check(true, Type.S, "a<b[]>[]");
+			Check(false, Type.S, "a[]<b[]>[]");
+			Check(true, Type.S, "a<b[][], c<d[][], e[][]>[][]>[][]");
+
+			Check(true, Type.S, "a?");
+			Check(false, Type.S, "a??");
+			Check(true, Type.S, "a<b>?");
+			Check(true, Type.S, "a<b?>");
+			Check(false, Type.S, "a?<b>");
+			Check(true, Type.S, "a<b?>?");
+			Check(false, Type.S, "a?<b?>?");
+			Check(true, Type.S, "a<b?, c<d?, e?>?>?");
+
+			Check(true, Type.S, "a?[]");
+			Check(false, Type.S, "a[]?");
+			Check(true, Type.S, "a<b>?[]");
+			Check(true, Type.S, "a<b?[]>");
+			Check(true, Type.S, "a<b?[]>?[][]");
+			Check(true, Type.S, "a<b?[][], c<d?[][], e?[][]>?[][]>?[][]");
+		}
+
+		[TestMethod]
+		public void Is_Type_Additional()
 		{
 			Check(true, Type.S, "global::abc");
 			Check(true, Type.S, "bool");
@@ -21,6 +66,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 			Check(true, Type.S, "a[]");
 			Check(true, Type.S, "a<b>");
+			Check(false, Type.S, "a[]<b>");
 			Check(true, Type.S, "a<b>[]");
 			Check(true, Type.S, "a<b<c>>");
 
@@ -34,6 +80,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, Type.S, "abc<bool?>");
 			Check(true, Type.S, "abc<bool>[]");
 			Check(true, Type.S, "abc<bool?>[]");
+			Check(true, Type.S, "abc<bool?>?[]");
 			Check(false, Type.S, "abc[][][]?");
 			Check(false, Type.S, "abc[][]?[]");
 			Check(false, Type.S, "abc[]<bool>");
@@ -47,37 +94,120 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, Type.S, "List<bool?>?[][][]");
 			Check(true, Type.S, "List<List<bool?[]>[][]>");
 			Check(true, Type.S, "Dictionary<List<bool?>?[][][], List<bool?>?[][][]>");
+
+			Check(true, Type.S, "global::A<int?>.B<int, bool>?[][]");
 		}
 
 		[TestMethod]
 		public void Is_Type_Extremal_Deep()
 		{
-			/*xxxstring test = @"
-				HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<
-				HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<
-				int
-				>>>>>>>>>>
-				>>>>>>>>>>
-				";*/
+			Check(
+				true,
+				Type.S,
+				@"
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					List<List<List<List<List<List<List<List<List<List<
+					int
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+					>>>>>>>>>>
+				");
 
-			string test = @"
-				HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<
-				int
-				>>>>>>>>>>
-				";
+			Check(
+				true,
+				Type.S,
+				@"
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					A<A<A<A<A<A<A<A<A<A<
+					int
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+					>?>?>?>?>?>?>?>?>?>?
+				");
 
-			Check(true, Type.S, test);
-		}
+			Check(
+				true,
+				Type.S,
+				@"
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<Ab<
+					int
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+					>[]>[]>[]>[]>[]>[]>[]>[]>[]>[]
+				");
 
-		[TestMethod]
-		public void Is_Struct_Type()
-		{
-			Check(true, StructType.S, "global::abc");
-			Check(true, StructType.S, "byte");
-			Check(false, StructType.S, "bool?");
-			Check(false, StructType.S, "string");
-			Check(false, StructType.S, "object");
-			Check(false, StructType.S, "null");
+			Check(
+				true,
+				Type.S,
+				@"
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<Abc<
+					int
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+					>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]>?[]
+				");
 		}
 
 		[TestMethod]
@@ -133,30 +263,6 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		}
 
 		[TestMethod]
-		public void Is_Nullable_Type()
-		{
-			Check(false, NullableType.S, "bool");
-			Check(true, NullableType.S, "bool?");
-			Check(false, NullableType.S, "bool??");
-			Check(true, NullableType.S, "abc?");
-			Check(false, NullableType.S, "List<abc>");
-			Check(false, NullableType.S, "List<abc?>");
-			Check(true, NullableType.S, "List<abc>?");
-			Check(true, NullableType.S, "List<abc?>?");
-			Check(false, NullableType.S, "null");
-			Check(false, NullableType.S, "null?");
-		}
-
-		[TestMethod]
-		public void Is_Enum_Type()
-		{
-			Check(true, EnumType.S, "State");
-			Check(true, EnumType.S, "State<bool>");
-			Check(false, EnumType.S, "object");
-			Check(false, EnumType.S, "null");
-		}
-
-		[TestMethod]
 		public void Is_Class_Type()
 		{
 			Check(true, ClassType.S, "Class1");
@@ -174,35 +280,6 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, InterfaceType.S, "IEnumerable<bool>");
 			Check(false, InterfaceType.S, "object");
 			Check(false, InterfaceType.S, "null");
-		}
-
-		[TestMethod]
-		public void Is_Array_Type()
-		{
-			Check(false, ArrayType.S, "bool");
-			Check(true, ArrayType.S, "bool[]");
-			Check(true, ArrayType.S, "int[][]");
-			Check(true, ArrayType.S, "abc[][][]");
-			Check(true, ArrayType.S, "abc?[][][]");
-			Check(true, ArrayType.S, "List<abc?>[][][]");
-			Check(true, ArrayType.S, "List<abc>?[][][]");
-			Check(true, ArrayType.S, "List<abc?>?[][][]");
-			Check(false, ArrayType.S, "void");
-			Check(false, ArrayType.S, "void[]");
-		}
-
-		[TestMethod]
-		public void Is_Non_Array_Type()
-		{
-			Check(true, NonArrayType.S, "bool");
-			Check(false, NonArrayType.S, "bool[]");
-			Check(true, NonArrayType.S, "abc");
-			Check(true, NonArrayType.S, "abc?");
-			Check(true, NonArrayType.S, "List<abc?>");
-			Check(true, NonArrayType.S, "List<abc>?");
-			Check(true, NonArrayType.S, "List<abc?>?");
-			Check(false, NonArrayType.S, "void");
-			Check(false, NonArrayType.S, "void[]");
 		}
 
 		[TestMethod]
@@ -248,41 +325,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		}
 
 		[TestMethod]
-		public void Is_Type_Argument_List()
-		{
-			Check(true, TypeArgumentList.S, "< byte >");
-			Check(true, TypeArgumentList.S, "<byte>");
-			Check(true, TypeArgumentList.S, "<byte, bool>");
-			Check(true, TypeArgumentList.S, "<List<bool>>");
-			Check(true, TypeArgumentList.S, "<List<bool?>>");
-			Check(true, TypeArgumentList.S, "<List<bool>?>");
-			Check(false, TypeArgumentList.S, "byte, bool>");
-			Check(false, TypeArgumentList.S, "<<byte, bool>");
-			Check(false, TypeArgumentList.S, "<byte, bool");
-			Check(false, TypeArgumentList.S, "<byte, bool>>");
-		}
-
-		[TestMethod]
-		public void Is_Type_Arguments()
-		{
-			Check(true, TypeArguments.S, "byte");
-			Check(true, TypeArguments.S, "byte, bool");
-			Check(false, TypeArgument.S, "byte, false");
-			Check(false, TypeArgument.S, "byte bool");
-			Check(false, TypeArgument.S, "byte-bool");
-		}
-
-		[TestMethod]
-		public void Is_Type_Argument()
-		{
-			Check(true, TypeArgument.S, "byte");
-			Check(true, TypeArgument.S, "bool");
-			Check(false, TypeArgument.S, "void");
-			Check(false, TypeArgument.S, "false");
-		}
-
-		[TestMethod]
-		public void Is_Type_Parameters()
+		public void Is_Type_Parameter()
 		{
 			Check(true, TypeParameter.S, " Abc1 ");
 			Check(false, TypeParameter.S, " 1Abc ");

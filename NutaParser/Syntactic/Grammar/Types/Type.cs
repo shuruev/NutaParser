@@ -6,16 +6,11 @@
 
 		public override bool Parse(SyntacticState state)
 		{
-			return ParseAny(
+			return ParseAll(
 				state,
-				ArrayType.S,
-				NullableType.S,
-				ClassType.S,
-				InterfaceType.S,
-				DelegateType.S,
-				StructType.S,
-				EnumType.S,
-				TypeParameter.S);
+				TypePart.S,
+				QuestionTerminal.O,
+				RankSpecifiers.O);
 		}
 	}
 }

@@ -9,7 +9,7 @@ namespace NutaParser.Syntactic
 	/// </summary>
 	public abstract class SyntacticItem
 	{
-		private const int c_maxResearchDeep = 1000;
+		private const int c_maxResearchDeep = 10000;
 
 		#region Properties
 
@@ -76,11 +76,11 @@ namespace NutaParser.Syntactic
 			Debug.WriteLine(String.Empty);
 #endif
 
-			bool parsed = false;
-			if (state.Deep < c_maxResearchDeep)
-			{
-				parsed = action.Invoke(state, args);
-			}
+			if (state.Deep >= c_maxResearchDeep)
+				throw new InvalidOperationException(
+					String.Format("Maximum research deep {0} has been reached.", c_maxResearchDeep));
+
+			bool parsed = action.Invoke(state, args);
 
 			state.Deep--;
 			return parsed;
@@ -172,21 +172,26 @@ namespace NutaParser.Syntactic
 		/// </summary>
 		private bool ParseManyInternal(SyntacticState state, SyntacticItem part, SyntacticItem delimiter)
 		{
-			int innerIndex = state.InnerPosition;
+			if (!part.Parse(state))
+				return false;
+
 			while (true)
 			{
+				int innerIndex = state.InnerPosition;
+				int outerIndex = state.OuterPosition;
+
+				if (delimiter != null)
+				{
+					if (!delimiter.Parse(state))
+						break;
+				}
+
 				if (!part.Parse(state))
+				{
+					state.Reset(innerIndex, outerIndex);
 					break;
-
-				if (delimiter == null)
-					continue;
-
-				if (!delimiter.Parse(state))
-					break;
+				}
 			}
-
-			if (innerIndex == state.InnerPosition)
-				return false;
 
 			state.AddAbsolute(Key, state.InnerPosition, state.OuterPosition);
 			return true;

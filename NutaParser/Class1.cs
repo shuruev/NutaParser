@@ -10,8 +10,8 @@ public struct A<T>
 
 public class Class1
 {
-	A<int>.B a;
-	public A<bool?>?[] A;
+	public A<int>?[] x;
+
 	public
 	HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<HashSet<
 	int
