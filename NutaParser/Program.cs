@@ -13,11 +13,16 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
+			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
+			ParseAll(@"C:\Users\Public\VSS\SED\TFS\PDM\PDMMaintenanceTool");
 			return;
 
-			ParseAll(@"D:\OLEG\Dropbox");
-			ParseAll(@"D:\OLEG\Git");
+			//ParseAll(@"D:\OLEG\Dropbox");
+			//ParseAll(@"D:\OLEG\Git");
+			ParseAll(@"C:\Users\Public\GIT");
+			ParseAll(@"C:\Users\Public\Mercurial");
+			ParseAll(@"C:\Users\Public\TFS");
+			ParseAll(@"C:\Users\Public\VSS");
 		}
 
 		public static void ParseAll(string dirPath)
@@ -36,7 +41,7 @@ namespace NutaParser
 
 				Console.WriteLine(state.IsEndOfData ? "OK" : "ERROR");
 				if (!state.IsEndOfData)
-					throw new InvalidOperationException();
+					throw new InvalidOperationException("Parsing error.");
 			}
 
 			Console.WriteLine("Done.");
@@ -44,7 +49,23 @@ namespace NutaParser
 
 		public static LexicalState Parse(string filePath)
 		{
-			string data = File.ReadAllText(filePath);
+			string utf8 = File.ReadAllText(filePath, Encoding.UTF8);
+			string cp1251 = File.ReadAllText(filePath, Encoding.GetEncoding(1251));
+
+			string data;
+			if (utf8.Length < cp1251.Length)
+			{
+				data = utf8;
+			}
+			else if (utf8.Length == cp1251.Length)
+			{
+				data = cp1251;
+			}
+			else
+			{
+				throw new InvalidOperationException("Unkonwn encoding");
+			}
+
 			data = PrepareEndOfFile(data);
 
 			LexicalState state = new LexicalState(data);

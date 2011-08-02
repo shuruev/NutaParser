@@ -6,15 +6,8 @@
 
 		public NamespaceName()
 			: base(
-				new ParseAny(
-					QualifiedAliasMemberXNamespace.S,
-					IdentifierTerminal.S),
-				new ParseAny(
-					new ParseMany(
-						new ParseAll(
-							PeriodTerminal.S,
-							IdentifierTerminal.S)),
-					Empty.S))
+				QualifiedAliasPrefix.O,
+				new ParseMany(NamespaceNamePart.S, PeriodTerminal.S))
 		{
 		}
 	}

@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\ChecksumBytes.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\ChecksumGuid.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\PragmaChecksumBody.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\UnicodeEscapeSequenceCategory.cs" />
     <Compile Include="Lexical\Grammar\Directives\Conditional\PpConditional.cs" />
     <Compile Include="Lexical\Grammar\Directives\Conditional\PpIfSection.cs" />
@@ -52,9 +55,13 @@
     <Compile Include="Lexical\Grammar\Directives\Expressions\PpAndExpression.cs" />
     <Compile Include="Lexical\Grammar\OperatorsAndPunctuators\RightShiftAssignment.cs" />
     <Compile Include="Lexical\Grammar\OperatorsAndPunctuators\RightShift.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftCurlyBracketTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\RightCurlyBracketTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Brackets\RightRoundBracketTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftRoundBracketTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\BackslashTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\HyphenTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\ChecksumTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\RestoreTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\DisableTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\UndefTerminal.cs" />
@@ -202,8 +209,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Syntactic\Grammar\Basic\NamespaceName.cs" />
     <Compile Include="Syntactic\Grammar\Basic\TypeName.cs" />
-    <Compile Include="Syntactic\Grammar\TypeNamePart.cs" />
-    <Compile Include="Syntactic\Grammar\Namespaces\XHack\QualifiedAliasMemberXNamespace.cs" />
+    <Compile Include="Syntactic\Grammar\Basic\NamespaceNamePart.cs" />
+    <Compile Include="Syntactic\Grammar\Basic\TypeNamePart.cs" />
     <Compile Include="Syntactic\Grammar\Namespaces\QualifiedAliasMember.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\CommaTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\RightSquareBracketTerminal.cs" />
@@ -228,7 +235,7 @@
     <Compile Include="Syntactic\Grammar\Terminal\Word\ShortTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\SbyteTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\DoubleTerminal.cs" />
-    <Compile Include="Syntactic\Grammar\QualifiedAliasPrefix.cs" />
+    <Compile Include="Syntactic\Grammar\Namespaces\QualifiedAliasPrefix.cs" />
     <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArgumentList.cs" />
     <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArguments.cs" />
     <Compile Include="Syntactic\Grammar\Types\Constructed\TypeArgument.cs" />

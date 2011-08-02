@@ -15,6 +15,7 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpDirective.S, "#error abc\r\n");
 			Check(true, PpDirective.S, "#region abc\r\n#endregion\r\n");
 			Check(true, PpDirective.S, "#pragma warning disable 1591\r\n");
+			Check(true, PpDirective.S, "#pragma checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"3D3E4701DA70F08063536013BD27FBCD\"\r\n");
 		}
 
 		[TestMethod]
@@ -371,6 +372,9 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpLine.S, "#  line default\r\n");
 			Check(true, PpLine.S, "#line default \r\n");
 			Check(false, PpLine.S, "#line default");
+
+			Check(true, PpLine.S, "#line 4 \"App.xaml\"\r\n");
+			Check(true, PpLine.S, "#line 4 \"..\\..\\..\\App.xaml\"\r\n");
 		}
 
 		[TestMethod]
@@ -419,6 +423,8 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(true, PpPragma.S, "#  pragma warning disable 1591\r\n");
 			Check(true, PpPragma.S, "#pragma warning disable 1591 \r\n");
 			Check(false, PpPragma.S, "#pragma warning disable 1591");
+
+			Check(true, PpPragma.S, "#pragma checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"3D3E4701DA70F08063536013BD27FBCD\"\r\n");
 		}
 
 		[TestMethod]
@@ -426,6 +432,9 @@ namespace NutaParser.Tests.Lexical.Grammar
 		{
 			Check(true, PragmaBody.S, "warning disable 1591");
 			Check(false, PragmaBody.S, "warning disable unknown");
+
+			Check(true, PragmaBody.S, "checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"3D3E4701DA70F08063536013BD27FBCD\"");
+			Check(false, PragmaBody.S, "checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"012345678AB\"");
 		}
 
 		[TestMethod]
@@ -467,6 +476,42 @@ namespace NutaParser.Tests.Lexical.Grammar
 			Check(false, WarningList.S, ", 1");
 			Check(false, WarningList.S, "1,");
 			Check(false, WarningList.S, "1, ");
+		}
+
+		[TestMethod]
+		public void Is_Pragma_Checksum_Body()
+		{
+			Check(true, PragmaChecksumBody.S, "checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"3D3E4701DA70F08063536013BD27FBCD\"");
+			Check(true, PragmaChecksumBody.S, "checksum  \"file.cs\"  \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\"  \"3D3E4701DA70F08063536013BD27FBCD\"");
+			Check(false, PragmaChecksumBody.S, "checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"3D3E4701DA70F08063536013BD27FBCD\" ");
+			Check(false, PragmaChecksumBody.S, " checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"3D3E4701DA70F08063536013BD27FBCD\"");
+			Check(false, PragmaChecksumBody.S, "checksum\"file.cs\"\"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\"\"3D3E4701DA70F08063536013BD27FBCD\"");
+			Check(false, PragmaChecksumBody.S, "Checksum \"file.cs\" \"{F07ED4A5-E72D-4466-B852-237A36CAFFE5}\" \"3D3E4701DA70F08063536013BD27FBCD\"");
+		}
+
+		[TestMethod]
+		public void Is_Checksum_Guid()
+		{
+			Check(true, ChecksumGuid.S, "\"{12345678-AAAA-BBBB-CCCC-DDDDEEEEFFFF}\"");
+			Check(true, ChecksumGuid.S, "\"{12345678-aaaa-bbbb-cccc-ddddeeeeffff}\"");
+			Check(false, ChecksumGuid.S, "{12345678-AAAA-BBBB-CCCC-DDDDEEEEFFFF}\"");
+			Check(false, ChecksumGuid.S, "\"{12345678-AAAA-BBBB-CCCC-DDDDEEEEFFFF}");
+			Check(false, ChecksumGuid.S, "\"12345678-AAAA-BBBB-CCCC-DDDDEEEEFFFF\"");
+			Check(false, ChecksumGuid.S, "\"{12345678AAAA-BBBB-CCCC-DDDDEEEEFFFF}\"");
+			Check(false, ChecksumGuid.S, "\"{12345678-AAAA-BBBB-CCCC-DDDDEEEEFFF}\"");
+		}
+
+		[TestMethod]
+		public void Is_Checksum_Bytes()
+		{
+			Check(true, ChecksumBytes.S, "\"12345678AAAABBBBCCCCDDDDEEEEFFFF\"");
+			Check(true, ChecksumBytes.S, "\"12345678aaaabbbbccccddddeeeeffff\"");
+			Check(false, ChecksumBytes.S, "\"{12345678AAAABBBBCCCCDDDDEEEEFFFF}\"");
+			Check(false, ChecksumBytes.S, "\"12345678-AAAA-BBBB-CCCC-DDDDEEEEFFFF\"");
+			Check(false, ChecksumBytes.S, "\"{12345678-AAAA-BBBB-CCCC-DDDDEEEEFFFF}\"");
+			Check(false, ChecksumBytes.S, "12345678AAAABBBBCCCCDDDDEEEEFFFF\"");
+			Check(false, ChecksumBytes.S, "\"12345678AAAABBBBCCCCDDDDEEEEFFFF");
+			Check(false, ChecksumBytes.S, "\"12345678AAAABBBBCCCCDDDDEEEEFFF\"");
 		}
 	}
 }

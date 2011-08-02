@@ -1,7 +1,5 @@
-﻿// возможно убрать state.Deep ©®℗™
+// возможно убрать state.Deep ©®℗™
 // in и out в типах
-
-#pragma checksum "file.cs" "{F07ED4A5-E72D-4466-B852-237A36CAFFE5}" "3D3E4701DA70F08063536013BD27FBCD"
 
 using System.Collections.Generic;
 

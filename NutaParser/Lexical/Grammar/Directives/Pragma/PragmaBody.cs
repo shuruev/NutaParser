@@ -5,7 +5,9 @@
 		public static readonly PragmaBody S = new PragmaBody();
 
 		public PragmaBody()
-			: base(PragmaWarningBody.S)
+			: base(
+				PragmaWarningBody.S,
+				PragmaChecksumBody.S)
 		{
 		}
 	}
