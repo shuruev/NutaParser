@@ -9,7 +9,7 @@ namespace NutaParser.Syntactic
 	/// </summary>
 	public abstract class SyntacticItem
 	{
-		private const int c_maxResearchDeep = 10000;
+		private const int c_maxResearchDeep = 1000;
 
 		#region Properties
 

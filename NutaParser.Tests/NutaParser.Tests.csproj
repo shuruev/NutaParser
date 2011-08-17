@@ -45,6 +45,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Syntactic\Grammar\Expressions.cs" />
+    <Compile Include="Syntactic\Grammar\Variables.cs" />
     <Compile Include="TestHelper.cs" />
     <Compile Include="Lexical\Grammar\Directives.cs" />
     <Compile Include="Lexical\Grammar\Grammar.cs" />
