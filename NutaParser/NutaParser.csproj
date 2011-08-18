@@ -231,7 +231,7 @@
     <Compile Include="Syntactic\Grammar\Expressions\Logical\InclusiveOrExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Logical\ExclusiveOrExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\BaseAccess.cs" />
-    <Compile Include="Syntactic\Grammar\Expressions\Primary\ArrayCreationExpression.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\ArrayCreationExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\CollectionInitializer.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\ObjectCreationExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\ObjectOrCollectionInitializer.cs" />
