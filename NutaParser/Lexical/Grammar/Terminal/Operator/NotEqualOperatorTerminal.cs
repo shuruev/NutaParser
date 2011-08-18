@@ -1,12 +1,12 @@
 ﻿namespace NutaParser.Lexical.Grammar
 {
-	public class EqualOperatorTerminal : LexicalItem
+	public class NotEqualOperatorTerminal : LexicalItem
 	{
-		public static readonly EqualOperatorTerminal S = new EqualOperatorTerminal();
+		public static readonly NotEqualOperatorTerminal S = new NotEqualOperatorTerminal();
 
 		public override bool Parse(LexicalState state)
 		{
-			return ParseWord(state, "==");
+			return ParseWord(state, "!=");
 		}
 	}
 }

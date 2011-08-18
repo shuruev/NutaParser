@@ -6,8 +6,8 @@
 
 		public PrimaryExpressionSimple()
 			: base(
-				PrimaryNoArrayCreationExpressionSimple.S
-				/*xxx*/)
+				PrimaryNoArrayCreationExpressionSimple.S,
+				ArrayCreationExpression.S)
 		{
 		}
 	}

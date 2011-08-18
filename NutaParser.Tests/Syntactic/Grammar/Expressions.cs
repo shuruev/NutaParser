@@ -48,8 +48,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Primary_Expression()
 		{
 			Check(true, PrimaryExpression.S, "Abc<T1, T2>");
-
-			// xxx
+			Check(true, PrimaryExpression.S, "new[] { 5, 6 }");
 		}
 
 		[TestMethod]
@@ -65,6 +64,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, PrimaryNoArrayCreationExpression.S, "this()");
 			Check(true, PrimaryNoArrayCreationExpression.S, "base.Abc.D()");
 			Check(true, PrimaryNoArrayCreationExpression.S, "((5++--)--)++");
+			Check(true, PrimaryNoArrayCreationExpression.S, "new C(d: 5) { e = 6 }");
 
 			// xxx
 			Check(false, PrimaryNoArrayCreationExpression.S, "'abc'");
@@ -77,6 +77,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, PrimaryNoArrayCreationExpression.S, "base.base.Abc()");
 			Check(false, PrimaryNoArrayCreationExpression.S, "base()");
 			Check(false, PrimaryNoArrayCreationExpression.S, "((5++--)--)+");
+			Check(false, PrimaryNoArrayCreationExpression.S, "new C(d 5)");
 		}
 
 		[TestMethod]
@@ -114,6 +115,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, MemberAccess.S, "5.A.B");
 			Check(true, MemberAccess.S, "5.A");
 			Check(true, MemberAccess.S, "5++--.A--++.B");
+			Check(true, MemberAccess.S, "new[] { 5, 6 }.X");
 			Check(false, MemberAccess.S, "5++--.A--++.B--");
 		}
 
@@ -151,6 +153,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, ElementAccess.S, "Abc[]");
 			Check(false, ElementAccess.S, "Abc[[2]");
 			Check(false, ElementAccess.S, "Abc++[2]--");
+			Check(false, ElementAccess.S, "new[] { 5, 6 }[2]");
 		}
 
 		[TestMethod]
@@ -198,6 +201,115 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, PostDecrementExpression.S, "a--()");
 			Check(false, PostDecrementExpression.S, "a-()--");
 			Check(false, PostDecrementExpression.S, "a--()-");
+		}
+
+		[TestMethod]
+		public void Is_Object_Creation_Expression()
+		{
+			Check(true, ObjectCreationExpression.S, "new A(b: 5) { c = 38 }");
+			Check(true, ObjectCreationExpression.S, "new A(b: 5) { 5, 6 }");
+			Check(true, ObjectCreationExpression.S, "new A(b: 5) { }");
+			Check(true, ObjectCreationExpression.S, "new A(b: 5)");
+			Check(true, ObjectCreationExpression.S, "new A() { c = 38 }");
+			Check(true, ObjectCreationExpression.S, "new A() { }");
+			Check(true, ObjectCreationExpression.S, "new A()");
+			Check(true, ObjectCreationExpression.S, "new A { c = 38 }");
+			Check(true, ObjectCreationExpression.S, "new A { 5, 6 }");
+
+			Check(false, ObjectCreationExpression.S, "new A");
+			Check(false, ObjectCreationExpression.S, "new A b { 5, 6 }");
+		}
+
+		[TestMethod]
+		public void Is_Object_Or_Collection_Initializer()
+		{
+			Check(true, ObjectOrCollectionInitializer.S, "{ a = 5 }");
+			Check(true, ObjectOrCollectionInitializer.S, "{ 5, 6, 7 }");
+		}
+
+		[TestMethod]
+		public void Is_Object_Initializer()
+		{
+			Check(true, ObjectInitializer.S, "{ }");
+			Check(true, ObjectInitializer.S, "{ c = this.B, c = { abc, 56 } }");
+			Check(true, ObjectInitializer.S, "{ c = this.B, c = { abc, 56 }, }");
+			Check(false, ObjectInitializer.S, "{ , }");
+			Check(false, ObjectInitializer.S, "{ c = this.B, c = { abc, 56 },, }");
+		}
+
+		[TestMethod]
+		public void Is_Member_Initializer_List()
+		{
+			Check(true, MemberInitializerList.S, "c = this.B, c = { abc, 56 }");
+			Check(false, MemberInitializerList.S, "c = this.B, c = { abc, 56 },");
+		}
+
+		[TestMethod]
+		public void Is_Member_Initializer()
+		{
+			Check(true, MemberInitializer.S, "c = this.B");
+			Check(true, MemberInitializer.S, "c = { abc, 56 }");
+			Check(false, MemberInitializer.S, "c { abc, 56 }");
+		}
+
+		[TestMethod]
+		public void Is_Initializer_Value()
+		{
+			Check(true, InitializerValue.S, "this.A");
+			Check(true, InitializerValue.S, "{ abc, 56 }");
+		}
+
+		[TestMethod]
+		public void Is_Collection_Initializer()
+		{
+			Check(true, CollectionInitializer.S, "{ a, { c, d } }");
+			Check(true, CollectionInitializer.S, "{ a, { c, d }, }");
+			Check(false, CollectionInitializer.S, "{ a, { c, d }");
+			Check(false, CollectionInitializer.S, "{ a, { c, d },, }");
+		}
+
+		[TestMethod]
+		public void Is_Element_Initializer_List()
+		{
+			Check(true, ElementInitializerList.S, "a, { a, b }");
+			Check(false, ElementInitializerList.S, "a, { a, b },");
+		}
+
+		[TestMethod]
+		public void Is_Element_Initializer()
+		{
+			Check(true, ElementInitializer.S, "a");
+			Check(true, ElementInitializer.S, "{ a, b }");
+			//xxxCheck(true, ElementInitializer.S, "{ a = 5, b = 6 }");
+			Check(false, ElementInitializer.S, "a, b");
+			Check(false, ElementInitializer.S, "a = 5");
+		}
+
+		[TestMethod]
+		public void Is_Expression_List()
+		{
+			Check(true, ExpressionList.S, "5, 6++, this.A()");
+			Check(false, ExpressionList.S, "5, 6++,");
+		}
+
+		[TestMethod]
+		public void Is_Array_Creation_Expression()
+		{
+			Check(true, ArrayCreationExpression.S, "new int[5, 6][,][,] { a, b }");
+			Check(true, ArrayCreationExpression.S, "new int[][5, 6][,][,] { a, b }");
+			Check(true, ArrayCreationExpression.S, "new int[5, 6][,][,]");
+			Check(true, ArrayCreationExpression.S, "new int[5, 6] { a, b }");
+			Check(true, ArrayCreationExpression.S, "new int[5, 6]");
+			Check(false, ArrayCreationExpression.S, "new int[]");
+			Check(false, ArrayCreationExpression.S, "new int[][]");
+
+			Check(true, ArrayCreationExpression.S, "new int[] { }");
+			Check(true, ArrayCreationExpression.S, "new int[] { a, b }");
+			Check(false, ArrayCreationExpression.S, "new int { a, b }");
+
+			Check(true, ArrayCreationExpression.S, "new[] { }");
+			Check(true, ArrayCreationExpression.S, "new[] { a, b }");
+			Check(false, ArrayCreationExpression.S, "new[][] { a, b }");
 		}
 	}
 }

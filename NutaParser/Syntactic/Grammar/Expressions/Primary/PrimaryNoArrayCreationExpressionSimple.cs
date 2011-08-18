@@ -12,7 +12,8 @@
 				SimpleName.S,
 				ParenthesizedExpression.S,
 				ThisAccess.S,
-				BaseAccess.S
+				BaseAccess.S,
+				ObjectCreationExpression.S
 				/*xxx*/);
 		}
 	}

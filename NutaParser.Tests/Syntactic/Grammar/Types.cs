@@ -283,45 +283,23 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		}
 
 		[TestMethod]
-		public void Is_Rank_Specifiers()
-		{
-			Check(true, RankSpecifiers.S, "[]");
-			Check(true, RankSpecifiers.S, "[][]");
-			Check(true, RankSpecifiers.S, "[,][,]");
-			Check(false, RankSpecifiers.S, "[,],[,]");
-			Check(false, RankSpecifiers.S, "[.][.]");
-		}
-
-		[TestMethod]
-		public void Is_Rank_Specifier()
-		{
-			Check(true, RankSpecifier.S, "[]");
-			Check(true, RankSpecifier.S, "[ ]");
-			Check(true, RankSpecifier.S, "[,]");
-			Check(true, RankSpecifier.S, "[ , , ]");
-			Check(false, RankSpecifier.S, "[,.]");
-			Check(false, RankSpecifier.S, "[,]]");
-			Check(false, RankSpecifier.S, "[");
-			Check(false, RankSpecifier.S, "]");
-			Check(false, RankSpecifier.S, ",");
-		}
-
-		[TestMethod]
-		public void Is_Dim_Separators()
-		{
-			Check(true, DimSeparators.S, ",");
-			Check(true, DimSeparators.S, ",,,");
-			Check(true, DimSeparators.S, " , , , ");
-			Check(false, DimSeparators.S, " , . , ");
-		}
-
-		[TestMethod]
 		public void Is_Delegate_Type()
 		{
 			Check(true, DelegateType.S, "Action");
 			Check(true, DelegateType.S, "Action<bool>");
 			Check(false, DelegateType.S, "object");
 			Check(false, DelegateType.S, "null");
+		}
+
+		[TestMethod]
+		public void Is_Array_Type()
+		{
+			Check(true, ArrayType.S, "Abc[]");
+			Check(true, ArrayType.S, "Abc?[]");
+			Check(true, ArrayType.S, "Abc?[][]");
+			Check(false, ArrayType.S, "int");
+			Check(false, ArrayType.S, "List<Abc[]>");
+			Check(false, ArrayType.S, "Abc[]?");
 		}
 
 		[TestMethod]
