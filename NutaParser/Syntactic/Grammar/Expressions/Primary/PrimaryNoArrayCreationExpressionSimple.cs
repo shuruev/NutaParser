@@ -1,0 +1,19 @@
+﻿namespace NutaParser.Syntactic.Grammar
+{
+	public class PrimaryNoArrayCreationExpressionSimple : SyntacticItem
+	{
+		public static readonly PrimaryNoArrayCreationExpressionSimple S = new PrimaryNoArrayCreationExpressionSimple();
+
+		public override bool Parse(SyntacticState state)
+		{
+			return ParseAny(
+				state,
+				LiteralTerminal.S,
+				SimpleName.S,
+				ParenthesizedExpression.S,
+				ThisAccess.S,
+				BaseAccess.S
+				/*xxx*/);
+		}
+	}
+}

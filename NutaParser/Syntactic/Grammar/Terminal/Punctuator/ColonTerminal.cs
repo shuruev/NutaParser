@@ -1,11 +1,11 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class DoubleColonTerminal : TextTerminal
+	public class ColonTerminal : TextTerminal
 	{
-		public static readonly DoubleColonTerminal S = new DoubleColonTerminal();
+		public static readonly ColonTerminal S = new ColonTerminal();
 
-		public DoubleColonTerminal()
-			: base("::")
+		public ColonTerminal()
+			: base(":")
 		{
 		}
 	}

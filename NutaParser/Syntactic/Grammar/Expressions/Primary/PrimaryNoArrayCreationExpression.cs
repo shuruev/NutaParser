@@ -6,13 +6,10 @@
 
 		public override bool Parse(SyntacticState state)
 		{
-			return ParseAny(
+			return ParseAll(
 				state,
-				LiteralTerminal.S,
-				SimpleName.S,
-				ParenthesizedExpression.S,
-				MemberAccess.S
-				/*xxx*/);
+				PrimaryNoArrayCreationExpressionSimple.S,
+				PrimaryExpressionSuffixes.O);
 		}
 	}
 }

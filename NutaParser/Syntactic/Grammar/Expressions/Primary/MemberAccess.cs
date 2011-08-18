@@ -6,9 +6,14 @@
 
 		public MemberAccess()
 			: base(
-				/*xxxnew ParseAll(PrimaryExpression.S, PeriodTerminal.S, IdentifierTerminal.S, TypeArgumentList.O),*/
+				new ParseAll(QualifiedAliasMember.S, PeriodTerminal.S, IdentifierTerminal.S),
 				new ParseAll(PredefinedType.S, PeriodTerminal.S, IdentifierTerminal.S, TypeArgumentList.O),
-				new ParseAll(QualifiedAliasMember.S, PeriodTerminal.S, IdentifierTerminal.S))
+				new ParseAll(
+					PrimaryExpressionSimple.S,
+					new ParseMany(
+						new ParseAll(
+							PrimaryExpressionSuffixesNotMemberAccess.O,
+							PrimaryExpressionSuffixMemberAccess.S))))
 		{
 		}
 	}
