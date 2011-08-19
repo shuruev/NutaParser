@@ -311,5 +311,52 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, ArrayCreationExpression.S, "new[] { a, b }");
 			Check(false, ArrayCreationExpression.S, "new[][] { a, b }");
 		}
+
+		[TestMethod]
+		public void Is_Delegate_Creation_Expression()
+		{
+			Check(true, DelegateCreationExpression.S, "new Delegate1(abc)");
+			Check(true, DelegateCreationExpression.S, "new Delegate1<T>(abc)");
+			Check(false, DelegateCreationExpression.S, "new Delegate1()");
+			Check(false, DelegateCreationExpression.S, "new Delegate1[](abc)");
+		}
+
+		[TestMethod]
+		public void Is_Anonymous_Object_Creation_Expression()
+		{
+			Check(true, AnonymousObjectCreationExpression.S, "new { }");
+			Check(true, AnonymousObjectCreationExpression.S, "new { Abc<T1>, A = this.B }");
+			Check(false, AnonymousObjectCreationExpression.S, "new { , }");
+			Check(false, AnonymousObjectCreationExpression.S, "new { Abc<T1>,, }");
+		}
+
+		[TestMethod]
+		public void Is_Anonymous_Object_Initializer()
+		{
+			Check(true, AnonymousObjectInitializer.S, "{ }");
+			Check(true, AnonymousObjectInitializer.S, "{ Abc<T1>, A = this.B }");
+			Check(true, AnonymousObjectInitializer.S, "{ Abc<T1>, A = this.B, }");
+			Check(false, AnonymousObjectInitializer.S, "{ , }");
+			Check(false, AnonymousObjectInitializer.S, "{ Abc<T1>, A = this.B,, }");
+		}
+
+		[TestMethod]
+		public void Is_Member_Declarator_List()
+		{
+			Check(true, MemberDeclaratorList.S, "Abc<T1>, A = this.B");
+			Check(false, MemberDeclaratorList.S, "Abc<T1>, A = this.B,");
+		}
+
+		[TestMethod]
+		public void Is_Member_Declarator()
+		{
+			Check(true, MemberDeclarator.S, "Abc<T1>");
+			Check(true, MemberDeclarator.S, "A.B.C");
+			Check(true, MemberDeclarator.S, "A = this.B");
+			Check(false, MemberDeclarator.S, "Abc<1T>");
+			Check(false, MemberDeclarator.S, "A.B.char");
+			Check(false, MemberDeclarator.S, "1 = this.B");
+			Check(false, MemberDeclarator.S, "A == this.B");
+		}
 	}
 }

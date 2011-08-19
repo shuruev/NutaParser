@@ -210,6 +210,11 @@
     <Compile Include="Syntactic\Grammar\Arrays\ArrayInitializer.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\VariableInitializerList.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\VariableInitializer.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\AnonymousObjectInitializer.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\AnonymousObjectCreationExpression.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\MemberDeclaratorList.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\MemberDeclarator.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\DelegateCreationExpression.cs" />
     <Compile Include="Syntactic\Grammar\Types\Reference\ArrayType.cs" />
     <Compile Include="Syntactic\Grammar\Basic\NamespaceName.cs" />
     <Compile Include="Syntactic\Grammar\Basic\TypeName.cs" />
