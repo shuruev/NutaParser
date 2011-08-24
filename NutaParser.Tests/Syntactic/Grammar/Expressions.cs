@@ -65,6 +65,9 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, PrimaryNoArrayCreationExpression.S, "base.Abc.D()");
 			Check(true, PrimaryNoArrayCreationExpression.S, "((5++--)--)++");
 			Check(true, PrimaryNoArrayCreationExpression.S, "new C(d: 5) { e = 6 }");
+			Check(true, PrimaryNoArrayCreationExpression.S, "new Delegate1<T>(abc)");
+			Check(true, PrimaryNoArrayCreationExpression.S, "new { Abc<T1>, A = this.B }");
+			Check(true, PrimaryNoArrayCreationExpression.S, "typeof(X<T>)");
 
 			// xxx
 			Check(false, PrimaryNoArrayCreationExpression.S, "'abc'");
@@ -78,6 +81,9 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, PrimaryNoArrayCreationExpression.S, "base()");
 			Check(false, PrimaryNoArrayCreationExpression.S, "((5++--)--)+");
 			Check(false, PrimaryNoArrayCreationExpression.S, "new C(d 5)");
+			Check(false, PrimaryNoArrayCreationExpression.S, "new delegate()");
+			Check(false, PrimaryNoArrayCreationExpression.S, "new { , }");
+			Check(false, PrimaryNoArrayCreationExpression.S, "typeof(X<void>)");
 		}
 
 		[TestMethod]
@@ -357,6 +363,71 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, MemberDeclarator.S, "A.B.char");
 			Check(false, MemberDeclarator.S, "1 = this.B");
 			Check(false, MemberDeclarator.S, "A == this.B");
+		}
+
+		[TestMethod]
+		public void Is_Typeof_Expression()
+		{
+			Check(true, TypeofExpression.S, "typeof(int)");
+			Check(true, TypeofExpression.S, "typeof(Abc)");
+			Check(true, TypeofExpression.S, "typeof(global::Abc)");
+			Check(true, TypeofExpression.S, "typeof(Abc<>)");
+			Check(true, TypeofExpression.S, "typeof(Abc<T>)");
+			Check(true, TypeofExpression.S, "typeof(Abc<,>)");
+			Check(true, TypeofExpression.S, "typeof(Abc<T1, T2>)");
+			Check(true, TypeofExpression.S, "typeof(void)");
+
+			Check(false, TypeofExpression.S, "typeof()");
+			Check(false, TypeofExpression.S, "typeof(null)");
+			Check(false, TypeofExpression.S, "typeof(5)");
+			Check(false, TypeofExpression.S, "typeof(global::void)");
+
+			Check(true, TypeofExpression.S, "typeof(int)");
+			Check(true, TypeofExpression.S, "typeof(System.Int32)");
+			Check(true, TypeofExpression.S, "typeof(string)");
+			Check(true, TypeofExpression.S, "typeof(double[])");
+			Check(true, TypeofExpression.S, "typeof(void)");
+			Check(true, TypeofExpression.S, "typeof(T)");
+			Check(true, TypeofExpression.S, "typeof(X<T>)");
+			Check(true, TypeofExpression.S, "typeof(X<X<T>>)");
+			Check(true, TypeofExpression.S, "typeof(X<>)");
+		}
+
+		[TestMethod]
+		public void Is_Unbound_Type_Name()
+		{
+			Check(true, UnboundTypeName.S, "Abc");
+			Check(true, UnboundTypeName.S, "Abc<>");
+			Check(true, UnboundTypeName.S, "Abc<,,>");
+			Check(true, UnboundTypeName.S, "global::Abc<,,>");
+			Check(true, UnboundTypeName.S, "global::Abc");
+			Check(true, UnboundTypeName.S, "global::Abc<,,>.D<,>");
+			Check(true, UnboundTypeName.S, "Abc<,,>.D.E<>");
+			Check(true, UnboundTypeName.S, "global::Abc<,,>.D.E<>.F<,,>.G<,,,>");
+
+			Check(false, UnboundTypeName.S, "1Abc<>");
+			Check(false, UnboundTypeName.S, "<>");
+			Check(false, UnboundTypeName.S, "Abc::<,,>");
+			Check(false, UnboundTypeName.S, "Abc.D::E");
+		}
+
+		[TestMethod]
+		public void Is_Generic_Dimension_Specifier()
+		{
+			Check(true, GenericDimensionSpecifier.S, "<,,>");
+			Check(true, GenericDimensionSpecifier.S, "<>");
+			Check(false, GenericDimensionSpecifier.S, "<.,>");
+		}
+
+		[TestMethod]
+		public void Is_Commas()
+		{
+			Check(true, Commas.S, ",");
+			Check(true, Commas.S, ",,");
+			Check(true, Commas.S, ",, ,");
+			Check(false, Commas.S, "");
+			Check(false, Commas.S, " ");
+			Check(false, Commas.S, ".,");
 		}
 	}
 }

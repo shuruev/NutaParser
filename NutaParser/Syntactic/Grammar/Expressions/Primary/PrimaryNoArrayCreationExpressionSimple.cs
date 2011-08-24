@@ -13,7 +13,10 @@
 				ParenthesizedExpression.S,
 				ThisAccess.S,
 				BaseAccess.S,
-				ObjectCreationExpression.S
+				ObjectCreationExpression.S,
+				DelegateCreationExpression.S,
+				AnonymousObjectCreationExpression.S,
+				TypeofExpression.S
 				/*xxx*/);
 		}
 	}
