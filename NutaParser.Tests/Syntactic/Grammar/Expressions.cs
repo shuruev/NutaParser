@@ -68,8 +68,11 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, PrimaryNoArrayCreationExpression.S, "new Delegate1<T>(abc)");
 			Check(true, PrimaryNoArrayCreationExpression.S, "new { Abc<T1>, A = this.B }");
 			Check(true, PrimaryNoArrayCreationExpression.S, "typeof(X<T>)");
+			Check(true, PrimaryNoArrayCreationExpression.S, "checked(a++)");
+			Check(true, PrimaryNoArrayCreationExpression.S, "unchecked(a--)");
+			Check(true, PrimaryNoArrayCreationExpression.S, "default(List<int>)");
+			//xxxCheck(true, PrimaryNoArrayCreationExpression.S, "delegate (int a) { return 5; }");
 
-			// xxx
 			Check(false, PrimaryNoArrayCreationExpression.S, "'abc'");
 			Check(false, PrimaryNoArrayCreationExpression.S, "Abc<T>>");
 			Check(false, PrimaryNoArrayCreationExpression.S, "((5)");
@@ -84,6 +87,10 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, PrimaryNoArrayCreationExpression.S, "new delegate()");
 			Check(false, PrimaryNoArrayCreationExpression.S, "new { , }");
 			Check(false, PrimaryNoArrayCreationExpression.S, "typeof(X<void>)");
+			Check(false, PrimaryNoArrayCreationExpression.S, "checked((a++)");
+			Check(false, PrimaryNoArrayCreationExpression.S, "unchecked((a--)");
+			Check(false, PrimaryNoArrayCreationExpression.S, "default((List<int>)");
+			Check(false, PrimaryNoArrayCreationExpression.S, "delegate (int a)");
 		}
 
 		[TestMethod]
@@ -428,6 +435,83 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, Commas.S, "");
 			Check(false, Commas.S, " ");
 			Check(false, Commas.S, ".,");
+		}
+
+		[TestMethod]
+		public void Is_Checked_Expression()
+		{
+			Check(true, CheckedExpression.S, "checked(5)");
+			Check(true, CheckedExpression.S, "checked(6++)");
+			Check(true, CheckedExpression.S, "checked(this.A())");
+			Check(false, CheckedExpression.S, "checked((5)");
+			Check(false, CheckedExpression.S, "checked 5");
+		}
+
+		[TestMethod]
+		public void Is_Unchecked_Expression()
+		{
+			Check(true, UncheckedExpression.S, "unchecked(5)");
+			Check(true, UncheckedExpression.S, "unchecked(6++)");
+			Check(true, UncheckedExpression.S, "unchecked(this.A())");
+			Check(false, UncheckedExpression.S, "unchecked((5)");
+			Check(false, UncheckedExpression.S, "unchecked 5");
+		}
+
+		[TestMethod]
+		public void Is_Default_Value_Expression()
+		{
+			Check(true, DefaultValueExpression.S, "default(int)");
+			Check(true, DefaultValueExpression.S, "default(Abc)");
+			Check(true, DefaultValueExpression.S, "default(global::Abc)");
+			Check(false, DefaultValueExpression.S, "default((int)");
+			Check(false, DefaultValueExpression.S, "default int");
+		}
+
+		[TestMethod]
+		public void Is_Unary_Expression()
+		{
+			Check(true, UnaryExpression.S, "--++-+-+this.A()++");
+			Check(true, UnaryExpression.S, "!!~~!~!~this.A()--");
+			Check(true, UnaryExpression.S, "(int)++(a.b)--");
+			Check(true, UnaryExpression.S, "a.b--++");
+			Check(false, UnaryExpression.S, "::a.b");
+			Check(false, UnaryExpression.S, "(a, b)");
+		}
+
+		[TestMethod]
+		public void Is_Pre_Increment_Expression()
+		{
+			Check(true, PreIncrementExpression.S, "++a");
+			Check(true, PreIncrementExpression.S, "++(a.b)");
+			Check(true, PreIncrementExpression.S, "++(int)a--");
+			Check(true, PreIncrementExpression.S, "+++a--");
+			Check(true, PreIncrementExpression.S, "++++a--");
+
+			Check(false, PreIncrementExpression.S, "(int)++a");
+			Check(false, PreIncrementExpression.S, "++(int)");
+		}
+
+		[TestMethod]
+		public void Is_Pre_Decrement_Expression()
+		{
+			Check(true, PreDecrementExpression.S, "--a");
+			Check(true, PreDecrementExpression.S, "--(a.b)");
+			Check(true, PreDecrementExpression.S, "--(int)a++");
+			Check(true, PreDecrementExpression.S, "---a++");
+			Check(true, PreDecrementExpression.S, "----a++");
+
+			Check(false, PreDecrementExpression.S, "(int)--a");
+			Check(false, PreDecrementExpression.S, "--(int)");
+		}
+
+		[TestMethod]
+		public void Is_Cast_Expression()
+		{
+			Check(true, CastExpression.S, "(int)a++");
+			Check(true, CastExpression.S, "(T)this.A()++");
+			Check(true, CastExpression.S, "(List<int>)++5");
+			Check(false, CastExpression.S, "(a++)int");
+			Check(false, CastExpression.S, "(<int>)++5");
 		}
 	}
 }

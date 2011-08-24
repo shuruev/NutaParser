@@ -16,8 +16,11 @@
 				ObjectCreationExpression.S,
 				DelegateCreationExpression.S,
 				AnonymousObjectCreationExpression.S,
-				TypeofExpression.S
-				/*xxx*/);
+				TypeofExpression.S,
+				CheckedExpression.S,
+				UncheckedExpression.S,
+				DefaultValueExpression.S,
+				AnonymousMethodExpression.S);
 		}
 	}
 }
