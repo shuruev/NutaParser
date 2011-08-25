@@ -6,8 +6,13 @@
 
 		public ConditionalExpression()
 			: base(
-				NullCoalescingExpression.S
-				/*xxx*/)
+				new ParseAll(
+					NullCoalescingExpression.S,
+					QuestionTerminal.S,
+					Expression.S,
+					ColonTerminal.S,
+					Expression.S),
+				NullCoalescingExpression.S)
 		{
 		}
 	}

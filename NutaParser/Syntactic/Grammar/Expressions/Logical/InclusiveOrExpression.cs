@@ -1,13 +1,13 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class InclusiveOrExpression : ParseAny
+	public class InclusiveOrExpression : ParseMany
 	{
 		public static readonly InclusiveOrExpression S = new InclusiveOrExpression();
 
 		public InclusiveOrExpression()
 			: base(
-				ExclusiveOrExpression.S
-				/*xxx*/)
+				ExclusiveOrExpression.S,
+				BarTerminal.S)
 		{
 		}
 	}

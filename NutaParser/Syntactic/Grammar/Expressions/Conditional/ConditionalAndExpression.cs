@@ -1,13 +1,13 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class ConditionalAndExpression : ParseAny
+	public class ConditionalAndExpression : ParseMany
 	{
 		public static readonly ConditionalAndExpression S = new ConditionalAndExpression();
 
 		public ConditionalAndExpression()
 			: base(
-				InclusiveOrExpression.S
-				/*xxx*/)
+				InclusiveOrExpression.S,
+				DoubleAmpersandTerminal.S)
 		{
 		}
 	}

@@ -11,7 +11,7 @@
 					new ParseAll(DoubleColonTerminal.S, IdentifierTerminal.S),
 					Empty.S),
 				GenericDimensionSpecifier.O,
-				UnboundTypeNameSuffix.O)
+				UnboundTypeNameSuffixes.O)
 		{
 		}
 	}

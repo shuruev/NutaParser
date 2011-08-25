@@ -1,11 +1,11 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class UnboundTypeNameSuffix : ParseMany
+	public class UnboundTypeNameSuffixes : ParseMany
 	{
-		public static readonly UnboundTypeNameSuffix S = new UnboundTypeNameSuffix();
+		public static readonly UnboundTypeNameSuffixes S = new UnboundTypeNameSuffixes();
 		public static readonly Optional O = new Optional(S);
 
-		public UnboundTypeNameSuffix()
+		public UnboundTypeNameSuffixes()
 			: base(
 				new ParseAll(
 					PeriodTerminal.S,

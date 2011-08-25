@@ -1,13 +1,15 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class RelationalExpression : ParseAny
+	public class RelationalExpression : ParseAll
 	{
 		public static readonly RelationalExpression S = new RelationalExpression();
 
 		public RelationalExpression()
 			: base(
-				ShiftExpression.S
-				/*xxx*/)
+				ShiftExpression.S,
+				new ParseAny(
+					new ParseMany(RelationalExpressionPart.S),
+					Empty.S))
 		{
 		}
 	}

@@ -1,13 +1,13 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class NullCoalescingExpression : ParseAny
+	public class NullCoalescingExpression : ParseMany
 	{
 		public static readonly NullCoalescingExpression S = new NullCoalescingExpression();
 
 		public NullCoalescingExpression()
 			: base(
-				ConditionalOrExpression.S
-				/*xxx*/)
+				ConditionalOrExpression.S,
+				DoubleQuestionTerminal.S)
 		{
 		}
 	}

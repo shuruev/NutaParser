@@ -11,8 +11,6 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, VariableReference.S, "5");
 			Check(false, VariableReference.S, "!");
-
-			// xxx
 		}
 	}
 }

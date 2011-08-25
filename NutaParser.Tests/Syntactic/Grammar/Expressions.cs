@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NutaParser.Syntactic.Grammar;
 
 namespace NutaParser.Tests.Syntactic.Grammar
@@ -432,7 +433,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, Commas.S, ",");
 			Check(true, Commas.S, ",,");
 			Check(true, Commas.S, ",, ,");
-			Check(false, Commas.S, "");
+			Check(false, Commas.S, String.Empty);
 			Check(false, Commas.S, " ");
 			Check(false, Commas.S, ".,");
 		}
@@ -512,6 +513,157 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, CastExpression.S, "(List<int>)++5");
 			Check(false, CastExpression.S, "(a++)int");
 			Check(false, CastExpression.S, "(<int>)++5");
+		}
+
+		[TestMethod]
+		public void Is_Multiplicative_Expression()
+		{
+			Check(true, MultiplicativeExpression.S, "5");
+			Check(true, MultiplicativeExpression.S, "5 * 6");
+			Check(true, MultiplicativeExpression.S, "5 * 6 / A.B / c % d");
+			Check(false, MultiplicativeExpression.S, "5 ** 6");
+			Check(false, MultiplicativeExpression.S, "5 * 6 /");
+		}
+
+		[TestMethod]
+		public void Is_Additive_Expression()
+		{
+			Check(true, AdditiveExpression.S, "5");
+			Check(true, AdditiveExpression.S, "5 + 6");
+			Check(true, AdditiveExpression.S, "5 + 6 - A.B - c");
+			Check(true, AdditiveExpression.S, "1 * 2 + 3 / 4 - 5 % 6");
+			Check(true, AdditiveExpression.S, "5 + + 6");
+			Check(false, AdditiveExpression.S, "5 ++ 6");
+			Check(false, AdditiveExpression.S, "5 + 6 -");
+		}
+
+		[TestMethod]
+		public void Is_Shift_Expression()
+		{
+			Check(true, ShiftExpression.S, "5");
+			Check(true, ShiftExpression.S, "5 >> 6");
+			Check(true, ShiftExpression.S, "5 >> 6 << A.B << c");
+			Check(true, ShiftExpression.S, "1 * 2 + 3 << 4 / (5 - 5 % 6) << 7");
+
+			Check(false, ShiftExpression.S, "5 >");
+			Check(false, ShiftExpression.S, "5 ><");
+			Check(false, ShiftExpression.S, "5 >>");
+			Check(false, ShiftExpression.S, "5 > > 6");
+			Check(false, ShiftExpression.S, "5 >>> 6");
+			Check(false, ShiftExpression.S, "5 >> 6 <<");
+		}
+
+		[TestMethod]
+		public void Is_Relational_Expression()
+		{
+			Check(true, RelationalExpression.S, "a");
+			Check(true, RelationalExpression.S, "(a < b) > c");
+			Check(true, RelationalExpression.S, "a <= b >= c");
+			Check(true, RelationalExpression.S, "a is bool?[] as List<int?>");
+			Check(true, RelationalExpression.S, "(a < b) > c <= d >= e is g as int > c <= d >= e is g");
+			Check(true, RelationalExpression.S, "1 * 2 + 3 << 4 > (5 - 5 % 6) << 7");
+
+			Check(false, RelationalExpression.S, "5 >");
+			Check(false, RelationalExpression.S, "5 > = 6");
+			Check(false, RelationalExpression.S, "a is 5");
+			Check(false, RelationalExpression.S, "b as 6");
+
+			// TODO: there is a problem with angle brackets
+			// because they are considered as a generic type definition
+			Check(false, RelationalExpression.S, "a < b > c");
+		}
+
+		[TestMethod]
+		public void Is_Equality_Expression()
+		{
+			Check(true, EqualityExpression.S, "5 == 6");
+			Check(true, EqualityExpression.S, "5 == 6 == 7");
+			Check(true, EqualityExpression.S, "(a - b / 5 >> 6) == false");
+			Check(true, EqualityExpression.S, "(a + b % 5 << 6) != this.A() == true");
+
+			Check(false, EqualityExpression.S, "5 = 6");
+			Check(false, EqualityExpression.S, "5 = = 6");
+			Check(false, EqualityExpression.S, "5 ! = 6");
+			Check(false, EqualityExpression.S, "5 == 6 ==");
+		}
+
+		[TestMethod]
+		public void Is_And_Expression()
+		{
+			Check(true, AndExpression.S, "a");
+			Check(true, AndExpression.S, "a & b");
+			Check(true, AndExpression.S, "a == b & c");
+			Check(true, AndExpression.S, "(a == 5) & (b - 6)");
+			Check(false, AndExpression.S, "a &");
+			Check(false, AndExpression.S, "a && b");
+		}
+
+		[TestMethod]
+		public void Is_Exclusive_Or_Expression()
+		{
+			Check(true, ExclusiveOrExpression.S, "a");
+			Check(true, ExclusiveOrExpression.S, "a ^ b");
+			Check(true, ExclusiveOrExpression.S, "a & b ^ c");
+			Check(true, ExclusiveOrExpression.S, "(a == 5) ^ (b - 6)");
+			Check(false, ExclusiveOrExpression.S, "a ^");
+			Check(false, ExclusiveOrExpression.S, "a ^^ b");
+		}
+
+		[TestMethod]
+		public void Is_Inclusive_Or_Expression()
+		{
+			Check(true, InclusiveOrExpression.S, "a");
+			Check(true, InclusiveOrExpression.S, "a | b");
+			Check(true, InclusiveOrExpression.S, "a ^ b | c");
+			Check(true, InclusiveOrExpression.S, "(a == 5) | (b - 6)");
+			Check(false, InclusiveOrExpression.S, "a |");
+			Check(false, InclusiveOrExpression.S, "a || b");
+		}
+
+		[TestMethod]
+		public void Is_Conditional_And_Expression()
+		{
+			Check(true, ConditionalAndExpression.S, "a");
+			Check(true, ConditionalAndExpression.S, "a && b");
+			Check(true, ConditionalAndExpression.S, "a | b && c");
+			Check(true, ConditionalAndExpression.S, "(a == 5) && (b - 6)");
+			Check(false, ConditionalAndExpression.S, "a &&");
+			Check(false, ConditionalAndExpression.S, "a &&& b");
+		}
+
+		[TestMethod]
+		public void Is_Conditional_Or_Expression()
+		{
+			Check(true, ConditionalOrExpression.S, "a");
+			Check(true, ConditionalOrExpression.S, "a || b");
+			Check(true, ConditionalOrExpression.S, "a && b || c");
+			Check(true, ConditionalOrExpression.S, "(a == 5) || (b - 6)");
+			Check(false, ConditionalOrExpression.S, "a ||");
+			Check(false, ConditionalOrExpression.S, "a ||| b");
+		}
+
+		[TestMethod]
+		public void Is_Null_Coalescing_Expression()
+		{
+			Check(true, NullCoalescingExpression.S, "a");
+			Check(true, NullCoalescingExpression.S, "a || b == c");
+			Check(true, NullCoalescingExpression.S, "a ?? b");
+			Check(true, NullCoalescingExpression.S, "a || b ?? c == d ?? a - b");
+			Check(false, NullCoalescingExpression.S, "a ? b");
+			Check(false, NullCoalescingExpression.S, "a ??");
+			Check(false, NullCoalescingExpression.S, "a ?? b ??");
+		}
+
+		[TestMethod]
+		public void Is_Conditional_Expression()
+		{
+			Check(true, ConditionalExpression.S, "a");
+			Check(true, ConditionalExpression.S, "a ? b : c");
+			Check(true, ConditionalExpression.S, "a || b ? c == d : this.A()");
+			Check(true, ConditionalExpression.S, "a ? b : c ? d : e");
+			Check(false, ConditionalExpression.S, "a ? b :");
+			Check(false, ConditionalExpression.S, "a ?? b : c");
+			Check(false, ConditionalExpression.S, "a ? b :: c");
 		}
 	}
 }
