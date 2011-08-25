@@ -6,8 +6,9 @@
 
 		public NonAssignmentExpression()
 			: base(
-				ConditionalExpression.S
-				/*xxx*/)
+				ConditionalExpression.S,
+				LambdaExpression.S
+				/*xxxQUERY*/)
 		{
 		}
 	}

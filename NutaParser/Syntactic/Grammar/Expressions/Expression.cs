@@ -8,8 +8,8 @@
 		{
 			return ParseAny(
 				state,
-				NonAssignmentExpression.S
-				/*xxx*/);
+				Assignment.S,
+				NonAssignmentExpression.S);
 		}
 	}
 }

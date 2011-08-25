@@ -91,7 +91,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, PrimaryNoArrayCreationExpression.S, "checked((a++)");
 			Check(false, PrimaryNoArrayCreationExpression.S, "unchecked((a--)");
 			Check(false, PrimaryNoArrayCreationExpression.S, "default((List<int>)");
-			Check(false, PrimaryNoArrayCreationExpression.S, "delegate (int a)");
+			Check(false, PrimaryNoArrayCreationExpression.S, "delegate (int a) { ;; }");
 		}
 
 		[TestMethod]
@@ -294,7 +294,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, ElementInitializer.S, "a");
 			Check(true, ElementInitializer.S, "{ a, b }");
-			//xxxCheck(true, ElementInitializer.S, "{ a = 5, b = 6 }");
+			Check(true, ElementInitializer.S, "{ a = 5, b = 6 }");
 			Check(false, ElementInitializer.S, "a, b");
 			Check(false, ElementInitializer.S, "a = 5");
 		}
@@ -664,6 +664,199 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, ConditionalExpression.S, "a ? b :");
 			Check(false, ConditionalExpression.S, "a ?? b : c");
 			Check(false, ConditionalExpression.S, "a ? b :: c");
+		}
+
+		[TestMethod]
+		public void Is_Lambda_Expression()
+		{
+			Check(true, LambdaExpression.S, "(int x, int y) => x + y");
+			Check(true, LambdaExpression.S, "() => 5");
+			Check(true, LambdaExpression.S, "(x, y) => x + y");
+			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x + y; }");
+			Check(false, LambdaExpression.S, "x, y => x + y");
+			Check(false, LambdaExpression.S, "(x, y) <= x + y");
+
+			Check(true, LambdaExpression.S, "x => x + 1");
+			//xxxCheck(true, LambdaExpression.S, "x => { return x + 1; }");
+			Check(true, LambdaExpression.S, "(int x) => x + 1");
+			//xxxCheck(true, LambdaExpression.S, "(int x) => { return x + 1; }");
+			Check(true, LambdaExpression.S, "(int x, int y) => x - y");
+			//xxxCheck(true, LambdaExpression.S, "(int x, int y) => { return x - y; }");
+			Check(true, LambdaExpression.S, "(x, y) => x * y");
+			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x * y; }");
+			Check(true, LambdaExpression.S, "() => Console.WriteLine()");
+			//xxxCheck(true, LambdaExpression.S, "() => { Console.WriteLine(); }");
+			Check(true, LambdaExpression.S, "x => x + 1");
+			//xxxCheck(true, LambdaExpression.S, "x => { return x + 1; }");
+			Check(true, LambdaExpression.S, "(int x) => x + 1");
+			//xxxCheck(true, LambdaExpression.S, "(int x) => { return x + 1; }");
+			Check(true, LambdaExpression.S, "(int x, int y) => x - y");
+			//xxxCheck(true, LambdaExpression.S, "(int x, int y) => { return x - y; }");
+			Check(true, LambdaExpression.S, "(x, y) => x * y");
+			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x * y; }");
+			Check(true, LambdaExpression.S, "() => Console.WriteLine()");
+			//xxxCheck(true, LambdaExpression.S, "() => { Console.WriteLine(); }");
+		}
+
+		[TestMethod]
+		public void Is_Anonymous_Method_Expression()
+		{
+			//xxx
+			//Check(true, AnonymousMethodExpression.S, "delegate { return x + y; }");
+			//Check(true, AnonymousMethodExpression.S, "delegate (int x, int y) { return x + y; }");
+			//Check(false, AnonymousMethodExpression.S, "delegate (x, y) { return x + y; }");
+			//Check(false, AnonymousMethodExpression.S, "delegate (int x, int y) { }");
+			//Check(false, AnonymousMethodExpression.S, "delegate (int x, int y)");
+		}
+
+		[TestMethod]
+		public void Is_Anonymous_Function_Signature()
+		{
+			Check(true, AnonymousFunctionSignature.S, "()");
+			Check(true, AnonymousFunctionSignature.S, "(int x, ref byte[] y)");
+			Check(true, AnonymousFunctionSignature.S, "(abc)");
+			Check(true, AnonymousFunctionSignature.S, "abc");
+		}
+
+		[TestMethod]
+		public void Is_Explicit_Anonymous_Function_Signature()
+		{
+			Check(true, ExplicitAnonymousFunctionSignature.S, "()");
+			Check(true, ExplicitAnonymousFunctionSignature.S, "(int x, ref byte[] y)");
+			Check(false, ExplicitAnonymousFunctionSignature.S, "(abc)");
+			Check(false, ExplicitAnonymousFunctionSignature.S, "abc");
+			Check(false, ExplicitAnonymousFunctionSignature.S, "(x, y)");
+			Check(false, ExplicitAnonymousFunctionSignature.S, "x, y");
+		}
+
+		[TestMethod]
+		public void Is_Explicit_Anonymous_Function_Parameter_List()
+		{
+			Check(true, ExplicitAnonymousFunctionParameterList.S, "int a, ref bool b");
+			Check(false, ExplicitAnonymousFunctionParameterList.S, "int a, ref bool b,");
+		}
+
+		[TestMethod]
+		public void Is_Explicit_Anonymous_Function_Parameter()
+		{
+			Check(true, ExplicitAnonymousFunctionParameter.S, "int a");
+			Check(true, ExplicitAnonymousFunctionParameter.S, "ref int a");
+			Check(true, ExplicitAnonymousFunctionParameter.S, "out int a");
+			Check(false, ExplicitAnonymousFunctionParameter.S, "abc");
+			Check(false, ExplicitAnonymousFunctionParameter.S, "int 1");
+			Check(false, ExplicitAnonymousFunctionParameter.S, "in int a");
+		}
+
+		[TestMethod]
+		public void Is_Anonymous_Function_Parameter_Modifier()
+		{
+			Check(true, AnonymousFunctionParameterModifier.S, "ref");
+			Check(true, AnonymousFunctionParameterModifier.S, "out");
+			Check(false, AnonymousFunctionParameterModifier.S, "in");
+		}
+
+		[TestMethod]
+		public void Is_Implicit_Anonymous_Function_Signature()
+		{
+			Check(true, ImplicitAnonymousFunctionSignature.S, "()");
+			Check(true, ImplicitAnonymousFunctionSignature.S, "(x, y)");
+			Check(true, ImplicitAnonymousFunctionSignature.S, "(abc)");
+			Check(true, ImplicitAnonymousFunctionSignature.S, "abc");
+			Check(false, ImplicitAnonymousFunctionSignature.S, "x, y");
+		}
+
+		[TestMethod]
+		public void Is_Implicit_Anonymous_Function_Parameter_List()
+		{
+			Check(true, ImplicitAnonymousFunctionParameterList.S, "Abc, d");
+			Check(false, ImplicitAnonymousFunctionParameterList.S, "Abc, d,");
+		}
+
+		[TestMethod]
+		public void Is_Implicit_Anonymous_Function_Parameter()
+		{
+			Check(true, ImplicitAnonymousFunctionParameter.S, "Abc1");
+			Check(false, ImplicitAnonymousFunctionParameter.S, "1Abc");
+		}
+
+		[TestMethod]
+		public void Is_Anonymous_Function_Body()
+		{
+			Check(true, AnonymousFunctionBody.S, "5");
+			Check(true, AnonymousFunctionBody.S, "a + b");
+			Check(false, AnonymousFunctionBody.S, "!");
+
+			//xxxBLOCK
+		}
+
+		[TestMethod]
+		public void Is_Assignment()
+		{
+			Check(true, Assignment.S, "a = 5");
+			Check(true, Assignment.S, "a >>= 5");
+			Check(true, Assignment.S, "a = b = c");
+			Check(true, Assignment.S, "a = (b + c) / 25 >> 30");
+			Check(true, Assignment.S, "--this.A()++ = !!~~this.B()");
+			Check(false, Assignment.S, "a != b");
+			Check(false, Assignment.S, "a = (b + c) / 25 >>= 30");
+		}
+
+		[TestMethod]
+		public void Is_Assignment_Operator()
+		{
+			Check(true, AssignmentOperator.S, "=");
+			Check(true, AssignmentOperator.S, "+=");
+			Check(true, AssignmentOperator.S, "-=");
+			Check(true, AssignmentOperator.S, "*=");
+			Check(true, AssignmentOperator.S, "/=");
+			Check(true, AssignmentOperator.S, "%=");
+			Check(true, AssignmentOperator.S, "&=");
+			Check(true, AssignmentOperator.S, "|=");
+			Check(true, AssignmentOperator.S, "^=");
+			Check(true, AssignmentOperator.S, "^=");
+			Check(true, AssignmentOperator.S, "<<=");
+			Check(true, AssignmentOperator.S, ">>=");
+
+			Check(false, AssignmentOperator.S, "==");
+			Check(false, AssignmentOperator.S, "<<");
+			Check(false, AssignmentOperator.S, ">>");
+			Check(false, AssignmentOperator.S, ">> =");
+			Check(false, AssignmentOperator.S, "> >=");
+			Check(false, AssignmentOperator.S, "> > =");
+		}
+
+		[TestMethod]
+		public void Is_Expression()
+		{
+			Check(true, Expression.S, "(a + b) || (c >> d) ? c ^ d : this.A()");
+			Check(true, Expression.S, "(x, y) => x + y");
+			//xxxQUERY
+			Check(true, Expression.S, "a = b = c");
+		}
+
+		[TestMethod]
+		public void Is_Non_Assignment_Expression()
+		{
+			Check(true, NonAssignmentExpression.S, "(a + b) || (c >> d) ? c ^ d : this.A()");
+			Check(true, NonAssignmentExpression.S, "(x, y) => x + y");
+			//xxxQUERY
+			Check(false, NonAssignmentExpression.S, "a = b = c");
+		}
+
+		[TestMethod]
+		public void Is_Constant_Expression()
+		{
+			Check(true, ConstantExpression.S, "5");
+			Check(true, ConstantExpression.S, "a + b");
+			Check(false, ConstantExpression.S, "!");
+		}
+
+		[TestMethod]
+		public void Is_Boolean_Expression()
+		{
+			Check(true, BooleanExpression.S, "5");
+			Check(true, BooleanExpression.S, "a + b");
+			Check(false, BooleanExpression.S, "!");
 		}
 	}
 }

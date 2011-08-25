@@ -10,6 +10,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Variable_Reference()
 		{
 			Check(true, VariableReference.S, "5");
+			Check(true, VariableReference.S, "a + b");
 			Check(false, VariableReference.S, "!");
 		}
 	}
