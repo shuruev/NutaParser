@@ -48,6 +48,11 @@
     <Compile Include="Syntactic\Grammar\Arrays.cs" />
     <Compile Include="Syntactic\Grammar\Expressions.cs" />
     <Compile Include="Syntactic\Grammar\Variables.cs" />
+    <Compile Include="Syntactic\Syntactic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Syntactic.resx</DependentUpon>
+    </Compile>
     <Compile Include="TestHelper.cs" />
     <Compile Include="Lexical\Grammar\Directives.cs" />
     <Compile Include="Lexical\Grammar\Grammar.cs" />
@@ -75,6 +80,10 @@
     <EmbeddedResource Include="Lexical\Lexical.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Lexical.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Syntactic\Syntactic.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Syntactic.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

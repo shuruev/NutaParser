@@ -675,7 +675,11 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x + y; }");
 			Check(false, LambdaExpression.S, "x, y => x + y");
 			Check(false, LambdaExpression.S, "(x, y) <= x + y");
+		}
 
+		[TestMethod]
+		public void Is_Lambda_Expression_Additional()
+		{
 			Check(true, LambdaExpression.S, "x => x + 1");
 			//xxxCheck(true, LambdaExpression.S, "x => { return x + 1; }");
 			Check(true, LambdaExpression.S, "(int x) => x + 1");
@@ -686,6 +690,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x * y; }");
 			Check(true, LambdaExpression.S, "() => Console.WriteLine()");
 			//xxxCheck(true, LambdaExpression.S, "() => { Console.WriteLine(); }");
+
 			Check(true, LambdaExpression.S, "x => x + 1");
 			//xxxCheck(true, LambdaExpression.S, "x => { return x + 1; }");
 			Check(true, LambdaExpression.S, "(int x) => x + 1");
@@ -787,6 +792,32 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, AnonymousFunctionBody.S, "!");
 
 			//xxxBLOCK
+		}
+
+		//xxx
+
+		[TestMethod]
+		public void Is_Query_Expression_Additional()
+		{
+			Check(true, QueryExpression.S, Syntactic.QueryExpression1);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression2);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression3);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression4);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression5);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression6);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression7);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression8);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression9);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression10);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression11);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression12);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression13);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression14);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression15);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression16);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression17);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression18);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression19);
 		}
 
 		[TestMethod]
