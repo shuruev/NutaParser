@@ -72,7 +72,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, PrimaryNoArrayCreationExpression.S, "checked(a++)");
 			Check(true, PrimaryNoArrayCreationExpression.S, "unchecked(a--)");
 			Check(true, PrimaryNoArrayCreationExpression.S, "default(List<int>)");
-			//xxxCheck(true, PrimaryNoArrayCreationExpression.S, "delegate (int a) { return 5; }");
+			Check(true, PrimaryNoArrayCreationExpression.S, "delegate (int a) { return 5; }");
 
 			Check(false, PrimaryNoArrayCreationExpression.S, "'abc'");
 			Check(false, PrimaryNoArrayCreationExpression.S, "Abc<T>>");
@@ -91,7 +91,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, PrimaryNoArrayCreationExpression.S, "checked((a++)");
 			Check(false, PrimaryNoArrayCreationExpression.S, "unchecked((a--)");
 			Check(false, PrimaryNoArrayCreationExpression.S, "default((List<int>)");
-			Check(false, PrimaryNoArrayCreationExpression.S, "delegate (int a) { ;; }");
+			Check(false, PrimaryNoArrayCreationExpression.S, "delegate (a) { return 5; }");
 		}
 
 		[TestMethod]
@@ -672,7 +672,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, LambdaExpression.S, "(int x, int y) => x + y");
 			Check(true, LambdaExpression.S, "() => 5");
 			Check(true, LambdaExpression.S, "(x, y) => x + y");
-			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x + y; }");
+			Check(true, LambdaExpression.S, "(x, y) => { return x + y; }");
 			Check(false, LambdaExpression.S, "x, y => x + y");
 			Check(false, LambdaExpression.S, "(x, y) <= x + y");
 		}
@@ -681,37 +681,38 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Lambda_Expression_Additional()
 		{
 			Check(true, LambdaExpression.S, "x => x + 1");
-			//xxxCheck(true, LambdaExpression.S, "x => { return x + 1; }");
+			Check(true, LambdaExpression.S, "x => { return x + 1; }");
 			Check(true, LambdaExpression.S, "(int x) => x + 1");
-			//xxxCheck(true, LambdaExpression.S, "(int x) => { return x + 1; }");
+			Check(true, LambdaExpression.S, "(int x) => { return x + 1; }");
 			Check(true, LambdaExpression.S, "(int x, int y) => x - y");
-			//xxxCheck(true, LambdaExpression.S, "(int x, int y) => { return x - y; }");
+			Check(true, LambdaExpression.S, "(int x, int y) => { return x - y; }");
 			Check(true, LambdaExpression.S, "(x, y) => x * y");
-			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x * y; }");
+			Check(true, LambdaExpression.S, "(x, y) => { return x * y; }");
 			Check(true, LambdaExpression.S, "() => Console.WriteLine()");
-			//xxxCheck(true, LambdaExpression.S, "() => { Console.WriteLine(); }");
+			Check(true, LambdaExpression.S, "() => { Console.WriteLine(); }");
 
 			Check(true, LambdaExpression.S, "x => x + 1");
-			//xxxCheck(true, LambdaExpression.S, "x => { return x + 1; }");
+			Check(true, LambdaExpression.S, "x => { return x + 1; }");
 			Check(true, LambdaExpression.S, "(int x) => x + 1");
-			//xxxCheck(true, LambdaExpression.S, "(int x) => { return x + 1; }");
+			Check(true, LambdaExpression.S, "(int x) => { return x + 1; }");
 			Check(true, LambdaExpression.S, "(int x, int y) => x - y");
-			//xxxCheck(true, LambdaExpression.S, "(int x, int y) => { return x - y; }");
+			Check(true, LambdaExpression.S, "(int x, int y) => { return x - y; }");
 			Check(true, LambdaExpression.S, "(x, y) => x * y");
-			//xxxCheck(true, LambdaExpression.S, "(x, y) => { return x * y; }");
+			Check(true, LambdaExpression.S, "(x, y) => { return x * y; }");
 			Check(true, LambdaExpression.S, "() => Console.WriteLine()");
-			//xxxCheck(true, LambdaExpression.S, "() => { Console.WriteLine(); }");
+			Check(true, LambdaExpression.S, "() => { Console.WriteLine(); }");
 		}
 
 		[TestMethod]
 		public void Is_Anonymous_Method_Expression()
 		{
-			//xxx
-			//Check(true, AnonymousMethodExpression.S, "delegate { return x + y; }");
-			//Check(true, AnonymousMethodExpression.S, "delegate (int x, int y) { return x + y; }");
-			//Check(false, AnonymousMethodExpression.S, "delegate (x, y) { return x + y; }");
-			//Check(false, AnonymousMethodExpression.S, "delegate (int x, int y) { }");
-			//Check(false, AnonymousMethodExpression.S, "delegate (int x, int y)");
+			Check(true, AnonymousMethodExpression.S, "delegate { return x + y; }");
+			Check(true, AnonymousMethodExpression.S, "delegate (int x, int y) { return x + y; }");
+			Check(true, AnonymousMethodExpression.S, "delegate (int x, int y) { }");
+			Check(false, AnonymousMethodExpression.S, "delegate (x, y) { return x + y; }");
+			Check(false, AnonymousMethodExpression.S, "delegate (int x, int y)");
+			Check(false, AnonymousMethodExpression.S, "delegate int x { return x; }");
+			Check(false, AnonymousMethodExpression.S, "delegate (int x) { return x }");
 		}
 
 		[TestMethod]
@@ -791,10 +792,20 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, AnonymousFunctionBody.S, "a + b");
 			Check(false, AnonymousFunctionBody.S, "!");
 
-			//xxxBLOCK
+			Check(true, AnonymousFunctionBody.S, "{ }");
+			Check(true, AnonymousFunctionBody.S, "{ return a + b; }");
+			Check(false, AnonymousFunctionBody.S, "{ return }");
 		}
 
-		//xxx
+		[TestMethod]
+		public void Is_Query_Expression()
+		{
+			Check(true, QueryExpression.S, "from a in b select x");
+			Check(true, QueryExpression.S, "from a in b let c = d where e select x");
+			Check(true, QueryExpression.S, "from a in b from x in y let c = d where e select x");
+			Check(false, QueryExpression.S, "select x");
+			Check(false, QueryExpression.S, "let c = d where e select x");
+		}
 
 		[TestMethod]
 		public void Is_Query_Expression_Additional()
@@ -817,7 +828,133 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, QueryExpression.S, Syntactic.QueryExpression16);
 			Check(true, QueryExpression.S, Syntactic.QueryExpression17);
 			Check(true, QueryExpression.S, Syntactic.QueryExpression18);
-			Check(true, QueryExpression.S, Syntactic.QueryExpression19);
+		}
+
+		[TestMethod]
+		public void Is_Query_Body()
+		{
+			Check(true, QueryBody.S, "select x");
+			Check(true, QueryBody.S, "from a in b let c = d where e select x");
+			Check(true, QueryBody.S, "let c = d where e select x");
+			Check(true, QueryBody.S, "select x into y let c = d select z");
+			Check(false, QueryBody.S, "let c = d where e");
+			Check(false, QueryBody.S, "select x into y");
+			Check(false, QueryBody.S, "select x into y let c = d");
+		}
+
+		[TestMethod]
+		public void Is_Query_Body_Clauses()
+		{
+			Check(true, QueryBodyClauses.S, "from a in b let c = d where e");
+			Check(true, QueryBodyClauses.S, "join a in b on c equals d orderby e");
+		}
+
+		[TestMethod]
+		public void Is_Query_Body_Clause()
+		{
+			Check(true, QueryBodyClause.S, "from List<int> a in address");
+			Check(true, QueryBodyClause.S, "let a = c.Name.Length > 0 ? 1 : -1");
+			Check(true, QueryBodyClause.S, "where a != b || c.Name.Length > 0");
+			Check(true, QueryBodyClause.S, "join List<int> a in address on c.ZipCode equals a.ZipCode");
+			Check(true, QueryBodyClause.S, "join List<int> a in address on c.ZipCode equals a.ZipCode into x");
+			Check(true, QueryBodyClause.S, "orderby c.LastName, c.FirstName ascending, c.SecondName descending");
+		}
+
+		[TestMethod]
+		public void Is_From_Clause()
+		{
+			Check(true, FromClause.S, "from List<int> a in address");
+			Check(true, FromClause.S, "from a in address");
+			Check(false, FromClause.S, "from null a in address");
+			Check(false, FromClause.S, "from null in address");
+		}
+
+		[TestMethod]
+		public void Is_Let_Clause()
+		{
+			Check(true, LetClause.S, "let a = 5");
+			Check(true, LetClause.S, "let a = c.Name.Length > 0 ? 1 : -1");
+			Check(false, LetClause.S, "let a << 5");
+		}
+
+		[TestMethod]
+		public void Is_Where_Clause()
+		{
+			Check(true, WhereClause.S, "where c.Name.Length > 0");
+			Check(true, WhereClause.S, "where a != b || c.Name.Length > 0");
+			Check(false, WhereClause.S, "where !");
+		}
+
+		[TestMethod]
+		public void Is_Join_Clause()
+		{
+			Check(true, JoinClause.S, "join List<int> a in address on c.ZipCode equals a.ZipCode");
+			Check(false, JoinClause.S, "join List<int> a in address on c.ZipCode equals a.ZipCode into x");
+			Check(true, JoinClause.S, "join a in address on c.ZipCode equals a.ZipCode");
+			Check(false, JoinClause.S, "join a in address on c.ZipCode equals a.ZipCode into x");
+		}
+
+		[TestMethod]
+		public void Is_Join_Into_Clause()
+		{
+			Check(false, JoinIntoClause.S, "join List<int> a in address on c.ZipCode equals a.ZipCode");
+			Check(true, JoinIntoClause.S, "join List<int> a in address on c.ZipCode equals a.ZipCode into x");
+			Check(false, JoinIntoClause.S, "join a in address on c.ZipCode equals a.ZipCode");
+			Check(true, JoinIntoClause.S, "join a in address on c.ZipCode equals a.ZipCode into x");
+		}
+
+		[TestMethod]
+		public void Is_Orderby_Clause()
+		{
+			Check(true, OrderbyClause.S, "orderby c.LastName, c.FirstName ascending, c.SecondName descending");
+			Check(false, OrderbyClause.S, "orderby  c.LastName, c.FirstName ascending,");
+		}
+
+		[TestMethod]
+		public void Is_Orderings()
+		{
+			Check(true, Orderings.S, "c.LastName, c.FirstName ascending, c.SecondName descending");
+			Check(false, Orderings.S, "c.LastName, c.FirstName ascending,");
+		}
+
+		[TestMethod]
+		public void Is_Ordering()
+		{
+			Check(true, Ordering.S, "c.LastName");
+			Check(true, Ordering.S, "c.LastName ascending");
+			Check(false, Ordering.S, "{ ! }");
+			Check(false, Ordering.S, "{ ! } ascending");
+		}
+
+		[TestMethod]
+		public void Is_Ordering_Direction()
+		{
+			Check(true, OrderingDirection.S, "ascending");
+			Check(true, OrderingDirection.S, "descending");
+			Check(false, OrderingDirection.S, "unknown");
+		}
+
+		[TestMethod]
+		public void Is_Select_Or_Group_Clause()
+		{
+			Check(true, SelectOrGroupClause.S, "select c.Name");
+			Check(true, SelectOrGroupClause.S, "group c by c.Name");
+			Check(false, SelectOrGroupClause.S, "select !");
+			Check(false, SelectOrGroupClause.S, "group ! by c.Country");
+		}
+
+		[TestMethod]
+		public void Is_Select_Clause()
+		{
+			Check(true, SelectClause.S, "select c.Name");
+			Check(false, SelectClause.S, "select !");
+		}
+
+		[TestMethod]
+		public void Is_Group_Clause()
+		{
+			Check(true, GroupClause.S, "group c by c.Country");
+			Check(false, GroupClause.S, "group ! by c.Country");
 		}
 
 		[TestMethod]
@@ -861,7 +998,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, Expression.S, "(a + b) || (c >> d) ? c ^ d : this.A()");
 			Check(true, Expression.S, "(x, y) => x + y");
-			//xxxQUERY
+			Check(true, Expression.S, "from c in customers select c.Name");
 			Check(true, Expression.S, "a = b = c");
 		}
 
@@ -870,7 +1007,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, NonAssignmentExpression.S, "(a + b) || (c >> d) ? c ^ d : this.A()");
 			Check(true, NonAssignmentExpression.S, "(x, y) => x + y");
-			//xxxQUERY
+			Check(true, NonAssignmentExpression.S, "from c in customers select c.Name");
 			Check(false, NonAssignmentExpression.S, "a = b = c");
 		}
 

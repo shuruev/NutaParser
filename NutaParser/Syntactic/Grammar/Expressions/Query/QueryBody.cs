@@ -1,14 +1,17 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class QueryBody : ParseAll
+	public class QueryBody : ParseMany
 	{
 		public static readonly QueryBody S = new QueryBody();
 
 		public QueryBody()
 			: base(
-				QueryBodyClauses.O,
-				SelectOrGroupClause.S,
-				QueryContinuation.O)
+				new ParseAll(
+					QueryBodyClauses.O,
+					SelectOrGroupClause.S),
+				new ParseAll(
+					IntoTerminal.S,
+					IdentifierTerminal.S))
 		{
 		}
 	}

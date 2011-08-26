@@ -6,8 +6,8 @@
 
 		public AnonymousFunctionBody()
 			: base(
-				Expression.S
-				/*xxxBLOCK*/)
+				Expression.S,
+				Block.S)
 		{
 		}
 	}

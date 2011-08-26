@@ -130,24 +130,21 @@
     <value>from c in customers orderby c.LastName descending, c.FirstName ascending orderby c.Address select c.Name</value>
   </data>
   <data name="QueryExpression13" xml:space="preserve">
-    <value>from c in customers select c.Name</value>
-  </data>
-  <data name="QueryExpression14" xml:space="preserve">
     <value>from c in customers group c by c.Country</value>
   </data>
-  <data name="QueryExpression15" xml:space="preserve">
+  <data name="QueryExpression14" xml:space="preserve">
     <value>from c in customers group c by c.Country into g select g.Key</value>
   </data>
-  <data name="QueryExpression16" xml:space="preserve">
+  <data name="QueryExpression15" xml:space="preserve">
     <value>from itm in new int[] { 1, 2, 3, 4, 5 } let i = itm == 1 ? 1 : 0 select i</value>
   </data>
-  <data name="QueryExpression17" xml:space="preserve">
+  <data name="QueryExpression16" xml:space="preserve">
     <value>from b in new int[] { 1, 2, 3, 4, 5 } where true &amp;&amp; (b.Equals) select b</value>
   </data>
-  <data name="QueryExpression18" xml:space="preserve">
+  <data name="QueryExpression17" xml:space="preserve">
     <value>from b in new int[] { 1, 2, 3, 4, 5 } where true || (b.Equals) select b</value>
   </data>
-  <data name="QueryExpression19" xml:space="preserve">
+  <data name="QueryExpression18" xml:space="preserve">
     <value>from b in new int[] { 1, 2, 3, 4, 5 } where true != (b.Equals) select b</value>
   </data>
   <data name="QueryExpression2" xml:space="preserve">

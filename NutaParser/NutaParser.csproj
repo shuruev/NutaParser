@@ -238,7 +238,6 @@
     <Compile Include="Syntactic\Grammar\Expressions\Primary\Creation\DelegateCreationExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Query\QueryExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Query\FromClause.cs" />
-    <Compile Include="Syntactic\Grammar\Expressions\Query\QueryContinuation.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Query\QueryBody.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Query\QueryBodyClauses.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Query\QueryBodyClause.cs" />
@@ -257,6 +256,15 @@
     <Compile Include="Syntactic\Grammar\Expressions\Unary\CastExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Unary\PreDecrementExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Unary\PreIncrementExpression.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\Block.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\EmptyStatement.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\Expression\StatementExpression.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\Expression\ExpressionStatement.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\StatementList.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\Statement.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\EmbeddedStatement.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\Jump\JumpStatement.cs" />
+    <Compile Include="Syntactic\Grammar\Statements\Jump\ReturnStatement.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\AmpersandTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\CaretTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\BarTerminal.cs" />
@@ -274,7 +282,9 @@
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\Compound\NotEqualTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\Compound\DoubleEqualTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\Compound\PlusEqualTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Punctuator\SemicolonTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\AsTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Word\ReturnTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\Query\ByTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\Query\AscendingTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\Query\FromTerminal.cs" />
@@ -438,7 +448,6 @@
     <Compile Include="Syntactic\SyntacticState.cs" />
     <Compile Include="Syntactic\SyntacticEntry.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

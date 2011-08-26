@@ -7,8 +7,8 @@
 		public AnonymousMethodExpression()
 			: base(
 				DelegateTerminal.S,
-				ExplicitAnonymousFunctionSignature.O
-				/*xxxBLOCK*/)
+				ExplicitAnonymousFunctionSignature.O,
+				Block.S)
 		{
 		}
 	}

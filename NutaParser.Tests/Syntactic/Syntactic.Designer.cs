@@ -97,7 +97,7 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to from c in customers select c.Name.
+        ///   Looks up a localized string similar to from c in customers group c by c.Country.
         /// </summary>
         internal static string QueryExpression13 {
             get {
@@ -106,7 +106,7 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to from c in customers group c by c.Country.
+        ///   Looks up a localized string similar to from c in customers group c by c.Country into g select g.Key.
         /// </summary>
         internal static string QueryExpression14 {
             get {
@@ -115,7 +115,7 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to from c in customers group c by c.Country into g select g.Key.
+        ///   Looks up a localized string similar to from itm in new int[] { 1, 2, 3, 4, 5 } let i = itm == 1 ? 1 : 0 select i.
         /// </summary>
         internal static string QueryExpression15 {
             get {
@@ -124,7 +124,7 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to from itm in new int[] { 1, 2, 3, 4, 5 } let i = itm == 1 ? 1 : 0 select i.
+        ///   Looks up a localized string similar to from b in new int[] { 1, 2, 3, 4, 5 } where true &amp;&amp; (b.Equals) select b.
         /// </summary>
         internal static string QueryExpression16 {
             get {
@@ -133,7 +133,7 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to from b in new int[] { 1, 2, 3, 4, 5 } where true &amp;&amp; (b.Equals) select b.
+        ///   Looks up a localized string similar to from b in new int[] { 1, 2, 3, 4, 5 } where true || (b.Equals) select b.
         /// </summary>
         internal static string QueryExpression17 {
             get {
@@ -142,20 +142,11 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to from b in new int[] { 1, 2, 3, 4, 5 } where true || (b.Equals) select b.
+        ///   Looks up a localized string similar to from b in new int[] { 1, 2, 3, 4, 5 } where true != (b.Equals) select b.
         /// </summary>
         internal static string QueryExpression18 {
             get {
                 return ResourceManager.GetString("QueryExpression18", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to from b in new int[] { 1, 2, 3, 4, 5 } where true != (b.Equals) select b.
-        /// </summary>
-        internal static string QueryExpression19 {
-            get {
-                return ResourceManager.GetString("QueryExpression19", resourceCulture);
             }
         }
         
