@@ -94,10 +94,8 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx switch-label
 
-		//xxx iteration-statement
-
 		[TestMethod]
-		public void Is_Iteration_Statement_Additional()
+		public void Is_Iteration_Statement()
 		{
 			Check(true, IterationStatement.S, "while (i < 5) i++;");
 			Check(true, IterationStatement.S, "while (i < 5) { i++; Console.WriteLine(i); }");
@@ -138,8 +136,6 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		//xxx return-statement
 
 		//xxx throw-statement
-
-		//xxx
 
 		//xxx try-statement
 

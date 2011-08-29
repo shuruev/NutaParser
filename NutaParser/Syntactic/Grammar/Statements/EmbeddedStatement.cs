@@ -13,8 +13,13 @@
 				ExpressionStatement.S,
 				SelectionStatement.S,
 				IterationStatement.S,
-				JumpStatement.S
-				/*xxx*/);
+				JumpStatement.S,
+				TryStatement.S,
+				CheckedStatement.S,
+				UncheckedStatement.S,
+				LockStatement.S,
+				UsingStatement.S,
+				YieldStatement.S);
 		}
 	}
 }
