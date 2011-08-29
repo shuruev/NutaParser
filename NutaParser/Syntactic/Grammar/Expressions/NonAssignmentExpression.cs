@@ -7,8 +7,8 @@
 		public NonAssignmentExpression()
 			: base(
 				QueryExpression.S,
-				ConditionalExpression.S,
-				LambdaExpression.S)
+				LambdaExpression.S,
+				ConditionalExpression.S)
 		{
 		}
 	}

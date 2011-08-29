@@ -221,5 +221,136 @@ namespace NutaParser.Tests.Syntactic {
                 return ResourceManager.GetString("QueryExpression9", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch (i) {
+        ///case 0:
+        ///   CaseZero();
+        ///   break;
+        ///case 1:
+        ///   CaseOne();
+        ///   break;
+        ///default:
+        ///   CaseOthers();
+        ///   break;
+        ///}.
+        /// </summary>
+        internal static string SwitchStatement1 {
+            get {
+                return ResourceManager.GetString("SwitchStatement1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch (i) {
+        ///case 0:
+        ///   CaseZero();
+        ///case 1:
+        ///   CaseZeroOrOne();
+        ///default:
+        ///   CaseAny();
+        ///}.
+        /// </summary>
+        internal static string SwitchStatement2 {
+            get {
+                return ResourceManager.GetString("SwitchStatement2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch (i) {
+        ///case 0:
+        ///   CaseZero();
+        ///   goto case 1;
+        ///case 1:
+        ///   CaseZeroOrOne();
+        ///   goto default;
+        ///default:
+        ///   CaseAny();
+        ///   break;
+        ///}.
+        /// </summary>
+        internal static string SwitchStatement3 {
+            get {
+                return ResourceManager.GetString("SwitchStatement3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch (i) {
+        ///case 0:
+        ///   CaseZero();
+        ///   break;
+        ///case 1:
+        ///   CaseOne();
+        ///   break;
+        ///case 2:
+        ///default:
+        ///   CaseTwo();
+        ///   break;
+        ///}.
+        /// </summary>
+        internal static string SwitchStatement4 {
+            get {
+                return ResourceManager.GetString("SwitchStatement4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch (i) {
+        ///default:
+        ///   CaseAny();
+        ///   break;
+        ///case 1:
+        ///   CaseZeroOrOne();
+        ///   goto default;
+        ///case 0:
+        ///   CaseZero();
+        ///   goto case 1;
+        ///}.
+        /// </summary>
+        internal static string SwitchStatement5 {
+            get {
+                return ResourceManager.GetString("SwitchStatement5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch (i) {
+        ///case 0:
+        ///   while (true) F();
+        ///case 1:
+        ///   throw new ArgumentException();
+        ///case 2:
+        ///   return;
+        ///}.
+        /// </summary>
+        internal static string SwitchStatement6 {
+            get {
+                return ResourceManager.GetString("SwitchStatement6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch (command.ToLower()) {
+        ///   case &quot;run&quot;:
+        ///      DoRun();
+        ///      break;
+        ///   case &quot;save&quot;:
+        ///      DoSave();
+        ///      break;
+        ///   case &quot;quit&quot;:
+        ///      DoQuit();
+        ///      break;
+        ///   default:
+        ///      InvalidCommand(command);
+        ///      break;
+        ///   }.
+        /// </summary>
+        internal static string SwitchStatement7 {
+            get {
+                return ResourceManager.GetString("SwitchStatement7", resourceCulture);
+            }
+        }
     }
 }

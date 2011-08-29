@@ -6,9 +6,11 @@
 
 		public JumpStatement()
 			: base(
-				/*xxx*/
-				ReturnStatement.S
-				/*xxx*/)
+				BreakStatement.S,
+				ContinueStatement.S,
+				GotoStatement.S,
+				ReturnStatement.S,
+				ThrowStatement.S)
 		{
 		}
 	}

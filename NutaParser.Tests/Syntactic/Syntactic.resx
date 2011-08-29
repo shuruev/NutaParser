@@ -171,4 +171,93 @@
   <data name="QueryExpression9" xml:space="preserve">
     <value>from c in customers orderby c.LastName ascending select c.Name</value>
   </data>
+  <data name="SwitchStatement1" xml:space="preserve">
+    <value>switch (i) {
+case 0:
+   CaseZero();
+   break;
+case 1:
+   CaseOne();
+   break;
+default:
+   CaseOthers();
+   break;
+}</value>
+  </data>
+  <data name="SwitchStatement2" xml:space="preserve">
+    <value>switch (i) {
+case 0:
+   CaseZero();
+case 1:
+   CaseZeroOrOne();
+default:
+   CaseAny();
+}</value>
+  </data>
+  <data name="SwitchStatement3" xml:space="preserve">
+    <value>switch (i) {
+case 0:
+   CaseZero();
+   goto case 1;
+case 1:
+   CaseZeroOrOne();
+   goto default;
+default:
+   CaseAny();
+   break;
+}</value>
+  </data>
+  <data name="SwitchStatement4" xml:space="preserve">
+    <value>switch (i) {
+case 0:
+   CaseZero();
+   break;
+case 1:
+   CaseOne();
+   break;
+case 2:
+default:
+   CaseTwo();
+   break;
+}</value>
+  </data>
+  <data name="SwitchStatement5" xml:space="preserve">
+    <value>switch (i) {
+default:
+   CaseAny();
+   break;
+case 1:
+   CaseZeroOrOne();
+   goto default;
+case 0:
+   CaseZero();
+   goto case 1;
+}</value>
+  </data>
+  <data name="SwitchStatement6" xml:space="preserve">
+    <value>switch (i) {
+case 0:
+   while (true) F();
+case 1:
+   throw new ArgumentException();
+case 2:
+   return;
+}</value>
+  </data>
+  <data name="SwitchStatement7" xml:space="preserve">
+    <value>switch (command.ToLower()) {
+   case "run":
+      DoRun();
+      break;
+   case "save":
+      DoSave();
+      break;
+   case "quit":
+      DoQuit();
+      break;
+   default:
+      InvalidCommand(command);
+      break;
+   }</value>
+  </data>
 </root>

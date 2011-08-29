@@ -998,6 +998,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, Expression.S, "(a + b) || (c >> d) ? c ^ d : this.A()");
 			Check(true, Expression.S, "(x, y) => x + y");
+			Check(true, Expression.S, "x => x + 1");
 			Check(true, Expression.S, "from c in customers select c.Name");
 			Check(true, Expression.S, "a = b = c");
 		}
@@ -1007,6 +1008,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, NonAssignmentExpression.S, "(a + b) || (c >> d) ? c ^ d : this.A()");
 			Check(true, NonAssignmentExpression.S, "(x, y) => x + y");
+			Check(true, NonAssignmentExpression.S, "x => x + 1");
 			Check(true, NonAssignmentExpression.S, "from c in customers select c.Name");
 			Check(false, NonAssignmentExpression.S, "a = b = c");
 		}

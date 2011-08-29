@@ -6,7 +6,8 @@
 
 		public Statement()
 			: base(
-				/*xxx*/
+				LabeledStatement.S,
+				DeclarationStatement.S,
 				EmbeddedStatement.S)
 		{
 		}

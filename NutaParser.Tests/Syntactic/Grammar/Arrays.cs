@@ -46,6 +46,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, ArrayInitializer.S, "{ this.A, }");
 			Check(true, ArrayInitializer.S, "{ { a, b }, c }");
 			Check(true, ArrayInitializer.S, "{ { a, b }, c, }");
+			Check(true, ArrayInitializer.S, "{ 1, 2, 3 }");
 			Check(false, ArrayInitializer.S, "{ , }");
 			Check(false, ArrayInitializer.S, "{ this.A,, }");
 		}

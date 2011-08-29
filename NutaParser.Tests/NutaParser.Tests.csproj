@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Syntactic\Grammar\Arrays.cs" />
+    <Compile Include="Syntactic\Grammar\Statements.cs" />
     <Compile Include="Syntactic\Grammar\Expressions.cs" />
     <Compile Include="Syntactic\Grammar\Variables.cs" />
     <Compile Include="Syntactic\Syntactic.Designer.cs">

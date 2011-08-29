@@ -1,18 +1,20 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class EmbeddedStatement : ParseAny
+	public class EmbeddedStatement : SyntacticItem
 	{
 		public static readonly EmbeddedStatement S = new EmbeddedStatement();
 
-		public EmbeddedStatement()
-			: base(
+		public override bool Parse(SyntacticState state)
+		{
+			return ParseAny(
+				state,
 				Block.S,
 				EmptyStatement.S,
 				ExpressionStatement.S,
-				/*xxx*/
+				SelectionStatement.S,
+				IterationStatement.S,
 				JumpStatement.S
-				/*xxx*/)
-		{
+				/*xxx*/);
 		}
 	}
 }
