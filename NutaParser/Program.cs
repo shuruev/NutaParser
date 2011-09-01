@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using NutaParser.Lexical;
 using NutaParser.Lexical.Grammar;
+using NutaParser.Syntactic;
+using NutaParser.Syntactic.Grammar;
 
 namespace NutaParser
 {
@@ -13,8 +15,8 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
-			ParseAll(@"C:\Users\Public\VSS\SED\TFS\PDM\PDMMaintenanceTool");
+			Parse2(ClassDeclaration.S, @"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
+			//ParseAll(@"C:\Users\Public\VSS\SED\TFS\PDM\PDMMaintenanceTool");
 			return;
 
 			//ParseAll(@"D:\OLEG\Dropbox");
@@ -49,6 +51,44 @@ namespace NutaParser
 
 		public static LexicalState Parse(string filePath)
 		{
+			string data = ReadFileData(filePath);
+
+			LexicalState state = new LexicalState(data);
+			Input.S.Parse(state);
+
+			return state;
+		}
+
+		private static SyntacticState Parse2(SyntacticItem item, string filePath)
+		{
+			string data = ReadFileData(filePath);
+
+			LexicalState lexicalState = new LexicalState(data);
+			bool lexicalParsed = Input.S.Parse(lexicalState);
+
+			if (!lexicalParsed)
+				return null;
+
+			if (!lexicalState.IsEndOfData)
+				return null;
+
+			SyntacticState syntacticState = new SyntacticState(
+				lexicalState.ExtractTokens(),
+				data);
+
+			bool syntacticParsed = item.Parse(syntacticState);
+
+			if (!syntacticParsed)
+				return null;
+
+			if (!syntacticState.IsEndOfData)
+				return null;
+
+			return syntacticState;
+		}
+
+		public static string ReadFileData(string filePath)
+		{
 			string utf8 = File.ReadAllText(filePath, Encoding.UTF8);
 			string cp1251 = File.ReadAllText(filePath, Encoding.GetEncoding(1251));
 
@@ -66,12 +106,7 @@ namespace NutaParser
 				throw new InvalidOperationException("Unkonwn encoding");
 			}
 
-			data = PrepareEndOfFile(data);
-
-			LexicalState state = new LexicalState(data);
-			Input.S.Parse(state);
-
-			return state;
+			return PrepareEndOfFile(data);
 		}
 
 		public static string PrepareEndOfFile(string data)
