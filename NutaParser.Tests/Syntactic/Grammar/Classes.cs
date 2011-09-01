@@ -7,6 +7,11 @@ namespace NutaParser.Tests.Syntactic.Grammar
 	[TestClass]
 	public class Classes : GrammarTest
 	{
+		[TestMethod]
+		public void Is_Class_Declaration_Additional()
+		{
+		}
+
 		//xxx class-declaration
 
 		//xxx class-modifiers

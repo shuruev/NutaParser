@@ -15,8 +15,10 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			Parse2(ClassDeclaration.S, @"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
+			Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
 			//ParseAll(@"C:\Users\Public\VSS\SED\TFS\PDM\PDMMaintenanceTool");
+			Console.WriteLine("Done.");
+			Console.ReadKey();
 			return;
 
 			//ParseAll(@"D:\OLEG\Dropbox");
@@ -29,7 +31,7 @@ namespace NutaParser
 
 		public static void ParseAll(string dirPath)
 		{
-			var files = Directory.EnumerateFiles(dirPath, "*.cs", SearchOption.AllDirectories);
+			/*xxxvar files = Directory.EnumerateFiles(dirPath, "*.cs", SearchOption.AllDirectories);
 
 			foreach (string file in files)
 			{
@@ -46,23 +48,20 @@ namespace NutaParser
 					throw new InvalidOperationException("Parsing error.");
 			}
 
-			Console.WriteLine("Done.");
+			Console.WriteLine("Done.");*/
 		}
 
-		public static LexicalState Parse(string filePath)
+		public static void Parse(string filePath)
 		{
 			string data = ReadFileData(filePath);
 
-			LexicalState state = new LexicalState(data);
-			Input.S.Parse(state);
-
-			return state;
+			SyntacticState state = ParseSyntactic(data);
+			if (state == null)
+				throw new InvalidOperationException("Parsing error.");
 		}
 
-		private static SyntacticState Parse2(SyntacticItem item, string filePath)
+		private static LexicalState ParseLexical(string data)
 		{
-			string data = ReadFileData(filePath);
-
 			LexicalState lexicalState = new LexicalState(data);
 			bool lexicalParsed = Input.S.Parse(lexicalState);
 
@@ -72,11 +71,20 @@ namespace NutaParser
 			if (!lexicalState.IsEndOfData)
 				return null;
 
+			return lexicalState;
+		}
+
+		private static SyntacticState ParseSyntactic(string data)
+		{
+			LexicalState lexicalState = ParseLexical(data);
+			if (lexicalState == null)
+				return null;
+
 			SyntacticState syntacticState = new SyntacticState(
 				lexicalState.ExtractTokens(),
 				data);
 
-			bool syntacticParsed = item.Parse(syntacticState);
+			bool syntacticParsed = CompilationUnit.S.Parse(syntacticState);
 
 			if (!syntacticParsed)
 				return null;
