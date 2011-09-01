@@ -9,6 +9,7 @@
 			return ParseAny(
 				state,
 				LiteralTerminal.S,
+				MemberAccessSimple.S,
 				SimpleName.S,
 				ParenthesizedExpression.S,
 				ThisAccess.S,

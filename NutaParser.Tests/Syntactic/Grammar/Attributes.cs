@@ -19,6 +19,12 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx attributes
 
+		[TestMethod]
+		public void Is_Attributes_Additional()
+		{
+			Check(true, NutaParser.Syntactic.Grammar.Attributes.S, "[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]");
+		}
+
 		//xxx attribute-sections
 
 		//xxx attribute-section

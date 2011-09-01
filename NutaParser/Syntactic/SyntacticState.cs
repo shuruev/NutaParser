@@ -122,11 +122,8 @@ namespace NutaParser.Syntactic
 		internal string GetOuterDebug()
 		{
 			return m_outerData
-				.Substring(m_outerPosition, Math.Min(30, m_outerData.Length - m_outerPosition))
-				.Replace("\r", String.Empty)
-				.Replace("\n", String.Empty)
-				.Replace("\t", String.Empty)
-				.Replace("\v", String.Empty);
+				.Substring(m_outerPosition, Math.Min(60, m_outerData.Length - m_outerPosition))
+				.ToDisplay();
 		}
 
 		#endregion

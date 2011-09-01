@@ -203,6 +203,7 @@
     <Compile Include="Lexical\Grammar\Comments\NotSlashOrAsterisk.cs" />
     <Compile Include="Lexical\Grammar\Literals\UnicodeEscapeSequence.cs" />
     <Compile Include="Lexical\Grammar\Tokens\WhitespaceCharacter.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\ArrayInitializer.cs" />
@@ -321,6 +322,7 @@
     <Compile Include="Syntactic\Grammar\Expressions\AssignmentOperator.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\Commas.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\CheckedExpression.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Primary\MemberAccessSimple.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\DefaultValueExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\UncheckedExpression.cs" />
     <Compile Include="Syntactic\Grammar\Expressions\Primary\TypeofExpression.cs" />

@@ -6,7 +6,8 @@
 
 		public CompilationUnit()
 			: base(
-				/*xxx*/
+				ExternAliasDirectives.O,
+				UsingDirectives.O,
 				GlobalAttributes.O,
 				NamespaceMemberDeclarations.O)
 		{

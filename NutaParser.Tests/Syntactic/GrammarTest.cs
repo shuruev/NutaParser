@@ -23,7 +23,7 @@ namespace NutaParser.Tests.Syntactic
 				throw new AssertFailedException(
 					String.Format(
 						"Checking for [{0}] failed. Expected:<{1}>. Actual:<{2}>.",
-						data.Replace("\r", "\v").Replace("\n", "\v"),
+						data.ToDisplay(),
 						expected,
 						!expected));
 			}
@@ -34,7 +34,7 @@ namespace NutaParser.Tests.Syntactic
 		/// </summary>
 		private static bool Parse(SyntacticItem item, string data)
 		{
-			data = Program.PrepareEndOfFile(data);
+			data = Parser.PrepareEndOfFile(data);
 
 			LexicalState lexicalState = new LexicalState(data);
 			bool lexicalParsed = Input.S.Parse(lexicalState);

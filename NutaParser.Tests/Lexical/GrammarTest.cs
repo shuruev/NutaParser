@@ -21,7 +21,7 @@ namespace NutaParser.Tests.Lexical
 				throw new AssertFailedException(
 					String.Format(
 						"Checking for [{0}] failed. Expected:<{1}>. Actual:<{2}>.",
-						data.Replace("\r", "\v").Replace("\n", "\v"),
+						data.ToDisplay(),
 						expected,
 						!expected));
 			}

@@ -117,10 +117,12 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, MemberAccess.S, "Abc.D<T>");
 			Check(true, MemberAccess.S, "Abc.D");
-			Check(true, MemberAccess.S, "bool.D<T>");
-			Check(true, MemberAccess.S, "bool.D");
-			Check(true, MemberAccess.S, "global::Abc.D");
-			Check(true, MemberAccess.S, "global::Abc<T>.D");
+			Check(true, MemberAccessSimple.S, "bool.D<T>");
+			Check(true, MemberAccessSimple.S, "bool.D");
+			Check(true, MemberAccessSimple.S, "global::Abc.D");
+			Check(true, MemberAccess.S, "global::Abc.D.E");
+			Check(true, MemberAccess.S, "global::Abc.D.E.F");
+			Check(true, MemberAccessSimple.S, "global::Abc<T>.D");
 			Check(false, MemberAccess.S, "global::Abc.D<T>");
 			Check(false, MemberAccess.S, "Abc.D.<T>");
 
