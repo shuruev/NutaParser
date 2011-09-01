@@ -87,6 +87,7 @@
     <EmbeddedResource Include="Syntactic\Syntactic.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Syntactic.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

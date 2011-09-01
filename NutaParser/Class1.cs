@@ -113,11 +113,11 @@ namespace PDMMaintenanceTool.AttrGroups
 			data.IsMultyVal = IsMultyVal;
 			data.Comment = Comment;
 			data.UnitList = (IUnitList)UnitList.Data;
-			data.ValueList = (IValueList)ValueList.Data;
-			data.Owner = (IAttrGroup)AttrGroup.Data;
+			/*data.ValueList = (IValueList)ValueList.Data;
+			data.Owner = (IAttrGroup)AttrGroup.Data;*/
 		}
 
-		void RefreshDictionaries()
+		/*void RefreshDictionaries()
 		{
 			UnitLists.Add(EmptyWrapper.Value);
 			UnitLists.AddRange(from x in m_stor.UnitLists.ReadUnitLists()
@@ -171,7 +171,7 @@ namespace PDMMaintenanceTool.AttrGroups
 			{
 				Source = new AttrEditWrapper(data, stor, view) { IsUpdate = false }
 			};
-		}
+		}*/
 	}
 
 	public class AttrEditMode : EditMode<AttrEditWrapper> { }
