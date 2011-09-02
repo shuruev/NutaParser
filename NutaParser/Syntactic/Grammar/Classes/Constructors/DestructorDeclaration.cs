@@ -7,7 +7,7 @@
 		public DestructorDeclaration()
 			: base(
 				Attributes.O,
-				ExternTerminal.S,
+				ExternTerminal.O,
 				TildeTerminal.S,
 				IdentifierTerminal.S,
 				LeftRoundBracketTerminal.S,

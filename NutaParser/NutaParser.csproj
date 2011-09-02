@@ -437,6 +437,7 @@
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\Compound\DoubleEqualTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\Compound\PlusEqualTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Punctuator\SemicolonTerminal.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Special\IdentifierInLinqTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\AsTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\ConstTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\CatchTerminal.cs" />
@@ -657,7 +658,9 @@
     <Compile Include="Syntactic\SyntacticState.cs" />
     <Compile Include="Syntactic\SyntacticEntry.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

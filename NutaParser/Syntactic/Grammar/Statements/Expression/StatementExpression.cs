@@ -6,9 +6,9 @@
 
 		public StatementExpression()
 			: base(
+				Assignment.S,
 				InvocationExpression.S,
 				ObjectCreationExpression.S,
-				Assignment.S,
 				PostIncrementExpression.S,
 				PostDecrementExpression.S,
 				PreIncrementExpression.S,

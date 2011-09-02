@@ -15,8 +15,8 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
-			//ParseAll(@"C:\Users\Public\VSS\SED\TFS\PDM\PDMMaintenanceTool");
+			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
+			ParseAll(@"C:\Users\Public\VSS\SED\TFS\PDM");
 
 			//ParseAll(@"D:\OLEG\Dropbox");
 			//ParseAll(@"D:\OLEG\Git");
@@ -51,6 +51,13 @@ namespace NutaParser
 		public static void Parse(string filePath)
 		{
 			string data = Parser.ReadFileData(filePath);
+
+			//xxx
+			if (data.Contains("interface ")
+				|| data.Contains("enum ")
+				|| data.Contains("delegate ")
+				|| data.Contains("struct "))
+				return;
 
 			SyntacticState state = ParseSyntactic(data);
 			if (state == null)

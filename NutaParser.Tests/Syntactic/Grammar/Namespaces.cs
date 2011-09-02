@@ -6,7 +6,6 @@ namespace NutaParser.Tests.Syntactic.Grammar
 	[TestClass]
 	public class Namespaces : GrammarTest
 	{
-
 		//xxx compilation-unit
 
 		//xxx namespace-declaration
@@ -21,7 +20,14 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx using-directives
 
-		//xxx using-directive
+		[TestMethod]
+		public void Is_Using_Directive()
+		{
+			//xxx
+
+			Check(true, UsingDirective.S, "using CategoryTemplatePair = System.Collections.Generic.KeyValuePair<string, CSMLG.CategoryTemplate>;");
+			Check(true, UsingDirective.S, "using TextItemMap = System.Collections.Generic.Dictionary<int, System.Collections.Generic.List<CSMLG.SupplementaryClasses.TextItemTemplate>>;");
+		}
 
 		//xxx using-alias-directive
 

@@ -9,7 +9,7 @@
 				UsingTerminal.S,
 				IdentifierTerminal.S,
 				EqualTerminal.S,
-				NamespaceName.S,
+				TypeName.S,
 				SemicolonTerminal.S)
 		{
 		}

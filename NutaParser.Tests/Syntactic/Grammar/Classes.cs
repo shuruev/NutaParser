@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NutaParser.Syntactic.Grammar;
 
 namespace NutaParser.Tests.Syntactic.Grammar
@@ -8,11 +7,10 @@ namespace NutaParser.Tests.Syntactic.Grammar
 	public class Classes : GrammarTest
 	{
 		[TestMethod]
-		public void Is_Class_Declaration_Additional()
+		public void Is_Class_Declaration()
 		{
+			//xxx
 		}
-
-		//xxx class-declaration
 
 		//xxx class-modifiers
 
@@ -78,7 +76,15 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx return-type
 
-		//xxx member-name
+		[TestMethod]
+		public void Is_Member_Name()
+		{
+			Check(true, MemberName.S, "Abc1");
+			Check(true, MemberName.S, "IList.Abc");
+			Check(true, MemberName.S, "System.Collections.IList.Abc");
+			Check(false, MemberName.S, "1Abc");
+			Check(false, MemberName.S, "Abc[]");
+		}
 
 		//xxx method-body
 
@@ -94,7 +100,14 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx parameter-array
 
-		//xxx property-declaration
+		[TestMethod]
+		public void Is_Property_Declaration()
+		{
+			//xxx
+
+			Check(true, PropertyDeclaration.S, "public IAttrGroup Data { get; private set; }");
+			Check(true, PropertyDeclaration.S, "object IWrapper.Data { get { return Data; } }");
+		}
 
 		//xxx property-modifiers
 
@@ -168,7 +181,13 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx static-constructor-body
 
-		//xxx destructor-declaration
+		[TestMethod]
+		public void Is_Desctructor_Declaration()
+		{
+			//xxx
+
+			Check(true, DestructorDeclaration.S, "~SqlExecutor() { Dispose(false); }");
+		}
 
 		//xxx destructor-body
 	}

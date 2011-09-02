@@ -6,10 +6,7 @@
 
 		public MemberName()
 			: base(
-				new ParseAll(
-					InterfaceType.S,
-					PeriodTerminal.S,
-					IdentifierTerminal.S),
+				TypeName.S,
 				IdentifierTerminal.S)
 		{
 		}

@@ -1021,6 +1021,17 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		}
 
 		[TestMethod]
+		public void Is_Expression_Linq_Versus_Casting_Issue()
+		{
+			Check(true, Expression.S, "q = select");
+			Check(true, Expression.S, "q = (abc)select");
+			Check(true, Expression.S, "from i in list where (i < 0) && (abc) select i");
+			Check(false, Expression.S, "from i in list where (i < 0) && select select i");
+			Check(false, Expression.S, "from i in list where (i < 0) && (select) select i");
+			Check(false, Expression.S, "from i in list where (i < 0) && (bool)select select i");
+		}
+
+		[TestMethod]
 		public void Is_Non_Assignment_Expression()
 		{
 			Check(true, NonAssignmentExpression.S, "(a + b) || (c >> d) ? c ^ d : this.A()");

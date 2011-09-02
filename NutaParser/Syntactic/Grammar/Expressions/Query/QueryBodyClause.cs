@@ -1,18 +1,28 @@
 ﻿namespace NutaParser.Syntactic.Grammar
 {
-	public class QueryBodyClause : ParseAny
+	public class QueryBodyClause : SyntacticItem
 	{
 		public static readonly QueryBodyClause S = new QueryBodyClause();
 
-		public QueryBodyClause()
-			: base(
-				FromClause.S,
-				LetClause.S,
-				WhereClause.S,
-				JoinIntoClause.S,
-				JoinClause.S,
-				OrderbyClause.S)
+		public override bool Parse(SyntacticState state)
 		{
+			state.RaiseFlag(Key);
+
+			try
+			{
+				return ParseAny(
+					state,
+					FromClause.S,
+					LetClause.S,
+					WhereClause.S,
+					JoinIntoClause.S,
+					JoinClause.S,
+					OrderbyClause.S);
+			}
+			finally
+			{
+				state.LowerFlag(Key);
+			}
 		}
 	}
 }

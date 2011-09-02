@@ -7,7 +7,13 @@ namespace NutaParser.Tests.Syntactic.Grammar
 	[TestClass]
 	public class Statements : GrammarTest
 	{
-		//xxx statement
+		[TestMethod]
+		public void Is_Statement()
+		{
+			//xxx
+
+			Check(true, Statement.S, "m_sqlCommand.Parameters.Add(\"RetVal\", SqlDbType.SmallInt).Direction = ParameterDirection.ReturnValue;");
+		}
 
 		//xxx embedded-statement
 

@@ -10,6 +10,7 @@ namespace NutaParser.Syntactic
 	public class SyntacticState
 	{
 		private readonly Dictionary<int, List<SyntacticEntry>> m_entriesByIndex;
+		private readonly Dictionary<string, int> m_stateFlags;
 
 		private readonly List<LexicalEntry> m_innerData;
 		private readonly string m_outerData;
@@ -30,6 +31,7 @@ namespace NutaParser.Syntactic
 				throw new ArgumentNullException("outerData");
 
 			m_entriesByIndex = new Dictionary<int, List<SyntacticEntry>>();
+			m_stateFlags = new Dictionary<string, int>();
 
 			m_innerData = new List<LexicalEntry>(innerData);
 			m_outerData = outerData;
@@ -179,6 +181,48 @@ namespace NutaParser.Syntactic
 
 			m_innerPosition = innerIndex;
 			m_outerPosition = outerIndex;
+		}
+
+		#endregion
+
+		#region Working with flags
+
+		/// <summary>
+		/// Raises a flag with specified key.
+		/// </summary>
+		public void RaiseFlag(string flagKey)
+		{
+			if (!m_stateFlags.ContainsKey(flagKey))
+				m_stateFlags[flagKey] = 0;
+
+			m_stateFlags[flagKey] += 1;
+		}
+
+		/// <summary>
+		/// Lowers a flag with specified key.
+		/// </summary>
+		public void LowerFlag(string flagKey)
+		{
+			if (!m_stateFlags.ContainsKey(flagKey))
+				throw new InvalidOperationException(
+					String.Format("Flag {0} does not exist.", flagKey));
+
+			if (m_stateFlags[flagKey] == 0)
+				throw new InvalidOperationException(
+					String.Format("Flag {0} was not raised.", flagKey));
+
+			m_stateFlags[flagKey] -= 1;
+		}
+
+		/// <summary>
+		/// Checks whether a flag with specified key is raised.
+		/// </summary>
+		public bool CheckFlag(string flagKey)
+		{
+			if (!m_stateFlags.ContainsKey(flagKey))
+				return false;
+
+			return m_stateFlags[flagKey] > 0;
 		}
 
 		#endregion
