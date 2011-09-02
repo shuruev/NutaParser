@@ -6,10 +6,24 @@
 
 		public TypeParameterConstraints()
 			: base(
-				new ParseAll(PrimaryConstraint.S, SecondaryConstraints.S, ConstructorConstraint.S),
-				new ParseAll(PrimaryConstraint.S, SecondaryConstraints.S),
-				new ParseAll(PrimaryConstraint.S, ConstructorConstraint.S),
-				new ParseAll(SecondaryConstraints.S, ConstructorConstraint.S),
+				new ParseAll(
+					PrimaryConstraint.S,
+					CommaTerminal.S,
+					SecondaryConstraints.S,
+					CommaTerminal.S,
+					ConstructorConstraint.S),
+				new ParseAll(
+					PrimaryConstraint.S,
+					CommaTerminal.S,
+					SecondaryConstraints.S),
+				new ParseAll(
+					PrimaryConstraint.S,
+					CommaTerminal.S,
+					ConstructorConstraint.S),
+				new ParseAll(
+					SecondaryConstraints.S,
+					CommaTerminal.S,
+					ConstructorConstraint.S),
 				PrimaryConstraint.S,
 				SecondaryConstraints.S,
 				ConstructorConstraint.S)

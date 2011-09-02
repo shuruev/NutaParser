@@ -6,8 +6,8 @@
 
 		public SecondaryConstraint()
 			: base(
-				TypeParameter.S,
-				InterfaceType.S)
+				InterfaceType.S,
+				TypeParameter.S)
 		{
 		}
 	}

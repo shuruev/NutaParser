@@ -26,9 +26,20 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx interface-type-list
 
-		//xxx type-parameter-constraints-clauses
+		[TestMethod]
+		public void Is_Type_Parameter_Constraints_Clauses()
+		{
+			//xxx
+		}
 
-		//xxx type-parameter-constraints-clause
+		[TestMethod]
+		public void Is_Type_Parameter_Constraints_Clause()
+		{
+			//xxx
+
+			Check(true, TypeParameterConstraintsClause.S, "where T : IDataRow, new()");
+			Check(true, TypeParameterConstraintsClause.S, "where T1 : IBinary, ISimpleRow<T2>, new()");
+		}
 
 		//xxx type-parameter-constraints
 
@@ -68,7 +79,14 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx method-declaration
 
-		//xxx method-header
+		[TestMethod]
+		public void Is_Method_Header()
+		{
+			//xxx
+
+			Check(true, MethodHeader.S, "public static void RepairSimple<T>(string tableName, IEnumerable<T> rows)");
+			Check(true, MethodHeader.S, "public static void RepairSimple<T>(string tableName, IEnumerable<T> rows) where T : IDataRow, new()");
+		}
 
 		//xxx method-modifiers
 
