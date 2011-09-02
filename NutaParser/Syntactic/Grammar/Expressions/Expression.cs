@@ -9,7 +9,7 @@
 		{
 			return ParseAny(
 				state,
-				Assignment.S,
+				/*xxxAssignment.S,*/
 				NonAssignmentExpression.S);
 		}
 	}

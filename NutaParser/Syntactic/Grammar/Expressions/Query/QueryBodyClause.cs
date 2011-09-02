@@ -8,21 +8,17 @@
 		{
 			state.RaiseFlag(StateFlags.InsideLinq);
 
-			try
-			{
-				return ParseAny(
-					state,
-					FromClause.S,
-					LetClause.S,
-					WhereClause.S,
-					JoinIntoClause.S,
-					JoinClause.S,
-					OrderbyClause.S);
-			}
-			finally
-			{
-				state.LowerFlag(StateFlags.InsideLinq);
-			}
+			bool parsed = ParseAny(
+				state,
+				FromClause.S,
+				LetClause.S,
+				WhereClause.S,
+				JoinIntoClause.S,
+				JoinClause.S,
+				OrderbyClause.S);
+
+			state.LowerFlag(StateFlags.InsideLinq);
+			return parsed;
 		}
 	}
 }

@@ -829,7 +829,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		[TestMethod]
 		public void Is_Query_Expression_Additional()
 		{
-			/*xxxCheck(true, QueryExpression.S, Syntactic.QueryExpression1);
+			Check(true, QueryExpression.S, Syntactic.QueryExpression1);
 			Check(true, QueryExpression.S, Syntactic.QueryExpression2);
 			Check(true, QueryExpression.S, Syntactic.QueryExpression3);
 			Check(true, QueryExpression.S, Syntactic.QueryExpression4);
@@ -846,15 +846,12 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, QueryExpression.S, Syntactic.QueryExpression15);
 			Check(true, QueryExpression.S, Syntactic.QueryExpression16);
 			Check(true, QueryExpression.S, Syntactic.QueryExpression17);
-			Check(true, QueryExpression.S, Syntactic.QueryExpression18);*/
+			Check(true, QueryExpression.S, Syntactic.QueryExpression18);
 		}
 
 		[TestMethod]
 		public void Is_Query_Body()
 		{
-			//xxx query-body-clauses -------------------------------]
-			Check(true, QueryBody.S, "where true || (b.Equals) select b");
-
 			Check(true, QueryBody.S, "select x");
 			Check(true, QueryBody.S, "from a in b let c = d where e select x");
 			Check(true, QueryBody.S, "let c = d where e select x");
@@ -1048,13 +1045,66 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Expression_Extremal_Deep()
 		{
 			Check(true, Expression.S, "(a + (a + b))");
+			Check(true, Expression.S, "((a + b) + b)");
 
-			/*Check(true, Expression.S, "(a + (a + (a + (a + (a + (a + (a + (a + (a + (a + b))))))))))");
-			Check(true, Expression.S, "((((((((((a + b) + b) + b) + b) + b) + b) + b) + b) + b) + b)");*/
+			Check(true, Expression.S, "(a + (a + (a + (a + (a + (a + (a + (a + (a + (a + b))))))))))");
+			Check(true, Expression.S, "((((((((((a + b) + b) + b) + b) + b) + b) + b) + b) + b) + b)");
 
-			Check(true, Expression.S, "(a * b) + (c * d)");
+			Check(
+				true,
+				Expression.S,
+				@"
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					(a+(a+(a+(a+(a+(a+(a+(a+(a+(a+
+					b
+					))))))))))
+					))))))))))
+					))))))))))
+					))))))))))
+					))))))))))
+					))))))))))
+					))))))))))
+					))))))))))
+					))))))))))
+					))))))))))
+				");
 
-			/*xxxCheck(
+			Check(
+				true,
+				Expression.S,
+				@"
+					((((((((((
+					((((((((((
+					((((((((((
+					((((((((((
+					((((((((((
+					((((((((((
+					((((((((((
+					((((((((((
+					((((((((((
+					((((((((((
+					a
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+					+b)+b)+b)+b)+b)+b)+b)+b)+b)+b)
+				");
+
+			Check(
 				true,
 				Expression.S,
 				@"
@@ -1081,7 +1131,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 					(((FLOOR(((((E104)*(E103)*(FLOOR((E86)*(1+(E87)),1)))*(IF((E102)==INCLUDE_OUTSIDE_SALES_EFFICIENCY, E105, 0)))
 					/(40*4.4)),1))*((E88)*(1+(E26)))*(1+(E89))/12)*(12-E110)),((FLOOR(((((E104)*(E103)*(FLOOR((E86)*(1+(E87)),1)))
 					*(IF((E102)==INCLUDE_OUTSIDE_SALES_EFFICIENCY, E105, 0)))/(40*4.4)),1))*((E88)*(1+(E26)))*(1+(E89))/12)*12)
-				");*/
+				");
 		}
 
 		[TestMethod]
