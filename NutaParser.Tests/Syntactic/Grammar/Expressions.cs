@@ -658,6 +658,9 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, NullCoalescingExpression.S, "a ? b");
 			Check(false, NullCoalescingExpression.S, "a ??");
 			Check(false, NullCoalescingExpression.S, "a ?? b ??");
+
+			Check(true, NullCoalescingExpression.S, "oldVal is DBNull");
+			Check(true, NullCoalescingExpression.S, "oldVal is DBNull?");
 		}
 
 		[TestMethod]
@@ -670,6 +673,16 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, ConditionalExpression.S, "a ? b :");
 			Check(false, ConditionalExpression.S, "a ?? b : c");
 			Check(false, ConditionalExpression.S, "a ? b :: c");
+
+			Check(true, ConditionalExpression.S, "o is bool ? 0 : 1");
+			Check(true, ConditionalExpression.S, "a + b is bool ? 0 : 1");
+			Check(true, ConditionalExpression.S, "(a + b) is bool ? 0 : 1");
+			Check(true, ConditionalExpression.S, "o is bool ? ? 0 : 1");
+			Check(false, ConditionalExpression.S, "o is bool ? ? ? 0 : 1");
+			Check(false, ConditionalExpression.S, "o is bool ?? 0 : 1");
+
+			Check(true, ConditionalExpression.S, "(a is bool?) && (b is bool?) ? 0 : 1");
+			Check(true, ConditionalExpression.S, "a is bool? && b is bool? ? 0 : 1");
 		}
 
 		[TestMethod]
@@ -1029,6 +1042,46 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(false, Expression.S, "from i in list where (i < 0) && select select i");
 			Check(false, Expression.S, "from i in list where (i < 0) && (select) select i");
 			Check(false, Expression.S, "from i in list where (i < 0) && (bool)select select i");
+		}
+
+		[TestMethod]
+		public void Is_Expression_Extremal_Deep()
+		{
+			Check(true, Expression.S, "(a + (a + b))");
+
+			/*Check(true, Expression.S, "(a + (a + (a + (a + (a + (a + (a + (a + (a + (a + b))))))))))");
+			Check(true, Expression.S, "((((((((((a + b) + b) + b) + b) + b) + b) + b) + b) + b) + b)");*/
+
+			Check(true, Expression.S, "(a * b) + (c * d)");
+
+			/*xxxCheck(
+				true,
+				Expression.S,
+				@"
+					((((((((E8)*(E9))/(E38))/(40*4.4))+((((E8)*((E35)))*(E38))/(40*52)))*((E10))
+					*(40*4.4))+(((((((E8)*(E9))/(E38))/(40*4.4))+((((E8)*((E35)))*(E38))/(40*52)))
+					/(E39))*((E45))*(1+(E50))/12)+(((((((E8)*(E9))/(E38))/(40*4.4))+((((E8)*((E35)))
+					*(E38))/(40*52)))/(E40))*((E46))*(1+(E50))/12)+(((E47))*((E54)*(E36))*(1+(E50))/12)
+					+(((E48))*((E55)*(E36))*(1+(E50))/12)+(((E49))*((E56)*(E36))*(1+(E50))/12)))*(12-E110)
+				");
+
+			Check(
+				true,
+				Expression.S,
+				@"
+					IF(E110>12, (((FLOOR((((FLOOR((E18)*(1+(E83)),1))-((((E19)*(FLOOR((E18)*(1+(E83)),1)))
+					*(1-(IF((E91)==INCLUDE_CALL_REDUCTIONS, E92, 0))))/((E19)*(1+(IF((E94)==INCLUDE_CALL_EFFICIENCY, E95, 0))))))
+					+(((IF((E102)==INCLUDE_OUTSIDE_SALES_EFFICIENCY, E107, 0))*((E106)*(E103)*(FLOOR((E86)*(1+(E87)),1))))
+					/(40*4.4))+((((FLOOR((E18)*(1+(E83)),1))*(E98)/12)*(E99)/4.4)*(IF((E97)==INCLUDE_REDUCED_RAMP_UP, E100, 0)))),1))
+					*(E20)*(1+(E89))/12)*(12-E110)),((FLOOR((((FLOOR((E18)*(1+(E83)),1))-((((E19)*(FLOOR((E18)
+					*(1+(E83)),1)))*(1-(IF((E91)==INCLUDE_CALL_REDUCTIONS, E92, 0))))/((E19)*(1
+					+(IF((E94)==INCLUDE_CALL_EFFICIENCY, E95, 0))))))+(((IF((E102)==INCLUDE_OUTSIDE_SALES_EFFICIENCY, E107, 0))
+					*((E106)*(E103)*(FLOOR((E86)*(1+(E87)),1))))/(40*4.4))+((((FLOOR((E18)*(1+(E83)),1))*(E98)/12)
+					*(E99)/4.4)*(IF((E97)==INCLUDE_REDUCED_RAMP_UP, E100, 0)))),1))*(E20)*(1+(E89))/12)*12)+IF(E110>12,
+					(((FLOOR(((((E104)*(E103)*(FLOOR((E86)*(1+(E87)),1)))*(IF((E102)==INCLUDE_OUTSIDE_SALES_EFFICIENCY, E105, 0)))
+					/(40*4.4)),1))*((E88)*(1+(E26)))*(1+(E89))/12)*(12-E110)),((FLOOR(((((E104)*(E103)*(FLOOR((E86)*(1+(E87)),1)))
+					*(IF((E102)==INCLUDE_OUTSIDE_SALES_EFFICIENCY, E105, 0)))/(40*4.4)),1))*((E88)*(1+(E26)))*(1+(E89))/12)*12)
+				");*/
 		}
 
 		[TestMethod]

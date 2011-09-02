@@ -13,6 +13,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			//xxx
 
 			Check(true, Statement.S, "m_sqlCommand.Parameters.Add(\"RetVal\", SqlDbType.SmallInt).Direction = ParameterDirection.ReturnValue;");
+			Check(true, Statement.S, "string s = oldVal is DBNull ? \"(null)\" : oldVal.ToString();");
 		}
 
 		//xxx embedded-statement

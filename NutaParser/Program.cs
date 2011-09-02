@@ -16,7 +16,7 @@ namespace NutaParser
 		public static void Main(string[] args)
 		{
 			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
-			ParseAll(@"C:\Users\Public\VSS\SED\TFS\PDM");
+			ParseAll(@"C:\Users\Public\VSS\SED\TFS");
 
 			//ParseAll(@"D:\OLEG\Dropbox");
 			//ParseAll(@"D:\OLEG\Git");
@@ -56,7 +56,8 @@ namespace NutaParser
 			if (data.Contains("interface ")
 				|| data.Contains("enum ")
 				|| data.Contains("delegate ")
-				|| data.Contains("struct "))
+				|| data.Contains("struct ")
+				|| data.Contains("unsafe"))
 				return;
 
 			SyntacticState state = ParseSyntactic(data);

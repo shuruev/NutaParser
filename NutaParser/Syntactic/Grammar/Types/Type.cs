@@ -6,6 +6,14 @@
 
 		public override bool Parse(SyntacticState state)
 		{
+			if (state.CheckFlag(StateFlags.IgnoreNullable))
+			{
+				return ParseAll(
+					state,
+					TypePart.S,
+					RankSpecifiers.O);
+			}
+
 			return ParseAll(
 				state,
 				TypePart.S,

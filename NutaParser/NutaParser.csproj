@@ -206,6 +206,7 @@
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\StateFlags.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\ArrayInitializer.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\VariableInitializerList.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\VariableInitializer.cs" />

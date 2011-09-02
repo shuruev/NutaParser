@@ -6,7 +6,7 @@
 
 		public override bool Parse(SyntacticState state)
 		{
-			state.RaiseFlag(Key);
+			state.RaiseFlag(StateFlags.InsideLinq);
 
 			try
 			{
@@ -21,7 +21,7 @@
 			}
 			finally
 			{
-				state.LowerFlag(Key);
+				state.LowerFlag(StateFlags.InsideLinq);
 			}
 		}
 	}

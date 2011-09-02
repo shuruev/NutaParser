@@ -6,7 +6,7 @@
 
 		public override bool Parse(SyntacticState state)
 		{
-			if (state.CheckFlag(QueryBodyClause.S.Key))
+			if (state.CheckFlag(StateFlags.InsideLinq))
 			{
 				return ParseAll(
 					state,
