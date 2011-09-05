@@ -57,7 +57,10 @@ namespace NutaParser
 				|| data.Contains("enum ")
 				|| data.Contains("delegate ")
 				|| data.Contains("struct ")
-				|| data.Contains("unsafe"))
+				|| data.Contains("unsafe")
+				|| data.Contains("fixed")
+				|| data.Contains("stackalloc")
+				|| data.Contains("sizeof"))
 				return;
 
 			SyntacticState state = ParseSyntactic(data);
