@@ -65,13 +65,27 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 		//xxx constant-declarator
 
-		//xxx field-declaration
+		[TestMethod]
+		public void Is_Field_Declaration()
+		{
+			//xxx
+
+			Check(true, FieldDeclaration.S, "private DateTime l_oDT0;");
+			Check(true, FieldDeclaration.S, "private DateTime l_oDT0, l_oDT;");
+		}
 
 		//xxx field-modifiers
 
 		//xxx field-modifier
 
-		//xxx variable-declarators
+		[TestMethod]
+		public void Is_Variable_Declarators()
+		{
+			//xxx
+
+			Check(true, VariableDeclarators.S, "l_oDT0");
+			Check(true, VariableDeclarators.S, "l_oDT0, l_oDT");
+		}
 
 		//xxx variable-declarator
 

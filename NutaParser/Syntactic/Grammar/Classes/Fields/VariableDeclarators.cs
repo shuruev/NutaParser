@@ -5,7 +5,7 @@
 		public static readonly VariableDeclarators S = new VariableDeclarators();
 
 		public VariableDeclarators()
-			: base(VariableDeclarator.S)
+			: base(VariableDeclarator.S, CommaTerminal.S)
 		{
 		}
 	}
