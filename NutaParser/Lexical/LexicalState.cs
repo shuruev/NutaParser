@@ -158,7 +158,7 @@ namespace NutaParser.Lexical
 
 		#endregion
 
-		#region Extracting result
+		#region Working with result
 
 		/// <summary>
 		/// Extracts all tokens from parsed results.

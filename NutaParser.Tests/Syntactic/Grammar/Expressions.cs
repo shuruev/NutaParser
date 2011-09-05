@@ -988,12 +988,27 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, Assignment.S, "a >>= 5");
 			Check(true, Assignment.S, "a = b = c");
 			Check(true, Assignment.S, "a = (b + c) / 25 >> 30");
+			Check(true, Assignment.S, "a = (b + c) / 25 >>= 30");
 			Check(true, Assignment.S, "--this.A()++ = !!~~this.B()");
 			Check(false, Assignment.S, "a != b");
-			Check(false, Assignment.S, "a = (b + c) / 25 >>= 30");
 
 			Check(true, Assignment.S, "data.UnitList = UnitList.Data");
 			Check(true, Assignment.S, "data.UnitList = (IUnitList)UnitList.Data");
+		}
+
+		[TestMethod]
+		public void Is_Assignment_As_Expression()
+		{
+			Check(true, Expression.S, "a = 5");
+			Check(true, Expression.S, "a >>= 5");
+			Check(true, Expression.S, "a = b = c");
+			Check(true, Expression.S, "a = (b + c) / 25 >> 30");
+			Check(true, Expression.S, "--this.A()++ = !!~~this.B()");
+			Check(true, Expression.S, "a != b");
+			Check(true, Expression.S, "a = (b + c) / 25 >>= 30");
+
+			Check(true, Expression.S, "data.UnitList = UnitList.Data");
+			Check(true, Expression.S, "data.UnitList = (IUnitList)UnitList.Data");
 		}
 
 		[TestMethod]

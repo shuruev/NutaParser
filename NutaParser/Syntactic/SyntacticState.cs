@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NutaParser.Lexical;
 
 namespace NutaParser.Syntactic
@@ -181,6 +182,22 @@ namespace NutaParser.Syntactic
 
 			m_innerPosition = innerIndex;
 			m_outerPosition = outerIndex;
+		}
+
+		#endregion
+
+		#region Working with result
+
+		/// <summary>
+		/// Checks whether there is specified entry at specified position.
+		/// </summary>
+		public bool CheckEntry(string key, int innerIndex)
+		{
+			if (!m_entriesByIndex.ContainsKey(innerIndex))
+				return false;
+
+			return m_entriesByIndex[innerIndex]
+				.Any(item => item.Key == key);
 		}
 
 		#endregion
