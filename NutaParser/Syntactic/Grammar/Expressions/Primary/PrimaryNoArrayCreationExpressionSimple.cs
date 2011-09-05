@@ -21,7 +21,8 @@
 				CheckedExpression.S,
 				UncheckedExpression.S,
 				DefaultValueExpression.S,
-				AnonymousMethodExpression.S);
+				AnonymousMethodExpression.S,
+				ArrayCreationExpression.S);
 		}
 	}
 }

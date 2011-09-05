@@ -52,6 +52,9 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		{
 			Check(true, PrimaryExpression.S, "Abc<T1, T2>");
 			Check(true, PrimaryExpression.S, "new[] { 5, 6 }");
+
+			Check(true, PrimaryExpression.S, "new[] { new Exec(Code.A, true) }.Sum()");
+			Check(true, PrimaryExpression.S, "new[] { 1, 2, 3 }.Count++--");
 		}
 
 		[TestMethod]
@@ -162,6 +165,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, InvocationExpression.S, "base.ExecuteFunction()");
 			Check(true, InvocationExpression.S, "base.ExecuteFunction(\"GetIconicSkuProperties\", sku_idParameter)");
 			Check(true, InvocationExpression.S, "base.ExecuteFunction<KeyValuePair>(\"GetIconicSkuProperties\", sku_idParameter)");
+			Check(true, InvocationExpression.S, "new[] { new Exec(Code.A, true) }.Sum()");
 		}
 
 		[TestMethod]
@@ -243,6 +247,8 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 			Check(false, ObjectCreationExpression.S, "new A");
 			Check(false, ObjectCreationExpression.S, "new A b { 5, 6 }");
+
+			Check(true, ObjectCreationExpression.S, "new Exec(new[] { new Exec(Code.A, true) }.Sum())");
 		}
 
 		[TestMethod]
@@ -335,6 +341,8 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, ArrayCreationExpression.S, "new[] { }");
 			Check(true, ArrayCreationExpression.S, "new[] { a, b }");
 			Check(false, ArrayCreationExpression.S, "new[][] { a, b }");
+
+			Check(true, ArrayCreationExpression.S, "new[] { new Exec(Code.A, true) }");
 		}
 
 		[TestMethod]
