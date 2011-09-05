@@ -13,6 +13,8 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, ArgumentList.S, "abc: 5");
 			Check(true, ArgumentList.S, "abc: 5, 6, d: e");
 			Check(false, ArgumentList.S, "abc: 5, 6, d: e,");
+
+			Check(true, ArgumentList.S, "\"sku_id\", typeof(global::System.Int32)");
 		}
 
 		[TestMethod]
@@ -152,9 +154,14 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, InvocationExpression.S, "Abc(d: 5, 6, e: 7)");
 			Check(true, InvocationExpression.S, "Abc++()");
 			Check(true, InvocationExpression.S, "Abc++--()()");
+			Check(true, InvocationExpression.S, "Abc<T>()");
 
 			Check(false, InvocationExpression.S, "Abc(()");
 			Check(false, InvocationExpression.S, "Abc++()--");
+
+			Check(true, InvocationExpression.S, "base.ExecuteFunction()");
+			Check(true, InvocationExpression.S, "base.ExecuteFunction(\"GetIconicSkuProperties\", sku_idParameter)");
+			Check(true, InvocationExpression.S, "base.ExecuteFunction<KeyValuePair>(\"GetIconicSkuProperties\", sku_idParameter)");
 		}
 
 		[TestMethod]
@@ -187,6 +194,8 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, BaseAccess.S, "base[5, 6]");
 			Check(true, BaseAccess.S, "base[a: 5]");
 			Check(true, BaseAccess.S, "base[a: 5, b: 6]");
+			Check(true, BaseAccess.S, "base.A<T>");
+			Check(true, BaseAccess.S, "base.A<T1, T2>");
 
 			Check(false, BaseAccess.S, "base.5");
 			Check(false, BaseAccess.S, "base[]");

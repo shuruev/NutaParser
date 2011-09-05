@@ -6,8 +6,16 @@
 
 		public BaseAccess()
 			: base(
-				new ParseAll(BaseTerminal.S, PeriodTerminal.S, IdentifierTerminal.S),
-				new ParseAll(BaseTerminal.S, LeftSquareBracketTerminal.S, ArgumentList.S, RightSquareBracketTerminal.S))
+				new ParseAll(
+					BaseTerminal.S,
+					PeriodTerminal.S,
+					IdentifierTerminal.S,
+					TypeArgumentList.O),
+				new ParseAll(
+					BaseTerminal.S,
+					LeftSquareBracketTerminal.S,
+					ArgumentList.S,
+					RightSquareBracketTerminal.S))
 		{
 		}
 	}
