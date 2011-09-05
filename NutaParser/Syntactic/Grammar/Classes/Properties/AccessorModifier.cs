@@ -7,11 +7,11 @@
 
 		public AccessorModifier()
 			: base(
+				new ParseAll(ProtectedTerminal.S, InternalTerminal.S),
+				new ParseAll(InternalTerminal.S, ProtectedTerminal.S),
 				ProtectedTerminal.S,
 				InternalTerminal.S,
-				PrivateTerminal.S,
-				new ParseAll(ProtectedTerminal.S, InternalTerminal.S),
-				new ParseAll(InternalTerminal.S, ProtectedTerminal.S))
+				PrivateTerminal.S)
 		{
 		}
 	}

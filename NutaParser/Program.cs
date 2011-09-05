@@ -16,8 +16,7 @@ namespace NutaParser
 		public static void Main(string[] args)
 		{
 			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
-			Parse(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
-			//ParseAll(@"C:\Users\Public\VSS\SED\TFS");
+			//Parse(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
 
 			//ParseAll(@"D:\OLEG\Dropbox");
 			//ParseAll(@"D:\OLEG\Git");
@@ -25,7 +24,8 @@ namespace NutaParser
 			//ParseAll(@"C:\Users\Public\GIT");
 			//ParseAll(@"C:\Users\Public\Mercurial");
 			//ParseAll(@"C:\Users\Public\TFS");
-			//ParseAll(@"C:\Users\Public\VSS");
+			ParseAll(@"C:\Users\Public\VSS");
+			//ParseAll(@"C:\Users\oshuruev\My Documents");
 
 			Console.WriteLine("Done.");
 			Console.ReadKey();
@@ -43,10 +43,8 @@ namespace NutaParser
 				Stopwatch sw = Stopwatch.StartNew();
 				Parse(file);
 				sw.Stop();
-				Console.Write(sw.ElapsedMilliseconds + "\t");
+				Console.WriteLine(sw.ElapsedMilliseconds + "\t");
 			}
-
-			Console.WriteLine("Done.");
 		}
 
 		public static void Parse(string filePath)
