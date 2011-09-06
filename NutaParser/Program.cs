@@ -22,10 +22,11 @@ namespace NutaParser
 			//ParseAll(@"D:\OLEG\Git");
 
 			//ParseAll(@"C:\Users\Public\GIT");
-			ParseAll(@"C:\Users\Public\Mercurial");
+			//ParseAll(@"C:\Users\Public\Mercurial");
 			//ParseAll(@"C:\Users\Public\TFS");
 			//ParseAll(@"C:\Users\Public\VSS");
-			//ParseAll(@"C:\Users\oshuruev\My Documents");
+			//ParseAll(@"C:\Users\oshuruev\Documents\Visual Studio 2008");
+			//ParseAll(@"C:\Users\oshuruev\Documents\Visual Studio 2010");
 
 			Console.WriteLine("Done.");
 			Console.ReadKey();
@@ -61,7 +62,8 @@ namespace NutaParser
 				|| data.Contains("stackalloc")
 				|| data.Contains("sizeof")
 				|| data.Contains("public class PreProcessorDirectives : ContextBoundObject, IPerfFoo")
-				|| data.Contains("#if DEBUG_FILTER"))
+				|| data.Contains("#if DEBUG_FILTER")
+				|| data.Contains("async"))
 				return;
 
 			if (data.Contains("public class PrefixLocalCallsWithThis")
@@ -69,17 +71,22 @@ namespace NutaParser
 				|| data.Contains("public class DeclarationKeywordOrderConstructors")
 				|| data.Contains("/// Invalid destructor header.")
 				|| data.Contains("public class DocumentationIndexers")
+				|| data.Contains("public class QueryExpressions")
+				|| data.Contains("public class ClassMembersLocalVariables")
 				|| data.Contains("public event EventHandler E4")
+				|| data.Contains("public class LambdaExpressions")
 				|| data.Contains("namespace InvalidContinuationQueryClauses")
 				|| data.Contains("namespace InvalidQueryClauses")
 				|| data.Contains("namespace ValidQueryClauses")
+				|| data.Contains("namespace ElementOrderStatics1")
 				|| data.Contains("directed Primary -> Secondary availability replica pairs.")
 				|| data.Contains("object arg0, object arg1, object arg2, __arglist")
 				|| data.Contains("this.currentSite = SPControl.GetContextSite(Context)")
 				|| data.Contains("namespace Micro@soft.StyleCop.CSharp")
 				|| data.Contains("namespace Microsoft@.StyleCop.CSharp")
 				|| data.Contains("@namespace Microsoft.StyleCop.CSharp")
-				|| data.Contains("namesp\\u0061ce Microsoft.StyleCop.CSharp"))
+				|| data.Contains("namesp\\u0061ce Microsoft.StyleCop.CSharp")
+				|| data.Contains("CheckWhetherLastCodeLineIsEmpty"))
 				return;
 
 			SyntacticState state = ParseSyntactic(data);
