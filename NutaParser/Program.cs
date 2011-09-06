@@ -22,9 +22,9 @@ namespace NutaParser
 			//ParseAll(@"D:\OLEG\Git");
 
 			//ParseAll(@"C:\Users\Public\GIT");
-			//ParseAll(@"C:\Users\Public\Mercurial");
+			ParseAll(@"C:\Users\Public\Mercurial");
 			//ParseAll(@"C:\Users\Public\TFS");
-			ParseAll(@"C:\Users\Public\VSS");
+			//ParseAll(@"C:\Users\Public\VSS");
 			//ParseAll(@"C:\Users\oshuruev\My Documents");
 
 			Console.WriteLine("Done.");
@@ -59,7 +59,27 @@ namespace NutaParser
 				|| data.Contains("unsafe")
 				|| data.Contains("fixed")
 				|| data.Contains("stackalloc")
-				|| data.Contains("sizeof"))
+				|| data.Contains("sizeof")
+				|| data.Contains("public class PreProcessorDirectives : ContextBoundObject, IPerfFoo")
+				|| data.Contains("#if DEBUG_FILTER"))
+				return;
+
+			if (data.Contains("public class PrefixLocalCallsWithThis")
+				|| data.Contains("public class CurlyBracketsEvents")
+				|| data.Contains("public class DeclarationKeywordOrderConstructors")
+				|| data.Contains("/// Invalid destructor header.")
+				|| data.Contains("public class DocumentationIndexers")
+				|| data.Contains("public event EventHandler E4")
+				|| data.Contains("namespace InvalidContinuationQueryClauses")
+				|| data.Contains("namespace InvalidQueryClauses")
+				|| data.Contains("namespace ValidQueryClauses")
+				|| data.Contains("directed Primary -> Secondary availability replica pairs.")
+				|| data.Contains("object arg0, object arg1, object arg2, __arglist")
+				|| data.Contains("this.currentSite = SPControl.GetContextSite(Context)")
+				|| data.Contains("namespace Micro@soft.StyleCop.CSharp")
+				|| data.Contains("namespace Microsoft@.StyleCop.CSharp")
+				|| data.Contains("@namespace Microsoft.StyleCop.CSharp")
+				|| data.Contains("namesp\\u0061ce Microsoft.StyleCop.CSharp"))
 				return;
 
 			SyntacticState state = ParseSyntactic(data);
