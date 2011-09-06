@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
     <Compile Include="Lexical\Grammar\Directives\Pragma\ChecksumBytes.cs" />
     <Compile Include="Lexical\Grammar\Directives\Pragma\ChecksumGuid.cs" />
     <Compile Include="Lexical\Grammar\Directives\Pragma\PragmaChecksumBody.cs" />

@@ -176,11 +176,11 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, ElementAccess.S, "Abc[d: 5, 6, e: 7]");
 			Check(true, ElementAccess.S, "Abc++[2]");
 			Check(true, ElementAccess.S, "Abc++--[2][3]");
+			Check(true, ElementAccess.S, "new[] { 5, 6 }[2]");
 
 			Check(false, ElementAccess.S, "Abc[]");
 			Check(false, ElementAccess.S, "Abc[[2]");
 			Check(false, ElementAccess.S, "Abc++[2]--");
-			Check(false, ElementAccess.S, "new[] { 5, 6 }[2]");
 		}
 
 		[TestMethod]
