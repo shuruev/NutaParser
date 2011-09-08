@@ -1,4 +1,3 @@
 ﻿// возможно убрать state.Deep
-// in и out в типах
 // прокомментировать все неочевидные : SyntacticItem
 // #if директивы (public class PreProcessorDirectives : ContextBoundObject, IPerfFoo)

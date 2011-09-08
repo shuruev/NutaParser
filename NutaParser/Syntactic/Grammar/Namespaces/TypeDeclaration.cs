@@ -8,8 +8,10 @@
 		{
 			return ParseAny(
 				state,
-				ClassDeclaration.S
-				/*xxx*/);
+				ClassDeclaration.S,
+				StructDeclaration.S,
+				/*xxx*/
+				DelegateDeclaration.S);
 		}
 	}
 }
