@@ -263,6 +263,9 @@ namespace NutaParser.Syntactic
 			if (!m_stateFlags.ContainsKey(flagKey))
 				return default(T);
 
+			if (m_stateFlags[flagKey].Count == 0)
+				return default(T);
+
 			return (T)m_stateFlags[flagKey].Peek();
 		}
 

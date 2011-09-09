@@ -16,7 +16,7 @@ namespace NutaParser
 		public static void Main(string[] args)
 		{
 			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
-			Parse(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
+			//Parse(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
 
 			//ParseAll(@"D:\OLEG\Dropbox");
 			//ParseAll(@"D:\OLEG\Git");
@@ -58,7 +58,8 @@ namespace NutaParser
 				|| data.Contains("stackalloc")
 				|| data.Contains("sizeof")
 				|| data.Contains("public class PreProcessorDirectives : ContextBoundObject, IPerfFoo")
-				|| data.Contains("#if DEBUG_FILTER")
+				|| data.Contains("#if ")
+				|| data.Contains("__arglist")
 				|| data.Contains("async"))
 				return;
 
@@ -72,12 +73,22 @@ namespace NutaParser
 				|| data.Contains("public event EventHandler E4")
 				|| data.Contains("public class LambdaExpressions")
 				|| data.Contains("public class NestedClassesConstructorSummary")
+				|| data.Contains("public class ValidInheritDoc1")
 				|| data.Contains("namespace InvalidContinuationQueryClauses")
 				|| data.Contains("namespace InvalidQueryClauses")
 				|| data.Contains("namespace ValidQueryClauses")
 				|| data.Contains("namespace ElementOrderStatics1")
+				|| data.Contains("namespace ElementOrderGlobalGeneratedCode1")
+				|| data.Contains("namespace LineSpacingBetweenElements1")
+				|| data.Contains("namespace InterfaceMethodDeclarationClosingParenthesisPlacement1")
+				|| data.Contains("namespace InterfaceMethodDeclarationCommaPlacement1")
+				|| data.Contains("namespace InterfaceMethodDeclarationOpeningParenthesisPlacement1")
+				|| data.Contains("namespace InterfaceMethodDeclarationParameterFollowsComma1")
+				|| data.Contains("namespace InterfaceMethodDeclarationParameterListStart1")
+				|| data.Contains("namespace InterfaceMethodDeclarationSpanningMultipleLines1")
+				|| data.Contains("namespace InterfaceMethodDeclarationSplitParameterMustStartOnLineAfterDeclaration1")
+				|| data.Contains("namespace InterfaceMethodDeclarationValidPlacement1")
 				|| data.Contains("directed Primary -> Secondary availability replica pairs.")
-				|| data.Contains("object arg0, object arg1, object arg2, __arglist")
 				|| data.Contains("this.currentSite = SPControl.GetContextSite(Context)")
 				|| data.Contains("namespace Micro@soft.StyleCop.CSharp")
 				|| data.Contains("namespace Microsoft@.StyleCop.CSharp")
