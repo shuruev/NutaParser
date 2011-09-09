@@ -210,6 +210,18 @@
     <Compile Include="Syntactic\Grammar\Delegates\DelegateModifier.cs" />
     <Compile Include="Syntactic\Grammar\Delegates\DelegateModifiers.cs" />
     <Compile Include="Syntactic\Grammar\Delegates\DelegateDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceBase.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceBody.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceMemberDeclarations.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceMemberDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceMethodDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfacePropertyDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceEventDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceAccessors.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceIndexerDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceModifier.cs" />
+    <Compile Include="Syntactic\Grammar\Interfaces\InterfaceModifiers.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\VariantTypeParameterList.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\VariantTypeParameters.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\VarianceAnnotation.cs" />
@@ -220,6 +232,7 @@
     <Compile Include="Syntactic\Grammar\Structs\StructBody.cs" />
     <Compile Include="Syntactic\Grammar\Structs\StructMemberDeclarations.cs" />
     <Compile Include="Syntactic\Grammar\Structs\StructMemberDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Word\Entity\InterfaceTerminal.cs" />
     <Compile Include="Syntactic\StateFlags.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\ArrayInitializer.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\VariableInitializerList.cs" />

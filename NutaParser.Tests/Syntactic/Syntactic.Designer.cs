@@ -61,6 +61,115 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to interface C&lt;out X, in Y, Z&gt; 
+        ///{
+        ///  X M(Y y);
+        ///  Z P { get; set; }
+        ///}.
+        /// </summary>
+        internal static string InterfaceDeclaration1 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to interface IControl
+        ///{
+        ///   void Paint();
+        ///}.
+        /// </summary>
+        internal static string InterfaceDeclaration2 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to interface IListBox: IControl
+        ///{
+        ///   void SetItems(string[] items);
+        ///}.
+        /// </summary>
+        internal static string InterfaceDeclaration3 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to interface IComboBox: ITextBox, IListBox { }.
+        /// </summary>
+        internal static string InterfaceDeclaration4 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to public interface IStringList
+        ///{
+        ///   void Add(string s);
+        ///   int Count { get; }
+        ///   event StringListEvent Changed;
+        ///   string this[int index] { get; set; }
+        ///}.
+        /// </summary>
+        internal static string InterfaceDeclaration5 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to interface I&lt;out T&gt; { void M&lt;U&gt;() where U : T; }.
+        /// </summary>
+        internal static string InterfaceDeclaration6 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to interface IList&lt;T&gt;
+        ///{
+        ///   T[] GetElements();
+        ///}.
+        /// </summary>
+        internal static string InterfaceDeclaration7 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to interface IDictionary&lt;K,V&gt;
+        ///{
+        ///   V this[K key] { get; }
+        ///   void Add(K key, V value);
+        ///}.
+        /// </summary>
+        internal static string InterfaceDeclaration8 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to interface I&lt;A,B,C&gt;
+        ///{
+        ///   void F&lt;T&gt;(T t) where T: A;
+        ///   void G&lt;T&gt;(T t) where T: B;
+        ///   void H&lt;T&gt;(T t) where T: C;
+        ///}.
+        /// </summary>
+        internal static string InterfaceDeclaration9 {
+            get {
+                return ResourceManager.GetString("InterfaceDeclaration9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to from c in customers select c.Name.
         /// </summary>
         internal static string QueryExpression1 {

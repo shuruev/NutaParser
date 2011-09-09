@@ -117,6 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InterfaceDeclaration1" xml:space="preserve">
+    <value>interface C&lt;out X, in Y, Z&gt; 
+{
+  X M(Y y);
+  Z P { get; set; }
+}</value>
+  </data>
+  <data name="InterfaceDeclaration2" xml:space="preserve">
+    <value>interface IControl
+{
+   void Paint();
+}</value>
+  </data>
+  <data name="InterfaceDeclaration3" xml:space="preserve">
+    <value>interface IListBox: IControl
+{
+   void SetItems(string[] items);
+}</value>
+  </data>
+  <data name="InterfaceDeclaration4" xml:space="preserve">
+    <value>interface IComboBox: ITextBox, IListBox { }</value>
+  </data>
+  <data name="InterfaceDeclaration5" xml:space="preserve">
+    <value>public interface IStringList
+{
+   void Add(string s);
+   int Count { get; }
+   event StringListEvent Changed;
+   string this[int index] { get; set; }
+}</value>
+  </data>
+  <data name="InterfaceDeclaration6" xml:space="preserve">
+    <value>interface I&lt;out T&gt; { void M&lt;U&gt;() where U : T; }</value>
+  </data>
+  <data name="InterfaceDeclaration7" xml:space="preserve">
+    <value>interface IList&lt;T&gt;
+{
+   T[] GetElements();
+}</value>
+  </data>
+  <data name="InterfaceDeclaration8" xml:space="preserve">
+    <value>interface IDictionary&lt;K,V&gt;
+{
+   V this[K key] { get; }
+   void Add(K key, V value);
+}</value>
+  </data>
+  <data name="InterfaceDeclaration9" xml:space="preserve">
+    <value>interface I&lt;A,B,C&gt;
+{
+   void F&lt;T&gt;(T t) where T: A;
+   void G&lt;T&gt;(T t) where T: B;
+   void H&lt;T&gt;(T t) where T: C;
+}</value>
+  </data>
   <data name="QueryExpression1" xml:space="preserve">
     <value>from c in customers select c.Name</value>
   </data>

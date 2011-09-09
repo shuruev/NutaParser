@@ -10,7 +10,8 @@
 				state,
 				ClassDeclaration.S,
 				StructDeclaration.S,
-				/*xxx*/
+				InterfaceDeclaration.S,
+				/*ENUMxxx*/
 				DelegateDeclaration.S);
 		}
 	}
