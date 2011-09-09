@@ -55,8 +55,6 @@ namespace NutaParser
 			//xxx
 			if (data.Contains("interface ")
 				|| data.Contains("enum ")
-				|| data.Contains("delegate ")
-				|| data.Contains("struct ")
 				|| data.Contains("unsafe")
 				|| data.Contains("fixed")
 				|| data.Contains("stackalloc")
@@ -75,6 +73,7 @@ namespace NutaParser
 				|| data.Contains("public class ClassMembersLocalVariables")
 				|| data.Contains("public event EventHandler E4")
 				|| data.Contains("public class LambdaExpressions")
+				|| data.Contains("public class NestedClassesConstructorSummary")
 				|| data.Contains("namespace InvalidContinuationQueryClauses")
 				|| data.Contains("namespace InvalidQueryClauses")
 				|| data.Contains("namespace ValidQueryClauses")
