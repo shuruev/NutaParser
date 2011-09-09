@@ -53,9 +53,7 @@ namespace NutaParser
 			string data = Parser.ReadFileData(filePath);
 
 			//xxx
-			if (data.Contains("interface ")
-				|| data.Contains("enum ")
-				|| data.Contains("unsafe")
+			if (data.Contains("unsafe")
 				|| data.Contains("fixed")
 				|| data.Contains("stackalloc")
 				|| data.Contains("sizeof")

@@ -61,6 +61,64 @@ namespace NutaParser.Tests.Syntactic {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to enum Color
+        ///{
+        ///   Red,
+        ///   Green,
+        ///   Blue
+        ///}.
+        /// </summary>
+        internal static string EnumDeclaration1 {
+            get {
+                return ResourceManager.GetString("EnumDeclaration1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to enum Color: long
+        ///{
+        ///   Red,
+        ///   Green,
+        ///   Blue
+        ///}.
+        /// </summary>
+        internal static string EnumDeclaration2 {
+            get {
+                return ResourceManager.GetString("EnumDeclaration2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to enum Color: uint
+        ///{
+        ///   Red = -1,
+        ///   Green = -2,
+        ///   Blue = -3
+        ///}.
+        /// </summary>
+        internal static string EnumDeclaration3 {
+            get {
+                return ResourceManager.GetString("EnumDeclaration3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to enum Color 
+        ///{
+        ///   Red,
+        ///   Green,
+        ///   Blue,
+        ///
+        ///   Max = Blue
+        ///}.
+        /// </summary>
+        internal static string EnumDeclaration4 {
+            get {
+                return ResourceManager.GetString("EnumDeclaration4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to interface C&lt;out X, in Y, Z&gt; 
         ///{
         ///  X M(Y y);

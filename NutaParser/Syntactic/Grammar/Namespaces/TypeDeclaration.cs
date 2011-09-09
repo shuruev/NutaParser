@@ -11,7 +11,7 @@
 				ClassDeclaration.S,
 				StructDeclaration.S,
 				InterfaceDeclaration.S,
-				/*ENUMxxx*/
+				EnumDeclaration.S,
 				DelegateDeclaration.S);
 		}
 	}

@@ -210,6 +210,13 @@
     <Compile Include="Syntactic\Grammar\Delegates\DelegateModifier.cs" />
     <Compile Include="Syntactic\Grammar\Delegates\DelegateModifiers.cs" />
     <Compile Include="Syntactic\Grammar\Delegates\DelegateDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Enums\EnumDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Enums\EnumBody.cs" />
+    <Compile Include="Syntactic\Grammar\Enums\EnumModifiers.cs" />
+    <Compile Include="Syntactic\Grammar\Enums\EnumModifier.cs" />
+    <Compile Include="Syntactic\Grammar\Enums\EnumMemberDeclarations.cs" />
+    <Compile Include="Syntactic\Grammar\Enums\EnumMemberDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Enums\EnumBase.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\InterfaceBase.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\InterfaceBody.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\InterfaceMemberDeclarations.cs" />
@@ -232,6 +239,7 @@
     <Compile Include="Syntactic\Grammar\Structs\StructBody.cs" />
     <Compile Include="Syntactic\Grammar\Structs\StructMemberDeclarations.cs" />
     <Compile Include="Syntactic\Grammar\Structs\StructMemberDeclaration.cs" />
+    <Compile Include="Syntactic\Grammar\Terminal\Word\Entity\EnumTerminal.cs" />
     <Compile Include="Syntactic\Grammar\Terminal\Word\Entity\InterfaceTerminal.cs" />
     <Compile Include="Syntactic\StateFlags.cs" />
     <Compile Include="Syntactic\Grammar\Arrays\ArrayInitializer.cs" />

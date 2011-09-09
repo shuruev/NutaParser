@@ -10,6 +10,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		public void Is_Interface_Declaration()
 		{
 			Check(true, InterfaceDeclaration.S, "interface IData { }");
+			Check(true, InterfaceDeclaration.S, "interface IData { };");
 			Check(true, InterfaceDeclaration.S, "[SomeAttribute] public partial interface IData { string GetName(); }");
 			Check(true, InterfaceDeclaration.S, "interface IData<in T, out T> : IList where T : new() { }");
 		}

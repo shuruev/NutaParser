@@ -117,6 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EnumDeclaration1" xml:space="preserve">
+    <value>enum Color
+{
+   Red,
+   Green,
+   Blue
+}</value>
+  </data>
+  <data name="EnumDeclaration2" xml:space="preserve">
+    <value>enum Color: long
+{
+   Red,
+   Green,
+   Blue
+}</value>
+  </data>
+  <data name="EnumDeclaration3" xml:space="preserve">
+    <value>enum Color: uint
+{
+   Red = -1,
+   Green = -2,
+   Blue = -3
+}</value>
+  </data>
+  <data name="EnumDeclaration4" xml:space="preserve">
+    <value>enum Color 
+{
+   Red,
+   Green,
+   Blue,
+
+   Max = Blue
+}</value>
+  </data>
   <data name="InterfaceDeclaration1" xml:space="preserve">
     <value>interface C&lt;out X, in Y, Z&gt; 
 {
