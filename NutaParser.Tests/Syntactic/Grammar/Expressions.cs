@@ -500,6 +500,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 			Check(true, UnaryExpression.S, "(IUnitList)UnitList.Data");
 			Check(true, UnaryExpression.S, "(IUnitList)");
 			Check(true, UnaryExpression.S, "(b.Equals)");
+			Check(true, UnaryExpression.S, "(bool?)reader[\"status\"]");
 		}
 
 		[TestMethod]
@@ -700,6 +701,10 @@ namespace NutaParser.Tests.Syntactic.Grammar
 
 			Check(true, ConditionalExpression.S, "(a is bool?) && (b is bool?) ? 0 : 1");
 			Check(true, ConditionalExpression.S, "a is bool? && b is bool? ? 0 : 1");
+			Check(true, ConditionalExpression.S, "reader[0] is DBNull ? null : (bool?)reader[0]");
+			Check(true, ConditionalExpression.S, "(bool?)reader[0] is DBNull ? null : (bool?)reader[0]");
+			Check(true, ConditionalExpression.S, "(bool?)a is bool? && (int?)b is int ? 0 : 1");
+			Check(true, ConditionalExpression.S, "(bool?)a is bool? && (int?)b is int? ? 0 : 1");
 		}
 
 		[TestMethod]

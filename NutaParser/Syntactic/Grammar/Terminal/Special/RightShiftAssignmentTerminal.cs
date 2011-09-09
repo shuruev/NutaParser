@@ -8,6 +8,8 @@ namespace NutaParser.Syntactic.Grammar
 
 		public override bool Parse(SyntacticState state)
 		{
+			// this terminal consists of two lexical punctuators
+			// and should be parsed in a special way
 			if (state.InnerPosition + 1 >= state.InnerLength)
 				return false;
 

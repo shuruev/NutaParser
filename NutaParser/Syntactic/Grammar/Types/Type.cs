@@ -6,6 +6,8 @@
 
 		public override bool Parse(SyntacticState state)
 		{
+			// in some cases we might need to
+			// ignore nullable types
 			if (state.CheckFlag(StateFlags.IgnoreNullable))
 			{
 				return ParseAll(

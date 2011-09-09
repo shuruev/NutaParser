@@ -6,6 +6,8 @@
 
 		public override bool Parse(SyntacticState state)
 		{
+			// in some cases we might need to prohibit
+			// using LINQ keywords as identifiers
 			if (state.CheckFlag(StateFlags.InsideLinq))
 			{
 				return ParseAll(

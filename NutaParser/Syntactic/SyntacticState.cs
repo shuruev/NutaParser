@@ -242,6 +242,33 @@ namespace NutaParser.Syntactic
 			return m_stateFlags[flagKey] > 0;
 		}
 
+		/// <summary>
+		/// Sets a value for a flag with specified key.
+		/// </summary>
+		public void SetFlag(string flagKey, int value)
+		{
+			m_stateFlags[flagKey] = value;
+		}
+
+		/// <summary>
+		/// Gets a value for a flag with specified key.
+		/// </summary>
+		public int GetFlag(string flagKey)
+		{
+			if (!m_stateFlags.ContainsKey(flagKey))
+				return -1;
+
+			return m_stateFlags[flagKey];
+		}
+
+		/// <summary>
+		/// Clears a flag with specified key.
+		/// </summary>
+		public void ClearFlag(string flagKey)
+		{
+			m_stateFlags.Remove(flagKey);
+		}
+
 		#endregion
 	}
 }

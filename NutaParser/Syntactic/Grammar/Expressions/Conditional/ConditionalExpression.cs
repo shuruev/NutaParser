@@ -15,7 +15,7 @@ namespace NutaParser.Syntactic.Grammar
 			if (!NullCoalescingExpression.S.Parse(state))
 				return false;
 
-			// if captured expression ends with ?
+			// if captured expression ends with "?"
 			LexicalEntry entry = state.GetInner(state.InnerPosition - 1);
 			if (state.GetOuter(entry) == "?")
 			{
@@ -35,23 +35,20 @@ namespace NutaParser.Syntactic.Grammar
 				}
 
 				// if not, make another attempt to parse conditional expression
-				// with "? and :" part, ignoring nullable types
+				// handling null-coalescing-expression without trailing "?"
 				state.Reset(innerIndex, outerIndex);
-				state.RaiseFlag(StateFlags.IgnoreNullable);
 
-				bool parsed = ParseAll(
-					state,
-					NullCoalescingExpression.S,
-					QuestionTerminal.S,
-					Expression.S,
-					ColonTerminal.S,
-					Expression.S);
-
-				state.LowerFlag(StateFlags.IgnoreNullable);
-
-				// if OK, we can return
-				if (parsed)
+				// if we could do that, we can return
+				if (ParseAll(
+						state,
+						NullCoalescingExpressionShorten.S,
+						QuestionTerminal.S,
+						Expression.S,
+						ColonTerminal.S,
+						Expression.S))
+				{
 					return true;
+				}
 
 				// if not, parse initial null-coalescing-expression once again
 				NullCoalescingExpression.S.Parse(state);

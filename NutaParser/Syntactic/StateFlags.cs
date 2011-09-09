@@ -18,5 +18,10 @@ namespace NutaParser.Syntactic
 		/// Supresses parsing of nullable types.
 		/// </summary>
 		public const string IgnoreNullable = "IgnoreNullable";
+
+		/// <summary>
+		/// Specifies position after which nullable types should be ignored.
+		/// </summary>
+		public const string IgnoreNullableAfterPosition = "IgnoreNullableAfterPosition";
 	}
 }

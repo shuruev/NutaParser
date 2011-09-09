@@ -217,6 +217,7 @@
     <Compile Include="Syntactic\Grammar\Enums\EnumMemberDeclarations.cs" />
     <Compile Include="Syntactic\Grammar\Enums\EnumMemberDeclaration.cs" />
     <Compile Include="Syntactic\Grammar\Enums\EnumBase.cs" />
+    <Compile Include="Syntactic\Grammar\Expressions\Conditional\NullCoalescingExpressionShorten.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\InterfaceBase.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\InterfaceBody.cs" />
     <Compile Include="Syntactic\Grammar\Interfaces\InterfaceMemberDeclarations.cs" />

@@ -1,5 +1,4 @@
-﻿using System;
-using NutaParser.Lexical;
+﻿using NutaParser.Lexical;
 using NutaParser.Lexical.Grammar;
 
 namespace NutaParser.Syntactic.Grammar
@@ -8,10 +7,6 @@ namespace NutaParser.Syntactic.Grammar
 	{
 		public static readonly IdentifierInLinqTerminal S = new IdentifierInLinqTerminal();
 
-		/// <summary>
-		/// Tries to parse an entity from the specified syntactic machine state.
-		/// In case of success returns true and advances parsing position.
-		/// </summary>
 		public override bool Parse(SyntacticState state)
 		{
 			if (state.IsEndOfData)
@@ -21,6 +16,8 @@ namespace NutaParser.Syntactic.Grammar
 			if (entry.Key != Identifier.S.Key)
 				return false;
 
+			// parse all identidiers except those
+			// which are similar to LINQ keywords
 			string name = state.GetOuter(entry);
 			if (name == "ascending"
 				|| name == "by"
