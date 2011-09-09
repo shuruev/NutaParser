@@ -24,7 +24,7 @@ namespace NutaParser.Syntactic.Grammar
 				return true;
 
 			// get a position of the last type entry
-			int lastTypeIndex = -1;
+			int lastTypeIndex = 0;
 			for (int i = innerIndex; i <= state.InnerPosition; i++)
 			{
 				if (state.CheckEntry(Type.S.Key, i))
@@ -41,7 +41,7 @@ namespace NutaParser.Syntactic.Grammar
 				ConditionalOrExpression.S,
 				DoubleQuestionTerminal.S);
 
-			state.ClearFlag(StateFlags.IgnoreNullableAfterPosition);
+			state.ResetFlag(StateFlags.IgnoreNullableAfterPosition);
 			return parsed;
 		}
 	}

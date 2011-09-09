@@ -7,7 +7,7 @@
 		public override bool Parse(SyntacticState state)
 		{
 			// check whether we need to ignore nullable types
-			int flag = state.GetFlag(StateFlags.IgnoreNullableAfterPosition);
+			int flag = state.GetFlag<int>(StateFlags.IgnoreNullableAfterPosition);
 			if (flag > 0 && state.InnerPosition >= flag)
 			{
 				// perform parsing ignoring nullable types

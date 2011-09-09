@@ -11,7 +11,7 @@ namespace NutaParser.Syntactic
 	public class SyntacticState
 	{
 		private readonly Dictionary<int, List<SyntacticEntry>> m_entriesByIndex;
-		private readonly Dictionary<string, int> m_stateFlags;
+		private readonly Dictionary<string, Stack<object>> m_stateFlags;
 
 		private readonly List<LexicalEntry> m_innerData;
 		private readonly string m_outerData;
@@ -32,7 +32,7 @@ namespace NutaParser.Syntactic
 				throw new ArgumentNullException("outerData");
 
 			m_entriesByIndex = new Dictionary<int, List<SyntacticEntry>>();
-			m_stateFlags = new Dictionary<string, int>();
+			m_stateFlags = new Dictionary<string, Stack<object>>();
 
 			m_innerData = new List<LexicalEntry>(innerData);
 			m_outerData = outerData;
@@ -205,68 +205,65 @@ namespace NutaParser.Syntactic
 		#region Working with flags
 
 		/// <summary>
-		/// Raises a flag with specified key.
+		/// Raises a boolean flag with specified key.
 		/// </summary>
 		public void RaiseFlag(string flagKey)
 		{
-			if (!m_stateFlags.ContainsKey(flagKey))
-				m_stateFlags[flagKey] = 0;
-
-			m_stateFlags[flagKey] += 1;
+			SetFlag(flagKey, true);
 		}
 
 		/// <summary>
-		/// Lowers a flag with specified key.
+		/// Lowers a boolean flag with specified key.
 		/// </summary>
 		public void LowerFlag(string flagKey)
 		{
-			if (!m_stateFlags.ContainsKey(flagKey))
-				throw new InvalidOperationException(
-					String.Format("Flag {0} does not exist.", flagKey));
-
-			if (m_stateFlags[flagKey] == 0)
-				throw new InvalidOperationException(
-					String.Format("Flag {0} was not raised.", flagKey));
-
-			m_stateFlags[flagKey] -= 1;
+			ResetFlag(flagKey);
 		}
 
 		/// <summary>
-		/// Checks whether a flag with specified key is raised.
+		/// Checks whether a boolean flag with specified key is raised.
 		/// </summary>
 		public bool CheckFlag(string flagKey)
 		{
-			if (!m_stateFlags.ContainsKey(flagKey))
-				return false;
-
-			return m_stateFlags[flagKey] > 0;
+			return GetFlag<bool>(flagKey);
 		}
 
 		/// <summary>
 		/// Sets a value for a flag with specified key.
 		/// </summary>
-		public void SetFlag(string flagKey, int value)
+		public void SetFlag<T>(string flagKey, T value)
 		{
-			m_stateFlags[flagKey] = value;
+			if (!m_stateFlags.ContainsKey(flagKey))
+				m_stateFlags[flagKey] = new Stack<object>();
+
+			m_stateFlags[flagKey].Push(value);
+		}
+
+		/// <summary>
+		/// Resets a value for a flag with specified key.
+		/// </summary>
+		public void ResetFlag(string flagKey)
+		{
+			if (!m_stateFlags.ContainsKey(flagKey))
+				throw new InvalidOperationException(
+					String.Format("Flag {0} does not exist.", flagKey));
+
+			if (m_stateFlags[flagKey].Count == 0)
+				throw new InvalidOperationException(
+					String.Format("Flag {0} was not set.", flagKey));
+
+			m_stateFlags[flagKey].Pop();
 		}
 
 		/// <summary>
 		/// Gets a value for a flag with specified key.
 		/// </summary>
-		public int GetFlag(string flagKey)
+		public T GetFlag<T>(string flagKey)
 		{
 			if (!m_stateFlags.ContainsKey(flagKey))
-				return -1;
+				return default(T);
 
-			return m_stateFlags[flagKey];
-		}
-
-		/// <summary>
-		/// Clears a flag with specified key.
-		/// </summary>
-		public void ClearFlag(string flagKey)
-		{
-			m_stateFlags.Remove(flagKey);
+			return (T)m_stateFlags[flagKey].Peek();
 		}
 
 		#endregion
