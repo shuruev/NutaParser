@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NutaParser.Syntactic.Grammar;
+using Nuta.Parser.CSharp.Syntactic;
 
 namespace NutaParser.Tests.Syntactic.Grammar
 {

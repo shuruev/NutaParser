@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Nuta.Parser.CSharp.Lexical.Grammar;
 using Nuta.Parser.Lexical;
 
 namespace Nuta.Parser.CSharp.Lexical

@@ -3,10 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using Nuta.Parser;
 using Nuta.Parser.CSharp.Lexical;
+using Nuta.Parser.CSharp.Syntactic;
 using Nuta.Parser.Lexical;
-using Nuta.Parser.CSharp.Lexical.Grammar;
 using Nuta.Parser.Syntactic;
-using NutaParser.Syntactic.Grammar;
 
 namespace NutaParser
 {

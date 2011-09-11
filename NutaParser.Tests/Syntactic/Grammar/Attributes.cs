@@ -1,8 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NutaParser.Syntactic.Grammar;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NutaParser.Tests.Syntactic;
 
-namespace NutaParser.Tests.Syntactic.Grammar
+namespace Nuta.Parser.CSharp.Tests.Syntactic
 {
 	[TestClass]
 	public class Attributes : GrammarTest
@@ -22,7 +21,7 @@ namespace NutaParser.Tests.Syntactic.Grammar
 		[TestMethod]
 		public void Is_Attributes_Additional()
 		{
-			Check(true, NutaParser.Syntactic.Grammar.Attributes.S, "[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]");
+			Check(true, CSharp.Syntactic.Attributes.S, "[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]");
 		}
 
 		//xxx attribute-sections

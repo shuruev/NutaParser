@@ -2,7 +2,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nuta.Parser;
 using Nuta.Parser.CSharp.Lexical;
-using Nuta.Parser.CSharp.Lexical.Grammar;
 using Nuta.Parser.Lexical;
 using Nuta.Parser.Syntactic;
 

@@ -1,6 +1,6 @@
 ﻿using Nuta.Parser.Lexical;
 
-namespace NutaParser.Lexical.Grammar
+namespace Nuta.Parser.Css.Lexical
 {
 	public class RightCurlyBracketTerminal : SingleCharacterTerminal
 	{

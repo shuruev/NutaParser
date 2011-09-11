@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NutaParser.Syntactic.Grammar;
 
 namespace NutaParser.Tests.Syntactic.Grammar
 {

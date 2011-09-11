@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using Nuta.Parser.Lexical;
 
-namespace Nuta.Parser.CSharp.Lexical.Grammar
+namespace Nuta.Parser.CSharp.Lexical
 {
 	public class LetterCharacter : ParseAny
 	{
