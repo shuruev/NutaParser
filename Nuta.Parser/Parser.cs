@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using Nuta.Parser.Lexical;
+using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser
 {
@@ -9,17 +11,7 @@ namespace Nuta.Parser
 	/// </summary>
 	public static class Parser
 	{
-		/// <summary>
-		/// Makes a string suitable for one-line displaying.
-		/// </summary>
-		public static string ToDisplay(this string text)
-		{
-			return text
-				.Replace("\r", "¶")
-				.Replace("\n", "¶")
-				.Replace("\t", "→")
-				.Replace("\v", "→");
-		}
+		#region Working with input data
 
 		/// <summary>
 		/// Reads data string from a specified file.
@@ -67,5 +59,59 @@ namespace Nuta.Parser
 
 			return data;
 		}
+
+		#endregion
+
+		#region Parsing extensions
+
+		/// <summary>
+		/// Returns true only if all input data has been successfully parsed.
+		/// </summary>
+		public static bool ParseFull(this LexicalItem item, LexicalState state)
+		{
+			bool parsed = item.Parse(state);
+
+			if (!parsed)
+				return false;
+
+			if (!state.IsEndOfData)
+				return false;
+
+			return true;
+		}
+
+		/// <summary>
+		/// Returns true only if all input data has been successfully parsed.
+		/// </summary>
+		public static bool ParseFull(this SyntacticItem item, SyntacticState state)
+		{
+			bool parsed = item.Parse(state);
+
+			if (!parsed)
+				return false;
+
+			if (!state.IsEndOfData)
+				return false;
+
+			return true;
+		}
+
+		#endregion
+
+		#region Service methods
+
+		/// <summary>
+		/// Makes a string suitable for one-line displaying.
+		/// </summary>
+		public static string ToDisplay(this string text)
+		{
+			return text
+				.Replace("\r", "¶")
+				.Replace("\n", "¶")
+				.Replace("\t", "→")
+				.Replace("\v", "→");
+		}
+
+		#endregion
 	}
 }

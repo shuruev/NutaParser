@@ -104,12 +104,7 @@ namespace NutaParser
 		private static LexicalState ParseLexical(string data)
 		{
 			LexicalState lexicalState = new LexicalState(data);
-			bool lexicalParsed = Input.S.Parse(lexicalState);
-
-			if (!lexicalParsed)
-				return null;
-
-			if (!lexicalState.IsEndOfData)
+			if (!Input.S.ParseFull(lexicalState))
 				return null;
 
 			return lexicalState;
@@ -125,12 +120,7 @@ namespace NutaParser
 				lexicalState.ExtractTokens(),
 				data);
 
-			bool syntacticParsed = CompilationUnit.S.Parse(syntacticState);
-
-			if (!syntacticParsed)
-				return null;
-
-			if (!syntacticState.IsEndOfData)
+			if (!CompilationUnit.S.ParseFull(syntacticState))
 				return null;
 
 			return syntacticState;
