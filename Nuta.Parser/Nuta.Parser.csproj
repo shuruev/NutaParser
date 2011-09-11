@@ -47,7 +47,18 @@
     <Compile Include="Lexical\Special\Terminal\AnyCharacterTerminal.cs" />
     <Compile Include="Lexical\Special\Terminal\CharacterCategoryTerminal.cs" />
     <Compile Include="Lexical\Special\Terminal\SingleCharacterTerminal.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\Special\Empty.cs" />
+    <Compile Include="Syntactic\Special\Optional.cs" />
+    <Compile Include="Syntactic\Special\ParseAll.cs" />
+    <Compile Include="Syntactic\Special\ParseAny.cs" />
+    <Compile Include="Syntactic\Special\ParseMany.cs" />
+    <Compile Include="Syntactic\Special\Terminal\LexicalTerminal.cs" />
+    <Compile Include="Syntactic\Special\Terminal\TextTerminal.cs" />
+    <Compile Include="Syntactic\SyntacticEntry.cs" />
+    <Compile Include="Syntactic\SyntacticItem.cs" />
+    <Compile Include="Syntactic\SyntacticState.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,4 @@
-﻿namespace NutaParser.Syntactic
+﻿namespace Nuta.Parser.Syntactic
 {
 	/// <summary>
 	/// Empty syntactic item.

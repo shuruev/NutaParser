@@ -1,4 +1,6 @@
-﻿namespace NutaParser.Syntactic.Grammar
+﻿using Nuta.Parser.Syntactic;
+
+namespace NutaParser.Syntactic.Grammar
 {
 	public class PlusTerminal : TextTerminal
 	{

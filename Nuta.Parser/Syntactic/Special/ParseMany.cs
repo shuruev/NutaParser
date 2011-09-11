@@ -1,4 +1,4 @@
-﻿namespace NutaParser.Syntactic
+﻿namespace Nuta.Parser.Syntactic
 {
 	/// <summary>
 	/// Syntactic item containing a batch of similar syntactic items with specified delimiter.

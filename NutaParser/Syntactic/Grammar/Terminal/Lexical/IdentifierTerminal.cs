@@ -1,5 +1,7 @@
 ﻿using Nuta.Parser.CSharp.Lexical.Grammar;
 
+using Nuta.Parser.Syntactic;
+
 namespace NutaParser.Syntactic.Grammar
 {
 	public class IdentifierTerminal : LexicalTerminal

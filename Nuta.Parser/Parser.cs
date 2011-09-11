@@ -2,10 +2,16 @@
 using System.IO;
 using System.Text;
 
-namespace NutaParser
+namespace Nuta.Parser
 {
+	/// <summary>
+	/// Contains some useful and service methods.
+	/// </summary>
 	public static class Parser
 	{
+		/// <summary>
+		/// Makes a string suitable for one-line displaying.
+		/// </summary>
 		public static string ToDisplay(this string text)
 		{
 			return text
@@ -15,7 +21,11 @@ namespace NutaParser
 				.Replace("\v", "→");
 		}
 
-		public static string ReadFileData(string filePath)
+		/// <summary>
+		/// Reads data string from a specified file.
+		/// Contains some logic for auto-detecting an appropriate encoding.
+		/// </summary>
+		public static string ReadDataFromFile(string filePath)
 		{
 			string utf8 = File.ReadAllText(filePath, Encoding.UTF8);
 			string cp1251 = File.ReadAllText(filePath, Encoding.GetEncoding(1251));
@@ -34,9 +44,12 @@ namespace NutaParser
 				throw new InvalidOperationException("Unkonwn encoding");
 			}
 
-			return PrepareEndOfFile(data);
+			return data;
 		}
 
+		/// <summary>
+		/// Prepares data string so that it always ended with a line-break.
+		/// </summary>
 		public static string PrepareEndOfFile(string data)
 		{
 			data = data.TrimEnd('\x001A');

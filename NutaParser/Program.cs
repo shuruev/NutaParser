@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using Nuta.Parser;
 using Nuta.Parser.CSharp.Lexical;
 using Nuta.Parser.Lexical;
 using Nuta.Parser.CSharp.Lexical.Grammar;
-using NutaParser.Syntactic;
+using Nuta.Parser.Syntactic;
 using NutaParser.Syntactic.Grammar;
 
 namespace NutaParser
@@ -48,7 +49,8 @@ namespace NutaParser
 
 		public static void Parse(string filePath)
 		{
-			string data = Parser.ReadFileData(filePath);
+			string data = Parser.ReadDataFromFile(filePath);
+			data = Parser.PrepareEndOfFile(data);
 
 			//xxx
 			if (data.Contains("unsafe")

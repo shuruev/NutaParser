@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Nuta.Parser.Lexical;
 
-namespace NutaParser.Syntactic
+namespace Nuta.Parser.Syntactic
 {
 	/// <summary>
 	/// Represents a state of the syntactic machine.

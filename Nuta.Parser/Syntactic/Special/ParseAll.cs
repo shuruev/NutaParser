@@ -1,16 +1,16 @@
-﻿namespace NutaParser.Syntactic
+﻿namespace Nuta.Parser.Syntactic
 {
 	/// <summary>
-	/// Syntactic item containing any of specified syntactic items.
+	/// Syntactic item containing consequent number of specified syntactic items.
 	/// </summary>
-	public class ParseAny : SyntacticItem
+	public class ParseAll : SyntacticItem
 	{
 		private readonly SyntacticItem[] m_items;
 
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public ParseAny(params SyntacticItem[] items)
+		public ParseAll(params SyntacticItem[] items)
 		{
 			m_items = items;
 		}
@@ -21,7 +21,7 @@
 		/// </summary>
 		public override bool Parse(SyntacticState state)
 		{
-			return ParseAny(state, m_items);
+			return ParseAll(state, m_items);
 		}
 	}
 }

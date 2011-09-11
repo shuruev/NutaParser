@@ -1,8 +1,10 @@
 ﻿using System;
+#if DEBUG
 using System.Diagnostics;
 using System.Linq;
+#endif
 
-namespace NutaParser.Syntactic
+namespace Nuta.Parser.Syntactic
 {
 	/// <summary>
 	/// Represents an entity from a syntactic grammar.

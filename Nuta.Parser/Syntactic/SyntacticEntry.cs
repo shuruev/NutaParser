@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NutaParser.Syntactic
+namespace Nuta.Parser.Syntactic
 {
 	/// <summary>
 	/// Represents an entry of a syntactic entity.
