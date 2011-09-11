@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using NutaParser.Lexical;
-
-namespace NutaParser.Syntactic
+﻿namespace NutaParser.Syntactic
 {
 	/// <summary>
 	/// Contains different flags used while parsing.

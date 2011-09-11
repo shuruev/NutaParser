@@ -1,4 +1,4 @@
-﻿using NutaParser.Lexical;
+﻿using Nuta.Parser.Lexical;
 
 namespace NutaParser.Syntactic.Grammar
 {

@@ -1,16 +1,16 @@
-﻿namespace NutaParser.Lexical
+﻿namespace Nuta.Parser.Lexical
 {
 	/// <summary>
-	/// Lexical item containing consequent number of specified lexical items.
+	/// Lexical item containing any of specified lexical items.
 	/// </summary>
-	public class ParseAll : LexicalItem
+	public class ParseAny : LexicalItem
 	{
 		private readonly LexicalItem[] m_items;
 
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public ParseAll(params LexicalItem[] items)
+		public ParseAny(params LexicalItem[] items)
 		{
 			m_items = items;
 		}
@@ -21,7 +21,7 @@
 		/// </summary>
 		public override bool Parse(LexicalState state)
 		{
-			return ParseAll(state, m_items);
+			return ParseAny(state, m_items);
 		}
 	}
 }

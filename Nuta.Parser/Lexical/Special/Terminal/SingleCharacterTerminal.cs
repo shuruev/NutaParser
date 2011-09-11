@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NutaParser.Lexical
+namespace Nuta.Parser.Lexical
 {
 	/// <summary>
 	/// Parses specified character.

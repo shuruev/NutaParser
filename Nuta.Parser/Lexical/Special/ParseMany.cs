@@ -1,4 +1,4 @@
-﻿namespace NutaParser.Lexical
+﻿namespace Nuta.Parser.Lexical
 {
 	/// <summary>
 	/// Lexical item containing a batch of similar lexical items with specified delimiter.

@@ -66,7 +66,6 @@
     <Compile Include="Lexical\Grammar\Terminal\Word\UndefTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\DefineTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\NullTerminal.cs" />
-    <Compile Include="Lexical\Special\ParseExcept.cs" />
     <Compile Include="Lexical\Grammar\Input.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Control\CarriageReturnTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Control\FormFeedTerminal.cs" />
@@ -76,11 +75,6 @@
     <Compile Include="Lexical\Grammar\Terminal\Control\LineSeparatorTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Control\NextLineTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Control\LineFeedTerminal.cs" />
-    <Compile Include="Lexical\Special\ParseMany.cs" />
-    <Compile Include="Lexical\Special\Empty.cs" />
-    <Compile Include="Lexical\Special\Optional.cs" />
-    <Compile Include="Lexical\Special\ParseAny.cs" />
-    <Compile Include="Lexical\Special\ParseAll.cs" />
     <Compile Include="Lexical\Grammar\Comments\Asterisks.cs" />
     <Compile Include="Lexical\Grammar\Comments\Comment.cs" />
     <Compile Include="Lexical\Grammar\Comments\SingleLineComment.cs" />
@@ -126,9 +120,6 @@
     <Compile Include="Lexical\Grammar\Terminal\Operator\OrOperatorTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Operator\NotEqualOperatorTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Operator\EqualOperatorTerminal.cs" />
-    <Compile Include="Lexical\Special\Terminal\AnyCharacterTerminal.cs" />
-    <Compile Include="Lexical\Special\Terminal\CharacterCategoryTerminal.cs" />
-    <Compile Include="Lexical\Special\Terminal\SingleCharacterTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\FalseTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\TrueTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Word\ElifTerminal.cs" />
@@ -198,9 +189,7 @@
     <Compile Include="Lexical\Grammar\Comments\DelimitedCommentText.cs" />
     <Compile Include="Lexical\Grammar\Comments\DelimitedCommentSection.cs" />
     <Compile Include="Lexical\Grammar\Tokens\Whitespace.cs" />
-    <Compile Include="Lexical\LexicalEntry.cs" />
-    <Compile Include="Lexical\LexicalItem.cs" />
-    <Compile Include="Lexical\LexicalState.cs" />
+    <Compile Include="Lexical\LexicalStateExtensions.cs" />
     <Compile Include="Lexical\Grammar\Comments\NotSlashOrAsterisk.cs" />
     <Compile Include="Lexical\Grammar\Literals\UnicodeEscapeSequence.cs" />
     <Compile Include="Lexical\Grammar\Tokens\WhitespaceCharacter.cs" />
@@ -697,6 +686,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nuta.Parser\Nuta.Parser.csproj">
+      <Project>{1BBF3DE5-0143-403B-A499-1AA9A511811A}</Project>
+      <Name>Nuta.Parser</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

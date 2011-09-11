@@ -1,11 +1,11 @@
-﻿namespace NutaParser.Lexical
+﻿namespace Nuta.Parser.Lexical
 {
 	/// <summary>
-	/// Parses any Unicode character.
+	/// Empty lexical item.
 	/// </summary>
-	public class AnyCharacterTerminal : LexicalItem
+	public class Empty : LexicalItem
 	{
-		public static readonly AnyCharacterTerminal S = new AnyCharacterTerminal();
+		public static readonly Empty S = new Empty();
 
 		/// <summary>
 		/// Tries to parse an entity from the specified lexical machine state.
@@ -13,7 +13,7 @@
 		/// </summary>
 		public override bool Parse(LexicalState state)
 		{
-			return ParseCharacter(state, c => true);
+			return true;
 		}
 	}
 }

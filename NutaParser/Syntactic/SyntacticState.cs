@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NutaParser.Lexical;
+using Nuta.Parser.Lexical;
 
 namespace NutaParser.Syntactic
 {

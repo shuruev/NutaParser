@@ -95,6 +95,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Nuta.Parser\Nuta.Parser.csproj">
+      <Project>{1BBF3DE5-0143-403B-A499-1AA9A511811A}</Project>
+      <Name>Nuta.Parser</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NutaParser\NutaParser.csproj">
       <Project>{F5C2C4DD-1866-4942-A1F0-737F63ACD7AA}</Project>
       <Name>NutaParser</Name>

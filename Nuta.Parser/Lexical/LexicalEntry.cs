@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NutaParser.Lexical
+namespace Nuta.Parser.Lexical
 {
 	/// <summary>
 	/// Represents an entry of a lexical entity.

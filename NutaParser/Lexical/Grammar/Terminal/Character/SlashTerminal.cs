@@ -1,4 +1,6 @@
-﻿namespace NutaParser.Lexical.Grammar
+﻿using Nuta.Parser.Lexical;
+
+namespace NutaParser.Lexical.Grammar
 {
 	public class SlashTerminal : SingleCharacterTerminal
 	{

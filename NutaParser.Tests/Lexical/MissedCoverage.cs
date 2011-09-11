@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NutaParser.Lexical;
+using Nuta.Parser.Lexical;
 
 namespace NutaParser.Tests.Lexical
 {

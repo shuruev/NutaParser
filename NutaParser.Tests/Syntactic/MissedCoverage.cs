@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NutaParser.Lexical;
+using Nuta.Parser.Lexical;
 using NutaParser.Syntactic;
 
 namespace NutaParser.Tests.Syntactic

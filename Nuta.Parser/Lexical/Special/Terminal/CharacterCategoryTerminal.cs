@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace NutaParser.Lexical
+namespace Nuta.Parser.Lexical
 {
 	/// <summary>
 	/// Parses any Unicode character from specified categories.

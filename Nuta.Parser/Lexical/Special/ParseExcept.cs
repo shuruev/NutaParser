@@ -1,4 +1,4 @@
-﻿namespace NutaParser.Lexical
+﻿namespace Nuta.Parser.Lexical
 {
 	/// <summary>
 	/// Lexical item containing all specified items except some others.

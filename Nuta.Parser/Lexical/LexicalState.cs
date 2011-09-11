@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NutaParser.Lexical.Grammar;
 
-namespace NutaParser.Lexical
+namespace Nuta.Parser.Lexical
 {
 	/// <summary>
 	/// Represents a state of the lexical machine.
@@ -161,18 +160,11 @@ namespace NutaParser.Lexical
 		#region Working with result
 
 		/// <summary>
-		/// Extracts all tokens from parsed results.
+		/// Gets all entries parsed so far.
 		/// </summary>
-		public List<LexicalEntry> ExtractTokens()
+		public IEnumerable<LexicalEntry> GetAllEntries()
 		{
-			return m_entriesByIndex.Values
-				.SelectMany(list => list)
-				.Where(entry =>
-					entry.Key == Identifier.S.Key
-					|| entry.Key == Literal.S.Key
-					|| entry.Key == Keyword.S.Key
-					|| entry.Key == OperatorOrPunctuator.S.Key)
-				.ToList();
+			return m_entriesByIndex.Values.SelectMany(list => list);
 		}
 
 		#endregion
