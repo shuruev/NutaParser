@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Nuta.Parser.CSharp.Lexical;
+using Nuta.Parser.CSharp.Lexical.Grammar;
 using Nuta.Parser.Lexical;
-using NutaParser.Lexical;
-using NutaParser.Lexical.Grammar;
 using NutaParser.Syntactic;
 
 namespace NutaParser.Tests.Syntactic

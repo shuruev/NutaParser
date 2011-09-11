@@ -1,5 +1,5 @@
-﻿using Nuta.Parser.Lexical;
-using NutaParser.Lexical.Grammar;
+﻿using Nuta.Parser.CSharp.Lexical.Grammar;
+using Nuta.Parser.Lexical;
 
 namespace NutaParser.Syntactic.Grammar
 {

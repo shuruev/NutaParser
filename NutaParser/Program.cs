@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using Nuta.Parser.CSharp.Lexical;
 using Nuta.Parser.Lexical;
-using NutaParser.Lexical;
-using NutaParser.Lexical.Grammar;
+using Nuta.Parser.CSharp.Lexical.Grammar;
 using NutaParser.Syntactic;
 using NutaParser.Syntactic.Grammar;
 

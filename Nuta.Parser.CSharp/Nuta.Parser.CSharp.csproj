@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nuta.Parser.CSharp</RootNamespace>
+    <AssemblyName>Nuta.Parser.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Lexical\Grammar\Comments\Asterisks.cs" />
+    <Compile Include="Lexical\Grammar\Comments\Comment.cs" />
+    <Compile Include="Lexical\Grammar\Comments\DelimitedComment.cs" />
+    <Compile Include="Lexical\Grammar\Comments\DelimitedCommentSection.cs" />
+    <Compile Include="Lexical\Grammar\Comments\DelimitedCommentText.cs" />
+    <Compile Include="Lexical\Grammar\Comments\InputCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Comments\InputCharacters.cs" />
+    <Compile Include="Lexical\Grammar\Comments\NewLineCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Comments\NotSlashOrAsterisk.cs" />
+    <Compile Include="Lexical\Grammar\Comments\SingleLineComment.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\ConditionalSection.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\ConditionalSymbol.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\NotNumberSign.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\PpConditional.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\PpElifSection.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\PpElifSections.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\PpElseSection.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\PpEndif.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\PpIfSection.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\SkippedCharacters.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\SkippedSection.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Conditional\SkippedSectionPart.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Declaration\PpDeclaration.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Declaration\PpNewLine.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Diagnostic\PpDiagnostic.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Diagnostic\PpMessage.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Expressions\PpAndExpression.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Expressions\PpEqualityExpression.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Expressions\PpExpression.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Expressions\PpOrExpression.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Expressions\PpPrimaryExpression.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Expressions\PpUnaryExpression.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Line\FileName.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Line\FileNameCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Line\FileNameCharacters.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Line\LineIndicator.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Line\PpLine.cs" />
+    <Compile Include="Lexical\Grammar\Directives\PpDirective.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\ChecksumBytes.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\ChecksumGuid.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\PpPragma.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\PragmaBody.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\PragmaChecksumBody.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\PragmaWarningBody.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\WarningAction.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Pragma\WarningList.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Region\PpEndRegion.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Region\PpRegion.cs" />
+    <Compile Include="Lexical\Grammar\Directives\Region\PpStartRegion.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\AvailableIdentifier.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\CombiningCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\ConnectingCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\DecimalDigitCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\FormattingCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\Identifier.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\IdentifierOrKeyword.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\IdentifierPartCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\IdentifierPartCharacters.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\IdentifierStartCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\LetterCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\UnicodeEscapeSequenceCategory.cs" />
+    <Compile Include="Lexical\Grammar\Input.cs" />
+    <Compile Include="Lexical\Grammar\InputElement.cs" />
+    <Compile Include="Lexical\Grammar\InputElements.cs" />
+    <Compile Include="Lexical\Grammar\InputSection.cs" />
+    <Compile Include="Lexical\Grammar\InputSectionPart.cs" />
+    <Compile Include="Lexical\Grammar\Keywords\Keyword.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Boolean\BooleanLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Character\Character.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Character\CharacterLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Character\HexadecimalEscapeSequence.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Character\SimpleEscapeSequence.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Character\SingleCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\DecimalDigit.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\DecimalDigits.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\DecimalIntegerLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\HexadecimalIntegerLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\HexDigit.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\HexDigits.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\IntegerLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Integer\IntegerTypeSuffix.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Literal.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Null\NullLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Real\ExponentPart.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Real\RealLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Real\RealTypeSuffix.cs" />
+    <Compile Include="Lexical\Grammar\Literals\Real\Sign.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\QuoteEscapeSequence.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\RegularStringLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\RegularStringLiteralCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\RegularStringLiteralCharacters.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\SingleRegularStringLiteralCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\SingleVerbatimStringLiteralCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\StringLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\VerbatimStringLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\VerbatimStringLiteralCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Literals\String\VerbatimStringLiteralCharacters.cs" />
+    <Compile Include="Lexical\Grammar\Literals\UnicodeEscapeSequence.cs" />
+    <Compile Include="Lexical\Grammar\OperatorsAndPunctuators\OperatorOrPunctuator.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftCurlyBracketTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftRoundBracketTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\RightCurlyBracketTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\RightRoundBracketTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\ApostropheTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\AsteriskTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\AtSignTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\BackslashTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\CommaTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\ExclamationTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\HyphenTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\NumberSignTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\PeriodTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\QuoteTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\SlashTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\UnderscoreTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\CarriageReturnTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\FormFeedTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\HorizontalTabTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\LineFeedTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\LineSeparatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\NextLineTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\ParagraphSeparatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Control\VerticalTabTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Operator\AndOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Operator\EqualOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Operator\NotEqualOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Operator\OrOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\ChecksumTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\DefaultTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\DefineTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\DisableTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\ElifTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\ElseTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\EndifTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\EndregionTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\ErrorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\FalseTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\HiddenTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\IfTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\LineTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\NullTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\PragmaTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\RegionTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\RestoreTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\TrueTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\UndefTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Word\WarningTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Tokens\NewLine.cs" />
+    <Compile Include="Lexical\Grammar\Tokens\Token.cs" />
+    <Compile Include="Lexical\Grammar\Tokens\Whitespace.cs" />
+    <Compile Include="Lexical\Grammar\Tokens\WhitespaceCharacter.cs" />
+    <Compile Include="Lexical\LexicalStateExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nuta.Parser\Nuta.Parser.csproj">
+      <Project>{1BBF3DE5-0143-403B-A499-1AA9A511811A}</Project>
+      <Name>Nuta.Parser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

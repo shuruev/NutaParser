@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser", "Nuta.Parser\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.Css", "Nuta.Parser.Css\Nuta.Parser.Css.csproj", "{A1F5EA92-A3FF-4D04-978E-C18F77F9956D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.CSharp", "Nuta.Parser.CSharp\Nuta.Parser.CSharp.csproj", "{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = NutaParser.vsmdi
@@ -69,6 +71,16 @@ Global
 		{A1F5EA92-A3FF-4D04-978E-C18F77F9956D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A1F5EA92-A3FF-4D04-978E-C18F77F9956D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A1F5EA92-A3FF-4D04-978E-C18F77F9956D}.Release|x86.ActiveCfg = Release|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C005B63A-C1ED-4454-92EB-FC9CCC6ECE78}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
