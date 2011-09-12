@@ -45,6 +45,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="Stylesheet1.css" />
     <Content Include="TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
