@@ -35,6 +35,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lexical\Grammar\Terminal\Character\BackslashTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Unicode.cs" />
+    <Compile Include="Lexical\Grammar\HexDigit.cs" />
     <Compile Include="Lexical\Grammar\NewLine.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftCurlyBracketTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftRoundBracketTerminal.cs" />
@@ -45,6 +48,7 @@
     <Compile Include="Lexical\Grammar\Terminal\Control\FormFeedTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Control\HorizontalTabTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Control\LineFeedTerminal.cs" />
+    <Compile Include="Lexical\Grammar\NonAscii.cs" />
     <Compile Include="Lexical\Grammar\Whitespace.cs" />
     <Compile Include="Lexical\Grammar\WhitespaceCharacter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

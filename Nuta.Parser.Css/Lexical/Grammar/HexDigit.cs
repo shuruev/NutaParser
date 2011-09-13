@@ -1,6 +1,6 @@
 ﻿using Nuta.Parser.Lexical;
 
-namespace Nuta.Parser.CSharp.Lexical
+namespace Nuta.Parser.Css.Lexical
 {
 	public class HexDigit : SingleCharacterTerminal
 	{
