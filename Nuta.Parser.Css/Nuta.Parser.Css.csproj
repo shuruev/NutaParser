@@ -37,6 +37,12 @@
   <ItemGroup>
     <Compile Include="Lexical\Grammar\AsciiLetter.cs" />
     <Compile Include="Lexical\Grammar\AsciiDigit.cs" />
+    <Compile Include="Lexical\Grammar\Comments\Comment.cs" />
+    <Compile Include="Lexical\Grammar\Comments\Asterisks.cs" />
+    <Compile Include="Lexical\Grammar\Comments\CommentPart.cs" />
+    <Compile Include="Lexical\Grammar\Comments\CommentParts.cs" />
+    <Compile Include="Lexical\Grammar\Comments\NonAsteriskCharacters.cs" />
+    <Compile Include="Lexical\Grammar\Comments\NonAsteriskOrSlashCharacter.cs" />
     <Compile Include="Lexical\Grammar\Escape.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\Name.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\Identifier.cs" />
@@ -50,9 +56,11 @@
     <Compile Include="Lexical\Grammar\Strings\String1Character.cs" />
     <Compile Include="Lexical\Grammar\Strings\String1.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\ApostropheTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\AsteriskTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\BackslashTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\HyphenTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\QuoteTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\SlashTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\UnderscoreTerminal.cs" />
     <Compile Include="Lexical\Grammar\Unicode.cs" />
     <Compile Include="Lexical\Grammar\HexDigit.cs" />
