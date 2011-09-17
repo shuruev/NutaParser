@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.Tests", "Nuta.P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C7F3482D-690D-4EB1-82B6-B5F2DEEA117E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.Css.Tests", "Nuta.Parser.Css.Tests\Nuta.Parser.Css.Tests.csproj", "{5B348037-F9D1-4619-8AC5-0447C65C8ED9}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = NutaParser.vsmdi
@@ -95,6 +97,16 @@ Global
 		{EC9A81C3-32FE-4224-B3C4-0C54C6D0C44F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EC9A81C3-32FE-4224-B3C4-0C54C6D0C44F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EC9A81C3-32FE-4224-B3C4-0C54C6D0C44F}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +114,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EC9A81C3-32FE-4224-B3C4-0C54C6D0C44F} = {C7F3482D-690D-4EB1-82B6-B5F2DEEA117E}
 		{2F800B19-DDEE-42D2-A68A-B22B5DAFBDE7} = {C7F3482D-690D-4EB1-82B6-B5F2DEEA117E}
+		{5B348037-F9D1-4619-8AC5-0447C65C8ED9} = {C7F3482D-690D-4EB1-82B6-B5F2DEEA117E}
 	EndGlobalSection
 EndGlobal

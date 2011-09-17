@@ -35,7 +35,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lexical\Grammar\AsciiLetter.cs" />
+    <Compile Include="Lexical\Grammar\AsciiDigit.cs" />
+    <Compile Include="Lexical\Grammar\Escape.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\Name.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\Identifier.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\NameCharacter.cs" />
+    <Compile Include="Lexical\Grammar\Identifiers\NameStart.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\BackslashTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\HyphenTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\UnderscoreTerminal.cs" />
     <Compile Include="Lexical\Grammar\Unicode.cs" />
     <Compile Include="Lexical\Grammar\HexDigit.cs" />
     <Compile Include="Lexical\Grammar\NewLine.cs" />

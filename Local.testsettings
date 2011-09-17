@@ -15,7 +15,9 @@
           <Configuration>
             <CodeCoverage xmlns="">
               <Regular>
-                <CodeCoverageItem binaryFile="NutaParser\bin\Debug\NutaParser.exe" pdbFile="NutaParser\bin\Debug\NutaParser.pdb" instrumentInPlace="true" />
+                <CodeCoverageItem binaryFile="Nuta.Parser.Css\bin\Debug\Nuta.Parser.Css.dll" pdbFile="Nuta.Parser.Css\bin\Debug\Nuta.Parser.Css.pdb" instrumentInPlace="true" />
+                <CodeCoverageItem binaryFile="Nuta.Parser.CSharp\bin\Debug\Nuta.Parser.CSharp.dll" pdbFile="Nuta.Parser.CSharp\bin\Debug\Nuta.Parser.CSharp.pdb" instrumentInPlace="true" />
+                <CodeCoverageItem binaryFile="Nuta.Parser\bin\Debug\Nuta.Parser.dll" pdbFile="Nuta.Parser\bin\Debug\Nuta.Parser.pdb" instrumentInPlace="true" />
               </Regular>
             </CodeCoverage>
           </Configuration>
