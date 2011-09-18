@@ -17,14 +17,14 @@ namespace Nuta.Parser.Css.Lexical
 
 			m_items = new LexicalItem[]
 			{
-				new ParseCharacter(c => c == lower || c == upper),
+				new SingleCharacterTerminal(lower, upper),
 				new ParseAll(
 					BackslashTerminal.S,
 					ZeroDigit.O,
 					ZeroDigit.O,
 					ZeroDigit.O,
 					ZeroDigit.O,
-					new ParseWord(true, new[] { lowerHex, upperHex }),
+					new SingleWordTerminal(true, lowerHex, upperHex),
 					UnicodeWhitespace.O)
 			};
 		}

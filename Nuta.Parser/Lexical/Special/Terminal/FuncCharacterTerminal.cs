@@ -3,16 +3,16 @@
 namespace Nuta.Parser.Lexical
 {
 	/// <summary>
-	/// Lexical item containing single character specified by function.
+	/// Parsed single character specified by function.
 	/// </summary>
-	public class ParseCharacter : LexicalItem
+	public class FuncCharacterTerminal : LexicalItem
 	{
 		private readonly Func<char, bool> m_check;
 
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public ParseCharacter(Func<char, bool> check)
+		public FuncCharacterTerminal(Func<char, bool> check)
 		{
 			m_check = check;
 		}

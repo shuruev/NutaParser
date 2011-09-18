@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lexical\Grammar\Comments.cs" />
+    <Compile Include="Lexical\Grammar\Numbers.cs" />
     <Compile Include="Lexical\Grammar\Letters.cs" />
     <Compile Include="Lexical\Grammar\Escapes.cs" />
     <Compile Include="Lexical\Grammar\Strings.cs" />

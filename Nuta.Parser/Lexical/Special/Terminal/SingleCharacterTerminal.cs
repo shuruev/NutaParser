@@ -3,7 +3,7 @@
 namespace Nuta.Parser.Lexical
 {
 	/// <summary>
-	/// Parses specified character.
+	/// Parses any of specified character.
 	/// </summary>
 	public class SingleCharacterTerminal : LexicalItem
 	{

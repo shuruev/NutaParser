@@ -1,9 +1,9 @@
 ﻿namespace Nuta.Parser.Lexical
 {
 	/// <summary>
-	/// Lexical item containing any of specified words.
+	/// Parses any of specified words.
 	/// </summary>
-	public class ParseWord : LexicalItem
+	public class SingleWordTerminal : LexicalItem
 	{
 		private readonly bool m_ignoreCase;
 		private readonly string[] m_words;
@@ -11,7 +11,7 @@
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public ParseWord(params string[] words)
+		public SingleWordTerminal(params string[] words)
 			: this(false, words)
 		{
 		}
@@ -19,7 +19,7 @@
 		/// <summary>
 		/// Initializes a new instance.
 		/// </summary>
-		public ParseWord(bool ignoreCase, params string[] words)
+		public SingleWordTerminal(bool ignoreCase, params string[] words)
 		{
 			m_ignoreCase = ignoreCase;
 			m_words = words;
