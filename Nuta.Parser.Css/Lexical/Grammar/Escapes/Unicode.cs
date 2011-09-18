@@ -15,10 +15,7 @@ namespace Nuta.Parser.Css.Lexical
 				HexDigit.O,
 				HexDigit.O,
 				HexDigit.O,
-				new ParseAny(
-					NewLine.S,
-					WhitespaceCharacter.S,
-					Empty.S))
+				UnicodeWhitespace.O)
 		{
 		}
 	}

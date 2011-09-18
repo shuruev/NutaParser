@@ -38,6 +38,8 @@
     <Compile Include="Lexical\LexicalEntry.cs" />
     <Compile Include="Lexical\LexicalItem.cs" />
     <Compile Include="Lexical\LexicalState.cs" />
+    <Compile Include="Lexical\Special\ParseCharacter.cs" />
+    <Compile Include="Lexical\Special\ParseWord.cs" />
     <Compile Include="Lexical\Special\Empty.cs" />
     <Compile Include="Lexical\Special\Optional.cs" />
     <Compile Include="Lexical\Special\ParseAll.cs" />

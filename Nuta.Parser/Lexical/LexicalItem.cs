@@ -37,7 +37,7 @@ namespace Nuta.Parser.Lexical
 		/// <summary>
 		/// Tries to parse any of specified words.
 		/// </summary>
-		public bool ParseWord(LexicalState state, params string[] words)
+		public bool ParseWord(LexicalState state, bool ignoreCase, params string[] words)
 		{
 			if (state.IsEndOfData)
 				return false;
@@ -47,7 +47,12 @@ namespace Nuta.Parser.Lexical
 				if (state.Position + word.Length > state.Length)
 					continue;
 
-				if (state.Get(state.Position, word.Length) == word)
+				string captured = state.Get(state.Position, word.Length);
+				bool matches = ignoreCase
+					? String.Compare(captured, word, StringComparison.OrdinalIgnoreCase) == 0
+					: captured == word;
+
+				if (matches)
 				{
 					state.AddIncrement(Key, word.Length);
 					return true;
@@ -55,6 +60,14 @@ namespace Nuta.Parser.Lexical
 			}
 
 			return false;
+		}
+
+		/// <summary>
+		/// Tries to parse any of specified words.
+		/// </summary>
+		public bool ParseWord(LexicalState state, params string[] words)
+		{
+			return ParseWord(state, false, words);
 		}
 
 		/// <summary>

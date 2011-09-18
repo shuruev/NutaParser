@@ -43,11 +43,41 @@
     <Compile Include="Lexical\Grammar\Comments\CommentParts.cs" />
     <Compile Include="Lexical\Grammar\Comments\NonAsteriskCharacters.cs" />
     <Compile Include="Lexical\Grammar\Comments\NonAsteriskOrSlashCharacter.cs" />
-    <Compile Include="Lexical\Grammar\Escape.cs" />
+    <Compile Include="Lexical\Grammar\Escapes\UnicodeWhitespace.cs" />
+    <Compile Include="Lexical\Grammar\Escapes\Escape.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\Name.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\Identifier.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\NameCharacter.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\NameStart.cs" />
+    <Compile Include="Lexical\Grammar\Letters\LetterOther.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Hex\LetterE.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Hex\LetterF.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Hex\LetterD.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Hex\LetterC.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Hex\LetterB.cs" />
+    <Compile Include="Lexical\Grammar\Letters\LetterHex.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterZ.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterY.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterX.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterW.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterV.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterU.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterT.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterS.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterR.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterQ.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterP.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterO.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterN.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterM.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterL.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterI.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterJ.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterK.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterH.cs" />
+    <Compile Include="Lexical\Grammar\Letters\ZeroDigit.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Other\LetterG.cs" />
+    <Compile Include="Lexical\Grammar\Letters\Hex\LetterA.cs" />
     <Compile Include="Lexical\Grammar\Strings\StringLiteral.cs" />
     <Compile Include="Lexical\Grammar\Strings\String2Characters.cs" />
     <Compile Include="Lexical\Grammar\Strings\String1Characters.cs" />
@@ -62,7 +92,7 @@
     <Compile Include="Lexical\Grammar\Terminal\Character\QuoteTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\SlashTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\UnderscoreTerminal.cs" />
-    <Compile Include="Lexical\Grammar\Unicode.cs" />
+    <Compile Include="Lexical\Grammar\Escapes\Unicode.cs" />
     <Compile Include="Lexical\Grammar\HexDigit.cs" />
     <Compile Include="Lexical\Grammar\NewLine.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftCurlyBracketTerminal.cs" />
@@ -85,6 +115,7 @@
       <Name>Nuta.Parser</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
