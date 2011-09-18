@@ -131,6 +131,8 @@
     <Compile Include="Lexical\Grammar\Terminal\Control\HorizontalTabTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Control\LineFeedTerminal.cs" />
     <Compile Include="Lexical\Grammar\NonAscii.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Operator\DashmatchOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Operator\IncludesOperatorTerminal.cs" />
     <Compile Include="Lexical\Grammar\Whitespace.cs" />
     <Compile Include="Lexical\Grammar\WhitespaceCharacter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
