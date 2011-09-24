@@ -20,5 +20,25 @@ namespace Nuta.Parser.Css.Tests.Lexical
 
 			Check(false, Comment.S, "/* comment /* nested */ here */");
 		}
+
+		[TestMethod]
+		public void Is_Comment_Delimiter_Open()
+		{
+			Check(true, CommentDelimiterOpen.S, "<!--");
+			Check(false, CommentDelimiterOpen.S, "<! --");
+			Check(false, CommentDelimiterOpen.S, "<!-- ");
+			Check(false, CommentDelimiterOpen.S, "<!---");
+			Check(false, CommentDelimiterOpen.S, "< !--");
+		}
+
+		[TestMethod]
+		public void Is_Comment_Delimiter_Close()
+		{
+			Check(true, CommentDelimiterClose.S, "-->");
+			Check(false, CommentDelimiterClose.S, "-- >");
+			Check(false, CommentDelimiterClose.S, " -->");
+			Check(false, CommentDelimiterClose.S, "--->");
+			Check(false, CommentDelimiterClose.S, "- ->");
+		}
 	}
 }

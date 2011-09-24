@@ -70,5 +70,13 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(true, Identifier.S, "B\\26 W\\3F");
 			Check(false, Identifier.S, "B\\26  W\\3F");
 		}
+
+		[TestMethod]
+		public void Is_Hash()
+		{
+			Check(true, Hash.S, "#red");
+			Check(true, Hash.S, "#BLUE");
+			Check(false, Hash.S, "# green");
+		}
 	}
 }

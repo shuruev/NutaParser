@@ -9,7 +9,7 @@ namespace Nuta.Parser.Css.Lexical
 		public UriLiteral()
 			: base(
 				Uri1.S,
-				Uri1.S)
+				Uri2.S)
 		{
 		}
 	}

@@ -8,7 +8,7 @@ namespace Nuta.Parser.Css.Lexical
 
 		public Hash()
 			: base(
-				AsteriskTerminal.S,
+				NumberSignTerminal.S,
 				Name.S)
 		{
 		}
