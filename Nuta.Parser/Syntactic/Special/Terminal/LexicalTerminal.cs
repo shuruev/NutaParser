@@ -18,6 +18,17 @@ namespace Nuta.Parser.Syntactic
 		}
 
 		/// <summary>
+		/// Gets entity key.
+		/// </summary>
+		public override string Key
+		{
+			get
+			{
+				return m_item.Key;
+			}
+		}
+
+		/// <summary>
 		/// Tries to parse an entity from the specified syntactic machine state.
 		/// In case of success returns true and advances parsing position.
 		/// </summary>

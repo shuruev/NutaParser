@@ -140,12 +140,14 @@ namespace Nuta.Parser.Lexical
 		/// </summary>
 		public bool ParseMany(LexicalState state, LexicalItem part, LexicalItem delimiter)
 		{
+			int index = state.Position;
+
 			if (!part.Parse(state))
 				return false;
 
 			while (true)
 			{
-				int index = state.Position;
+				int lastIndex = state.Position;
 
 				if (delimiter != null)
 				{
@@ -155,12 +157,12 @@ namespace Nuta.Parser.Lexical
 
 				if (!part.Parse(state))
 				{
-					state.Reset(index);
+					state.Reset(lastIndex);
 					break;
 				}
 			}
 
-			state.AddAbsolute(Key, state.Position);
+			state.AddBack(Key, index);
 			return true;
 		}
 

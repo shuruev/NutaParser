@@ -1,13 +1,13 @@
-﻿using Nuta.Parser.Lexical;
+﻿using Nuta.Parser.Syntactic;
 
-namespace Nuta.Parser.Css.Lexical
+namespace Nuta.Parser.Css.Syntactic
 {
-	public class RightAngleBracketTerminal : SingleCharacterTerminal
+	public class RightAngleBracketTerminal : TextTerminal
 	{
 		public static readonly RightAngleBracketTerminal S = new RightAngleBracketTerminal();
 
 		public RightAngleBracketTerminal()
-			: base('>')
+			: base(">")
 		{
 		}
 	}

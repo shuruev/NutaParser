@@ -21,30 +21,12 @@ namespace Nuta.Parser.Css.Lexical
 				Comment.S,
 				CommentDelimiterOpen.S,
 				CommentDelimiterClose.S,
-				FunctionPrefix.S
+				FunctionPrefix.S,
+				IncludesOperatorTerminal.S,
+				DashmatchOperatorTerminal.S
 			});
 
-			toExtract.AddRange(new LexicalItem[]
-			{
-				IncludesOperatorTerminal.S,
-				DashmatchOperatorTerminal.S,
-				RightAngleBracketTerminal.S,
-				LeftCurlyBracketTerminal.S,
-				RightCurlyBracketTerminal.S,
-				LeftSquareBracketTerminal.S,
-				RightSquareBracketTerminal.S,
-				EqualTerminal.S,
-				SemicolonTerminal.S,
-				ColonTerminal.S,
-				SlashTerminal.S,
-				MinusTerminal.S,
-				PlusTerminal.S,
-				AsteriskTerminal.S,
-				LeftRoundBracketTerminal.S,
-				RightRoundBracketTerminal.S,
-				CommaTerminal.S,
-				PeriodTerminal.S
-			});
+			toExtract.Add(Punctuator.S);
 
 			toExtract.AddRange(new LexicalItem[]
 			{
@@ -82,7 +64,7 @@ namespace Nuta.Parser.Css.Lexical
 			return state
 				.GetAllEntries()
 				.Where(entry => s_toExtract.Contains(entry.Key))
-				.ToList();
+				.FilterInclusive();
 		}
 	}
 }

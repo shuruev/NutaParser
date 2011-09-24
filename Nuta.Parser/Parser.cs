@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Nuta.Parser.Lexical;
 using Nuta.Parser.Syntactic;
@@ -94,6 +96,34 @@ namespace Nuta.Parser
 				return false;
 
 			return true;
+		}
+
+		#endregion
+
+		#region Extracting tokens
+
+		/// <summary>
+		/// Filters out all entries that are part of another ones.
+		/// </summary>
+		public static List<LexicalEntry> FilterInclusive(this IEnumerable<LexicalEntry> entries)
+		{
+			var result = new List<LexicalEntry>();
+			int position = 0;
+
+			var input = entries
+				.OrderBy(entry => entry.StartPosition)
+				.ThenByDescending(entry => entry.Length);
+
+			foreach (var entry in input)
+			{
+				if (entry.EndPosition <= position)
+					continue;
+
+				position = entry.EndPosition;
+				result.Add(entry);
+			}
+
+			return result;
 		}
 
 		#endregion

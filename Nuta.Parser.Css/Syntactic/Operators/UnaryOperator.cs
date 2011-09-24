@@ -1,16 +1,16 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
 	public class UnaryOperator : ParseAny
 	{
 		public static readonly UnaryOperator S = new UnaryOperator();
+		public static readonly Optional O = new Optional(S);
 
 		public UnaryOperator()
 			: base(
-				new LexicalTerminal(MinusTerminal.S),
-				new LexicalTerminal(PlusTerminal.S))
+				MinusTerminal.S,
+				PlusTerminal.S)
 		{
 		}
 	}

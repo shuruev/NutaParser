@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -10,8 +9,8 @@ namespace Nuta.Parser.Css.Syntactic
 		public Combinator()
 			: base(
 				new ParseAny(
-					new LexicalTerminal(PlusTerminal.S),
-					new LexicalTerminal(RightAngleBracketTerminal.S)),
+					PlusTerminal.S,
+					RightAngleBracketTerminal.S),
 				WhitespaceTerminal.O)
 		{
 		}

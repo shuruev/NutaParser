@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\LexicalTestBase.cs" />
+    <Compile Include="ParserTests.cs" />
     <Compile Include="LexicalMachineTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Code\Ensure.cs" />

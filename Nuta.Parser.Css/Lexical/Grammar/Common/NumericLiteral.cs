@@ -8,13 +8,13 @@ namespace Nuta.Parser.Css.Lexical
 
 		public NumericLiteral()
 			: base(
-				Size.S,
+				Percentage.S,
 				Length.S,
+				Size.S,
 				Angle.S,
 				Time.S,
 				Freq.S,
 				Dimension.S,
-				Percentage.S,
 				Number.S)
 		{
 		}

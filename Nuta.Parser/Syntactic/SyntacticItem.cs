@@ -18,7 +18,7 @@ namespace Nuta.Parser.Syntactic
 		/// <summary>
 		/// Gets entity key.
 		/// </summary>
-		public string Key
+		public virtual string Key
 		{
 			get
 			{
@@ -174,13 +174,16 @@ namespace Nuta.Parser.Syntactic
 		/// </summary>
 		private bool ParseManyInternal(SyntacticState state, SyntacticItem part, SyntacticItem delimiter)
 		{
+			int innerIndex = state.InnerPosition;
+			int outerIndex = state.OuterPosition;
+
 			if (!part.Parse(state))
 				return false;
 
 			while (true)
 			{
-				int innerIndex = state.InnerPosition;
-				int outerIndex = state.OuterPosition;
+				int lastInnerIndex = state.InnerPosition;
+				int lastOuterIndex = state.OuterPosition;
 
 				if (delimiter != null)
 				{
@@ -190,12 +193,12 @@ namespace Nuta.Parser.Syntactic
 
 				if (!part.Parse(state))
 				{
-					state.Reset(innerIndex, outerIndex);
+					state.Reset(lastInnerIndex, lastOuterIndex);
 					break;
 				}
 			}
 
-			state.AddAbsolute(Key, state.InnerPosition, state.OuterPosition);
+			state.AddBack(Key, innerIndex, outerIndex);
 			return true;
 		}
 

@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -10,8 +9,8 @@ namespace Nuta.Parser.Css.Syntactic
 		public Operator()
 			: base(
 				new ParseAny(
-					new LexicalTerminal(SlashTerminal.S),
-					new LexicalTerminal(CommaTerminal.S)),
+					SlashTerminal.S,
+					CommaTerminal.S),
 				WhitespaceTerminal.O)
 		{
 		}
