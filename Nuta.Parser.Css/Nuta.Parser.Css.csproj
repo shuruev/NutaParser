@@ -172,8 +172,10 @@
     <Compile Include="Lexical\LexicalStateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Syntactic\HexColor.cs" />
+    <Compile Include="Syntactic\Operators\Combinator.cs" />
+    <Compile Include="Syntactic\Operators\UnaryOperator.cs" />
+    <Compile Include="Syntactic\Operators\Operator.cs" />
     <Compile Include="Syntactic\Terminal\Lexical\FunctionPrefixTerminal.cs" />
-    <Compile Include="Syntactic\Terminal\Lexical\HashTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Lexical\IdentifierTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Lexical\WhitespaceTerminal.cs" />
   </ItemGroup>

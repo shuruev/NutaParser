@@ -12,10 +12,10 @@ namespace Nuta.Parser.Css.Lexical
 				Comment.S,
 				CommentDelimiterOpen.S,
 				CommentDelimiterClose.S,
+				FunctionPrefix.S,
 				OperatorOrPunctuator.S,
 				LiteralOrIdentifier.S,
-				Directive.S,
-				FunctionPrefix.S)
+				Directive.S)
 		{
 		}
 	}

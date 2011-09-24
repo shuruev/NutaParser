@@ -1,4 +1,5 @@
-﻿using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Css.Lexical;
+using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -8,7 +9,7 @@ namespace Nuta.Parser.Css.Syntactic
 
 		public HexColor()
 			: base(
-				HashTerminal.S,
+				new LexicalTerminal(Hash.S),
 				WhitespaceTerminal.O)
 		{
 		}

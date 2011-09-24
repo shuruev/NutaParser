@@ -15,8 +15,6 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		/// </summary>
 		protected override bool Parse(SyntacticItem item, string data)
 		{
-			data = Parser.PrepareEndOfFile(data);
-
 			LexicalState lexicalState = new LexicalState(data);
 			if (!Input.S.ParseFull(lexicalState))
 				return false;
