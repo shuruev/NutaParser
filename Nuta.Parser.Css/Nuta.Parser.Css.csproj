@@ -46,6 +46,10 @@
     <Compile Include="Lexical\Grammar\Comments\NonAsteriskCharacters.cs" />
     <Compile Include="Lexical\Grammar\Comments\NonAsteriskOrSlashCharacter.cs" />
     <Compile Include="Lexical\Grammar\AsciiDigits.cs" />
+    <Compile Include="Lexical\Grammar\Common\Directives.cs" />
+    <Compile Include="Lexical\Grammar\Common\NumericLiteral.cs" />
+    <Compile Include="Lexical\Grammar\Common\LiteralOrIdentifier.cs" />
+    <Compile Include="Lexical\Grammar\Common\OperatorOrPunctuator.cs" />
     <Compile Include="Lexical\Grammar\Directives\CharsetSymbol.cs" />
     <Compile Include="Lexical\Grammar\Directives\FunctionPrefix.cs" />
     <Compile Include="Lexical\Grammar\Directives\ImportantDelimiter.cs" />
@@ -60,6 +64,9 @@
     <Compile Include="Lexical\Grammar\Identifiers\Identifier.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\NameCharacter.cs" />
     <Compile Include="Lexical\Grammar\Identifiers\NameStart.cs" />
+    <Compile Include="Lexical\Grammar\Common\Input.cs" />
+    <Compile Include="Lexical\Grammar\Common\InputElement.cs" />
+    <Compile Include="Lexical\Grammar\Common\InputElements.cs" />
     <Compile Include="Lexical\Grammar\Letters\LetterOther.cs" />
     <Compile Include="Lexical\Grammar\Letters\Hex\LetterE.cs" />
     <Compile Include="Lexical\Grammar\Letters\Hex\LetterF.cs" />
@@ -119,10 +126,18 @@
     <Compile Include="Lexical\Grammar\Strings\String2Character.cs" />
     <Compile Include="Lexical\Grammar\Strings\String1Character.cs" />
     <Compile Include="Lexical\Grammar\Strings\String1.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\LeftSquareBracketTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\RightSquareBracketTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Brackets\RightAngleBracketTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\ApostropheTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\AsteriskTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\AtSignTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\BackslashTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\ColonTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\CommaTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\PlusTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\MinusTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\SemicolonTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\ExclamationTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\NumberSignTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\PercentTerminal.cs" />
@@ -145,6 +160,7 @@
     <Compile Include="Lexical\Grammar\Terminal\Control\LineFeedTerminal.cs" />
     <Compile Include="Lexical\Grammar\NonAscii.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Operator\DashmatchOperatorTerminal.cs" />
+    <Compile Include="Lexical\Grammar\Terminal\Character\EqualTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Operator\IncludesOperatorTerminal.cs" />
     <Compile Include="Lexical\Grammar\Urls\UriLiteral.cs" />
     <Compile Include="Lexical\Grammar\Urls\Uri2.cs" />
@@ -153,7 +169,13 @@
     <Compile Include="Lexical\Grammar\Urls\UrlCharacter.cs" />
     <Compile Include="Lexical\Grammar\Whitespace.cs" />
     <Compile Include="Lexical\Grammar\WhitespaceCharacter.cs" />
+    <Compile Include="Lexical\LexicalStateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\HexColor.cs" />
+    <Compile Include="Syntactic\Terminal\Lexical\FunctionPrefixTerminal.cs" />
+    <Compile Include="Syntactic\Terminal\Lexical\HashTerminal.cs" />
+    <Compile Include="Syntactic\Terminal\Lexical\IdentifierTerminal.cs" />
+    <Compile Include="Syntactic\Terminal\Lexical\WhitespaceTerminal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nuta.Parser\Nuta.Parser.csproj">

@@ -56,6 +56,8 @@
     <Compile Include="Lexical\Grammar\Grammar.cs" />
     <Compile Include="Lexical\LexicalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\Grammar\Grammar.cs" />
+    <Compile Include="Syntactic\SyntacticTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nuta.Parser.Css\Nuta.Parser.Css.csproj">

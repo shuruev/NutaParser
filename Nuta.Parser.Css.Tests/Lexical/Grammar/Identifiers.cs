@@ -77,6 +77,13 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(true, Hash.S, "#red");
 			Check(true, Hash.S, "#BLUE");
 			Check(false, Hash.S, "# green");
+
+			Check(true, Hash.S, "#9");
+			Check(true, Hash.S, "#99");
+			Check(true, Hash.S, "#999");
+			Check(true, Hash.S, "#9999");
+			Check(true, Hash.S, "#99999");
+			Check(true, Hash.S, "#999999");
 		}
 	}
 }
