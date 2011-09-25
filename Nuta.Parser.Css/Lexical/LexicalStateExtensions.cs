@@ -24,8 +24,6 @@ namespace Nuta.Parser.Css.Lexical
 				DashmatchOperatorTerminal.S
 			});
 
-			toExtract.Add(Punctuator.S);
-
 			toExtract.AddRange(new LexicalItem[]
 			{
 				UriLiteral.S,
@@ -42,6 +40,8 @@ namespace Nuta.Parser.Css.Lexical
 				Hash.S,
 				Identifier.S
 			});
+
+			toExtract.Add(Punctuator.S);
 
 			toExtract.AddRange(new LexicalItem[]
 			{
