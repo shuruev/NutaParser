@@ -11,8 +11,8 @@ namespace Nuta.Parser.Css.Syntactic
 				UnaryOperator.O,
 				new ParseAny(
 					TermPart.S,
-					HexColor.S
-					/*xxxFunction*/))
+					HexColor.S,
+					Function.S))
 		{
 		}
 	}

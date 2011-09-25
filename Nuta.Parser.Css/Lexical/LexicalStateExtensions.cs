@@ -18,10 +18,8 @@ namespace Nuta.Parser.Css.Lexical
 			toExtract.AddRange(new LexicalItem[]
 			{
 				Whitespace.S,
-				Comment.S,
 				CommentDelimiterOpen.S,
 				CommentDelimiterClose.S,
-				FunctionPrefix.S,
 				IncludesOperatorTerminal.S,
 				DashmatchOperatorTerminal.S
 			});
@@ -31,6 +29,7 @@ namespace Nuta.Parser.Css.Lexical
 			toExtract.AddRange(new LexicalItem[]
 			{
 				UriLiteral.S,
+				FunctionPrefix.S,
 				StringLiteral.S,
 				Size.S,
 				Length.S,

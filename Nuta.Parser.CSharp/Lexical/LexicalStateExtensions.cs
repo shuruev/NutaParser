@@ -21,6 +21,7 @@ namespace Nuta.Parser.CSharp.Lexical
 					|| entry.Key == Literal.S.Key
 					|| entry.Key == Keyword.S.Key
 					|| entry.Key == OperatorOrPunctuator.S.Key)
+				.OrderBy(entry => entry.StartPosition)
 				.ToList();
 		}
 	}

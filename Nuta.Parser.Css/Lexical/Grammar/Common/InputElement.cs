@@ -15,9 +15,13 @@ namespace Nuta.Parser.Css.Lexical
 				IncludesOperatorTerminal.S,
 				DashmatchOperatorTerminal.S,
 				Punctuator.S,
-				LiteralOrIdentifier.S,
-				Directive.S,
-				FunctionPrefix.S)
+				UriLiteral.S,
+				FunctionPrefix.S,
+				StringLiteral.S,
+				NumericLiteral.S,
+				Hash.S,
+				Identifier.S,
+				Directive.S)
 		{
 		}
 	}
