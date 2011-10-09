@@ -56,6 +56,7 @@
     <Compile Include="Lexical\Grammar\Grammar.cs" />
     <Compile Include="Lexical\LexicalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\Grammar\Selectors.cs" />
     <Compile Include="Syntactic\Grammar\Declarations.cs" />
     <Compile Include="Syntactic\Grammar\Expressions.cs" />
     <Compile Include="Syntactic\Grammar\Operators.cs" />
