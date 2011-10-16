@@ -14,13 +14,22 @@ namespace Nuta.Parser.Css.Lexical
 				CommentDelimiterClose.S,
 				IncludesOperatorTerminal.S,
 				DashmatchOperatorTerminal.S,
+				PrefixmatchOperatorTerminal.S,
+				SuffixmatchOperatorTerminal.S,
+				SubstringmatchOperatorTerminal.S,
 				UriLiteral.S,
 				FunctionPrefix.S,
+				NotPrefix.S,
+				AtKeyword.S,
 				StringLiteral.S,
 				NumericLiteral.S,
 				Hash.S,
 				Identifier.S,
 				Punctuator.S,
+				Plus.S,
+				Greater.S,
+				Comma.S,
+				Tilde.S,
 				Directive.S)
 		{
 		}

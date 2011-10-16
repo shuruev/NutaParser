@@ -14,7 +14,7 @@ namespace NutaParser
 		public static void Main(string[] args)
 		{
 			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
-			//Parse(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
+			Parse(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
 
 			//ParseAll(@"D:\OLEG\Dropbox");
 			//ParseAll(@"D:\OLEG\Git");

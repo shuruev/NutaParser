@@ -62,8 +62,11 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(false, NonAscii.S, "A");
 			Check(false, NonAscii.S, "Z");
 			Check(false, NonAscii.S, new string((char)159, 1));
-			Check(true, NonAscii.S, new string((char)160, 1));
-			Check(true, NonAscii.S, new string((char)161, 1));
+			Check(false, NonAscii.S, new string((char)160, 1));
+			Check(false, NonAscii.S, new string((char)161, 1));
+			Check(false, NonAscii.S, new string((char)176, 1));
+			Check(false, NonAscii.S, new string((char)177, 1));
+			Check(true, NonAscii.S, new string((char)178, 1));
 			Check(true, NonAscii.S, new string((char)254, 1));
 			Check(true, NonAscii.S, new string((char)255, 1));
 			Check(true, NonAscii.S, new string((char)256, 1));

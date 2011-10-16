@@ -66,5 +66,26 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(false, FunctionPrefix.S, "func (");
 			Check(false, FunctionPrefix.S, "func((");
 		}
+
+		[TestMethod]
+		public void Is_Not_Prefix()
+		{
+			Check(true, NotPrefix.S, ":not(");
+			Check(true, NotPrefix.S, ":NOT(");
+			Check(true, NotPrefix.S, ":no\\54(");
+			Check(false, NotPrefix.S, ": not(");
+			Check(false, NotPrefix.S, ":not (");
+			Check(false, NotPrefix.S, ":not((");
+		}
+
+		[TestMethod]
+		public void Is_At_Keyword()
+		{
+			Check(true, AtKeyword.S, "@word");
+			Check(true, AtKeyword.S, "@WORD");
+			Check(true, AtKeyword.S, "@some-word");
+			Check(false, AtKeyword.S, "@ word");
+			Check(false, AtKeyword.S, "@@word");
+		}
 	}
 }

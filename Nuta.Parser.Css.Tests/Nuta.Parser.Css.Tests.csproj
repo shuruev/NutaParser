@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lexical\Grammar\Comments.cs" />
+    <Compile Include="Lexical\Grammar\Punctuators.cs" />
     <Compile Include="Lexical\Grammar\Urls.cs" />
     <Compile Include="Lexical\Grammar\Directives.cs" />
     <Compile Include="Lexical\Grammar\Numbers.cs" />

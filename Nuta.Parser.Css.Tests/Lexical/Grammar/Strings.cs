@@ -31,6 +31,10 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(false, String1.S, "\"some\ntext\"");
 			Check(false, String1.S, "\"some\ftext\"");
 			Check(false, String1.S, "\"some\r\ntext\"");
+
+			Check(true, String1.S, "\"some" + (char)180 + "text\"");
+			Check(true, String1.S, "\"some" + (char)255 + "text\"");
+			Check(true, String1.S, "\"some" + (char)65535 + "text\"");
 		}
 
 		[TestMethod]
@@ -58,6 +62,10 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(false, String2.S, "'some\ntext'");
 			Check(false, String2.S, "'some\ftext'");
 			Check(false, String2.S, "'some\r\ntext'");
+
+			Check(true, String2.S, "'some" + (char)180 + "text'");
+			Check(true, String2.S, "'some" + (char)255 + "text'");
+			Check(true, String2.S, "'some" + (char)65535 + "text'");
 		}
 
 		[TestMethod]

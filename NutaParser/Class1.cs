@@ -4,9 +4,7 @@
 	{
 		public bool? GetStatus(string filepath)
 		{
-			SqlDataReader reader;
-			//return (reader["status"] is DBNull ? null : (bool?)reader["status"]);
-			return reader["status"] is DBNull ? null : (bool?)reader["status"];
+			string nestedFormula = "=" + IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, IntlFormula(m_sumFn, "2", "3")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
 		}
 	}
 }

@@ -8,7 +8,7 @@ namespace Nuta.Parser.Css.Lexical
 
 		public override bool Parse(LexicalState state)
 		{
-			return ParseCharacter(state, c => c >= 160);
+			return ParseCharacter(state, c => c > 177);
 		}
 	}
 }

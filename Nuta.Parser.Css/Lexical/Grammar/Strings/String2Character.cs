@@ -9,6 +9,7 @@ namespace Nuta.Parser.Css.Lexical
 		public String2Character()
 			: base(
 				Escape.S,
+				NonAscii.S,
 				new ParseAll(
 					BackslashTerminal.S,
 					NewLine.S),

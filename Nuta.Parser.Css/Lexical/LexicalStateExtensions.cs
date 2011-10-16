@@ -21,13 +21,18 @@ namespace Nuta.Parser.Css.Lexical
 				CommentDelimiterOpen.S,
 				CommentDelimiterClose.S,
 				IncludesOperatorTerminal.S,
-				DashmatchOperatorTerminal.S
+				DashmatchOperatorTerminal.S,
+				PrefixmatchOperatorTerminal.S,
+				SuffixmatchOperatorTerminal.S,
+				SubstringmatchOperatorTerminal.S,
 			});
 
 			toExtract.AddRange(new LexicalItem[]
 			{
 				UriLiteral.S,
 				FunctionPrefix.S,
+				NotPrefix.S,
+				AtKeyword.S,
 				StringLiteral.S,
 				Size.S,
 				Length.S,
@@ -42,6 +47,14 @@ namespace Nuta.Parser.Css.Lexical
 			});
 
 			toExtract.Add(Punctuator.S);
+
+			toExtract.AddRange(new LexicalItem[]
+			{
+				Plus.S,
+				Greater.S,
+				Comma.S,
+				Tilde.S
+			});
 
 			toExtract.AddRange(new LexicalItem[]
 			{
