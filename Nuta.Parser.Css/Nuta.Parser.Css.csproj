@@ -46,7 +46,7 @@
     <Compile Include="Lexical\Grammar\Comments\NonAsteriskCharacters.cs" />
     <Compile Include="Lexical\Grammar\Comments\NonAsteriskOrSlashCharacter.cs" />
     <Compile Include="Lexical\Grammar\AsciiDigits.cs" />
-    <Compile Include="Lexical\Grammar\Common\Directives.cs" />
+    <Compile Include="Lexical\Grammar\Common\Directive.cs" />
     <Compile Include="Lexical\Grammar\Common\NumericLiteral.cs" />
     <Compile Include="Lexical\Grammar\Common\Punctuator.cs" />
     <Compile Include="Lexical\Grammar\Directives\CharsetSymbol.cs" />
@@ -120,10 +120,6 @@
     <Compile Include="Lexical\Grammar\Numbers\Time\Time.cs" />
     <Compile Include="Lexical\Grammar\Numbers\Time\TimeS.cs" />
     <Compile Include="Lexical\Grammar\Numbers\Time\TimeMs.cs" />
-    <Compile Include="Lexical\Grammar\Punctuators\Comma.cs" />
-    <Compile Include="Lexical\Grammar\Punctuators\Tilde.cs" />
-    <Compile Include="Lexical\Grammar\Punctuators\Greater.cs" />
-    <Compile Include="Lexical\Grammar\Punctuators\Plus.cs" />
     <Compile Include="Lexical\Grammar\Strings\StringLiteral.cs" />
     <Compile Include="Lexical\Grammar\Strings\String2Characters.cs" />
     <Compile Include="Lexical\Grammar\Strings\String1Characters.cs" />
@@ -131,15 +127,11 @@
     <Compile Include="Lexical\Grammar\Strings\String2Character.cs" />
     <Compile Include="Lexical\Grammar\Strings\String1Character.cs" />
     <Compile Include="Lexical\Grammar\Strings\String1.cs" />
-    <Compile Include="Lexical\Grammar\Terminal\Brackets\RightAngleBracketTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\ApostropheTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\AsteriskTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\AtSignTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\BackslashTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\ColonTerminal.cs" />
-    <Compile Include="Lexical\Grammar\Terminal\Character\CommaTerminal.cs" />
-    <Compile Include="Lexical\Grammar\Terminal\Character\TildeTerminal.cs" />
-    <Compile Include="Lexical\Grammar\Terminal\Character\PlusTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\ExclamationTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\NumberSignTerminal.cs" />
     <Compile Include="Lexical\Grammar\Terminal\Character\PercentTerminal.cs" />
@@ -199,6 +191,7 @@
     <Compile Include="Syntactic\Terminal\Character\CommaTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\ColonTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\AsteriskTerminal.cs" />
+    <Compile Include="Syntactic\Terminal\Character\TildeTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\SemicolonTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\PeriodTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\EqualTerminal.cs" />

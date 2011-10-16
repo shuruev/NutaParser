@@ -26,10 +26,6 @@ namespace Nuta.Parser.Css.Lexical
 				Hash.S,
 				Identifier.S,
 				Punctuator.S,
-				Plus.S,
-				Greater.S,
-				Comma.S,
-				Tilde.S,
 				Directive.S)
 		{
 		}

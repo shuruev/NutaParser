@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nuta.Parser.Css.Syntactic;
 
 namespace Nuta.Parser.Css.Tests.Syntactic
@@ -19,11 +20,25 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		[TestMethod]
 		public void Is_Combinator()
 		{
+			Check(false, Combinator.S, String.Empty);
+			Check(false, Combinator.S, " ");
+			Check(false, Combinator.S, "  ");
+			Check(false, Combinator.S, "   ");
+
 			Check(true, Combinator.S, "+");
 			Check(true, Combinator.S, "+ ");
+			Check(false, Combinator.S, " +");
+			Check(false, Combinator.S, " + ");
+
 			Check(true, Combinator.S, ">");
 			Check(true, Combinator.S, "> ");
-			Check(false, Combinator.S, "++");
+			Check(false, Combinator.S, " >");
+			Check(false, Combinator.S, " > ");
+
+			Check(true, Combinator.S, "~");
+			Check(true, Combinator.S, "~ ");
+			Check(false, Combinator.S, " ~");
+			Check(false, Combinator.S, " ~ ");
 		}
 
 		[TestMethod]

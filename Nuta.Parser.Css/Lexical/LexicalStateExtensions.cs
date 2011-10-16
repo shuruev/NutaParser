@@ -50,14 +50,6 @@ namespace Nuta.Parser.Css.Lexical
 
 			toExtract.AddRange(new LexicalItem[]
 			{
-				Plus.S,
-				Greater.S,
-				Comma.S,
-				Tilde.S
-			});
-
-			toExtract.AddRange(new LexicalItem[]
-			{
 				ImportSymbol.S,
 				PageSymbol.S,
 				MediaSymbol.S,

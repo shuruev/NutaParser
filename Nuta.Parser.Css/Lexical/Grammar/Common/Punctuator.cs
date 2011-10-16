@@ -8,6 +8,7 @@ namespace Nuta.Parser.Css.Lexical
 
 		public Punctuator()
 			: base(
+				'>',
 				'{',
 				'}',
 				'[',
@@ -21,7 +22,8 @@ namespace Nuta.Parser.Css.Lexical
 				'*',
 				')',
 				',',
-				'.')
+				'.',
+				'~')
 		{
 		}
 	}

@@ -10,7 +10,8 @@ namespace Nuta.Parser.Css.Syntactic
 			: base(
 				new ParseAny(
 					PlusTerminal.S,
-					RightAngleBracketTerminal.S),
+					RightAngleBracketTerminal.S,
+					TildeTerminal.S),
 				WhitespaceTerminal.O)
 		{
 		}
