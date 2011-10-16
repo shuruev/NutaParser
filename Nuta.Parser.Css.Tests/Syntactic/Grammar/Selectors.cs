@@ -7,12 +7,52 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 	public class Selectors : SyntacticTest
 	{
 		[TestMethod]
+		public void Is_Selector_List()
+		{
+			Check(true, SelectorList.S, ".a,#id");
+			Check(true, SelectorList.S, ".a + .b, elem#id");
+			Check(true, SelectorList.S, ".a + .b , elem#id");
+			Check(true, SelectorList.S, ".a + .b , elem#id   ");
+			Check(false, SelectorList.S, ".a + .b,, elem#id");
+		}
+
+		[TestMethod]
+		public void Is_Selector()
+		{
+			Check(true, Selector.S, "elem");
+			Check(true, Selector.S, "#id");
+			Check(true, Selector.S, "elem #id");
+
+			Check(true, Selector.S, ".a.b");
+			Check(true, Selector.S, ".a+.b");
+			Check(true, Selector.S, ".a>.b");
+			Check(true, Selector.S, ".a .b");
+			Check(true, Selector.S, ".a +.b");
+			Check(true, Selector.S, ".a >.b");
+			Check(true, Selector.S, ".a+ .b");
+			Check(true, Selector.S, ".a> .b");
+			Check(true, Selector.S, ".a + .b");
+			Check(true, Selector.S, ".a > .b");
+
+			Check(true, Selector.S, "#a + #b > #c");
+			Check(false, Selector.S, "   #a + #b > #c");
+			Check(true, Selector.S, "#a + #b > #c   ");
+			Check(false, Selector.S, "   #a + #b > #c   ");
+		}
+
+		[TestMethod]
 		public void Is_Simple_Selector()
 		{
 			Check(true, SimpleSelector.S, "#id");
 			Check(true, SimpleSelector.S, ".class");
 			Check(true, SimpleSelector.S, "[att=val]");
 			Check(true, SimpleSelector.S, ":pseudo");
+
+			Check(true, SimpleSelector.S, "#id#id#id");
+			Check(true, SimpleSelector.S, ".class.class.class");
+			Check(true, SimpleSelector.S, "[att=val][att=val][att=val]");
+			Check(true, SimpleSelector.S, ":pseudo:pseudo:pseudo");
+			Check(true, SimpleSelector.S, "#id.class[att=val]:pseudo");
 
 			Check(true, SimpleSelector.S, "elem#id");
 			Check(true, SimpleSelector.S, "elem.class");
