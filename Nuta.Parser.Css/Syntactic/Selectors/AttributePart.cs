@@ -13,7 +13,10 @@ namespace Nuta.Parser.Css.Syntactic
 				new ParseAny(
 					EqualTerminal.S,
 					new LexicalTerminal(IncludesOperatorTerminal.S),
-					new LexicalTerminal(DashmatchOperatorTerminal.S)),
+					new LexicalTerminal(DashmatchOperatorTerminal.S),
+					new LexicalTerminal(PrefixmatchOperatorTerminal.S),
+					new LexicalTerminal(SuffixmatchOperatorTerminal.S),
+					new LexicalTerminal(SubstringmatchOperatorTerminal.S)),
 				WhitespaceTerminal.O,
 				new ParseAny(
 					new LexicalTerminal(Identifier.S),

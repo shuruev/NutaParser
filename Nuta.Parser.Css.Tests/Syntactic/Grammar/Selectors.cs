@@ -1,5 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nuta.Parser.Css.Syntactic;
+using Attribute = Nuta.Parser.Css.Syntactic.Attribute;
 
 namespace Nuta.Parser.Css.Tests.Syntactic
 {
@@ -41,6 +43,33 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		}
 
 		[TestMethod]
+		public void Is_Combinator()
+		{
+			Check(false, Combinator.S, String.Empty);
+			Check(true, Combinator.S, " ");
+			Check(true, Combinator.S, "  ");
+			Check(true, Combinator.S, "   ");
+
+			Check(true, Combinator.S, "+");
+			Check(true, Combinator.S, "+ ");
+			Check(true, Combinator.S, " +");
+			Check(true, Combinator.S, " + ");
+			Check(false, Combinator.S, " ++ ");
+
+			Check(true, Combinator.S, ">");
+			Check(true, Combinator.S, "> ");
+			Check(true, Combinator.S, " >");
+			Check(true, Combinator.S, " > ");
+			Check(false, Combinator.S, " >> ");
+
+			Check(true, Combinator.S, "~");
+			Check(true, Combinator.S, "~ ");
+			Check(true, Combinator.S, " ~");
+			Check(true, Combinator.S, " ~ ");
+			Check(false, Combinator.S, " ~~ ");
+		}
+
+		[TestMethod]
 		public void Is_Simple_Selector()
 		{
 			Check(true, SimpleSelector.S, "#id");
@@ -69,6 +98,60 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		}
 
 		[TestMethod]
+		public void Is_Namespace_Prefix()
+		{
+			Check(true, NamespacePrefix.S, "|");
+			Check(false, NamespacePrefix.S, " |");
+			Check(false, NamespacePrefix.S, "| ");
+			Check(false, NamespacePrefix.S, "||");
+
+			Check(false, NamespacePrefix.S, "abc");
+			Check(true, NamespacePrefix.S, "abc|");
+			Check(false, NamespacePrefix.S, "abc |");
+			Check(false, NamespacePrefix.S, "abc| ");
+			Check(true, NamespacePrefix.S, "-abc-2|");
+			Check(false, NamespacePrefix.S, "-abc-2||");
+
+			Check(false, NamespacePrefix.S, "*");
+			Check(true, NamespacePrefix.S, "*|");
+			Check(false, NamespacePrefix.S, "* |");
+			Check(false, NamespacePrefix.S, "*| ");
+			Check(false, NamespacePrefix.S, "**|");
+		}
+
+		[TestMethod]
+		public void Is_Type_Selector()
+		{
+			Check(true, TypeSelector.S, "h1");
+			Check(true, TypeSelector.S, "-h1");
+			Check(true, TypeSelector.S, "-x-ns|h1");
+			Check(true, TypeSelector.S, "-x-ns|-h1");
+			Check(false, TypeSelector.S, "-x-ns| h1");
+			Check(false, TypeSelector.S, "-x-ns|h1 ");
+			Check(false, TypeSelector.S, "-x-ns|");
+		}
+
+		[TestMethod]
+		public void Is_Element_Name()
+		{
+			Check(true, ElementName.S, "abc");
+			Check(true, ElementName.S, "-abc-2");
+			Check(false, ElementName.S, "-2-abc");
+		}
+
+		[TestMethod]
+		public void Is_Universal()
+		{
+			Check(true, Universal.S, "*");
+			Check(false, Universal.S, "**");
+			Check(true, Universal.S, "ns|*");
+			Check(true, Universal.S, "-x-ns|*");
+			Check(false, Universal.S, "ns| *");
+			Check(false, Universal.S, "ns *");
+			Check(false, Universal.S, "ns*");
+		}
+
+		[TestMethod]
 		public void Is_Class()
 		{
 			Check(true, Class.S, ".abc");
@@ -78,26 +161,27 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		}
 
 		[TestMethod]
-		public void Is_Element_Name()
-		{
-			Check(true, ElementName.S, "abc");
-			Check(true, ElementName.S, "-abc-2");
-			Check(true, ElementName.S, "*");
-			Check(false, ElementName.S, "**");
-		}
-
-		[TestMethod]
 		public void Is_Attribute()
 		{
 			Check(true, Attribute.S, "[att]");
 			Check(true, Attribute.S, "[ att ]");
-			Check(true, Attribute.S, "[att = val]");
+			Check(true, Attribute.S, "[ns|-att-2]");
+			Check(false, Attribute.S, "[ns |-att-2]");
+			Check(false, Attribute.S, "[ns| -att-2]");
+			Check(true, Attribute.S, "[ ns|-att-2 ]");
+
+			Check(true, Attribute.S, "[x|att = val]");
 			Check(true, Attribute.S, "[ att = val ]");
+
 			Check(true, Attribute.S, "[att = val]");
 			Check(true, Attribute.S, "[att ~= val]");
 			Check(true, Attribute.S, "[att |= val]");
+			Check(true, Attribute.S, "[att ^= val]");
+			Check(true, Attribute.S, "[att $= val]");
+			Check(true, Attribute.S, "[att *= val]");
 			Check(true, Attribute.S, "[att = \"val\"]");
 			Check(true, Attribute.S, "[att = 'val']");
+
 			Check(false, Attribute.S, "[att=]");
 			Check(false, Attribute.S, "[att = 5]");
 			Check(false, Attribute.S, "[att != val]");

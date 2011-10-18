@@ -165,16 +165,19 @@
     <Compile Include="Lexical\Grammar\WhitespaceCharacter.cs" />
     <Compile Include="Lexical\LexicalStateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Syntactic\Declarations\RuleSet.cs" />
+    <Compile Include="Syntactic\RuleSet.cs" />
     <Compile Include="Syntactic\Declarations\DeclarationList.cs" />
     <Compile Include="Syntactic\Declarations\Declaration.cs" />
     <Compile Include="Syntactic\Declarations\Priority.cs" />
     <Compile Include="Syntactic\Declarations\Property.cs" />
-    <Compile Include="Syntactic\Expressions\Function.cs" />
-    <Compile Include="Syntactic\Expressions\Expression.cs" />
+    <Compile Include="Syntactic\Declarations\Function.cs" />
+    <Compile Include="Syntactic\Declarations\Expression.cs" />
     <Compile Include="Syntactic\Selectors\Attribute.cs" />
     <Compile Include="Syntactic\Selectors\AttributePart.cs" />
     <Compile Include="Syntactic\Selectors\Class.cs" />
+    <Compile Include="Syntactic\Selectors\TypeSelector.cs" />
+    <Compile Include="Syntactic\Selectors\Universal.cs" />
+    <Compile Include="Syntactic\Selectors\NamespacePrefix.cs" />
     <Compile Include="Syntactic\Selectors\SelectorList.cs" />
     <Compile Include="Syntactic\Selectors\Selector.cs" />
     <Compile Include="Syntactic\Selectors\SimpleSelectorPart.cs" />
@@ -191,6 +194,7 @@
     <Compile Include="Syntactic\Terminal\Character\CommaTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\ColonTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\AsteriskTerminal.cs" />
+    <Compile Include="Syntactic\Terminal\Character\BarTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\TildeTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\SemicolonTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\PeriodTerminal.cs" />
@@ -198,12 +202,12 @@
     <Compile Include="Syntactic\Terminal\Character\MinusTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\SlashTerminal.cs" />
     <Compile Include="Syntactic\Terminal\Character\PlusTerminal.cs" />
-    <Compile Include="Syntactic\Expressions\TermPart.cs" />
-    <Compile Include="Syntactic\Expressions\Term.cs" />
-    <Compile Include="Syntactic\Expressions\HexColor.cs" />
-    <Compile Include="Syntactic\Operators\Combinator.cs" />
-    <Compile Include="Syntactic\Operators\UnaryOperator.cs" />
-    <Compile Include="Syntactic\Operators\Operator.cs" />
+    <Compile Include="Syntactic\Declarations\TermPart.cs" />
+    <Compile Include="Syntactic\Declarations\Term.cs" />
+    <Compile Include="Syntactic\Declarations\HexColor.cs" />
+    <Compile Include="Syntactic\Selectors\Combinator.cs" />
+    <Compile Include="Syntactic\Declarations\UnaryOperator.cs" />
+    <Compile Include="Syntactic\Declarations\Operator.cs" />
     <Compile Include="Syntactic\Terminal\WhitespaceTerminal.cs" />
   </ItemGroup>
   <ItemGroup>

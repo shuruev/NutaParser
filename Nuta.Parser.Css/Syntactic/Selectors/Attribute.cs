@@ -11,6 +11,7 @@ namespace Nuta.Parser.Css.Syntactic
 			: base(
 				LeftSquareBracketTerminal.S,
 				WhitespaceTerminal.O,
+				NamespacePrefix.O,
 				new LexicalTerminal(Identifier.S),
 				WhitespaceTerminal.O,
 				AttributePart.O,
