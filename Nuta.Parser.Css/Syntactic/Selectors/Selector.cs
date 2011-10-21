@@ -2,19 +2,14 @@
 
 namespace Nuta.Parser.Css.Syntactic
 {
-	public class Selector : ParseAll
+	public class Selector : ParseMany
 	{
 		public static readonly Selector S = new Selector();
 
 		public Selector()
 			: base(
-				new ParseMany(
-					SimpleSelector.S,
-					new ParseAny(
-						new ParseAll(WhitespaceTerminal.S, Combinator.S),
-						WhitespaceTerminal.S,
-						Combinator.S)),
-				WhitespaceTerminal.O)
+				SimpleSelectorSequence.S,
+				Combinator.S)
 		{
 		}
 	}

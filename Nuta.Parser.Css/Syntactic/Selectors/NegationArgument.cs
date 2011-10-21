@@ -3,16 +3,18 @@ using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
-	public class SimpleSelectorPart : ParseAny
+	public class NegationArgument : ParseAny
 	{
-		public static readonly SimpleSelectorPart S = new SimpleSelectorPart();
+		public static readonly NegationArgument S = new NegationArgument();
 
-		public SimpleSelectorPart()
+		public NegationArgument()
 			: base(
+				TypeSelector.S,
+				Universal.S,
 				new LexicalTerminal(Hash.S),
 				Class.S,
 				Attribute.S,
-				PseudoClass.S)
+				Pseudo.S)
 		{
 		}
 	}

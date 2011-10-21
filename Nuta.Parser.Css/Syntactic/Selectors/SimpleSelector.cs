@@ -1,4 +1,5 @@
-﻿using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Css.Lexical;
+using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -8,9 +9,11 @@ namespace Nuta.Parser.Css.Syntactic
 
 		public SimpleSelector()
 			: base(
-				new ParseMany(SimpleSelectorPart.S),
-				new ParseAll(ElementName.S, new ParseMany(SimpleSelectorPart.S)),
-				ElementName.S)
+				new LexicalTerminal(Hash.S),
+				Class.S,
+				Attribute.S,
+				Negation.S,
+				Pseudo.S)
 		{
 		}
 	}

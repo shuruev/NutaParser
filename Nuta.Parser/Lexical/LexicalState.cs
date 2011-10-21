@@ -93,7 +93,7 @@ namespace Nuta.Parser.Lexical
 
 			var entry = m_entriesByIndex[index]
 				.Where(i => i.Key == key)
-				.FirstOrDefault();
+				.First();
 
 			return m_data.Substring(entry.StartPosition, entry.Length);
 		}

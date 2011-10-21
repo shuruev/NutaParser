@@ -3,19 +3,19 @@ using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
-	public class TermPart : ParseAll
+	public class PseudoExpression : ParseMany
 	{
-		public static readonly TermPart S = new TermPart();
+		public static readonly PseudoExpression S = new PseudoExpression();
 
-		public TermPart()
+		public PseudoExpression()
 			: base(
 				new ParseAny(
-					new LexicalTerminal(Percentage.S),
-					TermPartDimension.S,
-					new LexicalTerminal(Number.S),
 					new LexicalTerminal(StringLiteral.S),
 					new LexicalTerminal(Identifier.S),
-					new LexicalTerminal(UriLiteral.S)),
+					TermPartDimension.S,
+					new LexicalTerminal(Number.S),
+					PlusTerminal.S,
+					MinusTerminal.S),
 				WhitespaceTerminal.O)
 		{
 		}

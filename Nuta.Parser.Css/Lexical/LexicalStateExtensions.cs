@@ -24,7 +24,7 @@ namespace Nuta.Parser.Css.Lexical
 				DashmatchOperatorTerminal.S,
 				PrefixmatchOperatorTerminal.S,
 				SuffixmatchOperatorTerminal.S,
-				SubstringmatchOperatorTerminal.S,
+				SubstringmatchOperatorTerminal.S
 			});
 
 			toExtract.AddRange(new LexicalItem[]
