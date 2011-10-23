@@ -20,13 +20,13 @@ namespace Nuta.Parser.Css.Lexical
 				UriLiteral.S,
 				FunctionPrefix.S,
 				NotPrefix.S,
-				AtKeyword.S,
 				StringLiteral.S,
 				NumericLiteral.S,
 				Hash.S,
 				Identifier.S,
 				Punctuator.S,
-				Directive.S)
+				Directive.S,
+				AtKeyword.S)
 		{
 		}
 	}

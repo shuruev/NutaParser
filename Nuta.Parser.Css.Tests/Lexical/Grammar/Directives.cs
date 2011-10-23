@@ -43,6 +43,15 @@ namespace Nuta.Parser.Css.Tests.Lexical
 		}
 
 		[TestMethod]
+		public void Is_Namespace_Symbol()
+		{
+			Check(true, NamespaceSymbol.S, "@namespace");
+			Check(true, NamespaceSymbol.S, "@NAMESPACE");
+			Check(true, NamespaceSymbol.S, "@nAmespac\\45");
+			Check(false, NamespaceSymbol.S, "@ namespace");
+		}
+
+		[TestMethod]
 		public void Is_Important_Symbol()
 		{
 			Check(true, ImportantSymbol.S, "!important");
