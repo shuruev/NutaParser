@@ -20,6 +20,7 @@ namespace Nuta.Parser.Css.Lexical
 				'-',
 				'+',
 				'*',
+				'(',
 				')',
 				',',
 				'.',

@@ -14,6 +14,7 @@ namespace Nuta.Parser.Css.Syntactic
 				new LexicalTerminal(Angle.S),
 				new LexicalTerminal(Time.S),
 				new LexicalTerminal(Freq.S),
+				new LexicalTerminal(Resolution.S),
 				new LexicalTerminal(Dimension.S))
 		{
 		}

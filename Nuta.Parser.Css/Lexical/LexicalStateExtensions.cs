@@ -29,16 +29,25 @@ namespace Nuta.Parser.Css.Lexical
 
 			toExtract.AddRange(new LexicalItem[]
 			{
-				UriLiteral.S,
+				ImportantSymbol.S,
 				FunctionPrefix.S,
 				NotPrefix.S,
 				AtKeyword.S,
+				Only.S,
+				Not.S,
+				And.S
+			});
+
+			toExtract.AddRange(new LexicalItem[]
+			{
+				UriLiteral.S,
 				StringLiteral.S,
 				Size.S,
 				Length.S,
 				Angle.S,
 				Time.S,
 				Freq.S,
+				Resolution.S,
 				Dimension.S,
 				Percentage.S,
 				Number.S,
@@ -54,8 +63,7 @@ namespace Nuta.Parser.Css.Lexical
 				PageSymbol.S,
 				MediaSymbol.S,
 				CharsetSymbol.S,
-				NamespaceSymbol.S,
-				ImportantSymbol.S
+				NamespaceSymbol.S
 			});
 
 			s_toExtract = new HashSet<string>(toExtract.Select(item => item.Key));

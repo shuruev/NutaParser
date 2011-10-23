@@ -79,6 +79,14 @@ namespace Nuta.Parser.Css.Tests.Lexical
 		}
 
 		[TestMethod]
+		public void Is_Resolution()
+		{
+			Check(true, Resolution.S, "12dPi");
+			Check(true, Resolution.S, "12dPcm");
+			Check(true, Resolution.S, "12dpc\\6D");
+		}
+
+		[TestMethod]
 		public void Is_Dimension()
 		{
 			Check(true, Dimension.S, "123Abc");

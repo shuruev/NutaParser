@@ -18,15 +18,13 @@ namespace Nuta.Parser.Css.Lexical
 				SuffixmatchOperatorTerminal.S,
 				SubstringmatchOperatorTerminal.S,
 				UriLiteral.S,
-				FunctionPrefix.S,
-				NotPrefix.S,
+				Directive.S,
+				Keyword.S,
 				StringLiteral.S,
 				NumericLiteral.S,
 				Hash.S,
 				Identifier.S,
-				Punctuator.S,
-				Directive.S,
-				AtKeyword.S)
+				Punctuator.S)
 		{
 		}
 	}

@@ -14,6 +14,7 @@ namespace Nuta.Parser.Css.Lexical
 				Angle.S,
 				Time.S,
 				Freq.S,
+				Resolution.S,
 				Dimension.S,
 				Number.S)
 		{
