@@ -174,6 +174,11 @@
     <Compile Include="Lexical\LexicalStateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Syntactic\Declarations\TermPartDimension.cs" />
+    <Compile Include="Syntactic\Media\MediaQueryList.cs" />
+    <Compile Include="Syntactic\Media\MediaQueryPrefix2.cs" />
+    <Compile Include="Syntactic\Media\MediaQuerySuffixes.cs" />
+    <Compile Include="Syntactic\Media\MediaQueryPrefix1.cs" />
+    <Compile Include="Syntactic\Media\MediaQuery.cs" />
     <Compile Include="Syntactic\Media\MediaType.cs" />
     <Compile Include="Syntactic\Media\MediaExpression.cs" />
     <Compile Include="Syntactic\Media\MediaFeature.cs" />
