@@ -5,6 +5,7 @@ namespace Nuta.Parser.Css.Syntactic
 	public class MediaQueryList : ParseAny
 	{
 		public static readonly MediaQueryList S = new MediaQueryList();
+		public static readonly Optional O = new Optional(S);
 
 		public MediaQueryList()
 			: base(

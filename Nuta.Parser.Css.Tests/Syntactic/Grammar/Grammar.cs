@@ -7,6 +7,27 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 	public class Grammar : SyntacticTest
 	{
 		[TestMethod]
+		public void Is_Import()
+		{
+			Check(true, Import.S, "@import'abc';");
+			Check(false, Import.S, "@ import'abc';");
+			Check(true, Import.S, "@import 'abc';");
+			Check(true, Import.S, "@import 'abc' ; ");
+
+			Check(true, Import.S, "@import url(abc) screen, print;");
+			Check(false, Import.S, "@import url(abc) screen, print;;");
+		}
+
+		[TestMethod]
+		public void Is_Import_Additional()
+		{
+			Check(true, Import.S, "@import \"mystyle.css\";");
+			Check(true, Import.S, "@import url(\"mystyle.css\");");
+			Check(true, Import.S, "@import url(\"fineprint.css\") print;");
+			Check(true, Import.S, "@import url(\"bluish.css\") projection, tv;");
+		}
+
+		[TestMethod]
 		public void Is_Rule_Set()
 		{
 			Check(true, RuleSet.S, "elem {}");

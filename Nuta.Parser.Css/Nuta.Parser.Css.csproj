@@ -173,6 +173,9 @@
     <Compile Include="Lexical\Grammar\WhitespaceCharacter.cs" />
     <Compile Include="Lexical\LexicalStateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\Import.cs" />
+    <Compile Include="Syntactic\Pages\Page.cs" />
+    <Compile Include="Syntactic\Pages\PseudoPage.cs" />
     <Compile Include="Syntactic\Declarations\TermPartDimension.cs" />
     <Compile Include="Syntactic\Media\MediaQueryList.cs" />
     <Compile Include="Syntactic\Media\MediaQueryPrefix2.cs" />
