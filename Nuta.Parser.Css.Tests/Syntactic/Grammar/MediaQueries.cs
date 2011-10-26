@@ -5,7 +5,7 @@ using Nuta.Parser.Css.Syntactic;
 namespace Nuta.Parser.Css.Tests.Syntactic
 {
 	[TestClass]
-	public class Media : SyntacticTest
+	public class MediaQueries : SyntacticTest
 	{
 		[TestMethod]
 		public void Is_Media_Query_List()

@@ -1,0 +1,235 @@
+﻿@charset "UTF-8";
+/*
+Theme Name: open-app
+Theme URI: http://enthusiasm.cc
+Description: Theme for this new project 
+Version: 0.1
+Author: Daniel Kay
+Author URI: http://daniel.enthusiasm.cc
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+nav ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+body { font: 13px/1.231 sans-serif; *font-size: small; }
+
+select, input, textarea, button { font: 99% sans-serif; }
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+.container { padding-left: 20px; padding-right: 20px; }
+
+.row { width: 100%; max-width: 1140px; margin: 0 auto; overflow: hidden; }
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol { margin-right: 3.8%; float: left; }
+
+.onecol { width: 4.85%; }
+
+.twocol { width: 13.5%; }
+
+.threecol { width: 22.15%; }
+
+.fourcol { width: 30.8%; }
+
+.fivecol { width: 39.45%; }
+
+.sixcol { width: 48.1%; }
+
+.sevencol { width: 56.75%; }
+
+.eightcol { width: 65.4%; }
+
+.ninecol { width: 74.05%; }
+
+.tencol { width: 82.7%; }
+
+.elevencol { width: 91.35%; }
+
+.twelvecol { width: 100%; float: left; }
+
+.last { margin-right: 0px; }
+
+img, object, embed { max-width: 100%; }
+
+body, select, input, textarea { background: white; color: #444444; font-family: Georgia, serif; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+html { overflow-y: scroll; }
+
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color: #607890; }
+
+a:hover { color: #036; }
+
+ul, ol { margin-left: 1.8em; }
+
+ol { list-style-type: decimal; }
+
+nav ul, nav li { margin: 0; }
+
+small { font-size: 85%; }
+
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align: top; }
+
+sub { vertical-align: sub; font-size: smaller; }
+
+sup { vertical-align: super; font-size: smaller; }
+
+pre { padding: 15px; white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+
+textarea { overflow: auto; }
+
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+
+input[type="radio"] { vertical-align: text-bottom; }
+
+input[type="checkbox"] { vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+
+.ie6 input { vertical-align: text-bottom; }
+
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+button, input, select, textarea { margin: 0; }
+
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px darkgreen; -webkit-box-shadow: 0px 0px 5px darkgreen; box-shadow: 0px 0px 5px darkgreen; }
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+::-moz-selection { background: #cccccc; color: white; text-shadow: none; }
+
+::selection { background: #cccccc; color: white; text-shadow: none; }
+
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+button { width: auto; overflow: visible; }
+
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+.hidden { display: none; visibility: hidden; }
+
+.visuallyhidden { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
+
+.invisible { visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+@font-face { font-family: 'LiberationMonoRegular'; src: url("css/LiberationMono-Regular-webfont.eot"); src: local("☺"), url("css/LiberationMono-Regular-webfont.woff") format("woff"), url("css/LiberationMono-Regular-webfont.ttf") format("truetype"), url("css/LiberationMono-Regular-webfont.svg#webfontkTQ7IjSn") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'LiberationMonoItalic'; src: url("css/LiberationMono-Italic-webfont.eot"); src: local("☺"), url("css/LiberationMono-Italic-webfont.woff") format("woff"), url("css/LiberationMono-Italic-webfont.ttf") format("truetype"), url("css/LiberationMono-Italic-webfont.svg#webfontGVrB7MFh") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'LiberationMonoBold'; src: url("css/LiberationMono-Bold-webfont.eot"); src: local("☺"), url("css/LiberationMono-Bold-webfont.woff") format("woff"), url("css/LiberationMono-Bold-webfont.ttf") format("truetype"), url("css/LiberationMono-Bold-webfont.svg#webfontaeeP2GuB") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'LiberationMonoBoldItalic'; src: url("css/LiberationMono-BoldItalic-webfont.eot"); src: local("☺"), url("css/LiberationMono-BoldItalic-webfont.woff") format("woff"), url("css/LiberationMono-BoldItalic-webfont.ttf") format("truetype"), url("css/LiberationMono-BoldItalic-webfont.svg#webfontIaTlafdm") format("svg"); font-weight: normal; font-style: normal; }
+
+a, a:visited { color: #395fc6; text-decoration: none; }
+
+a:active, a:hover { color: #a4c639; }
+
+header { padding-top: 20px; padding-bottom: 40px; }
+
+header span#blogtitle { font-size: 250%; font-weight: bold; }
+
+header span#blogtitle a { color: #a4c639; }
+
+header h1 { display: inline; }
+
+h1 { font-size: 130%; font-weight: normal; font-style: italic; }
+
+h2 { font-size: 130%; }
+
+h3 { font-size: 115%; }
+
+article { padding-bottom: 80px; }
+
+article p { padding-bottom: 10px; }
+
+article table { margin-top: 20px; }
+
+article p.postmeta { font-size: 80%; padding-bottom: 20px; }
+
+article div.qr_code { float: left; padding-right: 20px; }
+
+article ul.appinfo { padding-top: 20px; }
+
+#respond, #comments, .comment { padding-top: 40px; }
+
+#comments .comment { padding-top: 20px; }
+
+#comments .comment-author { color: #395fc6; font-weight: bold; }
+
+#comments .comment-author img { float: left; padding-right: 20px; }
+
+#comments .comment-meta { display: none; }
+
+#comments .reply { clear: both; padding-left: 84px; }
+
+#comments p { padding-top: 20px; }
+
+#comments p { position: relative; }
+
+#respond p.form-allowed-tags { display: none; }
+
+#respond p.comment-form-comment { padding-top: 20px; }
+
+#respond { padding-top: 20px; }
+
+#respond p { clear: both; float: none; }
+
+#respond label { clear: left; display: block; float: left; text-align: right; width: 150px; margin: 0px 0px 21px; }
+
+#respond input, #respond textarea { clear: right; float: left; margin-left: 20px; width: 400px; }
+
+#respond p.form-submit { padding-top: 20px; margin-left: 150px; }
+
+#respond input[type="submit"] { width: 410px; }
+
+#sidebar .oa_widget { padding-bottom: 20px; }
+
+@media all and (orientation:portrait) {}
+@media all and (orientation:landscape) {}
+@media screen and (max-device-width: 480px) {}
+@media print { * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; }
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; } }

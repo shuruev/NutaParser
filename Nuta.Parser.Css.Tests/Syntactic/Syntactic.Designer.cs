@@ -149,5 +149,231 @@ namespace Nuta.Parser.Css.Tests.Syntactic {
                 return ResourceManager.GetString("MediaQueryList9", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to h4 {
+        ///    font-size: 12px;
+        ///    font-weight: bold;
+        ///    color: #2c78bd;
+        ///    margin: 16px 0 6px 0;
+        ///}
+        ///
+        ///img.right {
+        ///    float: right;
+        ///}
+        ///
+        ///img.left {
+        ///    float: left;
+        ///    margin-right: 30px;
+        ///    margin-top: 20px;
+        ///}
+        ///
+        ////* links */
+        ///a {
+        ///    font-weight: normal;
+        ///    color: #2c78bd;
+        ///    text-decoration: none;
+        ///    cursor: pointer;
+        ///    cursor: hand;
+        ///}
+        ///
+        ///a:hover {
+        ///    color: #ffa811;
+        ///}
+        ///
+        ////* images */
+        ///img {
+        ///    border: 0;
+        ///}
+        ///
+        ////* input */
+        ///input {
+        ///    background: url(&apos;../images/textarea_backgro [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Stylesheet1 {
+            get {
+                return ResourceManager.GetString("Stylesheet1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @charset &quot;UTF-8&quot;;
+        ////*
+        ///Theme Name: open-app
+        ///Theme URI: http://enthusiasm.cc
+        ///Description: Theme for this new project 
+        ///Version: 0.1
+        ///Author: Daniel Kay
+        ///Author URI: http://daniel.enthusiasm.cc
+        ///*/
+        ///html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, d [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Stylesheet2 {
+            get {
+                return ResourceManager.GetString("Stylesheet2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /* The standard CSS for doxygen */
+        ///
+        ///body, table, div, p, dl {
+        ///	font-family: Lucida Grande, Verdana, Geneva, Arial, sans-serif;
+        ///	font-size: 12px;
+        ///}
+        ///
+        ////* @group Heading Levels */
+        ///
+        ///h1 {
+        ///	font-size: 150%;
+        ///}
+        ///
+        ///h2 {
+        ///	font-size: 120%;
+        ///}
+        ///
+        ///h3 {
+        ///	font-size: 100%;
+        ///}
+        ///
+        ///dt {
+        ///	font-weight: bold;
+        ///}
+        ///
+        ///div.multicol {
+        ///	-moz-column-gap: 1em;
+        ///	-webkit-column-gap: 1em;
+        ///	-moz-column-count: 3;
+        ///	-webkit-column-count: 3;
+        ///}
+        ///
+        ///p.startli, p.startdd, p.starttd {
+        ///	margin-top: 2px;
+        ///}
+        ///
+        ///p.endli {
+        ///	margin-bot [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Stylesheet3 {
+            get {
+                return ResourceManager.GetString("Stylesheet3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /* Colors */
+        ////*	bg: #7d7a6d rgb 125 122 107 cmyk 51 43 56 13 
+        ///		light foreground: #f2f2f2
+        ///	*/
+        ///		
+        ///@font-face {
+        ///	font-family: &apos;NobileRegular&apos;;
+        ///	src: url(&apos;nobile-webfont.eot&apos;);
+        ///	src: local(&apos;☺&apos;), url(&apos;nobile-webfont.woff&apos;) format(&apos;woff&apos;), url(&apos;nobile-webfont.ttf&apos;) format(&apos;truetype&apos;), url(&apos;nobile-webfont.svg#webfontsKo9tqe9&apos;) format(&apos;svg&apos;);
+        ///	font-weight: normal;
+        ///	font-style: normal;
+        ///}
+        ///
+        ///html { margin: 20px }
+        ///body {
+        ///	background: #7b7869 url(&apos;../images/bg.jpg&apos;) repeat;
+        ///}
+        ///#wrapper {
+        ///	margin: 0 auto [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Stylesheet4 {
+            get {
+                return ResourceManager.GetString("Stylesheet4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .listings-layout {
+        ///overflow:hidden;
+        ///padding-bottom:10px;
+        ///}
+        ///
+        ///.listings-layout&amp;gt;.header {
+        ///position:relative;
+        ///border-bottom:1px solid #ddd;
+        ///}
+        ///
+        ///.listings-layout&amp;gt;.header .nav {
+        ///font-size:14px;
+        ///}
+        ///
+        ///.listings-layout&amp;gt;.header .nav li {
+        ///display:inline-block;
+        ///cursor:pointer;
+        ///}
+        ///
+        ///.listings-layout&amp;gt;.header .nav li a {
+        ///color:#666;
+        ///text-decoration:none;
+        ///display:inline-block;
+        ///margin-bottom:-1px;
+        ///padding:8px 12px;
+        ///}
+        ///
+        ///.listings-layout&amp;gt;.header .nav li.selected {
+        ///font-weight:700;
+        ///border- [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Stylesheet5 {
+            get {
+                return ResourceManager.GetString("Stylesheet5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .unanswered strong {
+        ///background:transparent;
+        ///color:#9A4444!important;
+        ///}
+        ///
+        ///.peer1 {
+        ///background-image:url(img/sprites.png?v=4);
+        ///background-position:-167px -153px;
+        ///display:inline-block;
+        ///height:31px;
+        ///width:72px;
+        ///}
+        ///
+        ///#newsletter-ad-header {
+        ///font-size:110%;
+        ///margin-top:70px!important;
+        ///}
+        ///
+        ///.required-tag,.post-text .required-tag,.wmd-preview a.required-tag {
+        ///border:2px solid #979797;
+        ///}
+        ///
+        ///html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code, [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Stylesheet6 {
+            get {
+                return ResourceManager.GetString("Stylesheet6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /*1319592994,176820405*/
+        ///
+        ///.fbEmu .body .fbEmuLink{color:#333}
+        ///.fbEmu .body .fbEmuLink:hover{text-decoration:none}
+        ///.fbEmu .body a.signature{color:#3b5998;display:inline}
+        ///.fbEmu .body a.signature:hover{text-decoration:underline}
+        ///.fbEmu .hover:hover .title .fbEmuLink{text-decoration:underline}
+        ////* @noflip */
+        ///.fbEmu .forceRTL{direction:rtl;text-align:right;display:block}
+        ////* @noflip */
+        ///.fbEmu .forceLTR{direction:ltr;text-align:left;display:block}
+        ///.fbEmu .adInfo a.identity{color:#808080;display:block;wh [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Stylesheet7 {
+            get {
+                return ResourceManager.GetString("Stylesheet7", resourceCulture);
+            }
+        }
     }
 }

@@ -147,4 +147,26 @@
   <data name="MediaQueryList9" xml:space="preserve">
     <value>print and (monochrome), print and (min-resolution: 300dpi), print and (min-resolution: 118dpcm)</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Stylesheet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheet1.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Stylesheet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheet2.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Stylesheet3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheet3.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Stylesheet4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheet4.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Stylesheet5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheet5.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Stylesheet6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheet6.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Stylesheet7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheet7.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

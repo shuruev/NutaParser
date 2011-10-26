@@ -136,10 +136,12 @@ namespace Nuta.Parser
 		public static string ToDisplay(this string text)
 		{
 			return text
+				.Substring(0, Math.Min(text.Length, 200))
 				.Replace("\r", "¶")
 				.Replace("\n", "¶")
 				.Replace("\t", "→")
-				.Replace("\v", "→");
+				.Replace("\v", "→")
+				.Replace(" ", "·");
 		}
 
 		#endregion

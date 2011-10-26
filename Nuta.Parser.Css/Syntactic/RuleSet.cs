@@ -2,11 +2,11 @@
 
 namespace Nuta.Parser.Css.Syntactic
 {
-	public class RuleSet : ParseAll
+	public class Ruleset : ParseAll
 	{
-		public static readonly RuleSet S = new RuleSet();
+		public static readonly Ruleset S = new Ruleset();
 
-		public RuleSet()
+		public Ruleset()
 			: base(
 				SelectorList.S,
 				LeftCurlyBracketTerminal.S,
