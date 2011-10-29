@@ -10,7 +10,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public Property()
 			: base(
 				new LexicalTerminal(Identifier.S),
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

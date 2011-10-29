@@ -36,7 +36,7 @@ img {
 /* input */
 input {
     background: url('../images/textarea_background.png') no-repeat 0 0;
-    *background-attachment: fixed;
+    background-attachment: fixed;
     width:  165px;
     height: 16px;
     color: #4b4b4b;

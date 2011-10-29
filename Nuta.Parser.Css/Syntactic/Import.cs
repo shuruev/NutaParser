@@ -10,14 +10,14 @@ namespace Nuta.Parser.Css.Syntactic
 		public Import()
 			: base(
 				new LexicalTerminal(ImportSymbol.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				new ParseAny(
 					new LexicalTerminal(StringLiteral.S),
 					new LexicalTerminal(UriLiteral.S)),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				MediaQueryList.O,
 				SemicolonTerminal.S,
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

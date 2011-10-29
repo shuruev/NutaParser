@@ -12,7 +12,7 @@ namespace Nuta.Parser.Css.Syntactic
 				LeftCurlyBracketTerminal.S,
 				DeclarationList.S,
 				RightCurlyBracketTerminal.S,
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

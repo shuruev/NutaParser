@@ -11,7 +11,7 @@ namespace Nuta.Parser.Css.Syntactic
 			: base(
 				Property.S,
 				ColonTerminal.S,
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				Expression.S,
 				Priority.O)
 		{

@@ -12,7 +12,7 @@ namespace Nuta.Parser.Css.Syntactic
 				new ParseAny(
 					SlashTerminal.S,
 					CommaTerminal.S),
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

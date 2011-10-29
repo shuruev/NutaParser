@@ -10,9 +10,9 @@ namespace Nuta.Parser.Css.Syntactic
 		public Negation()
 			: base(
 				new LexicalTerminal(NotPrefix.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				NegationArgument.S,
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				RightRoundBracketTerminal.S)
 		{
 		}

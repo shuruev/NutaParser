@@ -140,8 +140,7 @@ namespace Nuta.Parser
 				.Replace("\r", "¶")
 				.Replace("\n", "¶")
 				.Replace("\t", "→")
-				.Replace("\v", "→")
-				.Replace(" ", "·");
+				.Replace("\v", "→");
 		}
 
 		#endregion

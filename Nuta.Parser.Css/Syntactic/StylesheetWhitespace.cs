@@ -11,7 +11,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public StylesheetWhitespace()
 			: base(
 				new ParseAny(
-					WhitespaceTerminal.S,
+					new LexicalTerminal(Whitespace.S),
 					new LexicalTerminal(CommentDelimiterOpen.S),
 					new LexicalTerminal(CommentDelimiterClose.S)))
 		{

@@ -11,7 +11,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public Priority()
 			: base(
 				new LexicalTerminal(ImportantSymbol.S),
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

@@ -12,10 +12,10 @@ namespace Nuta.Parser.Css.Syntactic
 			return ParseAll(
 				state,
 				new LexicalTerminal(FunctionPrefix.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				Expression.S,
 				RightRoundBracketTerminal.S,
-				WhitespaceTerminal.O);
+				Whitespaces.O);
 		}
 	}
 }

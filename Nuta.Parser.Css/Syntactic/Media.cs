@@ -10,13 +10,13 @@ namespace Nuta.Parser.Css.Syntactic
 		public Media()
 			: base(
 				new LexicalTerminal(MediaSymbol.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				MediaQueryList.O,
 				LeftCurlyBracketTerminal.S,
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				new Optional(new ParseMany(Ruleset.S)),
 				RightCurlyBracketTerminal.S,
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

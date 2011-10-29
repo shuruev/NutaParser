@@ -17,11 +17,11 @@ namespace Nuta.Parser.Css.Syntactic
 					new LexicalTerminal(PrefixmatchOperatorTerminal.S),
 					new LexicalTerminal(SuffixmatchOperatorTerminal.S),
 					new LexicalTerminal(SubstringmatchOperatorTerminal.S)),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				new ParseAny(
 					new LexicalTerminal(Identifier.S),
 					new LexicalTerminal(StringLiteral.S)),
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

@@ -11,10 +11,10 @@ namespace Nuta.Parser.Css.Syntactic
 			: base(
 				new ParseMany(
 					new ParseAll(
-						WhitespaceTerminal.O,
+						Whitespaces.O,
 						MediaQuery.S),
 					CommaTerminal.S),
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

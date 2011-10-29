@@ -9,9 +9,9 @@ namespace Nuta.Parser.Css.Syntactic
 		public SelectorList()
 			: base(
 				new ParseAll(
-					WhitespaceTerminal.O,
+					Whitespaces.O,
 					Selector.S,
-					WhitespaceTerminal.O),
+					Whitespaces.O),
 				CommaTerminal.S)
 		{
 		}

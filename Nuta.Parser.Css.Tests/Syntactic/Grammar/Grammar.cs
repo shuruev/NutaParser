@@ -18,12 +18,16 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 					li p[lang|=fr]:before {content: url(../flag-fr.png);
 					vertical-align: middle; margin-right: 0.33em}
 				");
+
+			Check(true, Stylesheet.S, "@charset \"UTF-8\"; /* Theme Name: open-app */ html { margin: 0 }");
+			Check(true, Stylesheet.S, "@charset 'utf-8'; /* Theme Name: open-app */ html { margin: 0 }");
 		}
 
 		[TestMethod]
 		public void Is_Stylesheet_Additional()
 		{
 			//xxx
+			Check(true, Stylesheet.S, Syntactic.StylesheetX);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet1);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet2);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet3);

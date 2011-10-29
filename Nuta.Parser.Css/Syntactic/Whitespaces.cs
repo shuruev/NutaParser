@@ -3,13 +3,14 @@ using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
-	public class WhitespaceTerminal : LexicalTerminal
+	public class Whitespaces : ParseMany
 	{
-		public static readonly WhitespaceTerminal S = new WhitespaceTerminal();
+		public static readonly Whitespaces S = new Whitespaces();
 		public static readonly Optional O = new Optional(S);
 
-		public WhitespaceTerminal()
-			: base(Whitespace.S)
+		public Whitespaces()
+			: base(
+				new LexicalTerminal(Whitespace.S))
 		{
 		}
 	}

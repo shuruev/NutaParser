@@ -12,6 +12,7 @@ namespace Nuta.Parser.Css.Syntactic
 				new Optional(
 					new ParseAll(
 						new LexicalTerminal(CharsetSymbol.S),
+						new LexicalTerminal(Whitespace.S),
 						new LexicalTerminal(StringLiteral.S),
 						SemicolonTerminal.S)),
 				StylesheetWhitespace.O,

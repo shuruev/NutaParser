@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSharpParser.cs" />
     <Compile Include="Lexical\Grammar\Comments\Asterisks.cs" />
     <Compile Include="Lexical\Grammar\Comments\Comment.cs" />
     <Compile Include="Lexical\Grammar\Comments\DelimitedComment.cs" />

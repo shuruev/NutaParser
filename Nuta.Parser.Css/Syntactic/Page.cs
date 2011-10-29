@@ -10,16 +10,16 @@ namespace Nuta.Parser.Css.Syntactic
 		public Page()
 			: base(
 				new LexicalTerminal(PageSymbol.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				PseudoPage.O,
 				LeftCurlyBracketTerminal.S,
 				new ParseMany(
 					new ParseAll(
-						WhitespaceTerminal.O,
+						Whitespaces.O,
 						Declaration.O),
 					SemicolonTerminal.S),
 				RightCurlyBracketTerminal.S,
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

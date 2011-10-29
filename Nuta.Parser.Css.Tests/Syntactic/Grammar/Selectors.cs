@@ -78,6 +78,11 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(true, Combinator.S, " ~");
 			Check(true, Combinator.S, " ~ ");
 			Check(false, Combinator.S, " ~~ ");
+
+			Check(true, Combinator.S, " /*1*/   /*1*/ ");
+			Check(true, Combinator.S, " /*1*/ + /*1*/ ");
+			Check(true, Combinator.S, " /*1*/ > /*1*/ ");
+			Check(true, Combinator.S, " /*1*/ ~ /*1*/ ");
 		}
 
 		[TestMethod]

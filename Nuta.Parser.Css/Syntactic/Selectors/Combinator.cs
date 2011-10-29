@@ -9,13 +9,13 @@ namespace Nuta.Parser.Css.Syntactic
 		public Combinator()
 			: base(
 				new ParseAll(
-					WhitespaceTerminal.O,
+					Whitespaces.O,
 					new ParseAny(
 						PlusTerminal.S,
 						RightAngleBracketTerminal.S,
 						TildeTerminal.S),
-					WhitespaceTerminal.O),
-				WhitespaceTerminal.S)
+					Whitespaces.O),
+				Whitespaces.S)
 		{
 		}
 	}

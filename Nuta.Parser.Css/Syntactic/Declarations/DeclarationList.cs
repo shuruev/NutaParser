@@ -8,7 +8,7 @@ namespace Nuta.Parser.Css.Syntactic
 
 		public DeclarationList()
 			: base(
-				new ParseAll(WhitespaceTerminal.O, Declaration.O),
+				new ParseAll(Whitespaces.O, Declaration.O),
 				SemicolonTerminal.S)
 		{
 		}

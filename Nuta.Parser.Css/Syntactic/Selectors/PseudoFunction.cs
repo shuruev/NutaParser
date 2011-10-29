@@ -10,9 +10,9 @@ namespace Nuta.Parser.Css.Syntactic
 		public PseudoFunction()
 			: base(
 				new LexicalTerminal(FunctionPrefix.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				PseudoExpression.S,
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				RightRoundBracketTerminal.S)
 		{
 		}

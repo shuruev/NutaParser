@@ -2,10 +2,10 @@
 using System.Diagnostics;
 using System.IO;
 using Nuta.Parser;
-using Nuta.Parser.CSharp.Lexical;
+using Nuta.Parser.CSharp;
 using Nuta.Parser.CSharp.Syntactic;
-using Nuta.Parser.Lexical;
-using Nuta.Parser.Syntactic;
+using Nuta.Parser.Css;
+using Nuta.Parser.Css.Syntactic;
 
 namespace NutaParser
 {
@@ -13,24 +13,26 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			//Parse(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
-			Parse(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
+			CssParser.Ensure(Stylesheet.S, "@charset 'UTF-8'; /* Theme Name: open-app */ html { margin: 0 }");
 
-			//ParseAll(@"D:\OLEG\Dropbox");
-			//ParseAll(@"D:\OLEG\Git");
+			//ParseCSharp(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
+			//ParseCSharp(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
 
-			//ParseAll(@"C:\Users\Public\GIT");
-			//ParseAll(@"C:\Users\Public\Mercurial");
-			//ParseAll(@"C:\Users\Public\TFS");
-			//ParseAll(@"C:\Users\Public\VSS");
-			//ParseAll(@"C:\Users\oshuruev\Documents\Visual Studio 2008");
-			//ParseAll(@"C:\Users\oshuruev\Documents\Visual Studio 2010");
+			//ParseCSharpAll(@"D:\OLEG\Dropbox");
+			//ParseCSharpAll(@"D:\OLEG\Git");
+
+			//ParseCSharpAll(@"C:\Users\Public\GIT");
+			//ParseCSharpAll(@"C:\Users\Public\Mercurial");
+			//ParseCSharpAll(@"C:\Users\Public\TFS");
+			//ParseCSharpAll(@"C:\Users\Public\VSS");
+			//ParseCSharpAll(@"C:\Users\oshuruev\Documents\Visual Studio 2008");
+			//ParseCSharpAll(@"C:\Users\oshuruev\Documents\Visual Studio 2010");
 
 			Console.WriteLine("Done.");
 			Console.ReadKey();
 		}
 
-		public static void ParseAll(string dirPath)
+		public static void ParseCSharpAll(string dirPath)
 		{
 			var files = Directory.EnumerateFiles(dirPath, "*.cs", SearchOption.AllDirectories);
 
@@ -40,13 +42,13 @@ namespace NutaParser
 				Console.Write(new FileInfo(file).Length + "\t");
 
 				Stopwatch sw = Stopwatch.StartNew();
-				Parse(file);
+				ParseCSharp(file);
 				sw.Stop();
 				Console.WriteLine(sw.ElapsedMilliseconds + "\t");
 			}
 		}
 
-		public static void Parse(string filePath)
+		public static void ParseCSharp(string filePath)
 		{
 			string data = Parser.ReadDataFromFile(filePath);
 			data = Parser.PrepareEndOfFile(data);
@@ -96,34 +98,7 @@ namespace NutaParser
 				|| data.Contains("CheckWhetherLastCodeLineIsEmpty"))
 				return;
 
-			SyntacticState state = ParseSyntactic(data);
-			if (state == null)
-				throw new InvalidOperationException("Parsing error.");
-		}
-
-		private static LexicalState ParseLexical(string data)
-		{
-			LexicalState lexicalState = new LexicalState(data);
-			if (!Input.S.ParseFull(lexicalState))
-				return null;
-
-			return lexicalState;
-		}
-
-		private static SyntacticState ParseSyntactic(string data)
-		{
-			LexicalState lexicalState = ParseLexical(data);
-			if (lexicalState == null)
-				return null;
-
-			SyntacticState syntacticState = new SyntacticState(
-				lexicalState.ExtractTokens(),
-				data);
-
-			if (!CompilationUnit.S.ParseFull(syntacticState))
-				return null;
-
-			return syntacticState;
+			CSharpParser.Ensure(CompilationUnit.S, data);
 		}
 	}
 }

@@ -10,10 +10,10 @@ namespace Nuta.Parser.Css.Syntactic
 		public Attribute()
 			: base(
 				LeftSquareBracketTerminal.S,
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				NamespacePrefix.O,
 				new LexicalTerminal(Identifier.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				AttributePart.O,
 				RightSquareBracketTerminal.S)
 		{

@@ -9,16 +9,16 @@ namespace Nuta.Parser.Css.Syntactic
 		public MediaExpression()
 			: base(
 				LeftRoundBracketTerminal.S,
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				MediaFeature.S,
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				new Optional(
 					new ParseAll(
 						ColonTerminal.S,
-						WhitespaceTerminal.O,
+						Whitespaces.O,
 						Expression.S)),
 				RightRoundBracketTerminal.S,
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

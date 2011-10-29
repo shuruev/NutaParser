@@ -16,7 +16,7 @@ namespace Nuta.Parser.Css.Syntactic
 					new LexicalTerminal(StringLiteral.S),
 					new LexicalTerminal(Identifier.S),
 					new LexicalTerminal(UriLiteral.S)),
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

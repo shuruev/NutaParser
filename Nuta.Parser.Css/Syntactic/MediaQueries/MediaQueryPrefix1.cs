@@ -13,9 +13,9 @@ namespace Nuta.Parser.Css.Syntactic
 					new LexicalTerminal(Only.S),
 					new LexicalTerminal(Not.S),
 					Empty.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				MediaType.S,
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

@@ -10,7 +10,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public HexColor()
 			: base(
 				new LexicalTerminal(Hash.S),
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

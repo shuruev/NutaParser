@@ -10,17 +10,17 @@ namespace Nuta.Parser.Css.Syntactic
 		public Namespace()
 			: base(
 				new LexicalTerminal(NamespaceSymbol.S),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				new Optional(
 					new ParseAll(
 						NamespaceName.S,
-						WhitespaceTerminal.O)),
+						Whitespaces.O)),
 				new ParseAny(
 					new LexicalTerminal(StringLiteral.S),
 					new LexicalTerminal(UriLiteral.S)),
-				WhitespaceTerminal.O,
+				Whitespaces.O,
 				SemicolonTerminal.S,
-				WhitespaceTerminal.O)
+				Whitespaces.O)
 		{
 		}
 	}

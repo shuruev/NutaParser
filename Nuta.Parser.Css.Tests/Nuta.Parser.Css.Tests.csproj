@@ -91,6 +91,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Syntactic\StylesheetX.css" />
     <Content Include="Syntactic\Stylesheet1.css" />
     <Content Include="Syntactic\Stylesheet2.css" />
     <Content Include="Syntactic\Stylesheet3.css" />

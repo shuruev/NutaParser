@@ -12,7 +12,7 @@ namespace Nuta.Parser.Css.Syntactic
 			: base(
 				new ParseAll(
 					new LexicalTerminal(And.S),
-					WhitespaceTerminal.O,
+					Whitespaces.O,
 					MediaExpression.S))
 		{
 		}

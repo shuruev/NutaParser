@@ -375,5 +375,20 @@ namespace Nuta.Parser.Css.Tests.Syntactic {
                 return ResourceManager.GetString("Stylesheet7", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to h4 {
+        ///    font-size: 12px;
+        ///    font-weight: bold;
+        ///    color: #2c78bd;
+        ///    margin: 16px 0 6px 0;
+        ///}
+        ///.
+        /// </summary>
+        internal static string StylesheetX {
+            get {
+                return ResourceManager.GetString("StylesheetX", resourceCulture);
+            }
+        }
     }
 }

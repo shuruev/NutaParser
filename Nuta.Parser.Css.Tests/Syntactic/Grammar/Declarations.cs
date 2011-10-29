@@ -18,6 +18,14 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(true, DeclarationList.S, ";");
 			Check(true, DeclarationList.S, ";;;");
 			Check(true, DeclarationList.S, " ; ; ; ");
+
+			Check(true, DeclarationList.S, "padding : 1;");
+			Check(true, DeclarationList.S, "padding : 1px;");
+			Check(true, DeclarationList.S, "padding : 1px; /* comment */");
+
+			Check(true, DeclarationList.S, "   padding : 1px;\r\n   \r\n");
+			Check(true, DeclarationList.S, "   padding : 1px;\r\n   /* comment */\r\n");
+			Check(true, DeclarationList.S, "   padding : 1px;\r\n   /* comment */   \r\n");
 		}
 
 		[TestMethod]
