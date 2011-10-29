@@ -31,7 +31,7 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet1);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet2);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet3);
-			//Check(true, Stylesheet.S, Syntactic.Stylesheet4);
+			Check(true, Stylesheet.S, Syntactic.Stylesheet4);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet5);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet6);
 			//Check(true, Stylesheet.S, Syntactic.Stylesheet7);

@@ -529,7 +529,7 @@ proper pixel height of your image.
 }
 */
 
-.directory &gt; h3 {
+.directory > h3 {
 	margin-top: 0;
 }
 
@@ -560,7 +560,7 @@ proper pixel height of your image.
 	font-size: 11pt;
 }
 
-.directory-alt &gt; h3 {
+.directory-alt > h3 {
 	margin-top: 0;
 }
 
