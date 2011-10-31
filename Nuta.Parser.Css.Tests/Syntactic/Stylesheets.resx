@@ -117,34 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MediaQueryList1" xml:space="preserve">
-    <value>screen, embossed, print and (resolution: 90dpi)</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Stylesheet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet1.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList10" xml:space="preserve">
-    <value>tv and (scan: progressive), handheld and (grid) and (device-max-height: 7em)</value>
+  <data name="Stylesheet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet2.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList2" xml:space="preserve">
-    <value>screen and (color), projection and (color)</value>
+  <data name="Stylesheet3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet3.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList3" xml:space="preserve">
-    <value>only screen and (color), (orientation: portrait)</value>
+  <data name="Stylesheet4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet4.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList4" xml:space="preserve">
-    <value>aural and (device-aspect-ratio: 16/9), speech and (min-device-width: 800px)</value>
+  <data name="Stylesheet5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet5.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList5" xml:space="preserve">
-    <value>print and (min-width: 25cm), screen and (min-width: 400px) and (max-width: 700px)</value>
+  <data name="Stylesheet6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet6.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList6" xml:space="preserve">
-    <value>handheld and (min-width: 20em), screen and (min-width: 20em)</value>
+  <data name="Stylesheet7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet7.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList7" xml:space="preserve">
-    <value>screen and (device-width: 800px), screen and (device-height: 600px)</value>
+  <data name="Stylesheet8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\Stylesheet8.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="MediaQueryList8" xml:space="preserve">
-    <value>all and (min-color: 1), not screen and (color)</value>
-  </data>
-  <data name="MediaQueryList9" xml:space="preserve">
-    <value>print and (monochrome), print and (min-resolution: 300dpi), print and (min-resolution: 118dpcm)</value>
+  <data name="StylesheetX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Stylesheets\StylesheetX.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>
