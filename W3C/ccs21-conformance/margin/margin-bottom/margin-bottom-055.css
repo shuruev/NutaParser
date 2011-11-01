@@ -1,0 +1,18 @@
+#wrapper
+            {
+                height: 50.8mm;
+                border-bottom: 25.4mm solid red;
+            }
+            div div
+            {
+                height: 0;
+            }
+            #div1
+            {
+                border-bottom: 25.4mm solid black;
+                margin-bottom: 25.4mm;
+            }
+            #div2
+            {
+                border-top: 25.4mm solid black;
+            }

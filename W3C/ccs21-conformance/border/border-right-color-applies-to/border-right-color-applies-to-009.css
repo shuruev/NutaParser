@@ -1,0 +1,8 @@
+span
+            {
+                border-right-style: solid;
+                border-right-color: green;
+                display: block;
+                height: 1in;
+                width: 0;
+            }

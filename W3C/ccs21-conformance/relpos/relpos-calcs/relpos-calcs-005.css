@@ -1,0 +1,25 @@
+div {
+            height: 120px;
+            width: 80px;
+            direction: rtl;
+            margin-right: auto;
+        }
+        .container {
+            direction: ltr; /* only set LTR on the containing block in question */
+        }
+        .outer {
+            background: green;
+            position: relative;
+            left: 50%;
+            right: 50%;
+        }
+        .inner {
+            background: green;
+            position: relative;
+            right: inherit; /* using inheritance to test computed vs. used */
+        }
+        .control {
+          background: red;
+          margin-bottom: -120px;
+          width: 120px;
+        }

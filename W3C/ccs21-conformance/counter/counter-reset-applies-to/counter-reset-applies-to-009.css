@@ -1,0 +1,9 @@
+span
+            {
+                counter-reset: test 5;
+                display: block;
+            }
+            span:before
+            {
+                content: counter(test);
+            }

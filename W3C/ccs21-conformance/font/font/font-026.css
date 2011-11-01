@@ -1,0 +1,23 @@
+#wrapper
+            {
+                position: relative;
+            }
+            #test
+            {
+                font: bold small-caps 1in/1em Ahem;
+                position: absolute;
+            }
+            #reference
+            {
+                color: red;
+                font-family: Ahem;
+                font-size: 1in;
+                font-variant: small-caps;
+                font-weight: bold;
+                height: 1in;
+                left: 0;
+                line-height: 1em;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }

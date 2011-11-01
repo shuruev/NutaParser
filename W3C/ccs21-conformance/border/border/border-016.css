@@ -1,0 +1,10 @@
+#div1
+            {
+                border: dashed;
+            }
+            div div
+            {
+                border: inherit;
+                height: 1in;
+                margin: 10px;
+            }

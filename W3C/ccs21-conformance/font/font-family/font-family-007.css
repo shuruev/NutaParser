@@ -1,0 +1,12 @@
+div
+            {
+                font-family: Ahem;
+            }
+            span
+            {
+                font-family: serif;
+            }
+            div span
+            {
+                font-family: inherit;
+            }

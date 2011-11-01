@@ -1,0 +1,20 @@
+div
+            {
+                border-left: 5px solid black;
+                height: 100px;
+            }
+            table
+            {
+                margin-left: 100px;
+                border-collapse: collapse;
+            }
+            caption
+            {
+                background: orange;
+                color: orange;
+            }
+            td
+            {
+                background: blue;
+                color: blue;
+            }

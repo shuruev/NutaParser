@@ -1,0 +1,15 @@
+#filler
+            {
+                height: 3000px;
+                margin: 10px;
+            }
+            @media print
+            {
+                #div1
+                {
+                    background: blue;
+                    height: 25px;
+                    position: fixed;
+                    top: 50px;
+                }
+            }

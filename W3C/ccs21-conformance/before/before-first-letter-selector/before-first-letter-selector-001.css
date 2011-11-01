@@ -1,0 +1,9 @@
+div:before
+            {
+                content: "Filler Text";
+                color: green;
+            }
+            div:first-letter
+            {
+                font-size: 98px;
+            }

@@ -1,0 +1,19 @@
+#div1
+            {
+                position: relative;
+            }
+            div div
+            {
+                border: solid green;
+                position: absolute;
+                top: 1in;
+                width: 300px;
+            }
+            iframe
+            {
+                border: solid red;
+                bottom: auto;
+                position: absolute;
+                top: 1in;
+                width: auto;
+            }

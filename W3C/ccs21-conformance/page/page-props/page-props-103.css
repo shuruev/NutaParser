@@ -1,0 +1,21 @@
+@page :right {
+        margin-bottom: 66%;
+    }
+    @page :left {
+        margin-bottom: 10%;
+    }
+    html, body, div.page {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    div.page {
+        position: relative;
+        page-break-after: always;
+    }
+    p {
+        border-bottom: medium blue solid;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }

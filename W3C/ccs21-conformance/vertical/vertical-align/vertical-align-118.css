@@ -1,0 +1,22 @@
+#div1
+            {
+                position: relative;
+            }
+            #div2
+            {
+                position: absolute;
+                top: 0;
+            }
+            #span1
+            {
+                font: 1.5in/1em Ahem;
+            }
+            span span
+            {
+                color: red;
+                vertical-align: text-top;
+            }
+            #div2, span span
+            {
+                font: 0.5in/1em Ahem;
+            }

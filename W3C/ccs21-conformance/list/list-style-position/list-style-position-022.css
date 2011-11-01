@@ -1,0 +1,15 @@
+div
+            {
+                border: 1px solid blue;
+                list-style-position: inside;
+                padding-left: 50px;
+            }
+            span
+            {
+                display: list-item;
+                list-style-position: outside;
+            }
+            div span
+            {
+                list-style-position: inherit;
+            }

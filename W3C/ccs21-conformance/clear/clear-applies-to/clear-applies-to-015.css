@@ -1,0 +1,27 @@
+p
+            {
+                float: left;
+            }
+            #caption
+            {
+                background: green;
+                display: table-caption;
+                clear: both;
+            }
+            #table, #cell, #caption
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

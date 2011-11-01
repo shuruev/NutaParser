@@ -1,0 +1,4 @@
+p:first-line[id="p1"], #p1
+            {
+                color: red;
+            }

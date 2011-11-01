@@ -1,0 +1,20 @@
+#test
+  {
+  background-color: green;
+  display: block;
+  z-index: -1;
+  }
+
+  #red-layer
+  {
+  background-color: red;
+  top: -100px;
+  z-index: auto;
+  }
+
+  #test, #red-layer
+  {
+  height: 100px;
+  position: relative;
+  width: 100px;
+  }

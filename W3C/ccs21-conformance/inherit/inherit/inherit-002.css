@@ -1,0 +1,9 @@
+div
+        {
+            border: solid blue;
+        }
+        div p
+        {
+            border: inherit;
+            border-color: orange;
+        }

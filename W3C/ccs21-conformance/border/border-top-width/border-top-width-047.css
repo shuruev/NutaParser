@@ -1,0 +1,38 @@
+div
+            {
+                width: 50px;
+            }
+            .ref1, .ref2
+            {
+                position: absolute;
+            }
+            .ref1
+            {
+                background: red;
+                height: 3px;
+                z-index: -1;
+            }
+            .ref2
+            {
+                background: green;
+                height: 4px;
+            }
+            .test1, .test2
+            {
+                border-top-style: solid;
+                border-top-width: 1mm;
+                height: 0;
+            }
+            .test1
+            {
+                border-top-color: green;
+            }
+            .test2
+            {
+                border-top-color: red;
+            }
+            #parent
+            {
+                background: red;
+                height: 7px;
+            }

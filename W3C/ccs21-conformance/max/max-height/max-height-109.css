@@ -1,0 +1,12 @@
+div#red-parent
+  {
+  background-color: red;
+  max-height: 400px;
+  overflow: auto;
+  }
+
+  div#green-child
+  {
+  color: green;
+  font: 200px/1 Ahem;
+  }

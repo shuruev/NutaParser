@@ -1,0 +1,10 @@
+div
+            {
+                height: 100px;
+                white-space: pre;
+                width: 200px;
+            }
+            div:before
+            {
+                content: "This text\Ashould be on two lines.";
+            }

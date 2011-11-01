@@ -1,0 +1,11 @@
+#test{
+  background:red;
+  display:list-item;
+  font-size:85px;
+  margin:50px;
+  }
+  #test div.descendant{
+  background:lime;
+  display: block;
+  overflow:auto;
+  }

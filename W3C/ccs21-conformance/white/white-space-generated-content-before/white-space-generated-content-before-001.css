@@ -1,0 +1,9 @@
+#div1
+            {
+                white-space: pre-line;
+            }
+            #div2:before
+            {
+                content:" The   spacing  on      these         ";
+                white-space: pre-line;
+            }

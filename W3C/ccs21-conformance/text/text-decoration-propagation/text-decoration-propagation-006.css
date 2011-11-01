@@ -1,0 +1,16 @@
+#div1
+            {
+               text-decoration: underline;
+            }
+            #table
+            {
+                display: inline-table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

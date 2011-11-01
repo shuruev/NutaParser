@@ -1,0 +1,10 @@
+#div1
+            {
+                background-color: red;
+                float: left;
+            }
+            div div
+            {
+                background-color: green;
+                min-width: 200%;
+            }

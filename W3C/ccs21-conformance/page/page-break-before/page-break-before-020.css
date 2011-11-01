@@ -1,0 +1,5 @@
+#floated {
+     float: right;
+     page-break-before: always;
+     width: 50%;
+   }

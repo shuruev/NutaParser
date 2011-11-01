@@ -1,0 +1,13 @@
+div
+            {
+                border: solid 5px black;
+                height: 2in;
+                width: 2in;
+            }
+            span
+            {
+                background-color: blue;
+                float: right;
+                height: 1in;
+                width: 1in;
+            }

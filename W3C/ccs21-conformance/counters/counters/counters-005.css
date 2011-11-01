@@ -1,0 +1,9 @@
+body
+            {
+                counter-reset: chapter;
+            }
+            div p:before
+            {
+                content: counters(chapter,".",upper-roman);
+                counter-increment: chapter;
+            }

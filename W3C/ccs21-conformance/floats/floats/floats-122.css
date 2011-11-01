@@ -1,0 +1,3 @@
+.control { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+   #container { display: block; width: 100px; background: red; color: green; font: 50px/1 Ahem; position: relative; }
+   .float { float: left; color: white; }

@@ -1,0 +1,17 @@
+html, body, p, br, div
+            {
+                border: none;
+                width: auto;
+            }
+            *
+            {
+                border: 1px solid blue;
+                padding: 0;
+                width: 100px;
+            }
+            div div
+            {
+                background: orange;
+                height: 20px;
+                width: 102px;
+            }

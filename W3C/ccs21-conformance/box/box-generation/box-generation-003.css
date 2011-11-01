@@ -1,0 +1,9 @@
+body
+            {
+                margin-left: 50px;
+            }
+            div
+            {
+                background: blue;
+                display: list-item;
+            }

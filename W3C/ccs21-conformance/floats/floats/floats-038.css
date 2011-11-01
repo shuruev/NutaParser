@@ -1,0 +1,30 @@
+#div1
+            {
+                border: black solid 5px;
+                height: 2in;
+                width: 2in;
+            }
+            div div
+            {
+                height: 0.5in;
+                width: 0.5in;
+            }
+            #div2
+            {
+                background: blue;
+                float: left;
+            }
+            #table
+            {
+                background: orange;
+                display: table;
+                border: 0.1in solid white;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

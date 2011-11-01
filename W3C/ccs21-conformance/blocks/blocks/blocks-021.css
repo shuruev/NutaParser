@@ -1,0 +1,2 @@
+.outer { position: absolute; width: 300px; height: 100px; background: red; }
+   .inner { width: 200%; height: 200%; font: 100px/1 Ahem; color: green; }

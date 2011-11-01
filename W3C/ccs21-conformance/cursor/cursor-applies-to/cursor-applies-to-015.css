@@ -1,0 +1,12 @@
+#test
+            {
+                display: table-caption;
+                background-color: blue;
+                cursor: pointer;
+                height: 1in;
+                width: 1in;
+            }
+            #table
+            {
+                display: table;
+            }

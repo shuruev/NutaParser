@@ -1,0 +1,11 @@
+div
+            {
+                background: black;
+                display: inline;
+                line-height: 1em;
+            }
+            div div
+            {
+                background: white;
+                margin-left: 100px;
+            }

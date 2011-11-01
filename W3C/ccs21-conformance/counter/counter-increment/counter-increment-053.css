@@ -1,0 +1,13 @@
+div
+            {
+                counter-increment: ident 5;
+            }
+            div:before
+            {
+                font-size: 30px;
+                content: counter(ident);
+            }
+            #none
+            {
+                counter-increment: none;
+            }

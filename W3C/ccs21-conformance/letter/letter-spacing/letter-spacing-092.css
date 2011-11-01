@@ -1,0 +1,12 @@
+div
+            {
+                font: 20px/1em Ahem;
+            }
+            #span1
+            {
+                margin-left: 12ex;
+            }
+            #test
+            {
+                letter-spacing: +12ex;
+            }

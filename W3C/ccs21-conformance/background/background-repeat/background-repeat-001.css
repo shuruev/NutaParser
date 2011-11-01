@@ -1,0 +1,7 @@
+div
+            {
+                background-image: url("support/blue15x15.png");
+                background-repeat: repeat;
+                border: 5px solid black;
+                height: 200px;
+            }

@@ -1,0 +1,15 @@
+div
+            {
+                direction: rtl;
+                height: 1in;
+                width: 0;
+            }
+            #div1
+            {
+                border-right: 5px solid blue;
+                margin-right: +0cm;
+            }
+            div div
+            {
+                border-right: 5px solid orange;
+            }

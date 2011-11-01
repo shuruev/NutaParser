@@ -1,0 +1,10 @@
+span
+  {
+  color: white;
+  font-size: 150%;
+  }
+
+  textarea:focus + span
+  {
+  color: green;
+  }

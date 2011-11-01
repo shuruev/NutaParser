@@ -1,0 +1,16 @@
+div
+            {
+                direction: rtl;
+                font: 20px/1 Ahem;
+                height: 1in;
+                width: 0;
+            }
+            #div1
+            {
+                border-right: 5px solid blue;
+                margin-right: +0ex;
+            }
+            div div
+            {
+                border-right: 5px solid orange;
+            }

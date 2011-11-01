@@ -1,0 +1,17 @@
+div
+            {
+                position: absolute;
+            }
+            #div1
+            {
+                border: solid;
+                height: 200px;
+                width: 200px;
+            }
+            div div
+            {
+                background: blue;
+                display: inline;
+                height: 50%;
+                width: 100%;
+            }

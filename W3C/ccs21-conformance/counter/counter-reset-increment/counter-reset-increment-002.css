@@ -1,0 +1,11 @@
+ol
+  {
+  counter-reset: list-item -4;
+  list-style-type: none;
+  }
+
+  li:before
+  {
+  content: counter(list-item) ". ";
+  counter-increment: list-item;
+  }

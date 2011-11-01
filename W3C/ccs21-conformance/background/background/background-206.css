@@ -1,0 +1,12 @@
+#div1
+            {
+                height: 200px;
+                width: 200px;
+                overflow: scroll;
+            }
+            div div
+            {
+                background: green url("support/cat.png") repeat-x scroll bottom;
+                width: 400px;
+                height: 400px;
+            }

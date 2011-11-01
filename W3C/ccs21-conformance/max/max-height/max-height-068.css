@@ -1,0 +1,7 @@
+div
+            {
+                background: red;
+                font: 20px/1 Ahem;
+                max-height: 0em;
+                height: 1em;
+            }

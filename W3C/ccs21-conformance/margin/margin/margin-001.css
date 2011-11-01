@@ -1,0 +1,26 @@
+#wrapper
+            {
+                position: relative;
+            }
+            #div1, #div2
+            {
+                border: 10px solid green;
+            }
+            #div1, #reference
+            {
+                left: 0;
+                position: absolute;
+                top: 0;
+            }
+            #div2
+            {
+                margin: 2.54cm;
+                height: 1in;
+                width: 3in;
+            }
+            #reference
+            {
+                border: 10px solid red;
+                height: 308px;
+                width: 500px;
+            }

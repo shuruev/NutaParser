@@ -1,0 +1,28 @@
+table
+            {
+                border-spacing: 0;
+                table-layout: fixed;
+                width: 200px;
+            }
+            #colgroup
+            {
+                width: 75px;
+            }
+            #cell
+            {
+                background: black;
+                width: 100px;
+            }
+            td
+            {
+                padding: 0;
+            }
+            #div1
+            {
+                background: blue;
+                width: 100px;
+            }
+            #div1, td
+            {
+                height: 1em;
+            }

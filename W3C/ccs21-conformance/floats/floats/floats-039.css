@@ -1,0 +1,22 @@
+#div1
+            {
+                width: 2in;
+                height: 2in;
+                border: black solid 5px;
+            }
+            div div
+            {
+                background: blue;
+                float: left;
+            }
+            div div, img
+            {
+                height: 0.5in;
+                width: 0.5in;
+            }
+            img
+            {
+                background: orange;
+                display: block;
+                border: 0.1in solid white;
+            }

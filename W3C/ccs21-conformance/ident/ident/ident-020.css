@@ -1,0 +1,5 @@
+.one { color: green; background: white; }
+  .--ident, .one { color: red; }
+
+  .two { color: green; background: white; }
+  #--ident, .two { color: red; }

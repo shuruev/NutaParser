@@ -1,0 +1,17 @@
+body
+            {
+                background-color: black;
+            }
+            p
+            {
+                color: white;
+            }
+            img, #test
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #test
+            {
+                background-color: rgb(254, 254, 254);
+            }

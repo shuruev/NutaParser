@@ -1,0 +1,7 @@
+li {
+     width: 10em;
+     margin: 0.5em 5em;
+     padding: 0;
+     list-style-position: inside;
+     background: navy;
+     color: white; }

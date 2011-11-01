@@ -1,0 +1,15 @@
+div
+            {
+                background-color: green;
+                color: green;
+                height: 100px;
+                margin: 100px;
+                width: 100px;
+            }
+            div div
+            {
+                background-color: red;
+                display: none;
+                font-size: 72pt;
+                line-height: 100px;
+            }

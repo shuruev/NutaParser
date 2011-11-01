@@ -1,0 +1,26 @@
+table
+            {
+                border-collapse: collapse;
+                table-layout: fixed;
+                width: 100px;
+            }
+            #colgroup
+            {
+                width: 300px;
+            }
+            #cell
+            {
+                background: black;
+            }
+            #div1
+            {
+                background: blue;
+            }
+            #div1, #cell
+            {
+                height: 1em;
+            }
+            #div1, #col
+            {
+                width: 100px;
+            }

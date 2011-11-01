@@ -1,0 +1,10 @@
+span
+            {
+                display: block;
+                list-style-type: square;
+                margin-left: 1in;
+            }
+            a
+            {
+                display: list-item;
+            }

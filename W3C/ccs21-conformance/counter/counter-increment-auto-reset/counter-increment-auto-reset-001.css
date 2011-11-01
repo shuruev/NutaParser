@@ -1,0 +1,8 @@
+div1:before
+            {
+                counter-increment: outofscope 10;
+            }
+            #div2:before
+            {
+                content: counter(outofscope);
+            }

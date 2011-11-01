@@ -1,0 +1,10 @@
+#div1
+            {
+                border: 2px solid blue;
+                display: inline;
+            }
+            div div
+            {
+                background: orange;
+                width: 2in;
+            }

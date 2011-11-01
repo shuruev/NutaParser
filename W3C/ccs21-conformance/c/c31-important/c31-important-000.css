@@ -1,0 +1,3 @@
+p { color: green ! important; }
+   p { color: red; }
+   p#id1 { color: red; }

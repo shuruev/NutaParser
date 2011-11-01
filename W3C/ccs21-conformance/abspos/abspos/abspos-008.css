@@ -1,0 +1,4 @@
+.container { font-size: 100px; position: relative; border-top: 10px solid white; }
+   .outer { position: absolute; top: 0; left: 0; z-index: 1; }
+   .inner { background: green; color: white; float: left; }
+   .control { float: left; color: yellow; background: red; }

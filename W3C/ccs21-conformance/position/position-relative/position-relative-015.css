@@ -1,0 +1,17 @@
+div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #div1
+            {
+                background: blue;
+                position: relative;
+                top: 1in;
+            }
+            #div2
+            {
+                background: orange;
+                bottom: 1in;
+                position: relative;
+            }

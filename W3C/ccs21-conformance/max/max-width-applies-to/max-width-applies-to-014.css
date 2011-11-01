@@ -1,0 +1,17 @@
+#table
+            {
+                display: inline-table;
+                table-layout: fixed;
+                max-width: 1in;
+                width: 3in;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                background: black;
+                display: table-cell;
+                height: 1in;
+            }

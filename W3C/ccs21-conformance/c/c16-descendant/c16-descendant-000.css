@@ -1,0 +1,5 @@
+body {color: red;}
+   p {color: green;}
+   li {list-style: none;}
+   html body div p {color: red;}
+   span, ul li li {color: green;}

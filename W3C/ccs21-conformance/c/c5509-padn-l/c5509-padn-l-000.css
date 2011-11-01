@@ -1,0 +1,8 @@
+body { color: navy; }
+   div { font: 10px/1 Ahem; width: 106px; color: blue; }
+   img { vertical-align: bottom; }
+   .zero {padding-left: 0; text-align: center; background-color: navy;}
+   .one {padding-left: 0.5in; text-align: left; background-color: navy;}
+   .two {padding-left: 48px; text-align: left; background-color: navy;}
+   .three {padding-left: 4.8em; text-align: left; background-color: navy;}
+   .four {padding-left: 45.3%; text-align: left; background-color: navy;}

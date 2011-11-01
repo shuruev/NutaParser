@@ -1,0 +1,10 @@
+div
+            {
+                border: solid;
+                color: green;
+                text-align: center;
+            }
+            div:after
+            {
+                content: 'PASS PASS';
+            }

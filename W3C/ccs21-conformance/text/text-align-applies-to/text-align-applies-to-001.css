@@ -1,0 +1,11 @@
+#parent
+            {
+                border: solid;
+                text-align: right;
+                width: 500px;
+            }
+            #test
+            {
+                display: inline;
+                text-align: left;
+            }

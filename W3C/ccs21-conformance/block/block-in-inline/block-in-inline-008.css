@@ -1,0 +1,4 @@
+.inline { display: inline; }
+   .block { display: block; }
+   .control { background: red; height: 5em; width: 5em; }
+   .test { background: green; height: 5em; width: 5em; position: relative; top: -5em; }

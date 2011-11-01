@@ -1,0 +1,9 @@
+form:before
+            {
+                content: attr(accept-charset);
+                color: green;
+            }
+            form
+            {
+                border: 2px solid black;
+            }

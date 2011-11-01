@@ -1,0 +1,20 @@
+#ruler
+            {
+                background: blue;
+                font: 20px/1em Ahem;
+                height: 10em;
+                width: 20em;
+            }
+            table
+            {
+                background: black;
+                border-spacing: 0;
+            }
+            tr
+            {
+                height: 1em;
+            }
+            td
+            {
+                padding: 0;
+            }

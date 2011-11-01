@@ -1,0 +1,10 @@
+button
+  {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  }
+
+  button[type] {background-color: red;}
+
+  button[type="submit"] {background-color: green;}

@@ -1,0 +1,15 @@
+#span1
+            {
+                background-color: blue;
+                float: left;
+                height: 1in;
+                width: 1in;
+            }
+            body
+            {
+                margin: 0;
+            }
+            div div
+            {
+                clear: both;
+            }

@@ -1,0 +1,8 @@
+p { margin: 0; padding: 0; text-align: justify;}
+   .eight {float: left; width: 25%; color: white;
+           background: navy url(support/square-purple.png) top right no-repeat;
+           padding: 0; margin: 0}
+   .nine {float: right; width: 50%;
+          background-color: teal; color: aqua;
+          padding: 0; margin: 0}
+   span { color: navy; }

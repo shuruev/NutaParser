@@ -1,0 +1,9 @@
+#div1
+            {
+                border: solid 1px black;
+                width: 600px;
+            }
+            div div
+            {
+                display: inline;
+            }

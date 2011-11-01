@@ -1,0 +1,10 @@
+#div1
+            {
+                unicode-bidi: bidi-override;
+            }
+            div div
+            {
+                direction: rtl;
+                unicode-bidi: inherit;
+                border: 2px solid blue;
+            }

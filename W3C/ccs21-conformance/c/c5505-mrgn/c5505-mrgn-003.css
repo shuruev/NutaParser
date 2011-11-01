@@ -1,0 +1,6 @@
+div { font: 1em/1 Ahem; margin: 1em; }
+   .test { width: 6em; padding: 1em 1em 0; border: solid; }
+   .test p { margin: -1em; color: orange; background: yellow; }
+   .control { width: 8em; background: red; border: solid; }
+   .control .a { width: 4em; height: 1em; vertical-align: bottom; }
+   .control .b { width: 4em; height: 1em; vertical-align: bottom; }

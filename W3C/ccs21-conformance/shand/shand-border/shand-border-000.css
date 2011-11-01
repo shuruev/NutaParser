@@ -1,0 +1,7 @@
+body { background: white; }
+  span { color: black; }
+
+  p { color: red; }
+  p { border-color: red; }
+  p { border: medium solid; }
+  p { color: green; }

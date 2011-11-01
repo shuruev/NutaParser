@@ -1,0 +1,26 @@
+#test
+  {
+  background-color: lime;
+  line-height: 1;
+  }
+
+  #empty-inline-element
+  {
+  line-height: 5;
+  }
+
+  #reference-overlapped-red
+  {
+  background-color: red;
+  left: 0;
+  line-height: 5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  }
+
+  #relatively-positioned-wrapper
+  {
+  position: relative;
+  }

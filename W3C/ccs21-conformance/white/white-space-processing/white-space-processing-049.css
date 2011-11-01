@@ -1,0 +1,15 @@
+#div1
+            {
+                color: orange;
+                font-family: Ahem;
+                position: relative;
+                white-space: normal;
+                width: 5em;
+            }
+            div div
+            {
+                color: blue;
+                position: absolute;
+                right:0;
+                top:0;
+            }

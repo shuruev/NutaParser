@@ -1,0 +1,18 @@
+#caption
+            {
+                border-bottom-style: dashed;
+                display: table-caption;
+                width: 1in;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

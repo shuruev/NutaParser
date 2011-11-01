@@ -1,0 +1,6 @@
+div
+            {
+                background: url("support/cat.png") repeat-x;
+                border: 1px solid black;
+                height: 200px;
+            }

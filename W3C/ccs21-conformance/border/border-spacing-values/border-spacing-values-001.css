@@ -1,0 +1,14 @@
+#table1
+            {
+                background: blue;
+                border-spacing: -100px;
+            }
+            #table2
+            {
+                background: orange;
+            }
+            td
+            {
+                height: 50px;
+                width: 50px;
+            }

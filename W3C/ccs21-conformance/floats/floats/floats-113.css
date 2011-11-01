@@ -1,0 +1,3 @@
+.control { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+   .container { width: 40%; padding: 0; margin: 1em; border: solid black; font: 2em/1 Ahem; height: 1em; width: 3em; background: white; }
+   .test { text-align: right; float: right; clear: right; color: green; }

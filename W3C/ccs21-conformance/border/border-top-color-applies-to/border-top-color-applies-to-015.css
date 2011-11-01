@@ -1,0 +1,19 @@
+#test
+            {
+                border-top-style: solid;
+                border-top-color: green;
+                display: table-caption;
+                width: 1in;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

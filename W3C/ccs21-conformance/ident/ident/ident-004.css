@@ -1,0 +1,5 @@
+.one { color: red; background: white; }
+  .怀ident, .one { color: green; }
+
+  .two { color: red; background: white; }
+  #怀ident, .two { color: green; }

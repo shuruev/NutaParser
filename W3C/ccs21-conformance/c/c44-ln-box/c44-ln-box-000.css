@@ -1,0 +1,5 @@
+div { font: 10px/20px Ahem; color: white; background: red url(support/css1test44a.png) no-repeat;
+         width: 19em; padding: 0.5em 1em; border: 1em solid green; }
+   img.onea, img.oneb { width: 4em; height: 4em; }
+   img.onea { vertical-align: text-bottom; }
+   img.oneb { vertical-align: text-top; }

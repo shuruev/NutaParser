@@ -1,0 +1,7 @@
+div
+            {
+                display: inline;
+                outline-color: blue;
+                outline-style: dotted;
+                outline-width: 10px;
+            }

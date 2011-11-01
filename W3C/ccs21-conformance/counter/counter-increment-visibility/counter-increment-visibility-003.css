@@ -1,0 +1,9 @@
+#div1
+            {
+                visibility: hidden;
+            }
+            div:before
+            {
+                counter-increment: hidden 1;
+                content: counter(hidden);
+            }

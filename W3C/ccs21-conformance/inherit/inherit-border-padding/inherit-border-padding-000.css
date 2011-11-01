@@ -1,0 +1,4 @@
+.a { border: 0 solid lime; }
+   .b { border-width: thick; border-style: inherit; border-color: inherit; }
+   .c { padding: 8px 0; background-color: red; }
+   .d { padding: inherit; background-color: lime; }

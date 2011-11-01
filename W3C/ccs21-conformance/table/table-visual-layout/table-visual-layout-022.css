@@ -1,0 +1,15 @@
+table
+            {
+                background: blue;
+                border-collapse: separate;
+                border-spacing: 3px 0;
+            }
+            colgroup
+            {
+                background: black;
+            }
+            td
+            {
+                height: 2em;
+                width: 2em;
+            }

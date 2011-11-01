@@ -1,0 +1,22 @@
+/* Make our document's head visible */
+   html { margin: 0; padding: 1em; }
+   head { display: block; }
+   title, style { display: none; }
+   link { display: inline; }
+   body { margin: 0; padding: 0; }
+   p { margin: 1em 0; }
+
+   /* Make the metadata links invisible */
+   [rel="author"], [rel="alternate"], [rel="help"] { display: none; }
+
+   /* The test */
+   link:before { content: '1. Link A'; }
+   /* Disabled due to http://www.w3.org/Bugs/Public/show_bug.cgi?id=11343
+      p:active, span:active { color: yellow; border: red solid thick; background: red; } */
+   .test { color: blue; }
+   a:active, link:active { color: white; background: green; border: green solid thick; }
+
+   /* Informative status message */
+   .msg { background: white; color: white; line-height: 1.2 }
+   .msg p { margin: 0; margin-bottom: -1.2em; position: relative; }
+   :target { font-style: italic; color: silver; z-index: 1; }

@@ -1,0 +1,6 @@
+div:before
+            {
+                content: "Filler\
+                                   Text\00000a
+                                                Filler Text";
+            }

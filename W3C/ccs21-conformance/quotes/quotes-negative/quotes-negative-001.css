@@ -1,0 +1,8 @@
+div:before
+            {
+                content: "PASS" close-quote;
+            }
+            div
+            {
+                quotes: 'FAIL' 'FAIL' 'FAIL' 'FAIL';
+            }

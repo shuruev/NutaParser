@@ -1,0 +1,3 @@
+body > span { border: 3px solid blue }
+   body > span > span { border: 3px solid cyan }
+   body > span > span:after { content: "Ten" }

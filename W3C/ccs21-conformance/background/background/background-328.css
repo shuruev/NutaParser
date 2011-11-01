@@ -1,0 +1,10 @@
+#wrapper
+            {
+                background: black url('support/green15x15.png') repeat-x;
+            }
+            #test
+            {
+                background: red;
+                background: inherit;
+                height: 1in;
+            }

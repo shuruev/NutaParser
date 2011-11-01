@@ -1,0 +1,4 @@
+/* basics */
+    .table { display: table; height: 5em; width: 5em; background: green; }
+    .table > * { display: table-cell; color: yellow; background: red; border: solid red; }
+    .table > *:after { content: 'FAIL!!!'; color: yellow; background: red;  border: solid red; }

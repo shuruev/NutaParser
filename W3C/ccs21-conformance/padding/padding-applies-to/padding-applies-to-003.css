@@ -1,0 +1,25 @@
+#test
+            {
+                display: table-footer-group;
+                padding: 50px;
+            }
+            #table
+            {
+                border: 10px solid blue;
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #cell div
+            {
+                border: 10px solid orange;
+                height: 200px;
+                width: 200px;
+            }

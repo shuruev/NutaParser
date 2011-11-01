@@ -1,0 +1,10 @@
+div
+            {
+                margin-top: 40px;
+            }
+            div div:first-letter, span
+            {
+                background: aqua;
+                color: green;
+                padding: 24px;
+            }

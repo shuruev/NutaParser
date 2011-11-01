@@ -1,0 +1,5 @@
+.ahem { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+  p { margin: 0.2em; }
+  .control, .test { font: 4em/1 Ahem; color: green; }
+  .first-line, .test:first-line { background: red; vertical-align: top; }
+  .inner { font-size: 1.25em; vertical-align: bottom; }

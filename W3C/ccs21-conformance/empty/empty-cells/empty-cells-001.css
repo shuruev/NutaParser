@@ -1,0 +1,10 @@
+td
+            {
+                color: white;
+            }
+            .empty
+            {
+                background-color: black;
+                border: 10px solid black;
+                empty-cells: show;
+            }

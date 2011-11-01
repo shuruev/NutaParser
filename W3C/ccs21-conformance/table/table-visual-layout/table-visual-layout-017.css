@@ -1,0 +1,14 @@
+table
+            {
+                background: red;
+                border-collapse: collapse;
+            }
+            tr
+            {
+                background: white;
+            }
+            td
+            {
+                width: 2em;
+                height: 2em;
+            }

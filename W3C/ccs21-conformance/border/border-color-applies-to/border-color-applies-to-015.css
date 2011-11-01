@@ -1,0 +1,20 @@
+#test
+            {
+                border-style: solid;
+                border-color: green;
+                display: table-caption;
+                height: 1in;
+                width: 1in;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

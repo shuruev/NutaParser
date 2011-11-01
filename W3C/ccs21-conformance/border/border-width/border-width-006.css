@@ -1,0 +1,20 @@
+#parent
+            {
+                border-color: transparent;
+                border-style: solid;
+                border-width: 0.5in 0.25in;
+            }
+            #test
+            {
+                border-style: solid;
+                border-width: inherit;
+                height: 0;
+                width: 0;
+            }
+            #reference
+            {
+                background-color: black;
+                height: 1in;
+                margin-top: 5px;
+                width: 0.5in;
+            }

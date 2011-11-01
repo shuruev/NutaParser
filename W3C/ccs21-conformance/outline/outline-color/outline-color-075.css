@@ -1,0 +1,15 @@
+#div1
+            {
+                outline-color: rgb(99%, 0%, 0%);
+                outline-style: solid;
+                outline-width: 50px;
+                margin: 100px 0 0 100px;
+                width: 0;
+            }
+            #reference
+            {
+                background-color: rgb(99%, 0%, 0%);
+                height: 100px;
+                margin: 200px 0 0 50px;
+                width: 100px;
+            }

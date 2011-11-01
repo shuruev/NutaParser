@@ -1,0 +1,14 @@
+#div1
+            {
+                position: relative;
+                bottom: 0;
+            }
+            div div
+            {
+                background: blue;
+                height: 1in;
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 1in;
+            }

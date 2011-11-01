@@ -1,0 +1,141 @@
+#maroon
+            {
+                background: maroon;
+            }
+            #maroonhex
+            {
+                background: #800000;
+            }
+            #red
+            {
+                background: red;
+            }
+            #redhex
+            {
+                background: #ff0000;
+            }
+            #orange
+            {
+                background: orange;
+            }
+            #orangehex
+            {
+                background: #ffa500;
+            }
+            #yellow
+            {
+                background: yellow;
+            }
+            #yellowhex
+            {
+                background: #ffff00;
+            }
+            #olive
+            {
+                background: olive;
+            }
+            #olivehex
+            {
+                background: #808000;
+            }
+            #purple
+            {
+                background: purple;
+            }
+            #purplehex
+            {
+                background: #800080;
+            }
+            #fuchsia
+            {
+                background: fuchsia;
+            }
+            #fuchsiahex
+            {
+                background: #ff00ff;
+            }
+            #white
+            {
+                background: white;
+            }
+            #whitehex
+            {
+                background: #ffffff;
+            }
+            #lime
+            {
+                background: lime;
+            }
+            #limehex
+            {
+                background: #00ff00;
+            }
+            #green
+            {
+                background: green;
+            }
+            #greenhex
+            {
+                background: #008000;
+            }
+            #navy
+            {
+                background: navy;
+            }
+            #navyhex
+            {
+                background: #000080;
+            }
+            #blue
+            {
+                background: blue;
+            }
+            #bluehex
+            {
+                background: #0000ff;
+            }
+            #aqua
+            {
+                background: aqua;
+            }
+            #aquahex
+            {
+                background: #00ffff;
+            }
+            #teal
+            {
+                background: teal;
+            }
+            #tealhex
+            {
+                background: #008080;
+            }
+            #black
+            {
+                background: black;
+            }
+            #blackhex
+            {
+                background: #000000;
+            }
+            #silver
+            {
+                background: silver;
+            }
+            #silverhex
+            {
+                background: #c0c0c0;
+            }
+            #gray
+            {
+                background: gray;
+            }
+            #grayhex
+            {
+                background: #808080;
+            }
+            td
+            {
+                height: 0.5in;
+                width: 0.5in;
+            }

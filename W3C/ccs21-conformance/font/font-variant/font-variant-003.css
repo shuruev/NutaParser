@@ -1,0 +1,12 @@
+div
+            {
+                font-variant: small-caps;
+            }
+            span
+            {
+                font-variant: normal;
+            }
+            div span
+            {
+                font-variant: inherit;
+            }

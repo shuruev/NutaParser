@@ -1,0 +1,15 @@
+div
+            {
+                height: 1in;
+                width: 0;
+            }
+            #div1
+            {
+                border-left: 1pc solid red;
+                padding-left: 6pc;
+            }
+            div div
+            {
+                border-left: 1pc solid black;
+                margin-left: -7pc;
+            }

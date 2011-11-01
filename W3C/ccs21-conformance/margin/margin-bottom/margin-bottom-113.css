@@ -1,0 +1,20 @@
+div
+            {
+                height: 0;
+            }
+            #wrapper
+            {
+                border-bottom: 0.2in solid red;
+                height: 1.2in;
+                margin-bottom: 1in;
+                width: 1in;
+            }
+            #div1
+            {
+                border-bottom: 0.2in solid black;
+                margin-bottom: inherit;
+            }
+            #div2
+            {
+                border-top: 0.2in solid black;
+            }

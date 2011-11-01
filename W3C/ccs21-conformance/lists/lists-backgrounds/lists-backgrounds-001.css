@@ -1,0 +1,12 @@
+#div1
+            {
+                background: orange;
+                margin-left: 50px;
+                padding-left: 30px;
+            }
+            div div
+            {
+                display: list-item;
+                list-style-type: disc;
+                background: blue;
+            }

@@ -1,0 +1,12 @@
+#parent, #reference
+            {
+                display: inline;
+            }
+            #reference, div div
+            {
+                font-variant: small-caps;
+            }
+            div div
+            {
+                display: inherit;
+            }

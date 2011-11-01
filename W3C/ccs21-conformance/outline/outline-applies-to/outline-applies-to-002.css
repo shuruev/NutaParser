@@ -1,0 +1,20 @@
+#test
+            {
+                display: table-header-group;
+                outline: solid blue 10px;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

@@ -1,0 +1,10 @@
+table
+            {
+                border: 10px outset;
+                border-collapse: separate;
+            }
+            td
+            {
+                width: 6em;
+                height: 3em;
+            }

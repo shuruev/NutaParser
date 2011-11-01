@@ -1,0 +1,10 @@
+#div1
+            {
+                background: red;
+            }
+            div div
+            {
+                float: left;
+                height: 1in;
+                width: 1in;
+            }

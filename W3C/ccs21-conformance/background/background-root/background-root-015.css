@@ -1,0 +1,5 @@
+body { border: solid lime; background: white url(support/square-purple.png) no-repeat top center; color: black; }
+   html { border: solid blue; background: white url(support/square-teal.png) no-repeat top center; color: black; }
+   :link, :visited { color: inherit; background: transparent; }
+   * { margin: 1em; padding: 1em; }
+   html, body { padding-top: 70px; }

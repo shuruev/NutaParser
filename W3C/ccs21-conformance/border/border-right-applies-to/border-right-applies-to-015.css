@@ -1,0 +1,19 @@
+#test
+            {
+                border-right: solid green;
+                display: table-caption;
+                height: 1in;
+                width: 0;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

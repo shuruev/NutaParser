@@ -1,0 +1,16 @@
+#table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+                width: 1in;
+            }
+            #cell
+            {
+                background: red;
+                display: table-cell;
+                height: 1in;
+            }

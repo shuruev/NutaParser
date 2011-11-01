@@ -1,0 +1,25 @@
+div
+            {
+                font: 1em/1 Ahem;
+                position: relative;
+                width: 6em;
+            }
+            div div
+            {
+                position: absolute;
+            }
+            #test
+            {
+                color: green;
+                text-align: justify;
+                white-space: pre;
+                
+            }
+            .red
+            {
+                color: red;
+            }
+            .green
+            {
+                color: green;
+            }

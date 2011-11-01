@@ -1,0 +1,17 @@
+#table
+            {
+                display: table;
+                quotes: "P" "S" "A" "S";
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #cell:before
+            {
+                content: open-quote open-quote close-quote close-quote;
+            }

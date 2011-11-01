@@ -1,0 +1,17 @@
+p
+            {
+                margin-bottom: 100px;
+            }
+            div
+            {
+                display: inline;
+            }
+            #div1
+            {
+                border-top: 5px solid blue;
+                padding-top: 50px;
+            }
+            div div
+            {
+                border-top: 5px solid orange;
+            }

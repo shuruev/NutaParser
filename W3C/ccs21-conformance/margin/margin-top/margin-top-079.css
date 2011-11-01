@@ -1,0 +1,15 @@
+div
+            {
+                font: 20px/1 Ahem;
+                height: 0;
+            }
+            #div1
+            {
+                border-top: 1em solid red;
+                margin-bottom: -7em;
+            }
+            #div2
+            {
+                border-top: 1em solid black;
+                margin-top: 6em;
+            }

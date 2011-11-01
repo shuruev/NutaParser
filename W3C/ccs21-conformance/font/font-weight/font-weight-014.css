@@ -1,0 +1,17 @@
+div
+            {
+                color: green;
+                font-size: 1in;
+                font-weight: normal;
+                line-height: 1em;
+                position: absolute;
+            }
+            #wrapper
+            {
+                font-weight: bold;
+            }
+            #test
+            {
+                color: black;
+                font-weight: inherit;
+            }

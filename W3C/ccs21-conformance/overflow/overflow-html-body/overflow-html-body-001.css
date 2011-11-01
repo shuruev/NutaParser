@@ -1,0 +1,9 @@
+body
+            {
+                overflow: hidden;
+            }
+            div
+            {
+                height: 110%;
+                width: 110%;
+            }

@@ -1,0 +1,5 @@
+body { background: white; color: black; }
+   span[onclick] { text-decoration: underline; color: blue; cursor: pointer; }
+   span[onclick]:hover { color: red; }
+   .collapse { visibility: collapse; }
+   table { border-spacing: 1em; }

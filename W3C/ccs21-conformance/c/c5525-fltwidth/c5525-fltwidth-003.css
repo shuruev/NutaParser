@@ -1,0 +1,4 @@
+.a { background: url(support/pattern-tr.png) center top no-repeat; }
+   .b { background: url(support/swatch-red.png) left top no-repeat; }
+   p { margin: 0; float: left; width: 50%; }
+   img { float: none; color: red; vertical-align: top; }

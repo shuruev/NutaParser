@@ -1,0 +1,5 @@
+div { position: relative; }
+   .test { color: blue; text-decoration: underline; }
+   .block { display: block; }
+   .float { float: right; }
+   .pos { position: absolute; top: 4em; right: 0; }

@@ -1,0 +1,14 @@
+table
+            {
+                background: red;
+                border-collapse: collapse;
+            }
+            colgroup
+            {
+                background: green;
+            }
+            td
+            {
+                height: 2em;
+                width: 2em;
+            }

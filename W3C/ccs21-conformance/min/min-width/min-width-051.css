@@ -1,0 +1,13 @@
+#div1
+            {
+                background: black;
+                height: 1in;
+                min-width: +25.4mm;
+                width: 0;
+            }
+            #div2
+            {
+                border-left: 25.4mm solid black;
+                height: 1in;
+                margin-top: 10px;
+            }

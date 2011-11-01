@@ -1,0 +1,15 @@
+div
+            {
+                border-bottom: solid orange;
+                color: blue;
+                font: 1in/1em Ahem;
+                height: 1in
+            }
+            #span1
+            {
+                vertical-align: 0%;
+            }
+            #span2
+            {
+                vertical-align: baseline;
+            }

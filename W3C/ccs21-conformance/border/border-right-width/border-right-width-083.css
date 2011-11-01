@@ -1,0 +1,17 @@
+div
+            {
+                font: 20px Ahem;
+                height: 1in;
+            }
+            #reference
+            {
+                background-color: black;
+                width: 1in;
+                margin-top: 5px;
+            }
+            #test
+            {
+                border-right-style: solid;
+                border-right-width: 6ex;
+                width: 0;
+            }

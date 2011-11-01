@@ -1,0 +1,13 @@
+ul {
+      margin: 0;
+      padding: 0;
+    }
+    .li {
+      display: list-item;
+    }
+    li, .li {
+      list-style: outside circle;
+      border: solid thin blue;
+      margin: 0.5em 4em;
+      padding: 0;
+    }

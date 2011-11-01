@@ -1,0 +1,6 @@
+div
+            {
+                direction: rtl;
+                unicode-bidi: bidi-override;
+                border: 2px solid blue;
+            }

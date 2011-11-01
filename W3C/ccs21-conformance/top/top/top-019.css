@@ -1,0 +1,22 @@
+div
+            {
+                position: relative;
+            }
+            #div1
+            {
+                margin-top: -72pt;
+            }
+            #div2
+            {
+                background: red;
+                height: 72pt;
+                margin-top: 72pt;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            #div3
+            {
+                border-bottom: 72pt solid black;
+                top: 72pt;
+            }

@@ -1,0 +1,15 @@
+html, body {
+		height:100%;
+		line-height:1;
+		margin: 0;
+		padding: 0;
+	}
+	div {
+		page-break-after: auto;
+	}
+	div#first {height: 50%;}
+	div#second {
+		height: 50%;
+		margin-bottom: -4em;
+	}
+	div#third {width: 0;}

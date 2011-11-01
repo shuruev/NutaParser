@@ -1,0 +1,13 @@
+table
+            {
+                border-collapse: collapse;
+            }
+            td
+            {
+                border: 5px none black;
+                height: 3em;
+            }
+            #cell1
+            {
+                border: 10px none red;
+            }

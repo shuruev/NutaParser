@@ -1,0 +1,14 @@
+.gen0:before {
+  padding:1px;
+}
+.gen1:before {
+  content: " ";
+}
+.gen2:before {
+  content: attr(missing);
+}
+.gen3:before {
+  content: url(missing-image.png);
+}
+
+div { border:1px solid green; margin:5px; }

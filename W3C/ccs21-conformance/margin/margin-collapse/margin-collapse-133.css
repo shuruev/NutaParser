@@ -1,0 +1,11 @@
+table, td { padding: 0; border-spacing: 0; }
+   .comparator { border-spacing: 1em; }
+   .test, .control { border: solid; background: lime; }
+
+   .test .top { display: block; margin: 0; height: 1em; width: 8em; background: yellow; }
+   .test .container { display: block; margin: 1em 0 0 0; width: 8em; background: red; }
+   .test .float { float: left; margin: 0; height: 1em; width: 8em; background: yellow; }
+   .test .block { display: block; margin: 2em 0 0 0; height: 1em; background: red; }
+
+   .control .lime { border-top: 2em solid lime; width: 8em; }
+   .control .yellow { border-top: 1em solid yellow; }

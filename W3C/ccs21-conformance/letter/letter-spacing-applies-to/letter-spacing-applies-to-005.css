@@ -1,0 +1,15 @@
+div
+            {
+                font: 16px/1em Ahem;
+            }
+            #div1
+            {
+                display: inline-block;
+                letter-spacing: 1em;
+            }
+            #div2
+            {
+                background: blue;
+                height: 1em;
+                width: 11em;
+            }

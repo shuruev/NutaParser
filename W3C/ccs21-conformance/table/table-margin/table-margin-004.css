@@ -1,0 +1,33 @@
+div#wrapper
+            {
+                border: blue solid medium;
+                height: 188px;
+                /*
+                20px (margin-top) + 1px + 20px (content) + 1px + max(20px, 20px) 1st div table
+                + 1px + 20px (content) + 1px + max(20px, 20px)  2nd div table
+                + 1px + 20px (content) + 1px + max(20px, 20px)  1st p table
+                + 1px + 20px (content) + 1px + 20px 2nd p table
+                --------------------------------------------------------
+                188px
+                */
+            }
+            
+            .table
+            {
+                border: 1px solid silver;
+                border-spacing: 0;
+                display: table;
+                font: 20px/20px Ahem;
+                height: 1em;
+                margin: 1em;
+            }
+            
+            div.table-row
+            {
+                display: table-row;
+            }
+            
+            div.cell
+            {
+                display: table-cell;
+            }

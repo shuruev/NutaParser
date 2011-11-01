@@ -1,0 +1,19 @@
+div
+            {
+                direction: rtl;
+                height: 1in;
+                width: 0;
+            }
+            #wrapper
+            {
+                border-right: 25.4mm solid red;
+            }
+            #div1
+            {
+                margin-right: 25.4mm;
+            }
+            #div2
+            {
+                border-right: 25.4mm solid black;
+                margin-right: -50.8mm;
+            }

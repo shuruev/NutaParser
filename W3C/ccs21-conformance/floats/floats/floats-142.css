@@ -1,0 +1,3 @@
+div { background: green; }
+   div p { margin-left: 10em; background: white; color: white; }
+   div p span { float: left; margin-left: -8em; }

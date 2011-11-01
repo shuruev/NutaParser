@@ -1,0 +1,8 @@
+#prerequisite:lang(fr)
+            {
+                display: none;
+            }
+            div:lang(fr)
+            {
+                color: green
+            }

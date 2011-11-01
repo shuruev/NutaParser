@@ -1,0 +1,5 @@
+body * {border: thin solid orange}
+body div {border: none}
+div * {border: thin solid blue}
+body h4 {border: none}
+h4  * {border: thin solid fuchsia}

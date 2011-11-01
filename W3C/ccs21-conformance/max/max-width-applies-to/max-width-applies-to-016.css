@@ -1,0 +1,14 @@
+div
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+            }
+            span
+            {
+                display: none;
+                width: 1000px;
+                max-width: 100px;
+                height: 100px;
+                background-color: red;
+            }

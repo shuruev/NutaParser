@@ -1,0 +1,14 @@
+div
+  {
+  color: white;
+  font: 16px/4 Ahem;
+  text-align: justify;
+  width: 400px;
+  }
+
+  span
+  {
+  border: blue solid 8px;
+  color: blue;
+  outline: orange solid 8px;
+  }

@@ -1,0 +1,13 @@
+div
+            {
+                border: solid;
+                color: green;
+            }
+            div:before
+            {
+                content: 'PASS ';
+            }
+            div:after
+            {
+                content: 'PASS';
+            }

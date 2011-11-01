@@ -1,0 +1,12 @@
+div /* a=0 b=0 c=0 d=1 -> specificity = 0,0,0,1 */
+            {
+                color: green;
+            }
+            * /* a=0 b=0 c=0 d=0 -> specificity = 0,0,0,0 */
+            {
+                color: red;
+            }
+            p
+            {
+                color: black;
+            }

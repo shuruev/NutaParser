@@ -1,0 +1,17 @@
+#div1
+            {
+                font-family: Ahem;
+                line-height: 1em;
+                text-indent: 5em;
+            }
+            div div
+            {
+                display: inline-block;
+            }
+            #div2
+            {
+                background: blue;
+                height: 1em;
+                margin-left: 10em;
+                width: 5em;
+            }

@@ -1,0 +1,13 @@
+body
+            {
+                counter-reset: chapter;
+            }
+            div p:before
+            {
+                content:
+                        counter(
+                            chapter
+                               )
+                               ;
+                counter-increment: chapter;
+            }

@@ -1,0 +1,11 @@
+div div
+            {
+                background: blue;
+                float: left;
+                height: 32px;
+                width: 32px;
+            }
+            *
+            {
+                clear: none;
+            }

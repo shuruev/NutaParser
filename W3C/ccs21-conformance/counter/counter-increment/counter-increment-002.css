@@ -1,0 +1,6 @@
+body { white-space: nowrap; }
+
+
+  #test, .reset { counter-reset: c; }
+  .increment:before, .use:before { content: counters(c, ".") "-"; }
+  .increment { counter-increment: c; }

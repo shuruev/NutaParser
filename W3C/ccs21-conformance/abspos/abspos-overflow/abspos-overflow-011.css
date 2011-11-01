@@ -1,0 +1,16 @@
+#outer {
+    position: relative;
+   }
+   #inner {
+    position: absolute; /* positioned relative to the containing block of the div that follows it */
+    top: 0;
+    background: white;
+    color: green;
+    width: 20em;
+   }
+   #content {
+    overflow: auto; /* this should have no effect on the stacking context calculations or painting order */
+    background: red;
+    color: yellow;
+    width: 20em;
+   }

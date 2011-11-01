@@ -1,0 +1,16 @@
+html, body { line-height: 1; margin: 0; padding: 0; }
+	pre {
+		margin: 0; padding: 0;
+		font: inherit;
+		font-size: 12pt;
+		white-space: pre;
+		page-break-before: avoid;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		widows: 30;
+		orphans: 30;
+		font-size: 
+	}
+	span {
+		font-size: 1in;
+	}

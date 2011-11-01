@@ -1,0 +1,10 @@
+#div1
+            {
+                border-bottom: solid;
+                padding-bottom: 10px;
+            }
+            div div
+            {
+                border-bottom: inherit;
+                height: 1in;
+            }

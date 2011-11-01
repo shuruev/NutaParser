@@ -1,0 +1,5 @@
+body {font-size: 12px; color: navy;}
+   .six {font: italic small-caps 100 150%/300% sans-serif;}
+   span.dummy {color: silver;}
+   span.color {background-color: silver;}
+   span.color span.dummy {color: gray;}

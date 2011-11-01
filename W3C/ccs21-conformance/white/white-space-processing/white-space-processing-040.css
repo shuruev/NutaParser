@@ -1,0 +1,15 @@
+div
+            {
+                font: 16px/1em Ahem;
+            }
+            #div1
+            {
+                white-space: pre-wrap;
+            }
+            #div2
+            {
+                background: black;
+                height: 1em;
+                margin-left: 1em;
+                width: 1em;
+            }

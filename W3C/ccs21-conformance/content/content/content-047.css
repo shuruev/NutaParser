@@ -1,0 +1,5 @@
+body:before
+            {
+                content: attr(background);
+                color: green;
+            }

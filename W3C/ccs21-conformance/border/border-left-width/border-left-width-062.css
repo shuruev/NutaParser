@@ -1,0 +1,16 @@
+div
+            {
+                height: 1in;
+            }
+            #reference
+            {
+                background-color: black;
+                width: 5in;
+                margin-top: 5px;
+            }
+            #test
+            {
+                border-left-style: solid;
+                border-left-width: +5in;
+                width: 0;
+            }

@@ -1,0 +1,14 @@
+body
+            {
+                border-bottom-color: transparent;
+                border-bottom-style: solid;
+                border-bottom-width: 1in;
+                padding-bottom: 20px;
+            }
+            div
+            {
+                border-bottom-color: black;
+                border-bottom-style: solid;
+                border-bottom-width: inherit;
+                width: 1in;
+            }

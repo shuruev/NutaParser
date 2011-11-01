@@ -1,0 +1,17 @@
+#wrapper
+            {
+                font: 20px/1em Ahem;
+            }
+            #span2
+            {
+                margin-left: 212px;
+            }
+            #parent
+            {
+                word-spacing: 12ex;
+            }
+            #test
+            {
+                word-spacing: 0;
+                word-spacing: inherit;
+            }

@@ -1,0 +1,15 @@
+#div1
+            {
+                direction: rtl;
+                font-family: Ahem;
+                line-height: 1em;
+                text-indent: 5em;
+            }
+            #div2
+            {
+                background: blue;
+                height: 1em;
+                float: right;
+                margin-right: 5em;
+                width: 5em;
+            }

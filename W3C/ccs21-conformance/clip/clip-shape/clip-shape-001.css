@@ -1,0 +1,5 @@
+div
+            {
+                clip: circle(10px, 25px);
+                position: absolute;
+            }

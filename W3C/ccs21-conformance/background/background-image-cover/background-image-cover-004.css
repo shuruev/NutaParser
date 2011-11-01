@@ -1,0 +1,7 @@
+div
+            {
+                background-image: url("support/blue15x15.png");
+                border: solid black;
+                height: 200px;
+                margin: 30px;
+            }

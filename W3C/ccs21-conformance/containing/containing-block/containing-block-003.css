@@ -1,0 +1,17 @@
+#div1
+            {
+                background: red;
+                display: inline-block;
+                height: 100px;
+                padding: 20px;
+                width: 100px;
+            }
+            div div
+            {
+                background: green;
+                height: 140px;
+                left: -20px;
+                position: relative;
+                top: -20px;
+                width: 140px;
+            }

@@ -1,0 +1,12 @@
+table
+            {
+                border-spacing: 0;
+            }
+            .inline
+            {
+                display: inline-table;
+            }
+            td
+            {
+                vertical-align: baseline;
+            }

@@ -1,0 +1,10 @@
+#div1
+            {
+                background: red;
+            }
+            div div
+            {
+                height: 1in;
+                position: absolute;
+                width: 1in;
+            }

@@ -1,0 +1,13 @@
+#wrapper
+            {
+                border-bottom: 10px blue solid;
+            }
+            div div
+            {
+                border-bottom: 10px orange solid;
+                display: list-item;
+                height: 16px;
+                margin-bottom: 50px;
+                margin-left: 1em;
+                width: 200px;
+            }

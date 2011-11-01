@@ -1,0 +1,18 @@
+div
+            {
+                font: 20px/1 Ahem;
+                height: 1em;
+                line-height: 1em;
+                position: relative;
+                width: 1em;
+            }
+            #div3
+            {
+                position: absolute;
+                top: 0;
+            }
+            #span1
+            {
+                color: red;
+                vertical-align: 0%;
+            }

@@ -1,0 +1,9 @@
+#div1
+            {
+                border: 1px blue solid;
+            }
+            div div
+            {
+                background: orange;
+                margin: 20px;
+            }

@@ -1,0 +1,25 @@
+#wrapper
+            {
+                margin-left: 1in;
+            }
+            div
+            {
+                height: 1in;
+                position: relative;
+                width: 1in;
+            }
+            #div1
+            {
+                border-left: 3px solid red;
+                left: 0;
+                position: absolute;
+            }
+            #div2
+            {
+                margin-left: inherit;
+            }
+            #div3
+            {
+                border-left: 3px solid black;
+                margin-left: -1in;
+            }

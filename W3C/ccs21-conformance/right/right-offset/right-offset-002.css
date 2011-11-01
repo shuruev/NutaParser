@@ -1,0 +1,16 @@
+#div1
+            {
+                background: blue;
+                height: 1in;
+                position: relative;
+                width: 1in;
+            }
+            div div
+            {
+                background: white;
+                height: 0.5in;
+                position: relative;
+                right: -0.5in;
+                /* In this testcase, right offset is -0.5in; so, it will move toward the right from its normal in-flow position by  a value of 0.5in. */
+                width: 0.5in;
+            }

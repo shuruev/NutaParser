@@ -1,0 +1,16 @@
+table
+            {
+                border-collapse: collapse;
+            }
+            tr#row1
+            {
+                border: 3px solid blue;
+            }
+            tr#row2
+            {
+                border: 1px solid black;
+            }
+            tr#row3
+            {
+                border: 1px solid black;
+            }

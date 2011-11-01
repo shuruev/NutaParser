@@ -1,0 +1,10 @@
+table
+            {
+                border: solid;
+            }
+            td
+            {
+                height: 10em;
+                vertical-align: bottom;
+                width: 10em;
+            }

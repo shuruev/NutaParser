@@ -1,0 +1,5 @@
+li
+  {
+  list-style-image: url("support/swatch-red.png");
+  list-style: decimal inside;
+  }

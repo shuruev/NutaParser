@@ -1,0 +1,20 @@
+#div1
+            {
+                position: relative;
+            }
+            #div2
+            {
+                background: blue;
+                display: inline-block;
+                line-height: 2in;
+                width: 1in;
+            }
+            #div3
+            {
+                background: orange;
+                height: 2in;
+                left: 1in;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }

@@ -1,0 +1,9 @@
+html, body, p
+            {
+                width: auto;
+            }
+            *
+            {
+                border: none;
+                width: 100%;
+            }

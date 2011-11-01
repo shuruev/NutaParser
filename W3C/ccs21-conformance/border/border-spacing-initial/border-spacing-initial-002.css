@@ -1,0 +1,4 @@
+.float { float: left; background: red; }
+   .table { display: table; }
+   .row { display: table-row; }
+   .cell { display: table-cell; background: green; color: white; text-align: center; }

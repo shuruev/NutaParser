@@ -1,0 +1,2 @@
+.container { background: red; height: auto; border-top: 1em red solid; border-bottom: 1em lime solid; }
+   .test { border-top: 1em solid lime; margin-top: -1em; }

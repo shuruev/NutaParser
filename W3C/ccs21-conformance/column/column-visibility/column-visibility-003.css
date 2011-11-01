@@ -1,0 +1,18 @@
+table
+            {
+                font: 128px/1 Ahem;
+            }
+            col#collapsed-column
+            {
+                visibility: collapse;
+            }
+            td
+            {
+                color: green;
+                padding: 0;
+                width: 1em;
+            }
+            .column-intersection
+            {
+                color: red;
+            }

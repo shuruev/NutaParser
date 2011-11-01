@@ -1,0 +1,21 @@
+#wrapper
+            {
+                border-left: 10px solid blue;
+            }
+            #table
+            {
+                border-left: 10px solid orange;
+                display: table;
+                table-layout: fixed;
+                margin-left: 50px;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 200px;
+                width: 200px;
+            }

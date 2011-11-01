@@ -1,0 +1,11 @@
+div:before
+            {
+                counter-increment: test;
+                content: counter(test, none);
+                color: red;
+            }
+            div
+            {
+                border: 2px solid black;
+                height: 30px;
+            }

@@ -1,0 +1,5 @@
+td { border: solid black; color: black; padding: 0; background: green; }
+   .inline { display: inline; background: lime; }
+   .block { display: block; }
+   .a, .c { background: lime; }
+   .b { background: green; }

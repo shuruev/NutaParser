@@ -1,0 +1,24 @@
+div
+            {
+                font: 48px/1em Ahem;
+                position: relative;
+            }
+            #div3
+            {
+                border-top: 2px solid blue;
+                height: 48px;
+                position: absolute;
+                top: 38px;
+                width: 48px;
+                z-index: 1;
+            }
+            #span1
+            {
+                color: orange;
+                vertical-align: sub;
+            }
+            #span2
+            {
+                color: white;
+                font: 96px/1em Ahem;
+            }

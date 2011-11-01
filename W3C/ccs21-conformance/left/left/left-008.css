@@ -1,0 +1,16 @@
+div
+            {
+                height: 1in;
+                position: relative;
+            }
+            #div1
+            {
+                border-left: 3px solid red;
+                width: 3in;
+            }
+            div div
+            {
+                border-left: 3px solid black;
+                margin-left: -99px;
+                left: +96px;
+            }

@@ -1,0 +1,10 @@
+body
+            {
+                counter-reset: chapter;
+            }
+            div:before
+            {
+                content: counter(chapter);
+                color: green;
+                counter-increment: chapter;
+            }

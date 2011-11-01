@@ -1,0 +1,10 @@
+#wrapper
+            {
+                background: green;
+            }
+            #test
+            {
+                background: red;
+                background: inherit;
+                height: 1in;
+            }

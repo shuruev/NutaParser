@@ -1,0 +1,6 @@
+.container { position: relative; background: red; width: 6em;
+                border-top: 1em solid blue; }
+   .test { position: absolute; height: 2em; width: 4em;
+           background: white; color: green;
+           border: solid 1em blue;
+           border-top: none;}

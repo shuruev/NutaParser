@@ -1,0 +1,3 @@
+.ahem { display: inline; font: 900 1em/1 Ahem, sans-serif; background: red; color: white; }   
+   p { font: 1em/1 Ahem; width: 10em; }
+   span { color: teal; border-left: 1em teal solid; padding-left: 1em; line-height: 2; }

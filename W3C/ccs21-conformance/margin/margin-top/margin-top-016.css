@@ -1,0 +1,13 @@
+div
+            {
+                height: 0;
+            }
+            #div1
+            {
+                border-top: 5px solid blue;
+            }
+            #div2
+            {
+                border-top: 5px solid orange;
+                margin-top: -0pt;
+            }

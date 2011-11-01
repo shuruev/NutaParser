@@ -1,0 +1,21 @@
+#test
+            {
+                display: table-footer-group;
+                max-width: 1in;
+                width: 3in;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                background: red;
+                display: table-cell;
+                height: 1in;
+            }

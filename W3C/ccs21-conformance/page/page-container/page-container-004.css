@@ -1,0 +1,8 @@
+html {
+			width: 50%;
+			float: right;
+			border: medium solid purple;
+}
+    div {
+			page-break-before: always;
+}

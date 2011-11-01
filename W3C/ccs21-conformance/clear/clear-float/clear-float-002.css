@@ -1,0 +1,21 @@
+div div
+            {
+                float: right;
+                height: 1in;
+                width: 1in;
+            }
+            #div1
+            {
+                height: 2in;
+                width: 2in;
+            }
+            #div2
+            {
+                background: red;
+            }
+            #div3
+            {
+                background: green;
+                clear: right;
+                margin-top: -1in;
+            }

@@ -1,0 +1,11 @@
+body
+            {
+                border-bottom-style: dotted;
+                border-bottom-width: 0;
+            }
+            div
+            {
+                border-bottom-style: inherit;
+                border-bottom-color: green;
+                border-bottom-width: 10px;
+            }

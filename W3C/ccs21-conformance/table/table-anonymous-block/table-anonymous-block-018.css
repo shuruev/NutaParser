@@ -1,0 +1,22 @@
+table
+            {
+                border-spacing: 0;
+                display: inline-table;
+                margin-right: 50px;
+            }
+            caption, td
+            {
+                background: blue;
+                color: blue;
+            }
+            td
+            {
+                padding: 0;
+            }
+            div
+            {
+                background: orange;
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+            }

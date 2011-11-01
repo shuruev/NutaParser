@@ -1,0 +1,4 @@
+div:before
+            {
+                content: no-open-quote "P" "A" "S" "S";
+            }

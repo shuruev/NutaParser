@@ -1,0 +1,26 @@
+div
+            {
+                width: 4in;
+            }
+            span
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #span1
+            {
+                background-color: blue;
+                clear: both;
+            }
+            #span1, #span2
+            {
+                float: right;
+            }
+            #span2, #span3
+            {
+                background: orange;
+            }
+            #span3
+            {
+                float: left;
+            }

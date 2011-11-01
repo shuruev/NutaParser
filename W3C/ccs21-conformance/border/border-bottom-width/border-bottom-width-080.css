@@ -1,0 +1,15 @@
+div
+            {
+                font: 20px/1 Ahem;
+            }
+            #wrapper
+            {
+                background: red;
+                height: 1ex;
+            }
+            #test
+            {
+                border-bottom-style: solid;
+                border-bottom-width: 1ex;
+                height: 0;
+            }

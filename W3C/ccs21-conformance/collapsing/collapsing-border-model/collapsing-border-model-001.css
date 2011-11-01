@@ -1,0 +1,18 @@
+table
+            {
+                border: 25px solid red;
+                border-collapse: collapse;
+            }
+            td
+            {
+                background: blue;
+                border: 50px solid blue;
+                padding: 10px;
+                width: 100px;
+            }
+            #div1
+            {
+                background: orange;
+                height: 110px;
+                width: 220px;
+            }

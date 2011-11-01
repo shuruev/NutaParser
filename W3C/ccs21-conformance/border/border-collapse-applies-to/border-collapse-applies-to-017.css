@@ -1,0 +1,19 @@
+#container
+            {
+                display: block;
+            }
+            .test
+            {
+                border-collapse: collapse;
+                display: inherit;
+                height: 100px;
+                width: 100px;
+            }
+            #top
+            {
+                border-bottom: 10px solid blue;
+            }
+            #bottom
+            {
+                border-top: 10px dotted orange;
+            }

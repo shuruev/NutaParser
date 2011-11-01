@@ -1,0 +1,9 @@
+div {
+     float: left;
+     background: green;
+   }
+   span { 
+     float: left;
+     background: white;
+     margin: 0 0 1em 0;
+   }

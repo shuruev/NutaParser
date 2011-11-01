@@ -1,0 +1,18 @@
+span {
+      color: orange;
+      padding-left: 2em;
+     }
+      
+      .rtol {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      }
+      
+      div {
+      text-align: left;
+      font: 1em/1 Ahem;
+      width: 20em;
+      background: navy;
+      color: teal;
+      margin-bottom: 1em;
+      }

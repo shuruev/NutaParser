@@ -1,0 +1,5 @@
+.one, .two { margin: 1em; }
+   p { color: navy; }
+   .one { font: 15px/1 Ahem; width: 7em; background: red; }
+   .one div { color: green; background: lime; }
+   .one span { margin: 1em; background: orange; color: yellow; }

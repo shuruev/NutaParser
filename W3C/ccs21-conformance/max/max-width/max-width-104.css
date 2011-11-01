@@ -1,0 +1,11 @@
+#div1
+            {
+                max-width: 1px;
+            }
+            div div
+            {
+                background: black;
+                height: 1in;
+                max-width: inherit;
+                width: 1in;
+            }

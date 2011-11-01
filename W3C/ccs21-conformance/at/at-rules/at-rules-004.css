@@ -1,0 +1,5 @@
+p { color: green; }
+
+  @foo {};
+
+  p { color: red; }

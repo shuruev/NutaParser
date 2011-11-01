@@ -1,0 +1,17 @@
+div
+            {
+                direction: rtl;
+                font: 20px/1 Ahem;
+                height: 1in;
+                position: relative;
+            }
+            #div1
+            {
+                border-right: 96px solid red;
+            }
+            div div
+            {
+                border-right: 96px solid black;
+                margin-right: -12ex;
+                right: +6ex;
+            }

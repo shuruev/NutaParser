@@ -1,0 +1,6 @@
+.override {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      }
+      .passcond {direction:ltr;}
+      .control {direction:ltr;}

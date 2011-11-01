@@ -1,0 +1,9 @@
+#div1
+            {
+                border-bottom: 5px solid blue;
+                margin-bottom: auto;
+            }
+            #div2
+            {
+                border-top: 5px solid orange;
+            }

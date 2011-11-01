@@ -1,0 +1,10 @@
+div
+            {
+                border: 1px solid blue;
+                padding-left: 50px;
+            }
+            span
+            {
+                display: list-item;
+                list-style-position: inside;
+            }

@@ -1,0 +1,30 @@
+#table
+            {
+                display: table;
+            }
+            #column
+            {
+                background: orange;
+                display: table-column;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                width: 0.5in;
+            }
+            #div1
+            {
+                background: blue;
+            }
+            #div1, #cell
+            {
+                height: 1in;
+            }
+            #column, #div1
+            {
+                width: 1in;
+            }

@@ -1,0 +1,10 @@
+td
+  {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  }
+
+  td[colspan] {background-color: red;}
+
+  td[colspan="1"] {background-color: green;}

@@ -1,0 +1,22 @@
+#parent
+            {
+                width: 10em;
+            }
+            .inline
+            {
+                color: white;
+                display: inline;
+            }
+            .test
+            {
+                border: 10px solid blue;
+                border-spacing: 20px;
+            }
+            .reference
+            {
+                border: 10px solid orange;
+            }
+            #spacer
+            {
+                margin: 25px;
+            }

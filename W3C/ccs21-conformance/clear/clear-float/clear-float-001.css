@@ -1,0 +1,20 @@
+div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #div1
+            {
+                background: orange;
+            }
+            #div2
+            {
+                background: blue;
+                clear: both;
+                width: 2in;
+            }
+            #div3
+            {
+                background: yellow;
+                float: right;
+            }

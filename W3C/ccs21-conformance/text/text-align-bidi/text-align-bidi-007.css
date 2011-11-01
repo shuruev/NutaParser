@@ -1,0 +1,8 @@
+body {
+      direction: rtl;
+      }
+      div {
+      width:20em;
+      text-align: left;
+      border: 1px solid black;
+      }

@@ -1,0 +1,18 @@
+table
+            {
+                table-layout: fixed;
+                width: auto;
+            }
+            col
+            {
+                width: 100px;
+            }
+            td
+            {
+                color: white;
+            }
+            #secondrow
+            {
+                border: 2px solid black;
+                color: black;
+            }

@@ -1,0 +1,3 @@
+.block { display: block; background: green; }
+    .inline { display: inline; margin-left: 40px; }
+    span { float: left; width: 50%; background: white; }

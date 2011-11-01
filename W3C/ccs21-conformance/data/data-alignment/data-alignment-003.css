@@ -1,0 +1,11 @@
+tr
+            {
+                vertical-align: middle;
+                text-align: center;
+            }
+            td
+            {
+                width: 10em;
+                height: 10em;
+                border: solid;
+            }

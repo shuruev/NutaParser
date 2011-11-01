@@ -1,0 +1,5 @@
+body > p {color: silver}
+
+p+p {color: purple}
+p+div {color: black}
+div+h4 {color: blue}

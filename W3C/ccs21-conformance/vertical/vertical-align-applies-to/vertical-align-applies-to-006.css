@@ -1,0 +1,26 @@
+div
+            {
+                color: blue;
+                font: 20px/1em Ahem;
+            }
+            #test
+            {
+                display: table-column;
+                vertical-align: bottom;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                background: orange;
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

@@ -1,0 +1,18 @@
+#wrapper
+            {
+                position: relative;
+            }
+            #test
+            {
+                font: italic 1in Ahem;
+                line-height: 1em;
+            }
+            #reference
+            {
+                background: black;
+                height: 1in;
+                left: 1.4in;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }

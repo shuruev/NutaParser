@@ -1,0 +1,4 @@
+ul {color: green;}
+   p {color: red;}
+   html body div p {color: green;}
+   span, ul li li {color: red;}

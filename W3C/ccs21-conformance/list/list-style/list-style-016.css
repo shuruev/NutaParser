@@ -1,0 +1,17 @@
+body
+            {
+                margin: 50px;
+            }
+            div
+            {
+                list-style: square;
+            }
+            span
+            {
+                display: list-item;
+                list-style: disc;
+            }
+            div span
+            {
+                list-style: inherit;
+            }

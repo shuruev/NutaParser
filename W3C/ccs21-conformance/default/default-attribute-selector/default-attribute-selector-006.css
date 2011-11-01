@@ -1,0 +1,3 @@
+form {background-color: green;}
+  form[method] {background-color: red;}
+  form[method="get"] {background-color: green;}

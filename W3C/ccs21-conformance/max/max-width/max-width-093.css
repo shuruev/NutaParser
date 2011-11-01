@@ -1,0 +1,10 @@
+#div1
+            {
+                width: 1in;
+            }
+            div div
+            {
+                background: red;
+                height: 1in;
+                max-width: +0%;
+            }

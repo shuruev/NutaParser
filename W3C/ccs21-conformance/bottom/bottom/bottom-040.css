@@ -1,0 +1,11 @@
+#div1
+            {
+                border-top: 5px solid orange;
+                position: relative;
+            }
+            #div2
+            {
+                border-top: 5px solid blue;
+                bottom: -0cm;
+                position: relative;
+            }

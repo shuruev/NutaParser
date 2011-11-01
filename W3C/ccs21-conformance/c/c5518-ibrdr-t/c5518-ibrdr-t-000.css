@@ -1,0 +1,4 @@
+p { color: silver; }
+   span { color: blue; }
+   .one { border-top: blue double 10px; }
+   .two { border-top: blue thin solid; }

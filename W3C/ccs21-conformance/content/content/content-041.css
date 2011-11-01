@@ -1,0 +1,9 @@
+form:before
+            {
+                content: attr(action);
+                color: green;
+            }
+            form
+            {
+                border: 2px solid black;
+            }

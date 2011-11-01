@@ -1,0 +1,10 @@
+div
+            {
+                margin-left: 2em;
+            }
+            span
+            {
+                border: solid;
+                display: list-item;
+                text-align: right;
+            }

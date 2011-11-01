@@ -1,0 +1,9 @@
+a:before
+            {
+                content: attr(onblur);
+                color: green;
+            }
+            a
+            {
+                border: 2px solid black;
+            }

@@ -1,0 +1,4 @@
+* {color: silver}
+em:first-child {color: fuchsia;}
+div:first-child {color: orange;}
+span:first-child {color: blue}

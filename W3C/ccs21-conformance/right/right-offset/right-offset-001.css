@@ -1,0 +1,19 @@
+div
+            {
+                height: 1in;
+                position: relative;
+                width: 1in;
+            }
+            #div1
+            {
+                background: blue;
+            }
+            #div2
+            {
+                background: white;
+                height: 0.5in;
+                position: absolute;
+                right: 0.5in;
+                top: 0;
+                width: 0.5in;
+            }

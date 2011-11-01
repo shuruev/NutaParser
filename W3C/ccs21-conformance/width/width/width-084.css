@@ -1,0 +1,16 @@
+div
+            {
+                font: 20px/1 Ahem;
+            }
+            #div1
+            {
+                background: black;
+                height: 1in;
+                width: +6ex;
+            }
+            #div2
+            {
+                border-left: 1in solid black;
+                height: 1in;
+                margin-top: 2px;
+            }

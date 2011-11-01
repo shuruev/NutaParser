@@ -1,0 +1,6 @@
+.test:first-letter {
+    color: blue;
+    }
+    .test, .control {
+    font-size: 2em;
+    }

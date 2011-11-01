@@ -1,0 +1,4 @@
+table { margin: 0; border-spacing: 0; }
+	td, th { padding: 0; }
+
+	span { display: inline-block; vertical-align: bottom; }

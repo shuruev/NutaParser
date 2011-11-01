@@ -1,0 +1,15 @@
+#bottom, span
+            {
+                border-collapse: collapse;
+                display: block;
+                height: 100px;
+                width: 100px;
+            }
+            span
+            {
+                border-bottom: 10px solid blue;
+            }
+            #bottom
+            {
+                border-top: 10px dotted orange;
+            }

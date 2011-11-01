@@ -1,0 +1,24 @@
+div
+            {
+                float: left;
+                width: 60px;
+                height: 60px;
+            }
+            #div1
+            {
+                background: blue;
+            }
+            #div1:hover
+            {
+                width: 300px;
+                height: 300px;
+            }
+            #div3
+            {
+                background: purple;
+            }
+            #div2
+            {
+                clear: left;
+                background: orange;
+            }

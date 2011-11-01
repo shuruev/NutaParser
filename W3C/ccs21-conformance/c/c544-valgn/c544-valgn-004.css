@@ -1,0 +1,6 @@
+p {font-size: 12pt;}
+   p.example { font: 15px/1 Ahem; color: blue; background: white url(support/square-white.png); border: 1px solid silver; padding: 0.5em; margin: 1em; }
+   .no {color: silver;}
+   big {font-size: 20px;}
+   small {font-size: 10px;}
+   .topalign {vertical-align: top;}

@@ -1,0 +1,17 @@
+#table
+            {
+                display: table;
+            }
+            #test
+            {
+                display: table-header-group;
+                font-family: Ahem;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

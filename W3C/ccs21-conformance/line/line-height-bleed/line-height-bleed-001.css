@@ -1,0 +1,10 @@
+#div1
+            {
+                font: 1in/1em serif;
+                margin-top: 1in;
+            }
+            div div
+            {
+                background: red;
+                line-height: 0;
+            }

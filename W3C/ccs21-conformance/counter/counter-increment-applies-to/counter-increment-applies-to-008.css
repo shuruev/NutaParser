@@ -1,0 +1,9 @@
+div
+            {
+                counter-increment: test 5;
+                display: inline;
+            }
+            div:before
+            {
+                content: counter(test);
+            }

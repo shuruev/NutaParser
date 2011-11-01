@@ -1,0 +1,26 @@
+div
+            {
+                width: 200px;
+            }
+            #wrapper
+            {
+                border-top: 10px solid blue;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+                padding-top: 50px;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #cell div
+            {
+                border-top: 10px solid orange;
+            }

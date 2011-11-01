@@ -1,0 +1,9 @@
+span
+  {
+  color: white;
+  }
+
+  input:focus + span
+  {
+  color: green;
+  }

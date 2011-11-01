@@ -1,0 +1,24 @@
+#table
+            {
+                display: inline-table;
+                background: orange;
+                color: orange;
+            }
+            #div1
+            {
+                color: silver;
+            }
+            #caption
+            {
+                display: table-caption;
+                color: blue;
+                background: blue;
+            }
+            #tr
+            {
+                display: table-row;
+            }
+            #td
+            {
+                display: table-cell;
+            }

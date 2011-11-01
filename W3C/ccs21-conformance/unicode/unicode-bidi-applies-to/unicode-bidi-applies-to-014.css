@@ -1,0 +1,14 @@
+#test
+            {
+                direction: rtl;
+                display: inline-table;
+                unicode-bidi: bidi-override;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

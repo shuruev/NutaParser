@@ -1,0 +1,9 @@
+div
+            {
+                background-image: url('support/blue15x15.png');
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                border: solid black;
+                display: inline;
+                font: 96px/1em serif;
+            }

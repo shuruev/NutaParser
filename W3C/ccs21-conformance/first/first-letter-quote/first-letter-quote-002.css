@@ -1,0 +1,5 @@
+div { color: black; }
+  div:first-letter { color: green; }
+  span:before { content: open-quote; }
+  span:after { content: close-quote; }
+  span { quotes: '"' '"'; }

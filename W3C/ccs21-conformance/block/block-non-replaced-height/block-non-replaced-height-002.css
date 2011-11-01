@@ -1,0 +1,16 @@
+#div1
+            {
+                border-bottom: solid orange;
+                border-top: solid orange;
+                width: 1in;
+            }
+            div div
+            {
+                background: blue;
+                margin-bottom: auto;
+                margin-top: auto;
+            }
+            html, body
+            {
+                overflow: scroll;
+            }

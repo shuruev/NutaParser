@@ -1,0 +1,3 @@
+div { width: 2em; height: 1em; }
+span { display:inline-block; vertical-align: top; width: 2em; height: 1em; background: green; }
+div#after { margin-top:-1em; background: red; }

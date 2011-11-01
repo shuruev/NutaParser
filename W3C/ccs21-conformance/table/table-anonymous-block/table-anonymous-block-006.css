@@ -1,0 +1,21 @@
+div
+            {
+                border: solid black;
+                height: 125px;
+                width: 200px;
+            }
+            table
+            {
+                float: right;
+                border-spacing: 0;
+            }
+            caption
+            {
+                background: orange;
+                color: orange;
+            }
+            td
+            {
+                background: blue;
+                color: blue;
+            }

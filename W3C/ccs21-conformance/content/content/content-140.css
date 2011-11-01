@@ -1,0 +1,11 @@
+ol:before
+            {
+                color: green;
+                content: attr(start);
+            }
+            ol
+            {
+                border: 2px solid black;
+                color: white;
+                font-size: 25px;
+            }

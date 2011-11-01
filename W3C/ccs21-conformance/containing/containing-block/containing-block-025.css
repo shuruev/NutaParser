@@ -1,0 +1,16 @@
+@media print
+            {
+                #print
+                {
+                    display: none;
+                }
+                div
+                {
+                    border: solid black;
+                    height: 1in;
+                    left: 0;
+                    position: absolute;
+                    top: 50in;
+                    width: 1in;
+                }
+            }

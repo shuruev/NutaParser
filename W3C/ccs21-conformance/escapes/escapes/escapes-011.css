@@ -1,0 +1,1 @@
+p { color: green; color: \r\e\d; } /* '\r\e\d' is 'r^N^M', which isn't valid */

@@ -1,0 +1,6 @@
+div
+            {
+                direction: rtl;
+                display: inline-block;
+                unicode-bidi: bidi-override;
+            }

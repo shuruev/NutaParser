@@ -1,0 +1,15 @@
+ul, li {
+      margin: 0;
+      padding: 0;
+      color: blue;
+      font: bold larger monospace;
+    }
+    li {
+      list-style: inside decimal;
+    }
+    li:before {
+      content: "2";
+    }
+    li:after {
+      content: "4";
+    }

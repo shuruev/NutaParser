@@ -1,0 +1,26 @@
+#div1
+            {
+                background: purple;
+                height: 1in;
+                width: 1.25in;
+            }
+            #div2
+            {
+                background: yellow;
+                height: 0.25in;
+                width: 0.75in;
+            }
+            #div3
+            {
+                background: orange;
+                float: left;
+                height: 1in;
+                width: 1in;
+            }
+            #div4
+            {
+                background: blue;
+                float: left;
+                height: 1.25in;
+                width: 1.25in;
+            }

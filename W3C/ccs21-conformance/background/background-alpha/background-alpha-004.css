@@ -1,0 +1,3 @@
+html { background: white url(support/background-alpha-test.png) fixed; color: black; }
+   p { background: white; color: black; padding: 0.25em; border: thin solid black; display: inline; line-height: 2; }
+   div { height: 512px; width: 512px; margin: 5em auto 100em; background: url(support/background-alpha-test.png); border: solid thick black; }

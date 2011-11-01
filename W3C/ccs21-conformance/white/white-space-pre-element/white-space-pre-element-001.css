@@ -1,0 +1,9 @@
+pre, div
+            {
+                font-family: monospace;
+                font-size: 10pt;
+            }
+            div
+            {
+                white-space: pre;
+            }

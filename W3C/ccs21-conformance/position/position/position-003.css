@@ -1,0 +1,12 @@
+#wrapper
+            {
+                background: red;
+                border: 3px solid orange;
+            }
+            #div1
+            {
+                background: blue;
+                left: 1in;
+                position: absolute;
+                top: 1in;
+            }

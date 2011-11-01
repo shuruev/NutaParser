@@ -1,0 +1,12 @@
+#test{
+  color:navy;
+  display:list-item;
+  font-size:85px;
+  list-style-position:inside;
+  }
+  #test div{
+  background:blue;
+  float:right;
+  height:100px;
+  width:100px;
+  }

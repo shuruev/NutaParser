@@ -1,0 +1,15 @@
+#filler
+            {
+                height: 6000px;
+                margin: 10px;
+            }
+            @media handheld, projection, screen, tty, tv
+            {
+                #div1
+                {
+                    background: blue;
+                    height: 25px;
+                    position: fixed;
+                    top: 50px;
+                }
+            }

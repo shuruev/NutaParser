@@ -1,0 +1,27 @@
+.container {
+      margin: 1em;
+      font: 20px/1 Ahem;
+      border: solid silver;
+      width: 4em;
+      color: aqua;
+      background: fuchsia;
+    }
+    .relpos {
+      position: relative;
+      color: yellow;
+      left: 2em;
+    }
+    .block, .controlC {
+      color: orange;
+      background: orange;
+      width: 2em;
+      margin-left: -2em;
+      border-left: 2em solid blue
+    }
+
+    .controlB {
+      color: yellow;
+    }
+    .controlC {
+      margin-left: 0;
+    }

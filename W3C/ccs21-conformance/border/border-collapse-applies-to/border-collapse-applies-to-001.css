@@ -1,0 +1,15 @@
+div
+            {
+                border-collapse: collapse;
+                color: white;
+                display: inline;
+                font-size: 4em;
+            }
+            #left
+            {
+                border-right: 10px solid blue;
+            }
+            #right
+            {
+                border-left: 10px dotted orange;
+            }

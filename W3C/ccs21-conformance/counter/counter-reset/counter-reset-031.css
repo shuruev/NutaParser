@@ -1,0 +1,9 @@
+div
+            {
+                counter-reset: ident -0 ident -0 ident -0;
+            }
+            div:before
+            {
+                font-size: 30px;
+                content: counter(ident);
+            }

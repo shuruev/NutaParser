@@ -1,0 +1,17 @@
+#div1
+            {
+                empty-cells: hide;
+            }
+            table
+            {
+                border-style: solid;
+            }
+            td
+            {
+                color: white;
+            }
+            .empty
+            {
+                background: red;
+                border: 1px solid red;
+            }

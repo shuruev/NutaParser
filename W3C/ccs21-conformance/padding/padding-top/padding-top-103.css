@@ -1,0 +1,18 @@
+div
+            {
+                height: 0;
+            }
+            #wrapper
+            {
+                padding-top: 1in;
+            }
+            #div1
+            {
+                border-top: 1in solid red;
+                padding-top: inherit;
+            }
+            #div2
+            {
+                border-bottom: 1in solid black;
+                margin-top: -2in;
+            }

@@ -1,0 +1,11 @@
+div
+            {
+                height: 100px;
+                margin-left: 40px;
+                margin-top: 40px;
+                outline-color: green;
+                outline-width: 15px;
+                outline-style: solid;
+                outline-style: hidden;
+                width: 100px;
+            }

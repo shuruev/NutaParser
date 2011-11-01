@@ -1,0 +1,27 @@
+#div1
+            {
+                font: 1in/1em Ahem;
+                height: 4in;
+                position: relative;
+                width: 1in;
+            }
+            #div2
+            {
+                background: orange;
+                height: 0.5in;
+                position: relative;
+                top: 0.5in;
+                width: 1in;
+            }
+            #div3
+            {
+                background: blue;
+                bottom: 3in;
+                height: auto;
+                margin-bottom: auto;
+                margin-top: auto;
+                max-height: 0.5in;
+                position: absolute;
+                top: auto;
+                width: 0.5in;
+            }

@@ -1,0 +1,9 @@
+div:first-letter
+            {
+                color: green;
+            }
+            div:before
+            {
+                color: black;
+                content: "Filler Text";
+            }

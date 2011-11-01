@@ -1,0 +1,3 @@
+body { width: 400px; border: medium solid; }
+div { float: left; clear: left; }
+span { display: block; overflow: hidden; width: 200px; height: 50px; background: aqua; margin-right: auto; }

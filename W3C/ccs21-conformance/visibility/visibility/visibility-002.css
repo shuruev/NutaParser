@@ -1,0 +1,18 @@
+div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #div1
+            {
+                background: orange;
+            }
+            #div2
+            {
+                background: red;
+                visibility: hidden;
+            }
+            #div3
+            {
+                background: blue;
+            }

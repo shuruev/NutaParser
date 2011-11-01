@@ -1,0 +1,11 @@
+#div1
+            {
+                background: red;
+                font: 1in/1em Ahem;
+                height: 2em;
+                width: 2em;
+            }
+            div div
+            {
+                color: green;
+            }

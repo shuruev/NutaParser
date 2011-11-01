@@ -1,0 +1,8 @@
+div
+            {
+                border-right-style: inset;
+                border-right-color: green;
+                border-right-width: 12px;
+                height: 1in;
+                width: 1in;
+            }

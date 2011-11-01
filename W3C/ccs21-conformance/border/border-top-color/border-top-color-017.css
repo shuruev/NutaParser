@@ -1,0 +1,17 @@
+div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #test
+            {
+                border-top-style: solid;
+                border-top-width: 1in;
+                border-top-color: #00ff00;
+                height: 0;
+            }
+            #reference
+            {
+                background-color: #00ff00;
+                margin-top: 10px;
+            }

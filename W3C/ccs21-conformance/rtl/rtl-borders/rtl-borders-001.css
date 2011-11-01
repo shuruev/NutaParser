@@ -1,0 +1,10 @@
+div
+            {
+                width: 0.9in;
+            }
+            span
+            {
+                border-left: solid blue;
+                border-right: solid orange;
+                direction: rtl;
+            }

@@ -1,0 +1,3 @@
+.outer { background: red; height: 2em; }
+   .test { border-top: solid green 1em; border-bottom: solid green 1em; background: red; }
+   .inner { margin-bottom: -10em; }

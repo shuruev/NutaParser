@@ -1,0 +1,14 @@
+table
+            {
+                table-layout: fixed;
+                width: 100px;
+            }
+            td
+            {
+                border: 1px solid blue;
+                width: 100px;
+            }
+            #hidden
+            {
+                overflow: hidden;
+            }

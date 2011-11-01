@@ -1,0 +1,7 @@
+div
+            {
+                display: inline;
+                outline-color: blue;
+                outline-style: solid;
+                outline-width: 10px;
+            }

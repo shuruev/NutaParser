@@ -1,0 +1,11 @@
+div:before
+            {
+                content: "FAIL FAIL";
+                content: normal;
+                color: red;
+            }
+            div
+            {
+                border: 2px solid black;
+                height: 30px;
+            }

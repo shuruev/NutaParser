@@ -1,0 +1,20 @@
+table
+            {
+                background: orange;
+                border-collapse: separate;
+                border-spacing: 0;
+            }
+            colgroup, col, tbody, tr
+            {
+                background: blue;
+            }
+            td
+            {
+                height: 2em;
+                width: 2em;
+            }
+            #test
+            {
+                background: red;
+                empty-cells: hide;
+            }

@@ -1,0 +1,10 @@
+#div1
+            {
+                padding-left: 5em;
+            }
+            div div
+            {
+                color: red;
+                overflow: hidden;
+                text-indent: -5em;
+            }

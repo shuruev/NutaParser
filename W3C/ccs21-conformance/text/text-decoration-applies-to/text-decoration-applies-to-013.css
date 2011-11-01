@@ -1,0 +1,17 @@
+#table
+            {
+                display: table;
+            }
+            #test
+            {
+                display: table-column;
+                text-decoration: underline;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

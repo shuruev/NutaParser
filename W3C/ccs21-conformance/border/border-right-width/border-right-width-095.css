@@ -1,0 +1,12 @@
+body
+            {
+                border-right-style: solid;
+                border-right-width: 1in;
+                padding-right: 20px;
+            }
+            div
+            {
+                border-right-style: solid;
+                border-right-width: inherit;
+                height: 1in;
+            }

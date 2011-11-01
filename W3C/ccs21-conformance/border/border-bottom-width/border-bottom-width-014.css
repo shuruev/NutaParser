@@ -1,0 +1,15 @@
+#wrapper
+            {
+                background: red;
+                height: 1pt;
+            }
+            #test
+            {
+                border-bottom-style: solid;
+                border-bottom-width: 1pt;
+                height: 0;
+            }
+            p
+            {
+                height: 40px;
+            }

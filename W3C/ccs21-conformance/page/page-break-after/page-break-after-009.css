@@ -1,0 +1,21 @@
+html, body { height: 100%; line-height: 1; font-size: 20px; margin: 0; padding: 0; }
+	.spacer { height: 50%; }
+	.backup { margin-top: -3em; }
+	.start { page-break-before: always; }
+
+	p {
+		margin: 0;
+		color: blue;
+		orphans: 1;
+		widows: 1;
+		white-space: pre;
+	}
+
+	.avoidAfter {
+		page-break-after: avoid;
+	}
+	.avoidInside {
+		page-break-inside: avoid;
+		widows: 3;
+		orphans: 3;
+	}

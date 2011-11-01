@@ -1,0 +1,10 @@
+div:before
+            {
+                counter-increment: test;
+                content: counter(test, lower-alpha);
+            }
+            div
+            {
+                border: 2px solid black;
+                height: 30px;
+            }

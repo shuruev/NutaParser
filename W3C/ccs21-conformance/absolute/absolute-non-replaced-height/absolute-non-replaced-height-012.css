@@ -1,0 +1,18 @@
+#div1
+            {
+                border: solid black;
+                height: 3in;
+                position: relative;
+                width: 3in;
+            }
+            div div
+            {
+                position: absolute;
+                top: 1in;
+                bottom: auto;
+                height: 1in;
+                margin-top: auto;
+                margin-bottom: auto;
+                background: blue;
+                width: 100%;
+            }

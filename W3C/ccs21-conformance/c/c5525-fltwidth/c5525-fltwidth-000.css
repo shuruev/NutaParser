@@ -1,0 +1,5 @@
+p { color: navy; font-size: 2em; margin: 1em; }
+   div { text-align: justify; }
+   p.end { text-align: right; }
+   .float { float: left; width: 50%; background: blue; color: white; font-variant: small-caps; }
+   .flow { color: silver; background: url(support/ruler-h-50%25.png) bottom center no-repeat; }

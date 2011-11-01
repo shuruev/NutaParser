@@ -1,0 +1,16 @@
+td
+            {
+                vertical-align: baseline;
+            }
+            #big
+            {
+                font-size: 30px;
+            }
+            #bigger
+            {
+                font-size: 60px;
+            }
+            #biggest
+            {
+                font-size: 90px;
+            }

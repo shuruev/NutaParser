@@ -1,0 +1,12 @@
+body
+            {
+                color: green;
+            }
+            div
+            {
+                color: red;
+            }
+            body div
+            {
+                color: inherit;
+            }

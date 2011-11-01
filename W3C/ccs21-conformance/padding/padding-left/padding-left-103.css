@@ -1,0 +1,19 @@
+div
+            {
+                height: 1in;
+                width: 0;
+            }
+            #wrapper
+            {
+                padding-left: 1in;
+            }
+            #div1
+            {
+                border-left: 1in solid red;
+                padding-left: inherit;
+            }
+            #div2
+            {
+                border-left: 1in solid black;
+                margin-left: -2in;
+            }

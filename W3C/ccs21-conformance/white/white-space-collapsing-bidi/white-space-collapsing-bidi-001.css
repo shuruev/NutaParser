@@ -1,0 +1,5 @@
+.control { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+   td { background: red; padding: 0; border: solid; }
+   .test span { color: aqua; background: yellow; font: 2em/1 Ahem; white-space: normal; }
+   .reference .block { color: aqua; background: red; font: 2em/1 Ahem; white-space: normal; }
+   .reference .space { color: yellow; background: red; font: 2em/1 Ahem; white-space: normal; }

@@ -1,0 +1,13 @@
+#div1
+            {
+                caption-side: bottom;
+            }
+            table
+            {
+                background: blue;
+            }
+            td
+            {
+                height: 1in;
+                width: 2in;
+            }

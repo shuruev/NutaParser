@@ -1,0 +1,20 @@
+table
+            {
+                height: 100px;
+            }
+            td
+            {
+                vertical-align: sub;
+            }
+            #small
+            {
+                font-size: 10pt;
+            }
+            #medium
+            {
+                font-size: 20pt;
+            }
+            #large
+            {
+                font-size: 30pt;
+            }

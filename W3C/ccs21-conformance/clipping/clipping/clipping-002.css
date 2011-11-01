@@ -1,0 +1,16 @@
+.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin-top:100px;
+}
+
+.overflow {
+  overflow: hidden;
+}

@@ -1,0 +1,8 @@
+#parent, #reference
+            {
+                font-weight: 100;
+            }
+            div div
+            {
+                font-weight: lighter;
+            }

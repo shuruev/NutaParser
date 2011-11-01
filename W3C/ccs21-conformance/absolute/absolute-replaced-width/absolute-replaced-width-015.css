@@ -1,0 +1,23 @@
+#div1
+            {
+                border: solid black;
+                direction: rtl;
+                height: 2in;
+                position: relative;
+                width: 2in;
+            }
+            img
+            {
+                margin-left: auto;
+                margin-right: auto;
+                left: auto;
+                position: absolute;
+                right: auto;
+            }
+            div div
+            {
+                background: orange;
+                height: 15px;
+                margin-top: 15px;
+                width: 15px;
+            }

@@ -1,0 +1,9 @@
+td
+            {
+                color: white;
+            }
+            .empty
+            {
+                background: green;
+                border: 1px solid green;
+            }

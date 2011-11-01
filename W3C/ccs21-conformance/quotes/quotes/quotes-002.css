@@ -1,0 +1,13 @@
+div:before
+            {
+                content: open-quote open-quote;
+            }
+            div:after
+            {
+                content: close-quote close-quote;
+            }
+            div
+            {
+                quotes: "P" "S" "A" "S";
+                border: 2px solid black;
+            }

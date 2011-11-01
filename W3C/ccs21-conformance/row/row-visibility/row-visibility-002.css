@@ -1,0 +1,27 @@
+#table
+            {
+                display: table;
+            }
+            #rowgroup1
+            {
+                background: red;
+                visibility: collapse;
+            }
+            #rowgroup2
+            {
+                background: green;
+            }
+            #rowgroup1, #rowgroup2
+            {
+                display: table-row-group;
+            }
+            .row
+            {
+                display: table-row;
+            }
+            .cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

@@ -1,0 +1,19 @@
+.table
+            {
+                display: table;
+            }
+            .caption
+            {
+                display: table-caption;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                background: black;
+                display: table-cell;
+                height: 3em;
+                width: 3em;
+            }

@@ -1,0 +1,14 @@
+div
+  {
+  background-color: green;
+  margin: 1em;
+  }
+
+  input
+  {
+  background-color: orange;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  }

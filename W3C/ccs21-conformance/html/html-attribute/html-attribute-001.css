@@ -1,0 +1,13 @@
+div
+            {
+                border: 1px solid black;
+                float: left;
+            }
+            table
+            {
+                width: 300px;
+            }
+            *
+            {
+                caption-side: bottom;
+            }

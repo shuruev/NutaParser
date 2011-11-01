@@ -1,0 +1,5 @@
+p { color: navy; }
+   table { margin: 1em 5em; }
+   td { padding: 4px; vertical-align: top; }
+   .control { font: 40px Ahem; color: navy; }
+   .test { font: 40px Ahem; border-top: 1ex solid navy; width: 1em; }

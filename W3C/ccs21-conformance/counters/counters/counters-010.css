@@ -1,0 +1,33 @@
+body
+            {
+                counter-reset: chapter;
+            }
+            #p1
+            {
+                counter-reset: chapter;
+            }
+            div p:before
+            {
+                content: counter(chapter);
+                counter-increment: chapter;
+            }
+            #p1:before
+            {
+                content: counters(chapter, ".");
+                counter-increment: chapter;
+            }
+            #p2:before
+            {
+                content: counters(chapter, ".");
+                counter-increment: chapter;
+            }
+            #p3:before
+            {
+                content: counters(chapter, ".", lower-roman);
+                counter-increment: chapter;
+            }
+            #p4:before
+            {
+                content: counters(chapter, ".", upper-roman);
+                counter-increment: chapter;
+            }

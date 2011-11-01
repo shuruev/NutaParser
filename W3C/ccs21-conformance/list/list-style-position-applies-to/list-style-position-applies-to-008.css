@@ -1,0 +1,11 @@
+div
+            {
+                display: inline;
+                list-style-position: inside;
+            }
+            span
+            {
+                background: orange;
+                display: list-item;
+                margin-left: 1in;
+            }

@@ -1,0 +1,10 @@
+html, body, p, table, tr
+            {
+                background: white;
+                width: auto;
+            }
+            *
+            {
+                background: blue;
+                width: 0;
+            }

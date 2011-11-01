@@ -1,0 +1,14 @@
+td
+            {
+                border: 1px solid black;
+                height: 100px;
+                width: 100px;
+            }
+            #cell
+            {
+               background: black;
+            }
+            .cell
+            {
+                background: blue;
+            }

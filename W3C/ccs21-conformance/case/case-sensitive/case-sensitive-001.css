@@ -1,0 +1,8 @@
+p { color: white; }
+  @media all {
+   p { background: url(support/swatch-red.png); }
+  }
+
+  @MeDIa aLL {
+   p { BacKgrOUNd: UrL(support/swatch-green.png); }
+  }

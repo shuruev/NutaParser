@@ -1,0 +1,13 @@
+li
+  {
+  background-color: black;
+  color: lime;
+  font: 32px/1 Ahem;
+  list-style-position: outside;
+  }
+
+  li#left {text-indent: 10%;}
+
+  li#center {text-indent: 50%;}
+
+  li#right {text-indent: 90%;}

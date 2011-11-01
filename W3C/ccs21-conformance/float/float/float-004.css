@@ -1,0 +1,13 @@
+#div1
+            {
+                border: 2px solid orange;
+                width: 500px;
+                float: right;
+            }
+            #div2
+            {
+                float: inherit;
+                background: blue;
+                height: 1in;
+                width: 1in;
+            }

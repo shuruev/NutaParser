@@ -1,0 +1,16 @@
+#test
+            {
+                display: table-row;
+                outline: solid blue 10px;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

@@ -1,0 +1,11 @@
+div
+            {
+                width: 2in;
+            }
+            #span1
+            {
+                background-color: blue;
+                float: right;
+                height: 1in;
+                width: 1in;
+            }

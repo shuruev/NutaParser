@@ -1,0 +1,9 @@
+#div1
+            {
+                text-decoration: underline overline;
+            }
+            div div
+            {
+                text-decoration: underline;
+                text-decoration: inherit;
+            }

@@ -1,0 +1,18 @@
+#reference, #cell
+            {
+                font: italic small-caps bold 16px sans-serif;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

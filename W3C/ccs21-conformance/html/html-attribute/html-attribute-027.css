@@ -1,0 +1,10 @@
+html, body, p
+            {
+                background: white;
+                height: auto;
+            }
+            *
+            {
+                background: green;
+                height: 1px;
+            }

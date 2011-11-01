@@ -1,0 +1,15 @@
+#table
+            {
+                border: solid;
+                display: table;
+                width: 100%;
+            }
+            #row
+            {
+                display: table-row;
+                text-align: right;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

@@ -1,0 +1,4 @@
+body { color: blue; }
+   p:first-letter {color: green;}
+   .two:first-letter {font-size: 200%;}
+   p.three:first-letter {font-size: 350%;}

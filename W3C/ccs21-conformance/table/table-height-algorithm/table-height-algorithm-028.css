@@ -1,0 +1,17 @@
+table
+            {
+                height: 100px;
+            }
+            td
+            {
+                font: 20px/1em Ahem;
+                vertical-align: baseline;
+            }
+            #cell
+            {
+                color: blue;
+            }
+            div
+            {
+                height: 0;
+            }

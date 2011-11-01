@@ -1,0 +1,22 @@
+#table
+            {
+                display: table;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                color: white;
+                display: table-cell;
+            }
+            #test
+            {
+                background: black;
+                border: 5px solid black;
+                display: inline-block;
+                empty-cells: hide;
+                height: 1em;
+                width: 1em;
+            }

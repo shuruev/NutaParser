@@ -1,0 +1,7 @@
+div
+            {
+                outline: 10px solid green;
+                border: 10px solid blue;
+                width: 100px;
+                height: 100px;
+            }

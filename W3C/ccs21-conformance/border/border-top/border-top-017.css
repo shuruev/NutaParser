@@ -1,0 +1,9 @@
+#div1
+            {
+                border-top: dashed blue;
+                padding-top: 10px;
+            }
+            div div
+            {
+                border-top: inherit;
+            }
