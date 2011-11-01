@@ -1,6 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 using Nuta.Parser.Tests;
 
 namespace Nuta.Parser.Css.Tests.Syntactic
@@ -15,15 +13,7 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		/// </summary>
 		protected override bool Parse(SyntacticItem item, string data)
 		{
-			LexicalState lexicalState = new LexicalState(data);
-			if (!Input.S.ParseFull(lexicalState))
-				return false;
-
-			SyntacticState syntacticState = new SyntacticState(
-				lexicalState.ExtractTokens(),
-				data);
-
-			return item.ParseFull(syntacticState);
+			return CssParser.TryParse(item, data);
 		}
 	}
 }

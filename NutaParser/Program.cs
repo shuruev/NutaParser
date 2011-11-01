@@ -3,9 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using Nuta.Parser;
 using Nuta.Parser.CSharp;
-using Nuta.Parser.CSharp.Syntactic;
 using Nuta.Parser.Css;
-using Nuta.Parser.Css.Syntactic;
 
 namespace NutaParser
 {
@@ -13,7 +11,8 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			CssParser.Ensure(Stylesheet.S, "@charset 'UTF-8'; /* Theme Name: open-app */ html { margin: 0 }");
+			//CssParser.Ensure(Stylesheet.S, "@charset 'UTF-8'; /* Theme Name: open-app */ html { margin: 0 }");
+			ParseCssAll(@"C:\Users\Public\GIT\GitHub\NutaParser\W3C");
 
 			//ParseCSharp(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
 			//ParseCSharp(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
@@ -51,7 +50,6 @@ namespace NutaParser
 		public static void ParseCSharp(string filePath)
 		{
 			string data = Parser.ReadDataFromFile(filePath);
-			data = Parser.PrepareEndOfFile(data);
 
 			//xxx
 			if (data.Contains("unsafe")
@@ -98,7 +96,44 @@ namespace NutaParser
 				|| data.Contains("CheckWhetherLastCodeLineIsEmpty"))
 				return;
 
-			CSharpParser.Ensure(CompilationUnit.S, data);
+			CSharpParser.Ensure(data);
+		}
+
+		public static void ParseCssAll(string dirPath)
+		{
+			var files = Directory.EnumerateFiles(dirPath, "*.css", SearchOption.AllDirectories);
+
+			int passed = 0;
+			int failed = 0;
+
+			foreach (string file in files)
+			{
+				Console.Write(file + "\t");
+				Console.Write(new FileInfo(file).Length + "\t");
+
+				Stopwatch sw = Stopwatch.StartNew();
+				try
+				{
+					ParseCss(file);
+					Console.WriteLine("PASSED\t");
+					passed += 1;
+				}
+				catch
+				{
+					Console.WriteLine("FAILED\t");
+					failed += 1;
+				}
+				sw.Stop();
+				Console.WriteLine(sw.ElapsedMilliseconds + "\t");
+			}
+
+			Console.WriteLine("Passed: {0}, Failed: {1}.", passed, failed);
+		}
+
+		public static void ParseCss(string filePath)
+		{
+			string data = Parser.ReadDataFromFile(filePath);
+			CssParser.Ensure(data);
 		}
 	}
 }
