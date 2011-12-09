@@ -8,9 +8,6 @@ p {
     [title~=""], [title~=''], p.valid {
       color: green;
     }
-    [title~=], p.valid {
-      color: red;
-    }
 
     [title~=""] {
       color: red;

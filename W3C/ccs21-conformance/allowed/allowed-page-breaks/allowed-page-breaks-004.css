@@ -9,7 +9,6 @@ html, body { line-height: 1; margin: 0; padding: 0; }
 		page-break-inside: avoid;
 		widows: 30;
 		orphans: 30;
-		font-size: 
 	}
 	span {
 		font-size: 1in;

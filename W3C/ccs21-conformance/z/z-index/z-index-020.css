@@ -23,7 +23,7 @@
   z-index:-1;
 }
 .block {
-  margin-left: 100px
+  margin-left: 100px;
   background-color:fuchsia;
 }
 .float {
@@ -43,7 +43,7 @@
   margin-left: 25px;
   background: lime;
   position:relative;
-  margin-bottom: -80px !important; # 75 + 5
+  margin-bottom: -80px !important;
 }
 .positive {
   background-color: teal;
