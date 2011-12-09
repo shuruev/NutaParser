@@ -32,10 +32,7 @@ namespace Nuta.Parser.Css.Lexical
 				ImportantSymbol.S,
 				FunctionPrefix.S,
 				NotPrefix.S,
-				AtKeyword.S,
-				Only.S,
-				Not.S,
-				And.S
+				AtKeyword.S
 			});
 
 			toExtract.AddRange(new LexicalItem[]

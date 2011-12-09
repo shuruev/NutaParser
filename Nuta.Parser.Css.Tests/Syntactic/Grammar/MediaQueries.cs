@@ -53,8 +53,25 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(true, MediaQuery.S, "screen");
 			Check(true, MediaQuery.S, " screen");
 			Check(true, MediaQuery.S, "screen ");
+
 			Check(true, MediaQuery.S, "not screen");
+			Check(true, MediaQuery.S, "NOT screen");
+			Check(true, MediaQuery.S, "nO\\74  screen");
+			Check(false, MediaQuery.S, "note screen");
+			Check(false, MediaQuery.S, "nO\\75  screen");
+
 			Check(true, MediaQuery.S, "only screen");
+			Check(true, MediaQuery.S, "ONLY screen");
+			Check(true, MediaQuery.S, "oNl\\79  screen");
+			Check(false, MediaQuery.S, "onlyz screen");
+			Check(false, MediaQuery.S, "oNl\\7A  screen");
+
+			Check(true, MediaQuery.S, "screen and (min-height: 100px)");
+			Check(true, MediaQuery.S, "screen AND (min-height: 100px)");
+			Check(true, MediaQuery.S, "screen aN\\64  (min-height: 100px)");
+			Check(false, MediaQuery.S, "screen andy (min-height: 100px)");
+			Check(false, MediaQuery.S, "screen aN\\65  (min-height: 100px)");
+
 			Check(true, MediaQuery.S, "screen and (min-height:100px)");
 			Check(true, MediaQuery.S, "screen and (min-height: 100px)");
 			Check(false, MediaQuery.S, "screen and(min-height: 100px)");

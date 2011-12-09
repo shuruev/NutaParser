@@ -51,6 +51,8 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(false, Selector.S, "   #a + #b > #c ~ #d");
 			Check(false, Selector.S, "#a + #b > #c ~ #d   ");
 			Check(false, Selector.S, "   #a + #b > #c ~ #d   ");
+
+			Check(true, Selector.S, ".note");
 		}
 
 		[TestMethod]
@@ -186,6 +188,8 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(true, Class.S, ".-abc-2");
 			Check(false, Class.S, ".");
 			Check(false, Class.S, ".*");
+
+			Check(true, Class.S, ".note");
 		}
 
 		[TestMethod]

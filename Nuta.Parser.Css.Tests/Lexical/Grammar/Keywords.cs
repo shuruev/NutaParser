@@ -51,29 +51,5 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(false, AtKeyword.S, "@ word");
 			Check(false, AtKeyword.S, "@@word");
 		}
-
-		[TestMethod]
-		public void Is_Only()
-		{
-			Check(true, Only.S, "only");
-			Check(true, Only.S, "ONLY");
-			Check(true, Only.S, "oNl\\79");
-		}
-
-		[TestMethod]
-		public void Is_Not()
-		{
-			Check(true, Not.S, "not");
-			Check(true, Not.S, "NOT");
-			Check(true, Not.S, "nO\\74");
-		}
-
-		[TestMethod]
-		public void Is_And()
-		{
-			Check(true, And.S, "and");
-			Check(true, And.S, "AND");
-			Check(true, And.S, "aN\\64");
-		}
 	}
 }

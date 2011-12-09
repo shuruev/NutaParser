@@ -39,6 +39,8 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 
 			Check(true, Declaration.S, "width: 15px / 10cm !important");
 			Check(true, Declaration.S, "width: func(15px / 10cm) !   IMPORTANT   ");
+
+			Check(true, Declaration.S, "direction: ltr");
 		}
 
 		[TestMethod]

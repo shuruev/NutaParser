@@ -55,6 +55,9 @@ namespace Nuta.Parser.Css.Tests.Lexical
 		{
 			Check(true, UriLiteral.S, "url('left.png')");
 			Check(true, UriLiteral.S, "url(left.png)");
+
+			Check(true, UriLiteral.S, "url(test/*test)");
+			Check(false, UriLiteral.S, "url(test/* test)");
 		}
 	}
 }
