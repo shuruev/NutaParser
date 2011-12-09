@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -10,8 +9,8 @@ namespace Nuta.Parser.Css.Syntactic
 		public MediaQueryPrefix1()
 			: base(
 				new ParseAny(
-					new LexicalTerminal(Only.S),
-					new LexicalTerminal(Not.S),
+					IdentifierOnly.S,
+					IdentifierNot.S,
 					Empty.S),
 				Whitespaces.O,
 				MediaType.S,

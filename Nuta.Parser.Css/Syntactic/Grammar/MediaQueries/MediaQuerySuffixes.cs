@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -11,7 +10,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public MediaQuerySuffixes()
 			: base(
 				new ParseAll(
-					new LexicalTerminal(And.S),
+					IdentifierAnd.S,
 					Whitespaces.O,
 					MediaExpression.S))
 		{
