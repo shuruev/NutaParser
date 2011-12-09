@@ -4,6 +4,7 @@ using System.IO;
 using Nuta.Parser;
 using Nuta.Parser.CSharp;
 using Nuta.Parser.Css;
+using Nuta.Parser.Css.Syntactic;
 
 namespace NutaParser
 {
@@ -11,8 +12,15 @@ namespace NutaParser
 	{
 		public static void Main(string[] args)
 		{
-			//CssParser.Ensure(Stylesheet.S, "@charset 'UTF-8'; /* Theme Name: open-app */ html { margin: 0 }");
-			ParseCssAll(@"C:\Users\Public\GIT\GitHub\NutaParser\W3C");
+			CssParser.Ensure(
+				Stylesheet.S,
+				@"
+
+.note { }
+				");
+
+			//ParseCssAll(@"C:\Users\Public\GIT\GitHub\NutaParser\W3C");
+			//ParseCss(@"D:\OLEG\Git\NutaParser\W3C\ccs21-conformance\z\z-index\z-index-020.css");
 
 			//ParseCSharp(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
 			//ParseCSharp(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");
