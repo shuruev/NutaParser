@@ -1,3 +1,0 @@
-body { color: green; }
-   p { background: red ! fail; color: yellow ! fail }
-   div { background: red ! important fail; color: yellow ! important fail }

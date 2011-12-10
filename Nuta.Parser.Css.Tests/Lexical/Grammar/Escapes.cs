@@ -41,6 +41,10 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(true, Escape.S, "\\*");
 			Check(true, Escape.S, "\\{");
 			Check(true, Escape.S, "\\}");
+			Check(true, Escape.S, "\\.");
+			Check(true, Escape.S, "\\#");
+			Check(true, Escape.S, "\\:");
+			Check(true, Escape.S, "\\;");
 			Check(true, Escape.S, "\\\t");
 			Check(false, Escape.S, "\\\r");
 			Check(false, Escape.S, "\\\n");

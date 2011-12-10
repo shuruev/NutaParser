@@ -15,8 +15,7 @@ namespace NutaParser
 			CssParser.Ensure(
 				Stylesheet.S,
 				@"
-
-.note { }
+.one { color: green; background: white; }
 				");
 
 			//ParseCssAll(@"C:\Users\Public\GIT\GitHub\NutaParser\W3C");

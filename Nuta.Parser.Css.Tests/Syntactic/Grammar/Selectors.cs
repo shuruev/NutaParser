@@ -53,6 +53,7 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(false, Selector.S, "   #a + #b > #c ~ #d   ");
 
 			Check(true, Selector.S, ".note");
+			Check(true, Selector.S, "#--ident");
 		}
 
 		[TestMethod]
@@ -190,6 +191,7 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(false, Class.S, ".*");
 
 			Check(true, Class.S, ".note");
+			Check(true, Class.S, ".--ident");
 		}
 
 		[TestMethod]
