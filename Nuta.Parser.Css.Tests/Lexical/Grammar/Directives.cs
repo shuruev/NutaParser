@@ -50,5 +50,14 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(true, NamespaceSymbol.S, "@nAmespac\\45");
 			Check(false, NamespaceSymbol.S, "@ namespace");
 		}
+
+		[TestMethod]
+		public void Is_Font_Face_Symbol()
+		{
+			Check(true, FontFaceSymbol.S, "@font-face");
+			Check(true, FontFaceSymbol.S, "@FONT-FACE");
+			Check(true, FontFaceSymbol.S, "@fOn\\54-fAc\\45");
+			Check(false, FontFaceSymbol.S, "@ font-face");
+		}
 	}
 }

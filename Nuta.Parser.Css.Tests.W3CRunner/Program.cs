@@ -32,18 +32,6 @@ namespace Nuta.Parser.Css.Tests.W3CRunner
 					string data = Parser.ReadDataFromFile(testFile);
 					count += 1;
 
-					//xxx
-					string name = Path.GetFileNameWithoutExtension(testFile);
-					if (name == "forced-page-breaks-000"
-						|| name == "forced-page-breaks-001"
-						|| name == "font-family-rule-003"
-						|| name == "font-family-rule-007"
-						|| name == "page-break-after-008"
-						|| name == "page-break-after-010"
-						|| name == "page-break-before-003"
-						|| name == "page-break-before-005")
-						continue;
-
 					if (!CssParser.TryParse(Stylesheet.S, data))
 					{
 						failed += 1;

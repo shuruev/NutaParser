@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -12,7 +11,7 @@ namespace Nuta.Parser.Css.Syntactic
 				LeftSquareBracketTerminal.S,
 				Whitespaces.O,
 				NamespacePrefix.O,
-				new LexicalTerminal(Identifier.S),
+				IdentifierTerminal.S,
 				Whitespaces.O,
 				AttributePart.O,
 				RightSquareBracketTerminal.S)

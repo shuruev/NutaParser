@@ -60,7 +60,8 @@ namespace Nuta.Parser.Css.Lexical
 				PageSymbol.S,
 				MediaSymbol.S,
 				CharsetSymbol.S,
-				NamespaceSymbol.S
+				NamespaceSymbol.S,
+				FontFaceSymbol.S
 			});
 
 			s_toExtract = new HashSet<string>(toExtract.Select(item => item.Key));

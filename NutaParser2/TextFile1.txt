@@ -4,12 +4,17 @@ CSS Level 2 Revision 1		http://www.w3.org/TR/CSS21/
 Media Queries Level 3		http://www.w3.org/TR/css3-mediaqueries/
 CSS Namespaces				http://www.w3.org/TR/css3-namespace/
 Selectors Level 3			http://www.w3.org/TR/css3-selectors/
+CSS Fonts Level 3			http://www.w3.org/TR/css3-fonts/			[!] @font-face only
 
 TO DO
 =====
-CSS Fonts Level 3			http://www.w3.org/TR/css3-fonts/
 CSS Paged Media Level 3		http://www.w3.org/TR/css3-page/
+CSS Animations				http://www.w3.org/TR/css3-animations/
 
 LINKS
 =====
 http://www.w3.org/Style/CSS/current-work
+
+- вынести stylesheet тесты отдельно??? (может и не надо)
+- filter:progid:DXImageTransform.Microsoft.gradient
+- !ie7

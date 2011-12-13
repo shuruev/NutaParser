@@ -191,7 +191,7 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(false, Class.S, ".*");
 
 			Check(true, Class.S, ".note");
-			Check(true, Class.S, ".--ident");
+			Check(false, Class.S, ".--ident");
 		}
 
 		[TestMethod]

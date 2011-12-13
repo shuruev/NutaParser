@@ -11,13 +11,13 @@ namespace Nuta.Parser.Css.Syntactic
 			: base(
 				new LexicalTerminal(PageSymbol.S),
 				Whitespaces.O,
+				IdentifierTerminal.O,
 				PseudoPage.O,
+				Whitespaces.O,
 				LeftCurlyBracketTerminal.S,
 				new ParseMany(
-					new ParseAll(
-						Whitespaces.O,
-						Declaration.O),
-					SemicolonTerminal.S),
+					DeclarationList.S,
+					Margin.S),
 				RightCurlyBracketTerminal.S,
 				Whitespaces.O)
 		{

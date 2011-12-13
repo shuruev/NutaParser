@@ -14,7 +14,11 @@ namespace Nuta.Parser.Css.Syntactic
 				MediaQueryList.O,
 				LeftCurlyBracketTerminal.S,
 				Whitespaces.O,
-				new Optional(new ParseMany(Ruleset.S)),
+				new Optional(
+					new ParseMany(
+						new ParseAny(
+							Ruleset.S,
+							Page.S))),
 				RightCurlyBracketTerminal.S,
 				Whitespaces.O)
 		{

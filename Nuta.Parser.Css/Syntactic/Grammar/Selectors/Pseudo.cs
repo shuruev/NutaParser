@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -13,7 +12,7 @@ namespace Nuta.Parser.Css.Syntactic
 				ColonTerminal.O,
 				new ParseAny(
 					PseudoFunction.S,
-					new LexicalTerminal(Identifier.S)))
+					IdentifierTerminal.S))
 		{
 		}
 	}

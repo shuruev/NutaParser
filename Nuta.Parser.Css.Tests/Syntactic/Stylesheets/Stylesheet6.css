@@ -87,13 +87,13 @@ margin-bottom:10px;
 background-color:#eee;
 overflow:auto;
 width:650px !ie7;
-max-height:none\9;
+max-height:none;
 padding:5px 5px 20px !ie7 5px;
 }
 
 .post-text pre&gt;code:first-child,.wmd-preview pre&gt;code:first-child {
 max-height:600px;
-display:block\9;
+display:block;
 }
 
 blockquote {

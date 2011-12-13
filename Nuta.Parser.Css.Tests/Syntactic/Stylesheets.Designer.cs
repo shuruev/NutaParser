@@ -325,19 +325,47 @@ namespace Nuta.Parser.Css.Tests.Syntactic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to @media all and (orientation:portrait) {}
-        ///@media all and (orientation:landscape) {}
-        ///@media screen and (max-device-width: 480px) {}
-        ///@media print { * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
-        ///  a, a:visited { color: #444 !important; text-decoration: underline; }
-        ///  a:after { content: &quot; (&quot; attr(href) &quot;)&quot;; }
-        ///  abbr:after { content: &quot; (&quot; attr(title) &quot;)&quot;; }
-        ///  .ir a:after { content: &quot;&quot;; }
-        ///  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to #debug_holder{
+        ///	
+        ///	display:none;
+        ///	
+        ///	clear:both;
+        ///	padding-top:30px;
+        ///	margin:30px 0;
+        ///}
+        ///
+        ///#debug_holder pre{
+        ///	margin:0;
+        ///	padding:10px;
+        ///	border:1px solid #ddd;
+        ///	background-color:#f0f0f0;
+        ///}
+        ///
+        ///body{
+        ///	background:#FAFAFA url([% c.uri_for(&apos;/static/i/bg.png&apos;) %]) repeat-x left top;
+        ///	padding:0;
+        ///	margin:0;
+        ///	font-family:Arial, Verdana, sans-serif;
+        ///	font-size:80%;
+        ///}
+        ///a img{
+        ///	border:0;
+        ///}
+        ///
+        ///
+        ////* structure */
+        ///.sub_holder{
+        ///	width:970px;
+        ///	margin:0 auto;
+        ///	text-align:left;
+        ///}
+        ///
+        ///#header_holder{
+        ///	margi [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string StylesheetX {
+        internal static string Stylesheet9 {
             get {
-                return ResourceManager.GetString("StylesheetX", resourceCulture);
+                return ResourceManager.GetString("Stylesheet9", resourceCulture);
             }
         }
     }

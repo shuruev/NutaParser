@@ -32,6 +32,7 @@ namespace Nuta.Parser.Css.Syntactic
 							new ParseAny(
 								Ruleset.S,
 								Media.S,
+								FontFace.S,
 								Page.S),
 							StylesheetWhitespace.O))))
 		{

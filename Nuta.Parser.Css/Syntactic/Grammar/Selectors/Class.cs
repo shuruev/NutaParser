@@ -10,7 +10,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public Class()
 			: base(
 				PeriodTerminal.S,
-				new LexicalTerminal(Identifier.S))
+				IdentifierTerminal.S)
 		{
 		}
 	}

@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -11,7 +10,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public NamespacePrefix()
 			: base(
 				new ParseAny(
-					new LexicalTerminal(Identifier.S),
+					IdentifierTerminal.S,
 					AsteriskTerminal.S,
 					Empty.S),
 				BarTerminal.S)

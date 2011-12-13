@@ -2,9 +2,10 @@
 		counter-increment: page;
 		margin: 7%;
 		@top-right {
-           content: content: "Page " counter(page);
+           content: "Page " counter(page);
         }
 	}
+
 	@page :first {
 		@top-center {
            content: "This test requires 7 pages";

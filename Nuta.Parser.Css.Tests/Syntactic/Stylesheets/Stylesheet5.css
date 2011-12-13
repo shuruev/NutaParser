@@ -3,21 +3,21 @@ overflow:hidden;
 padding-bottom:10px;
 }
 
-.listings-layout&gt;.header {
+.listings-layout>.header {
 position:relative;
 border-bottom:1px solid #ddd;
 }
 
-.listings-layout&gt;.header .nav {
+.listings-layout>.header .nav {
 font-size:14px;
 }
 
-.listings-layout&gt;.header .nav li {
+.listings-layout>.header .nav li {
 display:inline-block;
 cursor:pointer;
 }
 
-.listings-layout&gt;.header .nav li a {
+.listings-layout>.header .nav li a {
 color:#666;
 text-decoration:none;
 display:inline-block;
@@ -25,7 +25,7 @@ margin-bottom:-1px;
 padding:8px 12px;
 }
 
-.listings-layout&gt;.header .nav li.selected {
+.listings-layout>.header .nav li.selected {
 font-weight:700;
 border-left:1px solid #ddd;
 border-top:1px solid #ddd;
@@ -39,7 +39,7 @@ border-top-right-radius:3px;
 background-color:#fff;
 }
 
-.listings-layout&gt;.header .nav li.selected a {
+.listings-layout>.header .nav li.selected a {
 color:#333;
 background-color:#FFF;
 -webkit-border-top-left-radius:3px;
@@ -50,7 +50,7 @@ border-top-left-radius:3px;
 border-top-right-radius:3px;
 }
 
-.listings-layout&gt;.list {
+.listings-layout>.list {
 margin:20px 0;
 }
 
@@ -635,7 +635,7 @@ border-radius:4px;
 padding:10px;
 }
 
-#facebox .content&gt;p:last-child {
+#facebox .content>p:last-child {
 margin-bottom:0;
 }
 
@@ -975,7 +975,7 @@ bottom:0;
 right:0;
 }
 
-.accountcols .main&gt;p.overview {
+.accountcols .main>p.overview {
 margin-top:20px;
 color:#333;
 }
@@ -1470,13 +1470,13 @@ text-transform:uppercase;
 margin:15px 0 5px;
 }
 
-.file&gt;.highlight {
+.file>.highlight {
 background:#f8f8ff;
 border:1px solid #d4d4e3;
 padding:5px;
 }
 
-.file&gt;h3 {
+.file>h3 {
 font-size:12px;
 color:#333;
 text-shadow:1px 1px 0 rgba(255,255,255,0.5);
@@ -2329,7 +2329,7 @@ color:inherit;
 color:#900;
 }
 
-.listings-layout .columns.main .content .listings .pagination&gt;.disabled,.ejection .ejecting,.ejection.open .confirming {
+.listings-layout .columns.main .content .listings .pagination>.disabled,.ejection .ejecting,.ejection.open .confirming {
 display:none;
 }
 
@@ -2337,7 +2337,7 @@ display:none;
 color:#000;
 }
 
-#facebox .content&gt;p:first-child,#planchange .fieldgroup,.fieldgroup dl.form:first-child,dl.form.expiration,.fieldgroup p:first-child,ul.fieldpills li:first-child,.add-pill-form label:first-child {
+#facebox .content>p:first-child,#planchange .fieldgroup,.fieldgroup dl.form:first-child,dl.form.expiration,.fieldgroup p:first-child,ul.fieldpills li:first-child,.add-pill-form label:first-child {
 margin-top:0;
 }
 

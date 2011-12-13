@@ -1,5 +1,4 @@
-﻿using Nuta.Parser.Css.Lexical;
-using Nuta.Parser.Syntactic;
+﻿using Nuta.Parser.Syntactic;
 
 namespace Nuta.Parser.Css.Syntactic
 {
@@ -11,8 +10,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public PseudoPage()
 			: base(
 				ColonTerminal.S,
-				new LexicalTerminal(Identifier.S),
-				Whitespaces.O)
+				IdentifierTerminal.S)
 		{
 		}
 	}

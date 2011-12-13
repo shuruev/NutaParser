@@ -211,7 +211,7 @@ button.as_link .button_img{margin:0 6px 0 0;vertical-align:text-bottom;width:16p
 #blueBar #pageHead{margin:0 auto;width:981px}
 #globalContainer{margin:0 auto;position:relative;zoom:1}
 .fbx #globalContainer{width:981px}
-.fbx #tab_canvas &gt; div{padding-top:0}
+.fbx #tab_canvas > div{padding-top:0}
 .fb_content{padding-bottom:20px}
 .fbx .fb_content{padding-bottom:0}
 .fbx #globalContainer #content{min-height:inherit}
@@ -583,7 +583,7 @@ div.uiHeaderTopBorder{margin-left:0}
 .uiTooltipActive .rightmiddle,.uiTooltip:active .rightmiddle,.uiTooltip:focus .rightmiddle,.uiTooltip:hover .rightmiddle{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yY/r/_ZWZupdaAgS.gif);background-position:left top;left:100%;margin:-4px 0 0 4px;right:auto}
 .uiTooltipActive .bottom,.uiTooltip:active .bottom,.uiTooltip:focus .bottom,.uiTooltip:hover .bottom{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yX/r/k2R_CZuPy2I.png);background-position:left top;bottom:auto;padding:4px 0 0;top:100%}
 .uiTooltipActive .rightbottom,.uiTooltip:active .rightbottom,.uiTooltip:focus .rightbottom,.uiTooltip:hover .rightbottom{background-position:right top}
-.uiTooltipDisabled:active .uiTooltipWrap,.uiTooltipDisabled:focus .uiTooltipWrap,.uiTooltipDisabled:hover .uiTooltipWrap,.openToggler &gt; .uiTooltip:active .uiTooltipWrap,.openToggler &gt; .uiTooltip:focus .uiTooltipWrap,.openToggler &gt; .uiTooltip:hover .uiTooltipWrap{display:none}
+.uiTooltipDisabled:active .uiTooltipWrap,.uiTooltipDisabled:focus .uiTooltipWrap,.uiTooltipDisabled:hover .uiTooltipWrap,.openToggler > .uiTooltip:active .uiTooltipWrap,.openToggler > .uiTooltip:focus .uiTooltipWrap,.openToggler > .uiTooltip:hover .uiTooltipWrap{display:none}
 .uiMediaThumb{background:#fff;border:1px solid #ccc;display:inline-block;outline:none;padding:4px;position:relative;vertical-align:bottom}
 .loading.uiMediaThumb{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yk/r/LOOn0JtHNzb.gif) no-repeat center center}
 .loading.uiMediaThumb i{opacity:.3}
@@ -1402,10 +1402,10 @@ li.showAllExperiences{border-top:1px solid #e5eaf1;padding-top:7px;text-align:ce
 .uiInfoTable .rightCol{padding:3px 0 1px 0;text-align:left;vertical-align:top}
 .uiInfoTable .dataRow .data,
 .uiInfoTable .dataRow .rightCol{padding-top:5px}
-.uiInfoTable .data &gt; input,
-.uiInfoTable .data &gt; label input,
-.uiInfoTable .rightCol &gt; input,
-.uiInfoTable .rightCol &gt; label input{margin-left:0}
+.uiInfoTable .data > input,
+.uiInfoTable .data > label input,
+.uiInfoTable .rightCol > input,
+.uiInfoTable .rightCol > label input{margin-left:0}
 .uiInfoTable .label{color:#666;font-weight:bold;padding-right:10px;text-align:right;width:130px}
 .uiInfoTable .dataRow .label{padding-top:8px}
 .uiInfoTable .label .annotation{color:#999}

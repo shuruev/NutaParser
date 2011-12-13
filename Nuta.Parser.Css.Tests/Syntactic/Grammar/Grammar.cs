@@ -27,15 +27,14 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		public void Is_Stylesheet_Additional()
 		{
 			//xxx
-			//Check(true, Stylesheet.S, Stylesheets.StylesheetX);
 			//Check(true, Stylesheet.S, Stylesheets.Stylesheet1);
 			//Check(true, Stylesheet.S, Stylesheets.Stylesheet2);
 			//Check(true, Stylesheet.S, Stylesheets.Stylesheet3);
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet4);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet4);
 			//Check(true, Stylesheet.S, Stylesheets.Stylesheet5);
 			//Check(true, Stylesheet.S, Stylesheets.Stylesheet6);
 			//Check(true, Stylesheet.S, Stylesheets.Stylesheet7);
-			Check(true, Stylesheet.S, Stylesheets.Stylesheet8);
+			//Check(true, Stylesheet.S, Stylesheets.Stylesheet8);
 		}
 
 		[TestMethod]
@@ -80,36 +79,6 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 			Check(true, Media.S, "@media print { body { font-size: 10pt } }");
 			Check(true, Media.S, "@media screen { body { font-size: 13px } }");
 			Check(true, Media.S, "@media screen, print { body { line-height: 1.2 } }");
-		}
-
-		[TestMethod]
-		public void Is_Page()
-		{
-			Check(true, Page.S, "@page{}");
-			Check(false, Page.S, "@ page{}");
-			Check(true, Page.S, "@page { } ");
-			Check(true, Page.S, "@page :abc { }");
-			Check(true, Page.S, "@page :abc {;;;}");
-			Check(true, Page.S, "@page :abc { ; ; ; }");
-			Check(true, Page.S, "@page :abc { width: 10px; height: 20px }");
-			Check(true, Page.S, "@page :abc { width: 10px; height: 20px; }");
-		}
-
-		[TestMethod]
-		public void Is_Page_Additional()
-		{
-			Check(true, Page.S, "@page { margin: 3cm; }");
-			Check(true, Page.S, "@page :left { margin-left: 4cm; margin-right: 3cm; }");
-			Check(true, Page.S, "@page :right { margin-left: 3cm; margin-right: 4cm; }");
-		}
-
-		[TestMethod]
-		public void Is_Pseudo_Page()
-		{
-			Check(true, PseudoPage.S, ":abc");
-			Check(false, PseudoPage.S, ": abc");
-			Check(true, PseudoPage.S, ":abc ");
-			Check(true, PseudoPage.S, ":-x-abc");
 		}
 
 		[TestMethod]
