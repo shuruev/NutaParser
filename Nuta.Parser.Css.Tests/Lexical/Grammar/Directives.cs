@@ -59,5 +59,14 @@ namespace Nuta.Parser.Css.Tests.Lexical
 			Check(true, FontFaceSymbol.S, "@fOn\\54-fAc\\45");
 			Check(false, FontFaceSymbol.S, "@ font-face");
 		}
+
+		[TestMethod]
+		public void Is_Keyframes_Symbol()
+		{
+			Check(true, KeyframesSymbol.S, "@keyframes");
+			Check(true, KeyframesSymbol.S, "@KEYFRAMES");
+			Check(true, KeyframesSymbol.S, "@kEyframe\\53");
+			Check(false, KeyframesSymbol.S, "@ keyframes");
+		}
 	}
 }

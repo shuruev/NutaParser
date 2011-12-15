@@ -9,8 +9,8 @@ namespace Nuta.Parser.Css.Syntactic
 		public MediaQueryPrefix1()
 			: base(
 				new ParseAny(
-					IdentifierOnly.S,
-					IdentifierNot.S,
+					Only.S,
+					Not.S,
 					Empty.S),
 				Whitespaces.O,
 				MediaType.S,

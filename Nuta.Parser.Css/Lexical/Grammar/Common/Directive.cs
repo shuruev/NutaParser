@@ -13,7 +13,8 @@ namespace Nuta.Parser.Css.Lexical
 				MediaSymbol.S,
 				CharsetSymbol.S,
 				NamespaceSymbol.S,
-				FontFaceSymbol.S)
+				FontFaceSymbol.S,
+				KeyframesSymbol.S)
 		{
 		}
 	}

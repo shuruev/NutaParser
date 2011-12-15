@@ -33,7 +33,8 @@ namespace Nuta.Parser.Css.Syntactic
 								Ruleset.S,
 								Media.S,
 								FontFace.S,
-								Page.S),
+								Page.S,
+								KeyframesRule.S),
 							StylesheetWhitespace.O))))
 		{
 		}

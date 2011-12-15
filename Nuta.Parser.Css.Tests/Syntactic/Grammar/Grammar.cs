@@ -26,15 +26,14 @@ namespace Nuta.Parser.Css.Tests.Syntactic
 		[TestMethod]
 		public void Is_Stylesheet_Additional()
 		{
-			//xxx
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet1);
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet2);
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet3);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet1);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet2);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet3);
 			Check(true, Stylesheet.S, Stylesheets.Stylesheet4);
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet5);
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet6);
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet7);
-			//Check(true, Stylesheet.S, Stylesheets.Stylesheet8);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet5);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet6);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet7);
+			Check(true, Stylesheet.S, Stylesheets.Stylesheet8);
 		}
 
 		[TestMethod]

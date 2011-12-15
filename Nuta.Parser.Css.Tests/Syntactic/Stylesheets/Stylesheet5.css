@@ -189,7 +189,6 @@ border-bottom-color:#cfcfcf;
 -moz-border-radius-topright:3px;
 border-top-left-radius:3px;
 border-top-right-radius:3px;
-filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#e6e6e6',endColorstr='#d5d5d5');
 background:0;
 margin:0 5px 0 0;
 padding:0 8px;
@@ -197,7 +196,6 @@ padding:0 8px;
 
 .listings-layout .columns.main .content .filterbar .filters li.selected {
 color:#333;
-filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#efefef',endColorstr='#e6e6e6');
 background:0;
 border-color:#c2c2c2 #c2c2c2 #f0f0f0;
 }
@@ -249,7 +247,6 @@ padding:30px;
 
 .listings-layout .columns.main .content .listings .actions {
 background:0;
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ecf0f1',GradientType=0);
 font-size:11px;
 overflow:hidden;
 margin:0;
@@ -676,7 +673,6 @@ z-index:99;
 font-size:11px;
 text-shadow:1px 1px 0 #000;
 opacity:.8;
-filter:alpha(opacity=80);
 background-repeat:no-repeat;
 padding:5px;
 }

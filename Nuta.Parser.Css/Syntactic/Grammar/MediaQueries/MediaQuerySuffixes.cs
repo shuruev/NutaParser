@@ -10,7 +10,7 @@ namespace Nuta.Parser.Css.Syntactic
 		public MediaQuerySuffixes()
 			: base(
 				new ParseAll(
-					IdentifierAnd.S,
+					And.S,
 					Whitespaces.O,
 					MediaExpression.S))
 		{

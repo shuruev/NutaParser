@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.Tests", "Nuta.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.Css.Tests", "Nuta.Parser.Css.Tests\Nuta.Parser.Css.Tests.csproj", "{5B348037-F9D1-4619-8AC5-0447C65C8ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.Css.Tests.W3CRunner", "Nuta.Parser.Css.Tests.W3CRunner\Nuta.Parser.Css.Tests.W3CRunner.csproj", "{B8A5C404-C0E4-4C75-BFB7-71306775A20F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuta.Parser.Css.Tests.Runner", "Nuta.Parser.Css.Tests.Runner\Nuta.Parser.Css.Tests.Runner.csproj", "{B8A5C404-C0E4-4C75-BFB7-71306775A20F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{341F2CB3-0CA4-4EC3-9474-556447E90EF9}"
 EndProject

@@ -86,12 +86,12 @@ font-family:Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 margin-bottom:10px;
 background-color:#eee;
 overflow:auto;
-width:650px !ie7;
+width:650px;
 max-height:none;
-padding:5px 5px 20px !ie7 5px;
+padding:5px 5px 20px 5px;
 }
 
-.post-text pre&gt;code:first-child,.wmd-preview pre&gt;code:first-child {
+.post-text pre>code:first-child,.wmd-preview pre>code:first-child {
 max-height:600px;
 display:block;
 }
@@ -286,7 +286,7 @@ height:58px;
 
 .accept-rate {
 margin-left:37px;
-padding-top:6px !ie7;
+padding-top:6px;
 margin-top:3px;
 margin-bottom:6px;
 }
@@ -391,7 +391,7 @@ clear:both;
 padding-top:2px;
 }
 
-.post-menu&gt;a:hover,.edit-tags-wrapper&gt;span&gt;a:hover {
+.post-menu>a:hover,.edit-tags-wrapper>span>a:hover {
 background-color:#777;
 color:#fff;
 text-decoration:none;
@@ -401,7 +401,7 @@ text-decoration:none;
 padding-right:40px;
 }
 
-.edit-tags-wrapper&gt;a.post-tag {
+.edit-tags-wrapper>a.post-tag {
 margin-right:6px;
 }
 
@@ -427,7 +427,7 @@ text-decoration:none;
 padding:0 3px 2px;
 }
 
-tr.comment&gt;td {
+tr.comment>td {
 padding-top:5px;
 padding-bottom:5px;
 border-bottom:dotted 1px #ddd;
@@ -478,14 +478,14 @@ padding:2px 5px;
 visibility:hidden;
 }
 
-.comment-form&gt;form&gt;table {
+.comment-form>form>table {
 text-align:left;
 margin-top:5px;
 margin-right:5px;
 vertical-align:top;
 }
 
-.comment-form&gt;form input {
+.comment-form>form input {
 margin-left:10px;
 margin-top:1px;
 width:100px;
@@ -497,7 +497,7 @@ cursor:pointer;
 margin-left:10px;
 }
 
-.comment-form&gt;form textarea {
+.comment-form>form textarea {
 margin-bottom:4px;
 height:5em;
 }
@@ -865,7 +865,7 @@ max-width:180px;
 #header {
 width:960px;
 height:120px;
-padding-bottom:15px !ie7;
+padding-bottom:15px;
 margin:0 auto;
 }
 
@@ -1643,7 +1643,6 @@ background-color:#E5BDB2;
 img.diff-delete {
 border:2px solid red;
 opacity:0.5;
-filter:alpha(opacity=50);
 }
 
 span.diff-add {
@@ -1658,13 +1657,11 @@ border:2px solid green;
 img.sponsor-tag-img {
 border:none;
 opacity:1;
-filter:alpha(opacity=100);
 }
 
 .tagged-ignored {
 background-color:#fff;
 opacity:0.5;
-filter:alpha(opacity=50);
 }
 
 .tagged-interesting {
@@ -1913,7 +1910,7 @@ list-style:none;
 cursor:pointer;
 }
 
-.wmd-button&gt;span {
+.wmd-button>span {
 background-image:url(Img/wmd-buttons.png);
 background-repeat:no-repeat;
 background-position:0 0;
@@ -2015,9 +2012,9 @@ background-position:0 -805px;
 display:inline-block;
 width:15px;
 height:10px;
-vertical-align:middle !ie7;
-margin-right:3px !ie7;
-font-size:500px !ie7;
+vertical-align:middle;
+margin-right:3px;
+font-size:500px;
 }
 
 .envelope-on {
@@ -2641,7 +2638,7 @@ color:#333;
 font-size:.85em;
 }
 
-.faq-page h2&gt;.expander-arrow-small-hide {
+.faq-page h2>.expander-arrow-small-hide {
 margin-left:5px;
 }
 
@@ -2729,7 +2726,7 @@ margin-right:5px;
 margin-bottom:10px;
 }
 
-.action-list&gt;li {
+.action-list>li {
 width:650px;
 }
 
@@ -3077,7 +3074,6 @@ width:990px;
 display:none;
 background:#000;
 opacity:0.7;
-filter:alpha(opacity=70);
 position:absolute;
 top:0;
 left:0;
@@ -3128,17 +3124,17 @@ padding:0 4px;
 margin-left:-4px;
 }
 
-table.flagged-posts tr.messageDivider&gt;td {
+table.flagged-posts tr.messageDivider>td {
 border-top:1px solid #aaa;
 padding:10px 5px;
 }
 
-table.flagged-posts tr.messageDivider&gt;td&gt;div,table.flagged-posts tr.messageDivider&gt;td&gt;div&gt;div,table.flagged-posts tr.messageDivider&gt;td&gt;div&gt;div&gt;div {
+table.flagged-posts tr.messageDivider>td>div,table.flagged-posts tr.messageDivider>td>div>div,table.flagged-posts tr.messageDivider>td>div>div>div {
 padding-top:0;
 padding-bottom:3px;
 }
 
-table.flagged-posts tr.messageDivider&gt;td div.mod-audit-user-info {
+table.flagged-posts tr.messageDivider>td div.mod-audit-user-info {
 padding:3px;
 }
 
@@ -3150,7 +3146,7 @@ table.flagged-posts tr.messageDivider:hover {
 opacity:1;
 }
 
-table.flagged-posts tr.loaded-body&gt;td {
+table.flagged-posts tr.loaded-body>td {
 border-top:1px dotted #aaa;
 }
 
@@ -3159,7 +3155,7 @@ width:28px;
 text-align:center;
 }
 
-table.flagged-posts .comments tr.message-divider&gt;td {
+table.flagged-posts .comments tr.message-divider>td {
 padding-top:4px;
 }
 
@@ -3167,7 +3163,7 @@ table.flagged-posts .comments .comment-score span {
 padding-right:0;
 }
 
-table.flagged-posts tr.messageDivider:first-child&gt;td,table.flagged-posts tr.loaded-body&gt;td:empty {
+table.flagged-posts tr.messageDivider:first-child>td,table.flagged-posts tr.loaded-body>td:empty {
 border-top:0 none transparent;
 }
 
@@ -3535,7 +3531,7 @@ z-index:300;
 padding:5px;
 }
 
-.tag-suggestions&gt;div {
+.tag-suggestions>div {
 width:200px;
 overflow:hidden;
 float:left;
@@ -3544,12 +3540,12 @@ cursor:pointer;
 padding:5px;
 }
 
-.tag-suggestions&gt;div p {
+.tag-suggestions>div p {
 font-size:11px;
 line-height:1.1;
 }
 
-.tag-suggestions&gt;div p.more-info {
+.tag-suggestions>div p.more-info {
 visibility:hidden;
 position:absolute;
 right:5px;
@@ -3874,11 +3870,10 @@ background-position:-27px -404px;
 -moz-box-shadow:2px 2px 4px rgba(0,0,0,0.5);
 -webkit-box-shadow:2px 2px 4px rgba(0,0,0,0.5);
 box-shadow:2px 2px 4px rgba(0,0,0,0.5);
-filter:filter: progid:DXImageTransform.Microsoft.Shadow(direction=135,strength=3,color=#808080);
 border-collapse:separate;
 }
 
-.diff-skipped&gt;div {
+.diff-skipped>div {
 border-bottom:2px dotted #d0d0d0;
 }
 
@@ -3909,13 +3904,13 @@ max-width:880px;
 margin-left:40px;
 }
 
-#revisions .sidebyside-diff&gt;div {
+#revisions .sidebyside-diff>div {
 float:left;
 margin-right:20px;
 width:420px;
 }
 
-#revisions .sidebyside-diff&gt;div img {
+#revisions .sidebyside-diff>div img {
 max-width:410px;
 }
 
@@ -3959,7 +3954,7 @@ ins,#notify-container span.notify-close a,.tags a:hover,.page-numbers:hover,.unr
 text-decoration:none;
 }
 
-.form-submit input:hover,.hlinks-drop-down,.cp,.vote-up-off,.vote-down-off,.vote-accepted-off,.star-off,.comment-up-off,.flag-off,.faq-page .col-summary,.faq-page .col-section.expandable,.action-list .action-name,.action-list .action-desc,.suggested-edit input,table.flagged-posts .delete-options&gt;input:hover,input[type=button],input[type=submit] {
+.form-submit input:hover,.hlinks-drop-down,.cp,.vote-up-off,.vote-down-off,.vote-accepted-off,.star-off,.comment-up-off,.flag-off,.faq-page .col-summary,.faq-page .col-section.expandable,.action-list .action-name,.action-list .action-desc,.suggested-edit input,table.flagged-posts .delete-options>input:hover,input[type=button],input[type=submit] {
 cursor:pointer;
 }
 
@@ -3983,11 +3978,11 @@ p code,.comment-text code {
 padding:1px 5px;
 }
 
-.dno,.edit-field-overlay,.edit-block,.tagged-ignored-hidden,.faq-page .col-summary.only,.faq-page .col-section&gt;.col-detail,.suggested-edit .body-diffs .full-diff,table.flagged-posts .fullhide,.login-page .script-only {
+.dno,.edit-field-overlay,.edit-block,.tagged-ignored-hidden,.faq-page .col-summary.only,.faq-page .col-section>.col-detail,.suggested-edit .body-diffs .full-diff,table.flagged-posts .fullhide,.login-page .script-only {
 display:none;
 }
 
-.vt,.comment-form&gt;form&gt;table td,.suggested-edit .body-diffs td,table.flagged-posts .flag-issue {
+.vt,.comment-form>form>table td,.suggested-edit .body-diffs td,table.flagged-posts .flag-issue {
 vertical-align:top;
 }
 
@@ -3995,7 +3990,7 @@ vertical-align:top;
 vertical-align:middle;
 }
 
-.fw,.comments&gt;table,.logins-popup .logins {
+.fw,.comments>table,.logins-popup .logins {
 width:100%;
 }
 
@@ -4007,12 +4002,12 @@ background-color:#e0eaf1;
 color:#888;
 }
 
-.post-menu&gt;a,.edit-tags-wrapper&gt;span&gt;a,.comments-link {
+.post-menu>a,.edit-tags-wrapper>span>a,.comments-link {
 color:#888;
 padding:0 3px 2px;
 }
 
-.comment:hover .comment-flag,.comment:hover .comment-up,.comment:hover .comment-delete,.comment:hover .comment-edit-hide,.comment-up-on,.tag-suggestions&gt;div:hover p.more-info,.tag-suggestions&gt;div:focus p.more-info {
+.comment:hover .comment-flag,.comment:hover .comment-up,.comment:hover .comment-delete,.comment:hover .comment-edit-hide,.comment-up-on,.tag-suggestions>div:hover p.more-info,.tag-suggestions>div:focus p.more-info {
 visibility:visible;
 }
 
@@ -4071,7 +4066,7 @@ color:#fff;
 font-weight:700;
 }
 
-.views strong,.faq-page .col-section&gt;.col-summary,.faq-page .col-summary.only,.faq-page .col-section&gt;h2,.faq-page .col-section&gt;h3 {
+.views strong,.faq-page .col-section>.col-summary,.faq-page .col-summary.only,.faq-page .col-section>h2,.faq-page .col-section>h3 {
 display:block;
 }
 
@@ -4125,7 +4120,7 @@ text-align:right;
 text-align:left;
 }
 
-.dingus,#revisions .sidebyside-diff&gt;div span.title-diff {
+.dingus,#revisions .sidebyside-diff>div span.title-diff {
 font-size:80%;
 }
 
@@ -4243,11 +4238,11 @@ background-color:#FFF;
 width:70px;
 }
 
-.tag-suggestions&gt;div:focus,.tag-suggestions&gt;div:focus .more-info {
+.tag-suggestions>div:focus,.tag-suggestions>div:focus .more-info {
 background-color:#ffe6bf;
 }
 
-.tag-suggestions&gt;div:hover,.tag-suggestions&gt;div:hover .more-info {
+.tag-suggestions>div:hover,.tag-suggestions>div:hover .more-info {
 background-color:#fff0d9;
 }
 

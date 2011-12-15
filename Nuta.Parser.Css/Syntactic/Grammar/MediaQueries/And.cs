@@ -2,11 +2,11 @@
 
 namespace Nuta.Parser.Css.Syntactic
 {
-	public class IdentifierAnd : SpecificIdentifier
+	public class And : SpecificIdentifier
 	{
-		public static readonly IdentifierAnd S = new IdentifierAnd();
+		public static readonly And S = new And();
 
-		public IdentifierAnd()
+		public And()
 			: base(
 				LetterA.S,
 				LetterN.S,

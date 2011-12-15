@@ -203,21 +203,21 @@ namespace Nuta.Parser.Css.Tests.Syntactic {
         ///padding-bottom:10px;
         ///}
         ///
-        ///.listings-layout&amp;gt;.header {
+        ///.listings-layout&gt;.header {
         ///position:relative;
         ///border-bottom:1px solid #ddd;
         ///}
         ///
-        ///.listings-layout&amp;gt;.header .nav {
+        ///.listings-layout&gt;.header .nav {
         ///font-size:14px;
         ///}
         ///
-        ///.listings-layout&amp;gt;.header .nav li {
+        ///.listings-layout&gt;.header .nav li {
         ///display:inline-block;
         ///cursor:pointer;
         ///}
         ///
-        ///.listings-layout&amp;gt;.header .nav li a {
+        ///.listings-layout&gt;.header .nav li a {
         ///color:#666;
         ///text-decoration:none;
         ///display:inline-block;
@@ -225,9 +225,9 @@ namespace Nuta.Parser.Css.Tests.Syntactic {
         ///padding:8px 12px;
         ///}
         ///
-        ///.listings-layout&amp;gt;.header .nav li.selected {
+        ///.listings-layout&gt;.header .nav li.selected {
         ///font-weight:700;
-        ///border- [rest of string was truncated]&quot;;.
+        ///border-left:1px solid  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Stylesheet5 {
             get {
@@ -321,51 +321,6 @@ namespace Nuta.Parser.Css.Tests.Syntactic {
         internal static string Stylesheet8 {
             get {
                 return ResourceManager.GetString("Stylesheet8", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to #debug_holder{
-        ///	
-        ///	display:none;
-        ///	
-        ///	clear:both;
-        ///	padding-top:30px;
-        ///	margin:30px 0;
-        ///}
-        ///
-        ///#debug_holder pre{
-        ///	margin:0;
-        ///	padding:10px;
-        ///	border:1px solid #ddd;
-        ///	background-color:#f0f0f0;
-        ///}
-        ///
-        ///body{
-        ///	background:#FAFAFA url([% c.uri_for(&apos;/static/i/bg.png&apos;) %]) repeat-x left top;
-        ///	padding:0;
-        ///	margin:0;
-        ///	font-family:Arial, Verdana, sans-serif;
-        ///	font-size:80%;
-        ///}
-        ///a img{
-        ///	border:0;
-        ///}
-        ///
-        ///
-        ////* structure */
-        ///.sub_holder{
-        ///	width:970px;
-        ///	margin:0 auto;
-        ///	text-align:left;
-        ///}
-        ///
-        ///#header_holder{
-        ///	margi [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Stylesheet9 {
-            get {
-                return ResourceManager.GetString("Stylesheet9", resourceCulture);
             }
         }
     }

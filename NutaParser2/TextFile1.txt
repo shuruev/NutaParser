@@ -5,16 +5,17 @@ Media Queries Level 3		http://www.w3.org/TR/css3-mediaqueries/
 CSS Namespaces				http://www.w3.org/TR/css3-namespace/
 Selectors Level 3			http://www.w3.org/TR/css3-selectors/
 CSS Fonts Level 3			http://www.w3.org/TR/css3-fonts/			[!] @font-face only
+CSS Paged Media Level 3		http://www.w3.org/TR/css3-page/
+CSS Animations				http://www.w3.org/TR/css3-animations/
 
 TO DO
 =====
-CSS Paged Media Level 3		http://www.w3.org/TR/css3-page/
-CSS Animations				http://www.w3.org/TR/css3-animations/
 
 LINKS
 =====
 http://www.w3.org/Style/CSS/current-work
 
-- вынести stylesheet тесты отдельно??? (может и не надо)
-- filter:progid:DXImageTransform.Microsoft.gradient
-- !ie7
+- вынести stylesheet тесты отдельно
+- filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#efefef',endColorstr='#e6e6e6');
+- width:650px !ie7;
+- background:#FAFAFA url([% c.uri_for('/static/i/bg.png') %]) repeat-x left top;

@@ -2,11 +2,11 @@
 
 namespace Nuta.Parser.Css.Syntactic
 {
-	public class IdentifierOnly : SpecificIdentifier
+	public class Only : SpecificIdentifier
 	{
-		public static readonly IdentifierOnly S = new IdentifierOnly();
+		public static readonly Only S = new Only();
 
-		public IdentifierOnly()
+		public Only()
 			: base(
 				LetterO.S,
 				LetterN.S,

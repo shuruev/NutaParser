@@ -57,6 +57,7 @@
     <Compile Include="Lexical\Grammar\Grammar.cs" />
     <Compile Include="Lexical\LexicalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntactic\Grammar\Animations.cs" />
     <Compile Include="Syntactic\Grammar\Pages.cs" />
     <Compile Include="Syntactic\Grammar\Fonts.cs" />
     <Compile Include="W3C\Css21Conformance.cs" />
@@ -111,7 +112,6 @@
     <Content Include="Syntactic\Stylesheets\Stylesheet5.css" />
     <Content Include="Syntactic\Stylesheets\Stylesheet6.css" />
     <Content Include="Syntactic\Stylesheets\Stylesheet7.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet9.css" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
