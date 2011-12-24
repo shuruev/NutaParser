@@ -9,9 +9,9 @@ namespace Nuta.Parser.Tests
 	public static class Ensure
 	{
 		/// <summary>
-		/// Checks whether specified code throws exception.
+		/// Ensures that specified code throws exception.
 		/// </summary>
-		public static void Throws(Action action)
+		private static void EnsureThrow(Action action, bool shouldThrow)
 		{
 			bool throwed = false;
 
@@ -24,8 +24,32 @@ namespace Nuta.Parser.Tests
 				throwed = true;
 			}
 
-			if (!throwed)
-				throw new AssertFailedException("Expected exception was not thrown.");
+			if (shouldThrow)
+			{
+				if (!throwed)
+					throw new AssertFailedException("Expected exception was not thrown.");
+			}
+			else
+			{
+				if (throwed)
+					throw new AssertFailedException("Unexpected exception was thrown.");
+			}
+		}
+
+		/// <summary>
+		/// Ensures that specified code throws exception.
+		/// </summary>
+		public static void Throws(Action action)
+		{
+			EnsureThrow(action, true);
+		}
+
+		/// <summary>
+		/// Ensures that specified code does not throw exception.
+		/// </summary>
+		public static void NotThrows(Action action)
+		{
+			EnsureThrow(action, false);
 		}
 	}
 }
