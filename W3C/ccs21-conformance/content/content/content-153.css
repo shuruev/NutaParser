@@ -1,5 +1,0 @@
-body:before
-            {
-                content: attr(vlink);
-                color: green;
-            }

@@ -1,9 +1,0 @@
-html, body, p, table, tr
-            {
-                background: white;
-            }
-            *
-            {
-                background: blue;
-                padding: 0;
-            }

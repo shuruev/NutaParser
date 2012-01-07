@@ -1,4 +1,0 @@
-.test { color: red; }
-   p:first-line { background: green; }
-   p.test:first-line { color: white; }
-   p:first-line.two { color: yellow; background: red; }

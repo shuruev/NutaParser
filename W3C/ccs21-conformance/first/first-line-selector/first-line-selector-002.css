@@ -1,8 +1,0 @@
-table
-            {
-                width: 100%
-            }
-            table td:first-line
-            {
-                color: green;
-            }

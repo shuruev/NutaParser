@@ -1,3 +1,0 @@
-p { background: white; color: green; }
-   p:invalidPseudoClass, p.test1 { color: yellow; background: red; }
-   p::invalidPseudoElement, p.test2 { color: yellow; background: red; }

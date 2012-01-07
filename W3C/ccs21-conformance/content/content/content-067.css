@@ -1,9 +1,0 @@
-meta:before
-            {
-                content: attr(content);
-                color: green;
-            }
-            head, meta[content='PASS PASS']
-            {
-                display: block;
-            }

@@ -1,9 +1,0 @@
-meta:before
-            {
-                content: attr(http-equiv);
-                color: green;
-            }
-            head, meta
-            {
-                display: block;
-            }

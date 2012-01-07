@@ -1,9 +1,0 @@
-td:before
-            {
-                content: attr(axis);
-                color: green;
-            }
-            td
-            {
-                border: 2px solid black;
-            }

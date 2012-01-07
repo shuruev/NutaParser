@@ -1,9 +1,0 @@
-div
-            {
-                counter-increment: test 5;
-                display: inline-block;
-            }
-            div:before
-            {
-                content: counter(test);
-            }

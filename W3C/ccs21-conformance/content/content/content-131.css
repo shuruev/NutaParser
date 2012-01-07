@@ -1,9 +1,0 @@
-meta:before
-            {
-                content: attr(scheme);
-                color: green;
-            }
-            head, meta
-            {
-                display: block;
-            }

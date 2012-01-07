@@ -1,5 +1,0 @@
-div:before
-            {
-                color: green;
-                content: attr(Title);
-            }

@@ -1,8 +1,0 @@
-@page :left {
-		@top-center 
-		{
-			content: "[This page intentionally left blank]";
-		}
-	}
-	p {page-break-after: always;}
-	div {page-break-before: right;}

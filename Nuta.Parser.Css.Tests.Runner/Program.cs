@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Nuta.Parser.Css.Syntactic;
 
-namespace Nuta.Parser.Css.Tests.W3CRunner
+namespace Nuta.Parser.Css.Tests.Runner
 {
 	/// <summary>
 	/// Runs W3C CSS test suites.

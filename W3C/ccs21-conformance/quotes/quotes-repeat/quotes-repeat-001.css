@@ -1,8 +1,0 @@
-div:before
-            {
-                content: open-quote;
-            }
-            div
-            {
-                quotes: 'PASS' 'FAIL' 'PASS' 'FAIL';
-            }

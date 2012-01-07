@@ -1,6 +1,0 @@
-div { color: navy; white-space: nowrap; }
-   .one {display: block;}
-   .two {display: inline;}
-   .three {display: list-item; list-style-type: decimal; list-style-position: inside;}
-   .four {display: none; color: yellow; background: red;}
-   a {display: block;}

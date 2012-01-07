@@ -1,5 +1,0 @@
-.control { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
-   div { margin: 4px 0; }
-   .border { border-top: solid 20px blue; width: 600px; }
-   .font { font: 20px/1 Ahem; color: blue; }
-   .inner { font: inherit; }

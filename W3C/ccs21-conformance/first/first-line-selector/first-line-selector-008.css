@@ -1,9 +1,0 @@
-#div1:first-line, #div2
-            {
-                font: 24px sans-serif;
-                color: gray;
-                letter-spacing: 5px;
-                text-decoration: underline;
-                text-transform: capitalize;
-                line-height: 48px;
-            }

@@ -1,5 +1,0 @@
-body { border: solid lime; background: green url(support/square-purple.png) center top no-repeat; color: white; }
-   html { border: solid blue; background: white url(support/square-teal.png) repeat-x top center; color: black; }
-   :link, :visited { color: inherit; background: transparent; }
-   p { margin: 1em; padding: 1em; }
-   html, body { margin: 17px; }

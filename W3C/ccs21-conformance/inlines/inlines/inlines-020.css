@@ -1,4 +1,0 @@
-p, body, html { margin: 0; padding: 0; color: green; font: 20px/1 serif; }
-   div { display: inline; border-left: solid lime; }
-   .fail { background: red; color: yellow; width: 4em; }
-   .pass { background: white; color: green; position: absolute; top: 1em; }

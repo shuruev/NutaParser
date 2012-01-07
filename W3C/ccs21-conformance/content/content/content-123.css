@@ -1,9 +1,0 @@
-head:before
-            {
-                content: attr(profile);
-                color: green;
-            }
-            head
-            {
-                display: block;
-            }

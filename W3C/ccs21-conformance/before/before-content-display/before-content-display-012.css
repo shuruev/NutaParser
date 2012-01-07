@@ -1,8 +1,0 @@
-div:before
-  {
-  background-color: red;
-  color: yellow;
-  content: ".\0D FAIL";
-  display: table-column-group;
-  font-size: 2em;
-  }

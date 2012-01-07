@@ -1,5 +1,0 @@
-html { background: white; color: navy; }
-   body { background: 100px 0 url(support/test-tr.png) no-repeat; }
-   div { width: 100px; background: url(support/test-bl.png) bottom left no-repeat; }
-   div p { background: url(support/test-tl.png) top left no-repeat; }
-   object { display: block; margin: auto; padding-right: 100px; background: url(support/test-br.png) bottom right no-repeat; }

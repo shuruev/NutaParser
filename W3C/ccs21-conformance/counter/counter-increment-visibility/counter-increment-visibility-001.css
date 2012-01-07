@@ -1,9 +1,0 @@
-#div1
-            {
-                counter-increment: hidden 5;
-                visibility: hidden;
-            }
-            #div2:before
-            {
-                content: counter(hidden);
-            }

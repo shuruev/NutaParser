@@ -1,9 +1,0 @@
-div
-            {
-                text-transform: uppercase;
-            }
-            span
-            {
-                text-transform: lowercase;
-                text-transform: inherit;
-            }

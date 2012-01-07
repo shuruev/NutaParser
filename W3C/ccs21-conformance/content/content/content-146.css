@@ -1,9 +1,0 @@
-a:before
-            {
-                content: attr(title);
-                color: green;
-            }
-            a
-            {
-                border: 2px solid black;
-            }

@@ -1,6 +1,0 @@
-p { color: navy; }
-   .explanation img { height: 1.2em; vertical-align: text-bottom; }
-   .test div { margin: 1em; padding: 0.5em; background: navy; color: blue; }
-   .test img { width: 10em; }
-   .test img.left { float: left; }
-   .test img.right { float: right; }

@@ -1,3 +1,0 @@
-div { color: black; }
-  div:first-letter { color: green; }
-  span:before { content: "\"This "; }

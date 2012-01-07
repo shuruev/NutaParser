@@ -1,4 +1,0 @@
-body { position: relative; }
-   .test { position: absolute; background: green; color: green;
-           width: 4em; height: 1em; }
-   .control { border-right: 4em solid red; height: 1em; }

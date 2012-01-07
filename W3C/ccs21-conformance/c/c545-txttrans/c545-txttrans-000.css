@@ -1,6 +1,0 @@
-div { font: 10px/1 Ahem; color: green; background: red url(support/css1test545.png); border: solid black; width: 32em; }
-   p { margin: 0; }
-   .ttn {text-transform: none;}
-   .cap {text-transform: capitalize;}
-   .upp {text-transform: uppercase;}
-   .low {text-transform: lowercase;}

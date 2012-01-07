@@ -1,5 +1,0 @@
-div:before
-            {
-                content: counter(chapter);
-                counter-increment: chapter 5;
-            }

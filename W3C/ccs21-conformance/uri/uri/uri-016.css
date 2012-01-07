@@ -1,8 +1,0 @@
-* { color: red; }
-   .one { background: red url(test/*test); color: green; }
-   .two { background: red; background: white url( test/*test ); color: white; }
-   .three { background: xtest url( test/*test ); color: white; }
-
-   .four { background: red url(/*test); color: green; }
-   .five { background: red; background: white url( /*test ); color: white; }
-   .six { background: xtest url( /*test ); color: white; }

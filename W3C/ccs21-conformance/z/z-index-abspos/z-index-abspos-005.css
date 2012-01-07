@@ -1,2 +1,0 @@
-.zero { position: absolute; height: 100px; width: 300px; background: red; z-index: 0; }
-   .auto { position: absolute; height: 150px; width: 400px; background: green; z-index: auto; }

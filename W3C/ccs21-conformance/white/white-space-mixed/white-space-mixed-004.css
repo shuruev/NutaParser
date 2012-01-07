@@ -1,9 +1,0 @@
-div { font: 1em/1 Ahem, monospace; color: navy; }
-   .bn { white-space: normal; }
-   .bp { white-space: pre; }
-   div:hover .an { white-space: normal; }
-   div:hover .ap { white-space: pre; }
-   div:hover .aG { color: green; }
-   div:hover .aB { color: brown; }
-   div:hover .abG { background: green; }
-   div:hover .abL { background: lime; }

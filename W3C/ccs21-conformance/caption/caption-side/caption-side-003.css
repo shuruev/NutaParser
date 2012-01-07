@@ -1,9 +1,0 @@
-table
-            {
-                background: black;
-                caption-side: bottom;
-            }
-            caption
-            {
-                caption-side: inherit;
-            }

@@ -1,5 +1,0 @@
-div, table, tr, td { margin: 0; border: 0; padding: 0; border-spacing: 0; line-height: 1; }
-   span { font-size: 0.2em; }
-   table { background: green; color: white; width: 5em; }
-   .test { height: 1em; background: red; width: 5em; }
-   .wrapper { font-size: 5em; }

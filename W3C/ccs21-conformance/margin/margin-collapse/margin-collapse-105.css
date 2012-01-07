@@ -1,9 +1,0 @@
-table { border-spacing: 0; font-size: 50px; border: solid; }
-   td { background: orange; padding: 0; }
-   div { margin: 1em 0; }
-   .test div { position: relative; }
-   .a { background: yellow; }
-   .b { background: lime; }
-   .c { background: aqua; }
-   .d { background: blue; }
-   .red { background: red; }

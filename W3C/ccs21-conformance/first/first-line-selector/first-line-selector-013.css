@@ -1,8 +1,0 @@
-div
-            {
-                display: inline-block;
-            }
-            div:first-line
-            {
-                color: green;
-            }

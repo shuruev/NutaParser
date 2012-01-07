@@ -1,4 +1,0 @@
-html, body { margin: 0; border: 0; padding: 0; }
-   .control { color: yellow; background: red; width: 10em; margin: 0 0 0 auto; }
-   .overflow { width: 8em; height: 8em; overflow: scroll; }
-   .positioned { color: white; background: green; position: absolute; top: 0; right: 0; width: 10em; }

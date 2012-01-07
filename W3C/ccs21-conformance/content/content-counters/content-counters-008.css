@@ -1,6 +1,0 @@
-body { white-space: nowrap; }
-
-
-  body, #test span:first-child { counter-reset: c; }
-  p, #test span { counter-increment: c; }
-  #test span:before { content: counters(c, ".", upper-roman); }

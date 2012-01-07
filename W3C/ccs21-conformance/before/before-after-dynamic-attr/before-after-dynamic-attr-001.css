@@ -1,9 +1,0 @@
-body {
-  font-family:sans-serif;
-}
-body:before {
-  content:attr(my-attr);
-}
-body:after {
-  content:attr(my-attr-2);
-}

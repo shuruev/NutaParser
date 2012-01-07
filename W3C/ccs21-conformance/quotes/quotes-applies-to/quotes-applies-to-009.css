@@ -1,9 +1,0 @@
-span
-            {
-                display: block;
-                quotes: "P" "S" "A" "S";
-            }
-            span:before
-            {
-                content: open-quote open-quote close-quote close-quote;
-            }

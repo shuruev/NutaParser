@@ -1,5 +1,0 @@
-body:before
-            {
-                content: attr(onload);
-                color: green;
-            }

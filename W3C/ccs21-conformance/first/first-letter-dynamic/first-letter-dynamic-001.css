@@ -1,3 +1,0 @@
-span:before { content: open-quote; }
-  span:after { content: close-quote; }
-  span { quotes: '"' '"'; }

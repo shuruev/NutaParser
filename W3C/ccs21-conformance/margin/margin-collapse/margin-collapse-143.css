@@ -1,4 +1,0 @@
-.outer { border-top: solid white; border-bottom: solid 1em red; background: green; }
-   .top { height: 1em; background: white; }
-   .float { height: 1em; float: left; background: white; width: 100%; }
-   .bottom { margin-bottom: 1em; }

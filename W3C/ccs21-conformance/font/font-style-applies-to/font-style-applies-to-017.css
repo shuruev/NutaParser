@@ -1,9 +1,0 @@
-#div1
-            {
-                display: inline;
-            }
-            div div
-            {
-                display: inherit;
-                font-style: italic;
-            }

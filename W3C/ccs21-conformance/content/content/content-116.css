@@ -1,9 +1,0 @@
-div:before
-            {
-                content: attr(onmouseout);
-                color: green;
-            }
-            div
-            {
-                border: 2px solid black;
-            }

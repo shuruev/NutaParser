@@ -1,9 +1,0 @@
-table:before
-            {
-                content: attr(rules);
-                color: green;
-            }
-            table
-            {
-                border: 2px solid black;
-            }

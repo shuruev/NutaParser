@@ -1,9 +1,0 @@
-form:before
-            {
-                content: attr(accept);
-                color: green;
-            }
-            form
-            {
-                border: 2px solid black;
-            }

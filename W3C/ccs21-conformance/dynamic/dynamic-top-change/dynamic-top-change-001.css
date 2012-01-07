@@ -1,5 +1,0 @@
-.testDiv { position: absolute; width: 100px; height: 100px; }
-    #green { top: 4em; background: green; }
-    #red { top: inherit; background: red; }
-    #parent { top: inherit; position: relative; }
-    #grandparent { position: relative; }

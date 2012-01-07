@@ -1,9 +1,0 @@
-#div1
-            {
-                height: 1px;
-            }
-            div div
-            {
-                background: black;
-                height: inherit;
-            }

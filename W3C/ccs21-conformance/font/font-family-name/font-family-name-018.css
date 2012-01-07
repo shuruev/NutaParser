@@ -1,6 +1,0 @@
-body { font-size: 36px; }
-            span#verify { font-family: CSSTest Verify; }
-            body { font-family: CSSTest Fallback; }
-            p, div {
-                font-family: "CSSTest Unknown";
-            }

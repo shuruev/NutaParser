@@ -1,5 +1,0 @@
-html:before
-            {
-                content: attr(version);
-                color: green;
-            }

@@ -1,6 +1,0 @@
-html { margin: 0; padding: 10px; }
-   body { margin: 0; padding: 0; }
-   .a { position: fixed; top: 10px; left: 10px; width: 20em; height: 4em;
-        background: red; color: yellow; }
-   .b { position: fixed; top: auto; left: auto; width: 20em; height: 4em;
-        background: green; color: white; }

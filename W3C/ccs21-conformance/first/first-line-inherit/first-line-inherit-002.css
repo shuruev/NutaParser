@@ -1,4 +1,0 @@
-div { background: green; }
-      div:first-line { background-color: red; }
-      span.one { background: inherit; }
-      span.two { background-color: inherit; }

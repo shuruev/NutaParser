@@ -1,7 +1,0 @@
-p { color: green; }   
-   .a, .b { position: absolute; }
-   .inner { background: red; height: 2em; }
-   .a { top: 4em; }
-   .a .inner { width: auto; }
-   .b { top: 8em; }
-   .b .inner { width: 100%; }

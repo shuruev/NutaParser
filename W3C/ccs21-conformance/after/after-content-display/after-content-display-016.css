@@ -1,8 +1,0 @@
-div:after
-  {
-  background-color: red;
-  color: yellow;
-  content: ".\0D FAIL";
-  display: none;
-  font-size: 2em;
-  }

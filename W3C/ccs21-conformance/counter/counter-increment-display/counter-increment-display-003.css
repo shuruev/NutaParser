@@ -1,9 +1,0 @@
-#div1
-            {
-                display: none;
-            }
-            div:before
-            {
-                counter-increment: hidden 1;
-                content: counter(hidden);
-            }

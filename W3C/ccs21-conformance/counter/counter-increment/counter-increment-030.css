@@ -1,9 +1,0 @@
-div
-            {
-                counter-increment: ident -2147483647 ident -2147483647 ident -2147483647;
-            }
-            div:before
-            {
-                font-size: 30px;
-                content: counter(ident);
-            }

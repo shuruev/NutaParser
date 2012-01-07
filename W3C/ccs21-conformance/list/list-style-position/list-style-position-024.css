@@ -1,7 +1,0 @@
-ol, li { margin: 0; padding: 0; border: 0; }
-   li, div {
-      color: blue;
-      border: solid silver 0.25em;
-      padding: 0.5em 3em 0.5em 0.5em;
-      list-style-position: inside; }
-   span { color: white; }

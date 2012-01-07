@@ -1,9 +1,0 @@
-pre:before
-            {
-                content: attr(width);
-                color: green;
-            }
-            pre
-            {
-                border: 2px solid black;
-            }

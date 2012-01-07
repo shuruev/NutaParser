@@ -1,9 +1,0 @@
-#parent
-            {
-                display: inline
-            }
-            div div
-            {
-                display: inherit;
-                font-family: Ahem;
-            }

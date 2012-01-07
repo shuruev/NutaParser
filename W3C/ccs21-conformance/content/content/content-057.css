@@ -1,9 +1,0 @@
-div:before
-            {
-                content: attr(class);
-                color: green;
-            }
-            div
-            {
-                border: 2px solid black;
-            }

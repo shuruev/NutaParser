@@ -1,9 +1,0 @@
-link:before
-            {
-                content: attr(media);
-                color: green;
-            }
-            head, link
-            {
-                display: block;
-            }

@@ -1,4 +1,0 @@
-div:before
-            {
-                content: counter(outofscope);
-            }

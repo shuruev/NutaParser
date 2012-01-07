@@ -1,9 +1,0 @@
-font:before
-            {
-                content: attr(color);
-                color: green;
-            }
-            font
-            {
-                border: 2px solid black;
-            }

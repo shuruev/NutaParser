@@ -1,5 +1,0 @@
-body { font-size: 8em; }
-   p { font-size: medium; }
-   .float { float: left; height: 1em; width: 1em; margin-right: -1em; background: red; }
-   .relative { position: relative; height: 1em; width: 1em; background: green; }
-   .inline { color: red; }

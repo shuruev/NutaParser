@@ -1,9 +1,0 @@
-div
-            {
-                background: red;
-                clip: rect(7.5ex, 7.5ex, 7.5ex, 7.5ex);
-                font: 20px/1 Ahem;
-                height: 3in;
-                position: absolute;
-                width: 3in;
-            }

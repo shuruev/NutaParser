@@ -1,9 +1,0 @@
-div
-            {
-                background-color: orange;
-                background-image: url('support/blue96x96.png');
-                background-attachment: fixed;
-                background-repeat: repeat-x;
-                display: inline;
-                font: 2in/1 serif;
-            }

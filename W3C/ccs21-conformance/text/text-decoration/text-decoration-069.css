@@ -1,9 +1,0 @@
-#div1
-            {
-                text-decoration: underline overline line-through blink;
-            }
-            div div
-            {
-                text-decoration: underline;
-                text-decoration: inherit;
-            }

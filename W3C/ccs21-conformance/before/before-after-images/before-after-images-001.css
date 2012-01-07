@@ -1,4 +1,0 @@
-div:before {
-  content:url(missing-image.png);
-}
-div { border:1px solid green; margin:5px; }

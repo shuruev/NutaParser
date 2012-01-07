@@ -1,5 +1,0 @@
-body { white-space: nowrap; }
-
-
-  #one:before { content: counter(one) }
-  #two:before { content: counter(two) }

@@ -1,8 +1,0 @@
-.outer { margin: 1em; background: red; height: 4.5em; }
-   .border { border: solid; width: 10em; }
-   .box { margin: 0; background: yellow; }
-   .float { margin: 0; width: 5em; height: 1.5em; background: orange; float: right; }
-   .clear { margin-top: 3em; height: 1.5em; background: aqua; clear: both; }
-   .control { border: solid; width: 10em; background: yellow; margin: 1em; }
-   .control .a { margin: 0 0 0 auto; width: 5em; height: 1.5em; background: orange; }
-   .control .b { margin-top: 1.5em; height: 1.5em; background: aqua; }

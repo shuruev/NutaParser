@@ -1,9 +1,0 @@
-@import "support/at-charset-001.css"; /* shift-jis encoding with UTF-8 BOM */
-            .平和
-            {
-                color: green;
-            }
-            div
-            {
-                color: red;
-            }

@@ -1,8 +1,0 @@
-div
-            {
-                background: red;
-                clip: rect(6pc, 6pc, 6pc, 6pc);
-                height: 3in;
-                position: absolute;
-                width: 3in;
-            }

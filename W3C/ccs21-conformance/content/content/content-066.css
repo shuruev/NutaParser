@@ -1,9 +1,0 @@
-ul:before
-            {
-                content: attr(compact);
-                color: green;
-            }
-            ul
-            {
-                border: 2px solid black;
-            }

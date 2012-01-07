@@ -1,5 +1,0 @@
-p { font: 1em monospace; }
-   .filler { color: silver; }
-   .absolute { color: white; background: green; position: absolute; }
-   .fail { color: yellow; background: red; }
-   .test { position: relative; }

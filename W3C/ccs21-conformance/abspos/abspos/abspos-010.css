@@ -1,4 +1,0 @@
-table { position: absolute; background: red; border-spacing: 0; padding: 0;}
-   td { padding: 0; }
-   div { width: 3em; height: 2em; background: green; }
-   .fixed { table-layout: fixed; margin-top: 2em; }

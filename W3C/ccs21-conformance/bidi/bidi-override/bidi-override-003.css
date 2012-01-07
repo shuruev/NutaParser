@@ -1,5 +1,0 @@
-ul, li { margin: 1em 2em; padding: 0; }
-      .override {
-        direction: rtl;
-        unicode-bidi: bidi-override;
-      }

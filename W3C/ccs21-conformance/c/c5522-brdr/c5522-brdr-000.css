@@ -1,8 +1,0 @@
-p { color: blue; padding: 1em; }
-   .one {border: orange solid;}
-   .three {border: thick orange outset;}
-   .four {border: thick orange inset;}
-   .two {border: 10px orange ridge;}
-   .six {border: 10px orange double;}
-   .five {border: 10px red;}
-   .seven {border: left red solid;}

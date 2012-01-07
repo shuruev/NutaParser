@@ -1,9 +1,0 @@
-div
-            {
-                display: inline-block;
-                quotes: "P" "S" "A" "S";
-            }
-            div:before
-            {
-                content: open-quote open-quote close-quote close-quote;
-            }

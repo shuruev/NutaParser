@@ -1,9 +1,0 @@
-#wrapper
-            {
-                direction: rtl;
-            }
-            div div
-            {
-                direction: ltr;
-                border: 2px solid blue;
-            }

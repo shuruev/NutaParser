@@ -1,5 +1,0 @@
-.one { color: red; background: white; }
-  .\ident, .one { color: green; }
-
-  .two { color: red; background: white; }
-  #\ident, .two { color: green; }

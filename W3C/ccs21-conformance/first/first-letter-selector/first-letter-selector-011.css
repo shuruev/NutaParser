@@ -1,5 +1,0 @@
-div p:first-letter, span
-            {
-                color: green;
-                letter-spacing: 45px;
-            }

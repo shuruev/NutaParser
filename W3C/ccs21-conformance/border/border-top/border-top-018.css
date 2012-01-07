@@ -1,9 +1,0 @@
-#div1
-            {
-                border-top: 1in solid blue;
-                padding-top: 10px;
-            }
-            div div
-            {
-                border-top: inherit;
-            }
