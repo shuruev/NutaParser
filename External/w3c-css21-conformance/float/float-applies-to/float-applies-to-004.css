@@ -1,0 +1,18 @@
+#test
+            {
+                background: green;
+                display: table-row;
+                float: right;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

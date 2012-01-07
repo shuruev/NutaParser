@@ -1,0 +1,12 @@
+table
+            {
+                width: 100px;
+            }
+            td
+            {
+                border: solid thin black;
+            }
+            *
+            {
+                white-space: normal;
+            }

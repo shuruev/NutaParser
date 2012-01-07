@@ -1,0 +1,5 @@
+body { border: solid lime; background: green url(support/square-purple.png) no-repeat 50% 50%; color: white; }
+   html { border: solid blue; background: navy; color: yellow; }
+   :link, :visited { color: inherit; background: transparent; }
+   * { margin: 1em 5%; padding: 1em; }
+   body { margin-right: 30%; }

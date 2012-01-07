@@ -1,0 +1,8 @@
+body:before
+            {
+                content: attr(text);
+            }
+            p
+            {
+                color: black;
+            }

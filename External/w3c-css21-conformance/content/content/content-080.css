@@ -1,0 +1,9 @@
+td:before
+            {
+                content: attr(headers);
+                color: green;
+            }
+            td
+            {
+                border: 2px solid black;
+            }

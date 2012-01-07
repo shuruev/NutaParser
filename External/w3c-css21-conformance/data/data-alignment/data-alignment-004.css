@@ -1,0 +1,13 @@
+col
+            {
+                text-align: center;
+                vertical-align: middle;
+            }
+            td
+            {
+                border: solid;
+                height: 10em;
+                text-align: left;
+                vertical-align: top;
+                width: 10em;
+            }

@@ -1,0 +1,10 @@
+script:before
+            {
+                content: attr(defer);
+                color: green;
+            }
+            script
+            {
+                border: 2px solid black;
+                display: block;
+            }

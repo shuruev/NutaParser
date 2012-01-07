@@ -1,0 +1,16 @@
+div
+            {
+                font: 20px/1 Ahem;
+                height: 1in;
+                width: 0;
+            }
+            #div1
+            {
+                border-left: 1ex solid red;
+                padding-left: 1ex;
+            }
+            div div
+            {
+                border-left: 1ex solid black;
+                margin-left: -2ex;
+            }

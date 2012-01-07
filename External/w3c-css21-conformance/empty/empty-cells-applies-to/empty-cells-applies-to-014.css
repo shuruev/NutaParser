@@ -1,0 +1,23 @@
+#table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                color: white;
+                display: table-cell;
+            }
+            #test
+            {
+                background: red;
+                border: 5px solid red;
+                display: table-cell;
+                empty-cells: hide;
+                height: 1em;
+                width: 1em;
+            }

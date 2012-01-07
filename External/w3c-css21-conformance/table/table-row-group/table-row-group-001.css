@@ -1,0 +1,20 @@
+.table
+            {
+                border: 2px solid black;
+                display: table;
+            }
+            #tbody
+            {
+                background: blue;
+                display: table-row-group;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                display: table-cell;
+                height: 2em;
+                width: 2em;
+            }

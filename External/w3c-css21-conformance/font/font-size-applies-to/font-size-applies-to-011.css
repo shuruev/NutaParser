@@ -1,0 +1,24 @@
+#div1
+            {
+                background: orange;
+                height: 1in;
+                width: 1in;
+            }
+            div
+            {
+                font-family: Ahem;
+                line-height: 1em;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+                font-size: 1in;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

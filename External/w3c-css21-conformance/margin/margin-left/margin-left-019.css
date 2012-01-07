@@ -1,0 +1,18 @@
+div
+            {
+                height: 1in;
+                width: 0;
+            }
+            #wrapper
+            {
+                border-left: 6pt solid red;
+            }
+            #div1
+            {
+                margin-left: 72pt;
+            }
+            #div2
+            {
+                border-left: 6pt solid black;
+                margin-left: -78pt;
+            }

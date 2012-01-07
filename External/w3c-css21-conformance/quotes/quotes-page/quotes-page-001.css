@@ -1,0 +1,17 @@
+#test
+            {
+                border: solid blue;
+                quotes: '"' '"' "'" "'";
+            }
+            #test div:before
+            {
+                content: open-quote;
+            }
+            #test div:after
+            {
+                content: close-quote;
+            }
+            #reference
+            {
+                border: solid orange;
+            }

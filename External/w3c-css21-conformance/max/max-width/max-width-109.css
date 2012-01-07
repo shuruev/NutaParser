@@ -1,0 +1,7 @@
+#test{
+	width:200px;
+  }
+  #test img{
+  	max-width:100px;
+	width:200%;
+  }

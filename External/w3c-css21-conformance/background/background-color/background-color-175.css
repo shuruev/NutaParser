@@ -1,0 +1,15 @@
+div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #wrapper
+            {
+                background-color: green;
+            }
+            #test
+            {
+                border: 10px solid;
+                background-color: red;
+                background-color: inherit;
+            }

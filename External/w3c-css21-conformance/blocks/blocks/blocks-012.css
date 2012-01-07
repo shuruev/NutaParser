@@ -1,0 +1,4 @@
+.container { width: 3em; }
+   .test { margin-left: 0; border-left: none; padding-left: 2em; width: auto; padding-right: 2em; border-right: none; margin-right: 0; }
+   .control { margin-left: 0; border-left: none; padding-left: 0; width: 4em; padding-right: 0; border-right: none; margin-right: 0; }
+   div { background: navy; height: 1em; }

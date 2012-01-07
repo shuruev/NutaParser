@@ -1,0 +1,9 @@
+span
+            {
+                unicode-bidi: embed;
+            }
+            div
+            {
+                border: 2px solid blue;
+                direction: rtl;
+            }

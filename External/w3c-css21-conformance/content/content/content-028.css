@@ -1,0 +1,10 @@
+div:before
+            {
+                content: counters(test, ".", upper-roman);
+                counter-increment: test;
+                counter-reset: test;
+            }
+            #div1
+            {
+                border: 2px solid black;
+            }

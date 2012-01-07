@@ -1,0 +1,3 @@
+.test { color: green; }
+   .test { test: not-nested; text-decoration: underline; }
+test { test:nested; color: yellow; background: red; }

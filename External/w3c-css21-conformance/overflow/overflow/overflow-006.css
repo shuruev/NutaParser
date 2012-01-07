@@ -1,0 +1,6 @@
+p { color: green; }
+   .container { border: solid white; position: relative; }
+   .overflow { overflow: auto; color: yellow; background: red; height: 0; }
+   .float { float: left; background: red; color: yellow; width: 10em; }
+   .pass { background: white; color: black; width: 10em; }
+   .fail { background: black; position: absolute; top: 1em; }

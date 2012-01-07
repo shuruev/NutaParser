@@ -1,0 +1,6 @@
+div
+            {
+                background: orange url("support/blue15x15.png") repeat-x bottom;
+                height: 100px;
+                width: 100px;
+            }

@@ -1,0 +1,9 @@
+body
+            {
+                margin: 50px;
+            }
+            div
+            {
+                display: list-item;
+                list-style-image: url('support/blue15x15.png');
+            }

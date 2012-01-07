@@ -1,0 +1,22 @@
+#test
+            {
+                display: table-caption;
+                list-style-image: url('support/blue15x15.png');
+            }
+            #table
+            {
+                display: table;
+                margin-left: 1in;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #test div
+            {
+                display: list-item;
+            }

@@ -1,0 +1,11 @@
+div
+            {
+                color: orange;
+                font: 1em/1 Ahem;
+                text-align: justify;
+                width: 20em;
+            }
+            span
+            {
+                color: blue;
+            }

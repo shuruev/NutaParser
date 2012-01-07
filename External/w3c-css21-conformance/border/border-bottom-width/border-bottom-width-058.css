@@ -1,0 +1,11 @@
+#wrapper
+            {
+                background: red;
+                height: 1in;
+            }
+            #test
+            {
+                border-bottom-style: solid;
+                border-bottom-width: 1in;
+                height: 0;
+            }

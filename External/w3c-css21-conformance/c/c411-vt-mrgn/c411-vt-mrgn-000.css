@@ -1,0 +1,35 @@
+/* test */
+   p.one      { margin-top: 0;    margin-bottom: 2cm;                                                }
+   p.two      { margin-top: 2cm;  margin-bottom: 0;                                                  }
+   p.three    { margin-top: 0;    margin-bottom: 0;                                                  }
+   p.four     { margin-top: -1cm; margin-bottom: 0;                                                  }
+   div.five   { margin-top: 1cm;  margin-bottom: 1cm;  padding-top: 1cm;                             }
+   p.six      { margin-top: 1cm;  margin-bottom: 1cm;                                                }
+   p.seven    { margin-top: 1cm;  margin-bottom: 0;                                                  }
+   p.eight    { margin-top: 0;    margin-bottom: -1cm; padding-bottom: 2cm;                          }
+   p.nine     { margin-top: -1cm; margin-bottom: 1cm;  padding-top: 1cm;                             }
+   p.ten      { margin-top: 1cm;  margin-bottom: 0;                         float: left; width: 50%; }
+   p.eleven   { margin-top: 1cm;  margin-bottom: 0;                                                  }
+   p.twelve   { margin-top: 0;    margin-bottom: 0;    padding-bottom: 1cm; clear: both;             }
+   p.thirteen { margin-top: 0;    margin-bottom: 0;    padding-top: 1cm;                             }
+
+   /* control */
+   td { width: 5em; padding: 0; border: solid; }
+   .p { margin: 0; padding: 0; height: auto; }
+   .h1 { margin: 0; padding: 0; height: 1cm; }
+   .h2 { margin: 0; padding: 0; height: 2cm; }
+   .h3 { margin: 0; padding: 0; height: 3cm; }
+   .w50 { width: 50%; }
+   .l50 { margin-left: 50%; }
+   .contain { position: relative; } /* XXX relies on CSS2 stuff */
+   .bottom { position: absolute; bottom: 0; }
+   .left { position: absolute; left: 0; }
+
+   /* colours */
+   .teal, .test { background: teal; }
+   .yellow, .one, .seven, .thirteen { background: yellow; }
+   .fuchsia, .two, .eight { background: fuchsia; }
+   .lime, .three, .nine { background: lime; }
+   .white, .four, .ten { background: white; }
+   .aqua, .five, .eleven { background: aqua; }
+   .orange, .six, .twelve { background: orange; }

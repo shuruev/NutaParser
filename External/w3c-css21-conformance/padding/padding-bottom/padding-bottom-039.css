@@ -1,0 +1,14 @@
+div
+            {
+                height: 0;
+            }
+            #div1
+            {
+                border-top: 2.54cm solid red;
+                padding-bottom: 2.54cm;
+            }
+            #div2
+            {
+                border-bottom: 2.54cm solid black;
+                margin-top: -5.08cm;
+            }

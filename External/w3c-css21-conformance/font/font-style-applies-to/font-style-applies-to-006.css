@@ -1,0 +1,13 @@
+#table
+            {
+                display: table;
+                font-style: italic;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

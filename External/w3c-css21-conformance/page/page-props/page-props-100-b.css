@@ -1,0 +1,12 @@
+@page {
+        margin: 7%;
+    }
+    @page :first {
+        margin-left: 50%;
+    }
+    @page :left {
+        margin-left: 50%;
+    }
+    p {
+        page-break-after: always;
+    }

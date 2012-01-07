@@ -1,0 +1,27 @@
+#table
+            {
+                display: table;
+            }
+            #test
+            {
+                border-collapse: collapse;
+                display: table-column;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            #top, #bottom
+            {
+                display: table-cell;
+                height: 100px;
+                width: 100px;
+            }
+            #top
+            {
+                border-bottom: 10px solid blue;
+            }
+            #bottom
+            {
+                border-top: 10px dotted orange;
+            }

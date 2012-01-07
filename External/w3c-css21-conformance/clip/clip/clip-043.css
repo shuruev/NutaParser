@@ -1,0 +1,8 @@
+div
+            {
+                background: red;
+                clip: rect(2.54cm, 2.54cm, 2.54cm, 2.54cm);
+                height: 3in;
+                position: absolute;
+                width: 3in;
+            }

@@ -1,0 +1,14 @@
+div
+            {
+                font: 20px/1 Ahem;
+                height: 0;
+            }
+            #div1
+            {
+                border-top: 5px solid blue;
+                padding-bottom: +0em;
+            }
+            #div2
+            {
+                border-bottom: 5px solid orange;
+            }

@@ -1,0 +1,10 @@
+#span1
+            {
+                font-size: 16px;
+            }
+            #span2
+            {
+                background: orange;
+                display: inline-block;
+                width: 5em;
+            }

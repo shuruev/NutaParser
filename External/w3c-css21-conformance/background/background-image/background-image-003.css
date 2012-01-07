@@ -1,0 +1,13 @@
+#div1
+            {
+                background-image: url("support/green_box.png");
+                height: 0;
+                width: 0;
+            }
+            #test
+            {
+                background-color: red;
+                background-image: inherit;
+                height: 1in;
+                width: 1in;
+            }

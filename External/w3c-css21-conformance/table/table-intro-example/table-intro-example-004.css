@@ -1,0 +1,13 @@
+caption
+            {
+                color: blue;
+                caption-side: top;
+            }
+            td
+            {
+                border: solid black;
+            }
+            th
+            {
+                border: solid black;
+            }

@@ -1,0 +1,9 @@
+div
+            {
+                border-right-style: solid;
+                border-right-color: green;
+                display: list-item;
+                height: 1in;
+                margin-left: 50px;
+                width: 0;
+            }

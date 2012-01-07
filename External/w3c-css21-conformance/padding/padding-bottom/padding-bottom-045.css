@@ -1,0 +1,13 @@
+div
+            {
+                height: 0;
+            }
+            #div1
+            {
+                border-top: 5px solid blue;
+                padding-bottom: -1mm;
+            }
+            #div2
+            {
+                border-bottom: 5px solid orange;
+            }

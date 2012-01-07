@@ -1,0 +1,14 @@
+span
+            {
+                display: block;
+                width: 200px;
+            }
+            #span1
+            {
+                border-top: 10px solid blue;
+                padding-top: 50px;
+            }
+            span span
+            {
+                border-top: 10px solid orange;
+            }

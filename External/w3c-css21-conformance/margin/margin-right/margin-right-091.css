@@ -1,0 +1,20 @@
+div
+            {
+                direction: rtl;
+                font: 20px/1 Ahem;
+                height: 1in;
+                width: 0;
+            }
+            #wrapper
+            {
+                border-right: 1ex solid red;
+            }
+            #div1
+            {
+                margin-right: 7.5ex;
+            }
+            #div2
+            {
+                border-right: 1ex solid black;
+                margin-right: -8.5ex;
+            }

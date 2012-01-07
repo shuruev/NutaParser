@@ -1,0 +1,15 @@
+div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #div1
+            {
+                background: red;
+            }
+            #div2
+            {
+                background: green;
+                clip: auto;
+                position: absolute;
+            }

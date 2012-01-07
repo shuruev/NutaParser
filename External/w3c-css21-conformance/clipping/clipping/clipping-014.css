@@ -1,0 +1,23 @@
+.green {
+  width: 100px;
+  height: 200px;
+  background-color: green;
+  border: 10px solid red;
+}
+
+.clip {
+  clip: rect(10px 110px 110px 10px);
+}
+
+.positioned {
+  position: absolute;
+  overflow: scroll;
+}
+
+.tall {
+  height: 1000px;
+}
+p
+{
+    height: 40px;
+}

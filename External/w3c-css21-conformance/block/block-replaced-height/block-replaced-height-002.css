@@ -1,0 +1,20 @@
+div
+            {
+                line-height: 0;
+                position: relative;
+            }
+            div div
+            {
+                background: orange;
+                height: 15px;
+                left: 15px;
+                position: absolute;
+                top: 0;
+                width: 15px;
+            }
+            img
+            {
+                display: block;
+                height: auto;
+                width: auto;
+            }

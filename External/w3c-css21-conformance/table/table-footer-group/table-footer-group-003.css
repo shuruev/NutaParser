@@ -1,0 +1,35 @@
+.table
+            {
+                display: table;
+            }
+            .caption
+            {
+                background: orange;
+                border: 1px solid black;
+                caption-side: bottom;
+                color: orange;
+                display: table-caption;
+                height: 4em;
+                width: 4em;
+            }
+            #tfoot
+            {
+                background: blue;
+                display: table-footer-group;
+            }
+            #tbody
+            {
+                background: orange;
+                display: table-row-group;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                border: 1px solid black;
+                display: table-cell;
+                height: 4em;
+                width: 4em;
+            }

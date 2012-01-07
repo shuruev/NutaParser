@@ -1,0 +1,19 @@
+div
+            {
+                position: relative;
+            }
+            #div2
+            {
+                background: black;
+                max-height: 2.54cm;
+                height: 5cm;
+                width: 1in;
+            }
+            #div3
+            {
+                border-top: 2.54cm solid black;
+                left: 1.1in;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }

@@ -1,0 +1,8 @@
+div
+            {
+                display: block;
+            }
+            span
+            {
+                display: inherit;
+            }

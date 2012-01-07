@@ -1,0 +1,12 @@
+#span1
+            {
+                background-color: orange;
+                float: left;
+                height: 1in;
+                width: 1in;
+            }
+            #span2
+            {
+                background: blue;
+                clear: left;
+            }

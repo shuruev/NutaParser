@@ -1,0 +1,22 @@
+#table1
+            {
+                border-collapse: separate;
+            }
+            #table2
+            {
+                border: 30px outset;
+                border-collapse: collapse;
+            }
+            td
+            {
+                height: 5em;
+                width: 5em;
+            }
+            #table1 td
+            {
+                border: 30px groove;
+            }
+            #table2 td
+            {
+                border: 30px outset;
+            }

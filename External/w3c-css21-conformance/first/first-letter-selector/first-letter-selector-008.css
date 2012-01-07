@@ -1,0 +1,8 @@
+div:first-letter
+            {
+                color: green;
+            }
+            div
+            {
+                display: inline-block;
+            }

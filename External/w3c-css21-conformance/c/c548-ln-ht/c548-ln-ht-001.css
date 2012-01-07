@@ -1,0 +1,8 @@
+div { font: 12px Ahem; background: red url(support/pattern-gg-gr.png); color: lime; width: 4em; padding: 0.5em 0 0.5em 1em; border: solid black; margin: 0.5em; }
+   p { margin: 0; }
+   .one {line-height: 0.25in;}
+   .two {line-height: 0.635cm;}
+   .three {line-height: 6.35mm;}
+   .four {line-height: 18pt;}
+   .five {line-height: 1.5pc;}
+   .six {line-height: 2em;}

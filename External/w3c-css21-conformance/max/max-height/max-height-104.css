@@ -1,0 +1,10 @@
+#div1
+            {
+                max-height: 1px;
+            }
+            div div
+            {
+                background: black;
+                height: 2in;
+                max-height: inherit;
+            }

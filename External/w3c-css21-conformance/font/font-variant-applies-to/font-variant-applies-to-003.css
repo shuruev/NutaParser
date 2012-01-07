@@ -1,0 +1,12 @@
+body
+            {
+                margin-left: 2em;
+            }
+            div
+            {
+                font-variant: small-caps;
+            }
+            #div1
+            {
+                display: list-item;
+            }

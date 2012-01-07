@@ -1,0 +1,17 @@
+div
+            {
+                height: 0;
+            }
+            #wrapper
+            {
+                width: 1in;
+            }
+            #div1
+            {
+                border-bottom: 5px solid blue;
+                margin-bottom: 0%;
+            }
+            #div2
+            {
+                border-top: 5px solid orange;
+            }

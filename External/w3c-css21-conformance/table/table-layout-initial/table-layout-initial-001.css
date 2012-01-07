@@ -1,0 +1,25 @@
+table
+            {
+                background: black;
+                border-spacing: 0;
+                width: 10em;
+            }
+            colgroup
+            {
+                width: 5em;
+            }
+            td
+            {
+                overflow: hidden;
+                padding: 0;
+            }
+            #div1
+            {
+                background: blue;
+                height: 2em;
+                width: 20em;
+            }
+            td, #div1
+            {
+                font: 20px/1em Ahem;
+            }

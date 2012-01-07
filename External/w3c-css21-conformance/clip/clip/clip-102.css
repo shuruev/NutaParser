@@ -1,0 +1,12 @@
+#div1
+            {
+                clip: rect(0, 0, 0, 0);
+            }
+            #div2
+            {
+                background: red;
+                clip: inherit;
+                height: 1in;
+                position: absolute;
+                width: 1in;
+            }

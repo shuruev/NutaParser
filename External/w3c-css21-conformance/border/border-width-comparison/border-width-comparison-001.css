@@ -1,0 +1,15 @@
+#thin
+            {
+                border-top: thin solid green;
+                height: 20px;
+            }
+            #medium
+            {
+                border-top: medium solid green;
+                height: 20px;
+            }
+            #thick
+            {
+                border-top: thick solid green;
+                height: 20px;
+            }

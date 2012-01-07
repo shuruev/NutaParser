@@ -1,0 +1,11 @@
+div
+            {
+                background: blue;
+                width: 300px;
+            }
+            table
+            {
+                background: black;
+                margin: 0;
+                width: auto;
+            }

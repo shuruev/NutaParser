@@ -1,0 +1,13 @@
+div
+            {
+                display: inline;
+            }
+            #div1
+            {
+                background: black;
+                padding-left: 100px;
+            }
+            div div
+            {
+                background: white;
+            }

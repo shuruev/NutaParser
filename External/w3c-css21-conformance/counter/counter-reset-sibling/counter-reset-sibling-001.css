@@ -1,0 +1,12 @@
+div
+            {
+                counter-increment: test 5;
+            }
+            #test
+            {
+                counter-reset: test 5;
+            }
+            div:before
+            {
+                content: counter(test);
+            }

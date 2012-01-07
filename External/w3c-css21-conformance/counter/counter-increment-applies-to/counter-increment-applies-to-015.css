@@ -1,0 +1,21 @@
+#table
+            {
+                display: table;
+            }
+            #caption
+            {
+                display: table-caption;
+                counter-increment: test 5;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #cell:before
+            {
+                content: counter(test);
+            }

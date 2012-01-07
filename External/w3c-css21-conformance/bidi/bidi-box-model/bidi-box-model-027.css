@@ -1,0 +1,15 @@
+div {
+      background: navy;
+      color: orange;
+      font: 1em/1 Ahem;
+      text-align: right;
+      margin-bottom: 1em;
+      margin-right: 5em;
+      }
+      
+      .rtol {
+      direction: rtl;
+      unicode-bidi: embed;
+      }
+      
+      p {text-align: left;}

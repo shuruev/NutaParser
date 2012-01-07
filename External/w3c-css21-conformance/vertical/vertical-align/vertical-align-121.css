@@ -1,0 +1,6 @@
+.ahemprereq { display: inline; font: 900 1em/1 Ahem, sans-serif; background: red; color: white; }
+   div { color: navy; text-align: center; width: 6em; font: 2em/1 Ahem; }
+   span { font-size: 2em; }
+   .bottom { border-bottom: solid blue; }
+   .bottom span { vertical-align: bottom; }
+   .top span { vertical-align: top; }

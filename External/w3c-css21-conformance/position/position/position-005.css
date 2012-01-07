@@ -1,0 +1,13 @@
+#wrapper
+            {
+                background: red;
+                border: 3px solid orange;
+                position: absolute;
+            }
+            #div1
+            {
+                background: blue;
+                left: 1in;
+                position: inherit;
+                top: 1in;
+            }

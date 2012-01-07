@@ -1,0 +1,13 @@
+div
+            {
+                direction: ltr;
+            }
+            div div
+            {
+                direction: inherit;
+                border: 2px solid blue;
+            }
+            #wrapper
+            {
+                direction: rtl;
+            }

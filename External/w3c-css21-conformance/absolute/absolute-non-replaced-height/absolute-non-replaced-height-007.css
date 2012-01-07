@@ -1,0 +1,19 @@
+#div1
+            {
+                color: orange;
+                font: 1in/1em Ahem;
+                height: 4in;
+                position: relative;
+                width: 2in;
+            }
+            div div
+            {
+                background: blue;
+                bottom: 3in;
+                height: auto;
+                margin-bottom: auto;
+                margin-top: auto;
+                position: absolute;
+                top: auto;
+                width: 100%;
+            }

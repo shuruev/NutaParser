@@ -1,0 +1,9 @@
+table:before
+            {
+                content: attr(frame);
+                color: green;
+            }
+            table
+            {
+                border: 2px solid black;
+            }

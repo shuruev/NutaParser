@@ -1,0 +1,5 @@
+table, caption, tbody, tr, th, td
+  {
+  display: inline;
+  vertical-align: baseline;
+  }

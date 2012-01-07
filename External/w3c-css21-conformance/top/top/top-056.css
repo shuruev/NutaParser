@@ -1,0 +1,22 @@
+div
+            {
+                position: relative;
+            }
+            #div1
+            {
+                margin-top: -25.4mm;
+            }
+            #div2
+            {
+                background: red;
+                height: 25.4mm;
+                margin-top: 25.4mm;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            #div3
+            {
+                border-bottom: 25.4mm solid black;
+                top: +25.4mm;
+            }

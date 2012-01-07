@@ -1,0 +1,16 @@
+table
+            {
+                border-spacing: 0;
+            }
+            td
+            {
+                color: blue;
+                font: 16px/1em Ahem;
+                padding: 0;
+                vertical-align: middle;
+            }
+            #short
+            {
+                color: orange;
+                height: 1em;
+            }

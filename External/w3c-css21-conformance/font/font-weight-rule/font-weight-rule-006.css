@@ -1,0 +1,12 @@
+#parent
+            {
+                font-weight: bold;
+            }
+            #reference
+            {
+                font-weight: normal;
+            }
+            div div
+            {
+                font-weight: lighter;
+            }

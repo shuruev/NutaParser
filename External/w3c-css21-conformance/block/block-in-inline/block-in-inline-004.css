@@ -1,0 +1,3 @@
+.inline { color: blue; display: inline; }
+   .block { display: block; } 
+   .inline:hover { color: green; }

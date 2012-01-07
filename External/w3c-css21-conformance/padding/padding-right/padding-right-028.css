@@ -1,0 +1,16 @@
+div
+            {
+                direction: rtl;
+                height: 1in;
+                width: 0;
+            }
+            #div1
+            {
+                border-right: 1pc solid red;
+                padding-right: 6pc;
+            }
+            div div
+            {
+                border-right: 1pc solid black;
+                margin-right: -7pc;
+            }

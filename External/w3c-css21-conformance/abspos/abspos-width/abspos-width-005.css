@@ -1,0 +1,2 @@
+.relative { position: relative; border: fuchsia thin solid; padding: 1em; width: 10em; height: 5em; }
+   .absolute { position: absolute; border: aqua thin solid; padding: 1em; max-width: 3em; }

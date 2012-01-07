@@ -1,0 +1,7 @@
+div {
+     background: red -5px -5px url(support/bordered-rectangle.png) scroll;
+     border: 10px dotted silver;
+     overflow: auto; height: 90px; width: 190px;
+     white-space: pre; font-size: 16px;
+   }
+   ul { color: navy; }

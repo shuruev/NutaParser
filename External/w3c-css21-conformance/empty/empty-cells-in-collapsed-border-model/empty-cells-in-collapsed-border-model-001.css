@@ -1,0 +1,12 @@
+table
+            {
+                background: red;
+                border-collapse: collapse;
+                empty-cells: hide;
+            }
+            td
+            {
+                background: green;
+                color: green;
+                padding: 0;
+            }

@@ -1,0 +1,5 @@
+body {direction:rtl;}
+      ul {
+      text-align: right;
+      list-style-position: inside;
+      }

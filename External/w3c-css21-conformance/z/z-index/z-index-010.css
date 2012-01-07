@@ -1,0 +1,24 @@
+#div1
+            {
+                background: green;
+                height: 1in;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 1in;
+                z-index: 2147483647;
+            }
+            #div2
+            {
+                background: red;
+                height: 1in;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 1in;
+                z-index: 100;
+            }
+            #wrapper
+            {
+                position: relative;
+            }

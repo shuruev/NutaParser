@@ -1,0 +1,18 @@
+table
+            {
+                border-collapse: collapse;
+                height: 2in;
+                width: 2in;
+            }
+            td
+            {
+                border: 5px solid black;
+            }
+            .collapsing1
+            {
+                border-left: red;
+            }
+            #collapsing2
+            {
+                border-top: red;
+            }

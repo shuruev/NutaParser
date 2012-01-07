@@ -1,0 +1,13 @@
+html,body,div { margin: 0; border: 0; padding: 0; }
+   div { font: 15px/1 Ahem; color: white; width: 11em; }
+   .right { width: auto; text-align: right; }
+
+   /* tests */
+   body {background-image: url(support/swatch-red.png); background-position: right top;
+         background-repeat: no-repeat;}
+   .one {background-image: url(support/swatch-red.png); background-position: center;
+         background-repeat: no-repeat;}
+   .two {background-image: url(support/swatch-red.png); background-position: 50% 50%;
+         background-repeat: no-repeat;}
+   .three {background-image: url(support/swatch-red.png); background-position: bottom right;
+           background-repeat: no-repeat;}

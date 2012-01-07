@@ -1,0 +1,18 @@
+div
+            {
+                font: 20px/1 Ahem;
+            }
+            #div1
+            {
+                white-space: normal;
+            }
+            span
+            {
+                background: black;
+            }
+            #div2
+            {
+                background: blue;
+                height: 1em;
+                width: 5em;
+            }

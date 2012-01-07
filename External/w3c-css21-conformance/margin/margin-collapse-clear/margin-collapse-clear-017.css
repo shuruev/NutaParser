@@ -1,0 +1,29 @@
+body
+  {
+  background: white url("support/ruler-v-100px-200px-300px.png") no-repeat;
+  margin: 34px 8px 8px 55px; /* max(34px, 16px) + 20px + 20px + 16px + 10px = 100px */
+  }
+
+  p
+  {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 1em 8px;
+  }
+
+  #parent-block
+  {
+  margin-bottom: 100px;
+  }
+
+  .vertical-gap-separator
+  {
+  background-color: green;
+  height: 10px;
+  }
+
+  #element-without-clearance-applied
+  {
+  clear: both;
+  margin-top: 100px;
+  }

@@ -1,0 +1,16 @@
+*
+            {
+                margin: 0;
+            }
+            div
+            {
+                background: blue;
+                float: right;
+                height: 1in;
+                position: absolute;
+                width: 1in;
+            }
+            p
+            {
+                padding-top: 1.1in;
+            }

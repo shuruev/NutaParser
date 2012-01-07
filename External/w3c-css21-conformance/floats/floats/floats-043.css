@@ -1,0 +1,19 @@
+div
+            {
+                border-top: solid 5px black;
+                width: 3in;
+            }
+            span
+            {
+                float: right;
+                height: 1in;
+                width: 1in;
+            }
+            #span1
+            {
+                background-color: orange;
+            }
+            #span2
+            {
+                background-color: blue;
+            }

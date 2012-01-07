@@ -1,0 +1,15 @@
+#table
+            {
+                border-left: solid green;
+                display: inline-table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                displaY: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+            }

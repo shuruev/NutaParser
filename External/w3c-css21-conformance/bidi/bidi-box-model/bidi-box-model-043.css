@@ -1,0 +1,14 @@
+div {
+      width: 20em;
+      text-align: right;
+      padding-right: 5em;
+      margin-bottom: 1em;
+      background: navy;
+      font: 1em/1 Ahem;
+      color: orange;
+      }
+
+      .rtol {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      }

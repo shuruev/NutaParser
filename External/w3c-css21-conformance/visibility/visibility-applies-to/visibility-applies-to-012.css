@@ -1,0 +1,14 @@
+#div1
+            {
+                background: red;
+                display: inline-block;
+                height: 1in;
+                visibility: hidden;
+                width: 1in;
+            }
+            .box
+            {
+                background: black;
+                height: 1em;
+                width: 1in;
+            }

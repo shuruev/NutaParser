@@ -1,0 +1,9 @@
+div
+            {
+                counter-reset: ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648 ident -2147483648;
+            }
+            div:before
+            {
+                font-size: 30px;
+                content: counter(ident);
+            }

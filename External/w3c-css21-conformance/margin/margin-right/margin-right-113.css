@@ -1,0 +1,20 @@
+div
+            {
+                direction: rtl;
+                height: 96px;
+                width: 96px;
+            }
+            #wrapper
+            {
+                border-right: 96px solid red;
+                margin-right: 48px;
+            }
+            #div1
+            {
+                margin-right: inherit;
+            }
+            #div2
+            {
+                border-right: 96px solid black;
+                margin-right: -144px;
+            }

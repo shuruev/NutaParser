@@ -1,0 +1,10 @@
+body
+            {
+                margin-right: 50px;
+            }
+            div
+            {
+                direction: rtl;
+                display: list-item;
+                unicode-bidi: bidi-override;
+            }

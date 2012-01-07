@@ -1,0 +1,18 @@
+div
+            {
+                height: 25px;
+                white-space: pre;
+            }
+            span
+            {
+                background: blue;
+                font: 50px Ahem;
+            }
+            #span1
+            {
+                line-height: 50px;
+            }
+            #span2
+            {
+                line-height: 10px;
+            }

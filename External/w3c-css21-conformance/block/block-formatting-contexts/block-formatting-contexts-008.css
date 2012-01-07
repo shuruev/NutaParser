@@ -1,0 +1,14 @@
+#div1
+            {
+                border: solid;
+                height: 200px;
+                width: 200px;
+            }
+            div div
+            {
+                background: blue;
+                display: inline;
+                float: right;
+                height: 50%;
+                width: 100%;
+            }

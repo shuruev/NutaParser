@@ -1,0 +1,12 @@
+div
+            {
+                counter-increment: hidden 1;
+            }
+            #div1
+            {
+                display: none;
+            }
+            div:before
+            {
+                content: counter(hidden);
+            }

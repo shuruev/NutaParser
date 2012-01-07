@@ -1,0 +1,8 @@
+div p:first-letter, span
+            {
+                border: 3px solid black;
+                color: silver;
+                font-size: 36px;
+                text-decoration: underline;
+                text-transform: lowercase;
+            }

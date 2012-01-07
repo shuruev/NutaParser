@@ -1,0 +1,20 @@
+#reference, #test
+            {
+                font-variant: small-caps;
+            }
+            #table
+            {
+                display: table;
+            }
+            #test
+            {
+                display: table-header-group;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

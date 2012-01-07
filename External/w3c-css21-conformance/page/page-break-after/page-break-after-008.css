@@ -1,0 +1,10 @@
+@page {margin: 7%;}
+	@page :left {
+		@top-center 
+		{
+			content: "[This page intentionally left blank]";
+		}
+	}
+	p {
+		page-break-after: right;
+	}

@@ -1,0 +1,21 @@
+table, div
+            {
+                font: 1em Ahem;
+            }
+            table
+            {
+                background: black;
+                border-spacing: 0;
+                table-layout: auto;
+                width: 5em;
+            }
+            td
+            {
+                padding: 0;
+            }
+            div
+            {
+                background: black;
+                margin-top: 10px;
+                width: 10em;
+            }

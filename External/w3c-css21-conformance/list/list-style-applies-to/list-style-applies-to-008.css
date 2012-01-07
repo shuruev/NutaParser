@@ -1,0 +1,10 @@
+div
+            {
+                display: inline;
+                list-style: square;
+            }
+            span
+            {
+                display: list-item;
+                margin-left: 1in;
+            }

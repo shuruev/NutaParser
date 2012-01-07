@@ -1,0 +1,9 @@
+#div1:before
+            {
+                counter-reset: notgenerated 10;
+                display: none;
+            }
+            div:before
+            {
+                content: counter(notgenerated);
+            }

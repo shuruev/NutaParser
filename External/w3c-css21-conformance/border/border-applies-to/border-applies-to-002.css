@@ -1,0 +1,21 @@
+#test
+            {
+                border: solid green;
+                display: table-header-group;
+            }
+            #table
+            {
+                border-collapse: collapse;
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

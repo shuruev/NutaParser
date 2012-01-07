@@ -1,0 +1,25 @@
+#table
+            {
+                display: table;
+                background: black;
+            }
+            .col, #col1
+            {
+                display: table-column;
+            }
+            #col1
+            {
+                visibility: collapse;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td1, .td2
+            {
+                display: table-cell;
+            }
+            .td2
+            {
+                background: red;
+            }

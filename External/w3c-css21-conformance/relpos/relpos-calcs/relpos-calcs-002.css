@@ -1,0 +1,21 @@
+div {
+            height: 120px;
+            width: 120px;
+        }
+        .container {
+            margin-top: -60px;
+        }
+        .outer {
+            background: red;
+            position: relative;
+            top: 50%;
+        }
+        .inner {
+            background: green;
+            position: relative;
+            bottom: inherit; /* using inheritance to test computed vs. used */
+        }
+        .control {
+          background: red;
+          margin-top: -60px;
+        }

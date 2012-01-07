@@ -1,0 +1,18 @@
+table
+            {
+                background: red;
+                border-collapse: collapse;
+            }
+            colgroup, col
+            {
+                background-color: red;
+            }
+            tbody
+            {
+                background-color: green;
+            }
+            td
+            {
+                height: 2em;
+                width: 2em;
+            }

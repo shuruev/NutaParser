@@ -1,0 +1,8 @@
+div
+            {
+                background-color: red;
+                color: blue;
+                display: inline-block;
+                font: 1in/1em Ahem;
+                width: auto;
+            }

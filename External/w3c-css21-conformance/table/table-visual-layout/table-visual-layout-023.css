@@ -1,0 +1,15 @@
+table
+            {
+                background: blue;
+            }
+            td
+            {
+                background: black;
+                height: 2em;
+                width: 2em;
+            }
+            #positioned
+            {
+                left: 200px;
+                position: absolute;
+            }

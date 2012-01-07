@@ -1,0 +1,8 @@
+body:before {
+  content:"Before";
+  border:inherit;
+}
+.cl:after {
+  display:block;
+  content:"After";
+}

@@ -1,0 +1,7 @@
+@media tty
+            {
+                div
+                {
+                    color: red;
+                }
+            }

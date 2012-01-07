@@ -1,0 +1,21 @@
+#div1
+            {
+                margin-left: 1em;
+                position: relative;
+            }
+            div div
+            {
+                background: orange;
+                height: 2in;
+                left: 1in;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }
+            span
+            {
+                background: blue;
+                display: list-item;
+                line-height: 2in;
+                width: 1in;
+            }

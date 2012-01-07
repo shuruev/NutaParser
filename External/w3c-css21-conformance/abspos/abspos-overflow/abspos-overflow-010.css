@@ -1,0 +1,8 @@
+#outer {
+    overflow: auto; /* this should have no visible effect as the element sizes vertically to fit its contents */
+    color: green;
+   }
+   #inner {
+    position: absolute; /* relative to the viewport, not that it matters */
+    z-index: -1; /* this should have no effect, as the element is fully transparent anyway */
+   }

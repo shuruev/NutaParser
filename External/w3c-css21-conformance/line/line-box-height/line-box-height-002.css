@@ -1,0 +1,18 @@
+#div1
+            {
+                position: relative;
+            }
+            img
+            {
+                display: inline;
+                line-height: 2in;
+            }
+            div div
+            {
+                background: orange;
+                height: 96px;
+                left: 1in;
+                position: absolute;
+                top: 0;
+                width: 96px;
+            }

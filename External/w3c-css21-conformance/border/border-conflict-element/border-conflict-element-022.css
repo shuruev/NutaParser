@@ -1,0 +1,14 @@
+table
+            {
+                border-collapse: collapse;
+                height: 2in;
+                width: 2in;
+            }
+            tbody
+            {
+                border: 5px solid black;
+            }
+            col
+            {
+                border: 5px solid red;
+            }

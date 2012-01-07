@@ -1,0 +1,3 @@
+div#test > span { display:inline-table; vertical-align: top; background: green; color: green; border-bottom: 0.25em solid green; border-top: 0.25em solid green; }
+div#before { height: 1em; margin-bottom:-1em; }
+div#before > span { display: inline; vertical-align: top; background: red; color: red; }

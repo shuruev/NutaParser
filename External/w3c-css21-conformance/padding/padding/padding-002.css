@@ -1,0 +1,27 @@
+#wrapper
+            {
+                position: relative;
+            }
+            #div1
+            {
+                border: 10px solid green;
+                left: 0;
+                padding: 96px 48px;
+                position: absolute;
+                top: 0;
+            }
+            #div2
+            {
+                border: 10px solid green;
+                height: 96px;
+                width: 288px;
+            }
+            #reference
+            {
+                border: 10px solid red;
+                height: 308px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 404px;
+            }

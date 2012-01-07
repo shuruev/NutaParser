@@ -1,0 +1,10 @@
+div
+            {
+                border: solid black;
+                text-align: justify;
+                width: 200px;
+            }
+            span
+            {
+                display: inline-table;
+            }

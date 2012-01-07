@@ -1,0 +1,5 @@
+div.menua, div.menub { float: left; clear: left; width: 100px; height: 100px }
+   div.menua { background: url(support/test-tl.png); }
+   div.menub { background: url(support/test-bl.png); }
+   div.article { margin-left: 100px; background: url(support/test-tr.png) no-repeat; clear: none; height: 200px; }
+   div.outer { background: url(support/test-br.png) no-repeat 100px 100px; }

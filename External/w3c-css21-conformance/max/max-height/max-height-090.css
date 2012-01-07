@@ -1,0 +1,10 @@
+#div1
+            {
+                height: 1in;
+            }
+            div div
+            {
+                background: red;
+                max-height: 0%;
+                height: 1%;
+            }

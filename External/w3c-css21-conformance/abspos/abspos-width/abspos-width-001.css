@@ -1,0 +1,6 @@
+p { color: green; }
+   div { position: absolute; }
+   td { background: red; height: 2em; padding: 0; }
+   .a { top: 4em; }
+   .b { top: 8em; }
+   .b table { width: 100%; }

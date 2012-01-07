@@ -1,0 +1,13 @@
+div#red-parent
+  {
+  background-color: red;
+  max-height: 400px;
+  overflow: scroll;
+  width: 200px;
+  }
+
+  div#green-child
+  {
+  background-color: green;
+  height: 200px;
+  }

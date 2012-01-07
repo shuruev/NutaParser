@@ -1,0 +1,13 @@
+#reference
+            {
+                border: solid green 5px;
+                margin-top: 10px;
+                width: 300px;
+            }
+            #test
+            {
+                margin: 5px 0 0 5px;
+                outline: solid green;
+                outline-width: 5px;
+                width: 300px;
+            }

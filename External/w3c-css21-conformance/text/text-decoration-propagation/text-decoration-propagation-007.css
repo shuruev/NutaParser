@@ -1,0 +1,8 @@
+#div1
+            {
+               text-decoration: underline;
+            }
+            div div
+            {
+                display: inline-block;
+            }

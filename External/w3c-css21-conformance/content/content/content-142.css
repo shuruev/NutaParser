@@ -1,0 +1,10 @@
+table:before
+            {
+                content: attr(summary);
+                color: green;
+            }
+            table
+            {
+                border: 2px solid black;
+                display: block;
+            }

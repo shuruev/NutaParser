@@ -1,0 +1,5 @@
+p { color: navy; }
+   div { margin: 1em; width: 20em; }
+   div p { margin: 0.25em; border: solid blue; padding: 0.25em; width: 7em; background: navy; color: white; }
+   div p.left { float: left; }
+   div p.right { float: right; text-align: right; }

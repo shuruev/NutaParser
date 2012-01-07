@@ -1,0 +1,9 @@
+div:before
+            {
+                content: attr(ondblclick);
+                color: green;
+            }
+            div
+            {
+                border: 2px solid black;
+            }

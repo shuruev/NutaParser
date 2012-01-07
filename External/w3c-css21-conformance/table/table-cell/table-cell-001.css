@@ -1,0 +1,15 @@
+.table
+            {
+                display: table;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                background: black;
+                display: table-cell;
+                height: 2em;
+                width: 2em;
+            }

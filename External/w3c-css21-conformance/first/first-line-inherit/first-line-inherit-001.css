@@ -1,0 +1,3 @@
+.a:first-line { }
+.a { overflow: scroll; }
+.b, .c { overflow: inherit; }

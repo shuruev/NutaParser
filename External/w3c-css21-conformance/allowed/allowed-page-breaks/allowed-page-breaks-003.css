@@ -1,0 +1,23 @@
+html, body { height: 100%; line-height: 1; font-size: 20px; margin: 0; padding: 0; }
+	div.spacer {
+		height: 25%;
+	}
+	div.backup {
+		margin-top: -3em;
+	}
+
+	div#wrapper {
+		height: 200%;
+		page-break-inside: avoid;
+		widows: 3;
+		orphans: 3;
+	}
+	
+	p {
+		margin: 0;
+		color: blue;
+	}
+	p, #wrapper div {
+		page-break-before: avoid;
+		page-break-after: avoid;
+	}

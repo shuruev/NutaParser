@@ -1,0 +1,9 @@
+div
+            {
+                margin-left: 1em;
+            }
+            span
+            {
+                display: list-item;
+                text-transform: capitalize;
+            }

@@ -1,0 +1,5 @@
+.one { color: red; background: white; }
+  .\6000ident, .one { color: green; }
+
+  .two { color: red; background: white; }
+  #\6000ident, .two { color: green; }

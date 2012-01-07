@@ -1,0 +1,12 @@
+p
+            {
+                float: left;
+            }
+            span
+            {
+                background: green;
+                display: block;
+                clear: both;
+                height: 1in;
+                width: 1in;
+            }

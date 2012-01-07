@@ -1,0 +1,16 @@
+table { 
+      border-collapse:collapse;
+      margin-bottom: 1em;
+      } 
+      tr {
+      border-left: 5px solid fuchsia;
+      border-right: 5px solid purple;
+      }
+      td.right {
+      background-color: yellow;
+      border-top: 5px solid orange;
+      }
+      td.left {
+      background-color: aqua;
+      border-top: 5px solid teal;
+      }

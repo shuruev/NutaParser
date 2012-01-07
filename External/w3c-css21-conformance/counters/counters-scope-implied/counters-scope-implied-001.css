@@ -1,0 +1,6 @@
+body { white-space: nowrap; }
+
+
+  .i { counter-increment: c 1; }
+  .r { counter-reset: c 0; }
+  .u:before { content: counters(c, ".") " "; }

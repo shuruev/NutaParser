@@ -1,0 +1,31 @@
+div
+            {
+                width: 200px;
+            }
+            #wrapper
+            {
+                border-top: 10px solid blue;
+            }
+            #test
+            {
+                display: table-header-group;
+                padding-top: 50px;
+            }
+            #table
+            {
+                border-collapse: collapse;
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #cell div
+            {
+                border-top: 10px solid orange;
+            }

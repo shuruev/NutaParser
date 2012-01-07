@@ -1,0 +1,19 @@
+div
+            {
+                font: 16px/1em Ahem;
+            }
+            #div1
+            {
+                word-spacing: 2em;
+            }
+            #div2, #div3
+            {
+                background: black;
+                display: inline-block;
+                height: 1em;
+                width: 1em;
+            }
+            #div3
+            {
+                margin-left: 12em;
+            }

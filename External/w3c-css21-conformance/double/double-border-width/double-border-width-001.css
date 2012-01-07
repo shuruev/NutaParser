@@ -1,0 +1,18 @@
+div
+            {
+                position: relative;
+                width: 1in;
+            }
+            #test
+            {
+                border-top-style: double;
+                border-top-width: 1in;
+            }
+            #reference
+            {
+                background: blue;
+                height: 1in;
+                left: 1.1in;
+                position: absolute;
+                top: 0;
+            }

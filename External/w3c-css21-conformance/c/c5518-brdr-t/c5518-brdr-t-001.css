@@ -1,0 +1,4 @@
+body { color: blue; }
+   td { text-align: center; }
+   td, span, .three { border-top: blue 2px solid; }
+   .skip { border-top: none; }

@@ -1,0 +1,30 @@
+#table
+            {
+                display: table;
+            }
+            #colgroup
+            {
+                background: orange;
+                display: table-column-group;
+                width: 1in;
+            }
+            #col
+            {
+                display: table-column;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 0.5in;
+            }
+            #div1
+            {
+                background: blue;
+                height: 1in;
+                width: 1in;
+            }

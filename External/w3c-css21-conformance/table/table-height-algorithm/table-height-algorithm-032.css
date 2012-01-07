@@ -1,0 +1,14 @@
+table
+            {
+                display: inline-table;
+            }
+            caption
+            {
+                color: white;
+            }
+            td
+            {
+                border: 1px solid black;
+                height: 100px;
+                vertical-align: baseline;
+            }

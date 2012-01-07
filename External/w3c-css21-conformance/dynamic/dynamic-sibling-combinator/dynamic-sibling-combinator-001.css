@@ -1,0 +1,11 @@
+div { color: red; }
+      [class=foo] + div { color: green; }
+      [class=foo] + div + div { color: green; }
+      [class=foo] + div + div + div { color: green; }
+      [class=foo] + div + div + div + div { color: green; }
+      [class=foo] + div + div + div + div + div { color: green; }
+      [class=foo] + div + div + div + div + div + div { color: green; }
+      [class=foo] + div + div + div + div + div + div + div { color: green; }
+      [class=foo] + div + div + div + div + div + div + div + div { color: green; }
+      [class=foo] + div + div + div + div + div + div + div + div + div { color: green; }
+      [class=foo] + div + div + div + div + div + div + div + div + div + div { color: green; }

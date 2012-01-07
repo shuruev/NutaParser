@@ -1,0 +1,3 @@
+body.before { background: red; color: yellow; }
+    body.after { background: green; color: white; }
+    p.after { font-weight: bold; }

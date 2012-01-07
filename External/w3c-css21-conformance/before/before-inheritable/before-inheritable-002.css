@@ -1,0 +1,11 @@
+div
+            {
+                border: 15px solid blue;
+                color: green;
+            }
+            div:before
+            {
+                border-color: orange;
+                border-style: solid;
+                content: 'PASS PASS';
+            }

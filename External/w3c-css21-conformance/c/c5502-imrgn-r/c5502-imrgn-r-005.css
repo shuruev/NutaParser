@@ -1,0 +1,5 @@
+p { color: navy; }
+   div { font: 15px/1 Ahem; margin: 1em; }
+   .six { width: 12em; }
+   .six p { background: yellow; color: lime; }
+   .six span { margin-right: -4em; background: blue; color: orange; }

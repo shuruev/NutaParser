@@ -1,0 +1,22 @@
+#test
+            {
+                border-left-style: solid;
+                border-left-width: 1in;
+                display: table-row-group;
+            }
+            #table
+            {
+                border-collapse: collapse;
+                display: table;
+                margin-left: 1in;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+            }

@@ -1,0 +1,8 @@
+li:first-letter
+            {
+                color: green;
+            }
+            .inside
+            {
+                list-style-position: inside;
+            }

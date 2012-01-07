@@ -1,0 +1,17 @@
+#parent
+            {
+                border: 5px solid transparent;
+                color: white;
+                font: 20px/1em Ahem;
+                width: 5em;
+            }
+            div div
+            {
+                display: inline;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            #span2
+            {
+                color: green;
+            }

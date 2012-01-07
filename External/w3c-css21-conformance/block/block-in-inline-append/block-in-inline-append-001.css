@@ -1,0 +1,2 @@
+body > span { outline: 1px dotted black; }
+	body > span > span { display: block; width: 10em; }

@@ -1,0 +1,4 @@
+body {direction:rtl;}
+      ul {
+      list-style-image: url("support/diamond.png");
+      }

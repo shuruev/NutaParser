@@ -1,0 +1,15 @@
+span
+            {
+                color: orange;
+                font: 16px Ahem;
+            }
+            #span1
+            {
+                border: 2px solid blue;
+            }
+            #span2
+            {
+                color: yellow;
+                position: relative;
+                left: -6em;
+            }

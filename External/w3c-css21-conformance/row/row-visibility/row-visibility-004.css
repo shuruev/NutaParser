@@ -1,0 +1,10 @@
+#row
+            {
+                visibility: collapse;
+            }
+            td
+            {
+                background: blue;
+                height: 2em;
+                width: 2em;
+            }

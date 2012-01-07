@@ -1,0 +1,15 @@
+div
+            {
+                background-repeat: no-repeat;
+                height: 3in;
+                width: 3in;
+            }
+            #div1
+            {
+                background-image: url("support/background-position-top-right.png");
+            }
+            div div
+            {
+                background-image: url("support/blue96x96.png");
+                background-position: 192px top;
+            }

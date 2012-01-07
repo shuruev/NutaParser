@@ -1,0 +1,16 @@
+.gutter { width: 9em; background: yellow; border-left: solid 9em aqua;
+            margin-left: auto; /* CSS1 agents */
+            position: absolute; top: 0; right: 0; bottom: 0; z-index: -1; /* CSS2 agents */ }
+   p, ul { color: navy; }
+   .test { position: relative; font: 1em/1.25 serif;
+           border: 5px solid gray; margin: 1em; color: silver; }
+   .test p { width: 7em; padding: 1em; margin: 0; }
+   .test p, .test span { color: white; }
+   .test .a { background-color: blue; }
+   .test p.a { float: left; }
+   .test .b { background-color: purple; }
+   .test p.b { float: right; }
+   .test .c { background-color: orange; }
+   .test p.c { float: left; }
+   .test .d { background-color: green; }
+   .test p.d { float: left; }

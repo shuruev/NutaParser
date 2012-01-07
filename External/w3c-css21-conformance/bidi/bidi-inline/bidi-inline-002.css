@@ -1,0 +1,8 @@
+.rtol {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      }
+      .ltor {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      }

@@ -1,0 +1,11 @@
+#div1
+            {
+                background: white;
+                color: blue;
+                content: "TEXT";
+            }
+            div:before
+            {
+                color: green;
+                content: inherit;
+            }

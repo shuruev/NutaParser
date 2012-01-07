@@ -1,0 +1,13 @@
+body
+            {
+                border-right-style: dotted;
+                border-right-width: 0;
+            }
+            div
+            {
+                border-right-style: inherit;
+                border-right-color: green;
+                border-right-width: 10px;
+                height: 1in;
+                width: 1in;
+            }

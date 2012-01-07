@@ -1,0 +1,20 @@
+div
+            {
+                direction: rtl;
+                height: 96px;
+                width: 50px;
+            }
+            #wrapper
+            {
+                padding-right: 96px;
+            }
+            #div1
+            {
+                border-right: 10px solid red;
+                padding-right: inherit;
+            }
+            #div2
+            {
+                border-right: 10px solid black;
+                margin-right: -106px;
+            }

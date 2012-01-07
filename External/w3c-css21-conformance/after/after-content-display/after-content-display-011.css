@@ -1,0 +1,5 @@
+div:after
+  {
+  content: "Filler text";
+  display: table-row;
+  }

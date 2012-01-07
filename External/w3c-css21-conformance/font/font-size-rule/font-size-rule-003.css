@@ -1,0 +1,16 @@
+div
+            {
+                font-size: 18px;
+            }
+            span
+            {
+                font-family: Ahem;
+            }
+            #span1
+            {
+                font-size: 24px;
+            }
+            #span2
+            {
+                font-size: larger;
+            }

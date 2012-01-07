@@ -1,0 +1,13 @@
+div:before
+            {
+                content: open-quote open-quote open-quote open-quote open-quote open-quote;
+            }
+            div:after
+            {
+                content: close-quote close-quote close-quote close-quote close-quote close-quote;
+            }
+            div
+            {
+                quotes: "A" "L" "B" "K" "C" "J" "D" "I" "E" "H" "F" "G";
+                border: 2px solid black;
+            }

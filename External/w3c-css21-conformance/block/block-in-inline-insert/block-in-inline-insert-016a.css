@@ -1,0 +1,2 @@
+#i { border: 2px solid; }
+      #i:after { display: block; content: "Two"; }

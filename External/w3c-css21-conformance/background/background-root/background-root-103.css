@@ -1,0 +1,3 @@
+html[lang="en-before"] > body { background: red; color: yellow; }
+    html[lang="en-after"] > body { background: green; color: white; }
+    p[lang="en-after"] { font-weight: bold; }

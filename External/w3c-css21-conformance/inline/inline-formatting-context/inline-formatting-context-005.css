@@ -1,0 +1,8 @@
+div
+            {
+                display: inline;
+            }
+            div div
+            {
+                border-right: 100px solid black;
+            }

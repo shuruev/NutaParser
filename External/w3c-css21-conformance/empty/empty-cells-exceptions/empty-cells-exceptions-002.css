@@ -1,0 +1,12 @@
+table
+            {
+                background: red;
+                border-spacing: 0;
+                empty-cells: hide;
+            }
+            td
+            {
+                background: green;
+                color: green;
+                padding: 0;
+            }

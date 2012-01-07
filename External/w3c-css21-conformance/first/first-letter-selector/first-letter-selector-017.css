@@ -1,0 +1,8 @@
+div:first-letter
+            {
+                background: red;
+            }
+            div p
+            {
+                display: inline-block;
+            }

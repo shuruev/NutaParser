@@ -1,0 +1,7 @@
+div
+            {
+                border-left-style: inset;
+                border-left-color: green;
+                border-left-width: 12px;
+                height: 1in;
+            }

@@ -1,0 +1,6 @@
+div:before
+            {
+                content: counter(chapter);
+                counter-increment: chapter 2;
+                counter-reset: chapter -10;
+            }

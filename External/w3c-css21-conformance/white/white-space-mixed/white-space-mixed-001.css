@@ -1,0 +1,5 @@
+.control { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+   .test { border: solid blue; font: 1em/1 Ahem; background: yellow; color: orange; width: 19em; }
+   .normal { white-space: normal; }
+   .nowrap { white-space: nowrap; }
+   .pre { white-space: pre; }

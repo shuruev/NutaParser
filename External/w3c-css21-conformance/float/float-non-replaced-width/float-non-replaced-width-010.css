@@ -1,0 +1,13 @@
+div
+  {
+  background-color: red;
+  float: left;
+  font: 32px/4 Ahem;
+  width: auto;
+  }
+
+  div > div
+  {
+  background-color: green;
+  width: 4em;
+  }

@@ -1,0 +1,12 @@
+#span1
+            {
+                margin: 1px;
+                padding: 1px;
+                line-height: 25px;
+            }
+            #span2
+            {
+                direction: rtl;
+                unicode-bidi: bidi-override;
+                line-height: 30px;
+            }

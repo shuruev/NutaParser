@@ -1,0 +1,23 @@
+#div1
+            {
+                font: 16px/1em Ahem;
+            }
+            #span1
+            {
+                white-space: pre-line;
+            }
+            #span2
+            {
+                white-space: pre-wrap;
+            }
+            #div2, #div3
+            {
+                background: black;
+                display: inline-block;
+                height: 1em;
+                width: 1em;
+            }
+            #div3
+            {
+                margin-left: 2em;
+            }

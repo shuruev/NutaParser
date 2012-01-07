@@ -1,0 +1,12 @@
+#div1
+            {
+                background: url('support/shorthand-004.png') -5px;
+                border: 5px green solid;
+                width: 200px;
+            }
+            div div
+            {
+                background: green;
+                margin: 5px 20px 50px 100px;
+                height: 160px;
+            }

@@ -1,0 +1,23 @@
+div
+            {
+                font: 0.5in/1em Ahem;
+                position: relative;
+            }
+            #div2
+            {
+                vertical-align: middle;
+            }
+            #div3
+            {
+                position: absolute;
+                top: 0.75in;
+            }
+            #span1
+            {
+                color: red;
+                vertical-align: inherit;
+            }
+            #span2
+            {
+                font: 1.5in/1em Ahem;
+            }

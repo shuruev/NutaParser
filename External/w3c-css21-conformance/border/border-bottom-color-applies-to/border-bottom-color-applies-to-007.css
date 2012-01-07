@@ -1,0 +1,16 @@
+#table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                border-bottom-style: solid;
+                border-bottom-color: green;
+                display: table-cell;
+                width: 1in;
+            }

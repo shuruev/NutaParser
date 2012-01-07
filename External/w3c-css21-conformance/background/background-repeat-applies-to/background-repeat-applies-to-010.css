@@ -1,0 +1,10 @@
+div
+            {
+                background-color: red;
+                background-image: url('support/green15x15.png');
+                background-repeat: repeat;
+                display: list-item;
+                height: 1in;
+                margin-left: 2em;
+                width: 1in;
+            }

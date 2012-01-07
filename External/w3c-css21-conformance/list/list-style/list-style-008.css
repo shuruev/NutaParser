@@ -1,0 +1,9 @@
+body
+            {
+                margin: 50px;
+            }
+            div
+            {
+                display: list-item;
+                list-style: url('support/green15x15.png') square;
+            }

@@ -1,0 +1,13 @@
+div {visibility: hidden;}
+
+  span
+  {
+  color: red;
+  font: 100px/1 Ahem;
+  }
+
+  span#testpassed
+  {
+  color: green;
+  visibility: visible;
+  }

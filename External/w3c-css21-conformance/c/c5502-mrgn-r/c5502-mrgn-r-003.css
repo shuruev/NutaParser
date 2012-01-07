@@ -1,0 +1,3 @@
+.test { width: 10em; }
+   .test p { margin-right: -5em; color: yellow; background: navy; }
+   .control { width: 15em; color: yellow; background: navy; }

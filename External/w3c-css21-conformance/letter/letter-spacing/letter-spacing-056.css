@@ -1,0 +1,12 @@
+div
+            {
+                font: 25.4mm/1em Ahem;
+            }
+            #span1
+            {
+                margin-left: 25.4mm;
+            }
+            #test
+            {
+                letter-spacing: +25.4mm;
+            }

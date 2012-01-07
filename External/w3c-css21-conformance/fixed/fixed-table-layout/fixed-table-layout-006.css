@@ -1,0 +1,20 @@
+table
+            {
+                background: blue;
+                border-collapse: separate;
+                border-spacing: 10px 0;
+                table-layout: fixed;
+                width: 130px;
+            }
+            td
+            {
+                background: blue;
+                border-left: 10px solid orange;
+                border-right: 10px solid orange;
+                height: 100px;
+                padding: 0;
+            }
+            #specified
+            {
+                width: 10px;
+            }

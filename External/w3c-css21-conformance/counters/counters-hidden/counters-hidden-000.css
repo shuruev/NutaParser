@@ -1,0 +1,6 @@
+body { white-space: nowrap; }
+
+
+  div { counter-reset: c }
+  #one:before { counter-increment: c }
+  #two:before { content: counter(c) }

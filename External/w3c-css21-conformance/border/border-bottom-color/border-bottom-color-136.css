@@ -1,0 +1,17 @@
+div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #test
+            {
+                border-bottom-style: solid;
+                border-bottom-width: 1in;
+                border-bottom-color: maroon;
+                height: 0;
+            }
+            #reference
+            {
+                background-color: maroon;
+                margin-top: 10px;
+            }

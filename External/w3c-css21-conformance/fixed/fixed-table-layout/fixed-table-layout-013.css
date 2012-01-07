@@ -1,0 +1,23 @@
+table
+            {
+                border-collapse: collapse;
+                table-layout: fixed;
+                width: 200px;
+            }
+            #colgroup
+            {
+                width: 50px;
+            }
+            #cell
+            {
+                background: black;
+            }
+            #div1
+            {
+                background: blue;
+                width: 100px;
+            }
+            #div1, #cell
+            {
+                height: 1em;
+            }

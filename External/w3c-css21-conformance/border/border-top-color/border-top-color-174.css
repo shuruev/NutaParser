@@ -1,0 +1,13 @@
+#wrapper
+            {
+                background-color: green;
+                width: 1in;
+            }
+            #test
+            {
+                border-top-style: solid;
+                border-top-width: 1in;
+                border-top-color: red;
+                border-top-color: transparent;
+                height: 0;
+            }

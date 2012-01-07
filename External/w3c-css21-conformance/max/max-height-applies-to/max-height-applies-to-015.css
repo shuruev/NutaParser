@@ -1,0 +1,20 @@
+#table
+            {
+                display: table;
+            }
+            #caption
+            {
+                background: black;
+                display: table-caption;
+                height: 3in;
+                max-height: 1in;
+                width: 1in;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

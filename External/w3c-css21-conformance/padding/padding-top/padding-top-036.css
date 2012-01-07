@@ -1,0 +1,28 @@
+div
+            {
+                height: 0;
+                width: 50px;
+            }
+            .parent1
+            {
+                background: red;
+                min-height: 37px
+            }
+            .test1, .test2
+            {
+                padding-top: 1cm;
+            }
+            .test1
+            {
+                background: green;
+            }
+            .test2
+            {
+                background: red;
+            }
+            .child1
+            {
+                background: green;
+                height: 38px;
+                margin-top: -1cm;
+            }

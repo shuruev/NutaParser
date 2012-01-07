@@ -1,0 +1,22 @@
+div
+            {
+                font: 20px/1 Ahem;
+            }
+            #wrapper
+            {
+                height: 7em;
+                border-bottom: 1em solid red;
+            }
+            div div
+            {
+                height: 0;
+            }
+            #div1
+            {
+                border-bottom: 1em solid black;
+                margin-bottom: +6em;
+            }
+            #div2
+            {
+                border-top: 1em solid black;
+            }

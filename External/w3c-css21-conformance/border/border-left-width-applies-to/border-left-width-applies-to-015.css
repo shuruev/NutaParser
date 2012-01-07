@@ -1,0 +1,19 @@
+#test
+            {
+                border-left-style: solid;
+                border-left-width: 1in;
+                display: table-caption;
+                height: 1in;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

@@ -1,0 +1,30 @@
+table
+            {
+                border-collapse: collapse;
+            }
+            td
+            {
+                border: 5px dotted lime;
+                height: 3em;
+                width: 3em;
+            }
+            #center
+            {
+                border: 5px hidden red;
+            }
+            #top
+            {
+                border-top: 5px dotted red;
+            }
+            #left
+            {
+                border-left: 5px dotted red;
+            }
+            #bottom
+            {
+                border-bottom: 5px dotted red;
+            }
+            #right
+            {
+                border-right: 5px dotted red;
+            }

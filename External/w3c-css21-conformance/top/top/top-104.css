@@ -1,0 +1,23 @@
+div
+            {
+                position: relative;
+            }
+            #div1
+            {
+                height: 1in;
+                margin-top: -1in;
+            }
+            #div2
+            {
+                background: red;
+                height: 1in;
+                margin-top: 1in;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            #div3
+            {
+                border-bottom: 1in solid black;
+                top: +100%;
+            }

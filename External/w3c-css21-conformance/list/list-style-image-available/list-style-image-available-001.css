@@ -1,0 +1,10 @@
+body
+            {
+                margin-left: 50px;
+            }
+            div
+            {
+                display: list-item;
+                list-style-image: url('missingImage.png');
+                list-style-type: disc;
+            }

@@ -1,0 +1,23 @@
+#table
+            {
+                display: table;
+            }
+            #row1
+            {
+                background: red;
+                visibility: collapse;
+            }
+            #row2
+            {
+                background: green;
+            }
+            #row1, #row2
+            {
+                display: table-row;
+            }
+            .cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

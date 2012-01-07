@@ -1,0 +1,13 @@
+#reference
+            {
+                border: solid green 5mm;
+                margin-top: 10mm;
+                width: 300px;
+            }
+            #test
+            {
+                margin: 5mm 0 0 5mm;
+                outline: solid green;
+                outline-width: 5mm;
+                width: 300px;
+            }

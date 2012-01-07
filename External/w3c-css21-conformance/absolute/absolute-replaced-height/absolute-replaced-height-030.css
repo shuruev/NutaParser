@@ -1,0 +1,24 @@
+#div1
+            {
+                border-top: solid black;
+                position: relative;
+            }
+            div div
+            {
+                background: blue;
+                height: 15px;
+                left: 15px;
+                position: absolute;
+                top: 1in;
+                width: 15px;
+            }
+            img
+            {
+                bottom: 1in;
+                height: auto;
+                margin-bottom: 0.5in;
+                margin-top: 0.5in;
+                position: absolute;
+                top: 0.5in;
+                width: auto;
+            }

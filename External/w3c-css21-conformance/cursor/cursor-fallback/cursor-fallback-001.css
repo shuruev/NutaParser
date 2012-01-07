@@ -1,0 +1,8 @@
+div
+            {
+                background-color: blue;
+                cursor: url("missing.cur"), pointer;
+                border: solid 2px blue;
+                width: 100px;
+                height: 100px;
+            }

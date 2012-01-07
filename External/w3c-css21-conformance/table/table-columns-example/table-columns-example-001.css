@@ -1,0 +1,14 @@
+.t1
+            {
+                border-collapse: collapse;
+                border-style: hidden;
+            }
+            .col1
+            {
+                border-style: none solid;
+            }
+            td
+            {
+                height: 2em;
+                width: 2em;
+            }

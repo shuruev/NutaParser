@@ -1,0 +1,23 @@
+@page {
+		counter-increment: page;
+		margin: 7%;
+		@top-right {
+           content: "Page " counter(page);
+        }
+	}
+
+	@page :first {
+		@top-center {
+           content: "This test requires 7 pages";
+        }
+	}
+
+	.breakBefore {page-break-before: always;}
+	.breakAfter {page-break-after: always;}
+	
+	.breakBeforeLeft {page-break-before: left;}
+	.breakBeforeRight {page-break-before: right;}
+
+	.avoidBefore { page-break-before: avoid; }
+	.avoidAfter { page-break-after: avoid; }
+	.avoidInside { page-break-inside: avoid; }

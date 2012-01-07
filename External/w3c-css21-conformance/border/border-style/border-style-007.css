@@ -1,0 +1,10 @@
+body
+            {
+                border-style: dashed dotted double;
+                border-width: 0;
+            }
+            div
+            {
+                border-style: inherit;
+                height: 1in;
+            }

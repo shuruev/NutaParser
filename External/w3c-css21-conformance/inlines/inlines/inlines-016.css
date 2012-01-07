@@ -1,0 +1,4 @@
+.ahem { display: inline; font: 900 1em/1 Ahem, sans-serif; background: red; color: white; }   
+   div { width: 4em; background: teal; color: aqua; margin: 1em; font: 2em/1 Ahem; }
+   .test span { padding-left: 1em; }
+   .control { white-space: pre; }

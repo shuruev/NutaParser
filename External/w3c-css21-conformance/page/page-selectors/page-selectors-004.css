@@ -1,0 +1,10 @@
+@page :first {
+    margin: 15% 50% 7% 7%;
+  }
+  @page :right {
+    margin-left: 50%
+  }
+
+  div {
+    page-break-after: always;
+  }

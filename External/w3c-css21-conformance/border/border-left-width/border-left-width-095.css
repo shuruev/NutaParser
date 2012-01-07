@@ -1,0 +1,13 @@
+body
+            {
+                border-left-color: transparent;
+                border-left-style: solid;
+                border-left-width: 1in;
+                padding-left: 20px;
+            }
+            div
+            {
+                border-left-style: solid;
+                border-left-width: inherit;
+                height: 1in;
+            }

@@ -1,0 +1,7 @@
+p { margin: 0; padding: 0; font-size: 3em; }
+   .eight {float: left; width: 25%;
+           background-color: #000080; color: white;
+           padding: 0; margin: 0}
+   .nine {float: right; width: 25%;
+          background-color: teal; color: white;
+          padding: 0; margin: 0}

@@ -1,0 +1,9 @@
+#div1
+            {
+                counter-reset: hidden 5;
+                visibility: hidden;
+            }
+            #div2:before
+            {
+                content: counter(hidden);
+            }

@@ -1,0 +1,10 @@
+html {font: 20px/1 Ahem;}
+
+  body
+  {
+  background: url("support/1x1-lime.png") repeat-y 12.5ex 0;
+  font-size: 2.5ex;
+  margin: 0;
+  }
+
+  #expected-results {font-family: serif;}

@@ -1,0 +1,8 @@
+div
+            {
+                background: red;
+                display: inline;
+                height: 3in;
+                max-height: 1in;
+                width: 1in;
+            }

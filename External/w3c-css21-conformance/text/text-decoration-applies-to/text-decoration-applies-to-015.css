@@ -1,0 +1,18 @@
+#table
+            {
+                display: table;
+                width: 100%
+            }
+            #test
+            {
+                display: table-caption;
+                text-decoration: underline;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

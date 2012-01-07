@@ -1,0 +1,22 @@
+html, body { height: 100%; line-height: 1; font-size: 20px; margin: 0; padding: 0; }
+	
+	* {page-break-inside: auto;}
+	div.spacer {
+		height: 50%;
+	}
+	div.backup {
+		margin-top: -3em;
+	}
+	div.dummy {
+		width: 0;
+		page-break-after: always;
+		color: blue;
+	}
+	
+	div {
+		widows: 1;
+		orphans: 1;
+	}
+	div#second {orphans: 4;}
+	div#third {widows: 4;}
+	div#fourth {page-break-inside: avoid; page-break-after: auto; }

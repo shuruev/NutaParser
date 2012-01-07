@@ -1,0 +1,13 @@
+div:before
+            {
+                content: open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote open-quote;
+            }
+            div:after
+            {
+                content: close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote close-quote;
+            }
+            div
+            {
+                quotes: "A" "v" "B" "u" "C" "t" "D" "s" "E" "r" "F" "q" "G" "p" "H" "o" "I" "n" "J" "m" "K" "l" "L" "k" "M" "j" "N" "i" "O" "h" "P" "g" "Q" "f" "R" "e" "S" "d" "T" "c" "U" "b" "V" "a" "W" "|" "X" "*" "Y" "0" "Z" "9" "1" "8" "2" "7" "3" "6" "4" "5";
+                border: 2px solid black;
+            }

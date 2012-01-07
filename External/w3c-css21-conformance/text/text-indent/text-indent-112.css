@@ -1,0 +1,15 @@
+#parent
+            {
+                font: 16px/1em Ahem;
+                text-indent: 96px;
+            }
+            #reference
+            {
+                margin-left: 96px;
+                text-indent: 0;
+            }
+            #test
+            {
+                text-indent: 0;
+                text-indent: inherit;
+            }

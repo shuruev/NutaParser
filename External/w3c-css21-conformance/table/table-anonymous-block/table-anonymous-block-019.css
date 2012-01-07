@@ -1,0 +1,20 @@
+div
+            {
+                color: gray;
+            }
+            table
+            {
+                border-spacing: 0;
+                display: inline-table;
+                margin: 20px;
+            }
+            caption
+            {
+                background: blue;
+                color: blue;
+            }
+            td
+            {
+                background: black;
+                color: black;
+            }

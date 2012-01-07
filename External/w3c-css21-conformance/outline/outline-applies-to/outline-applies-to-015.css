@@ -1,0 +1,11 @@
+#test
+            {
+                display: table-caption;
+                height: 1in;
+                outline: solid blue 10px;
+                width: 1in;
+            }
+            #table
+            {
+                display: table;
+            }

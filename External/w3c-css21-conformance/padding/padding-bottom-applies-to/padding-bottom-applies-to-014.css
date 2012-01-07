@@ -1,0 +1,27 @@
+div
+            {
+                line-height: 0;
+                width: 200px;
+            }
+            #wrapper
+            {
+                border-bottom: 10px solid blue;
+            }
+            #table
+            {
+                display: inline-table;
+                table-layout: fixed;
+                padding-bottom: 50px;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #cell div
+            {
+                border-bottom: 10px solid orange;
+            }

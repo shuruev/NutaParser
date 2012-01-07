@@ -1,0 +1,22 @@
+#test
+            {
+                display: table-column-group;
+                outline-color: red;
+                outline-style: dotted;
+                outline-width: 10px;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1in;
+                width: 1in;
+            }

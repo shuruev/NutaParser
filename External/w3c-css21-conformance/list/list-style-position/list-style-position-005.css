@@ -1,0 +1,11 @@
+#test{
+  background:lime;
+  color:lime;
+  display:list-item;
+  font-size:85px;
+  list-style-position:inside;
+  }
+  #test div{
+  background:blue;
+  display:block;
+  }

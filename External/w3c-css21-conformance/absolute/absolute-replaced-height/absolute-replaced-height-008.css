@@ -1,0 +1,22 @@
+#div1
+            {
+                border-top: solid black;
+                position: relative;
+            }
+            img
+            {
+                bottom: auto;
+                margin-bottom: auto;
+                margin-top: auto;
+                position: absolute;
+                top: 1in;
+            }
+            div div
+            {
+                background: blue;
+                height: 15px;
+                left: 15px;
+                position: relative;
+                top: 1in;
+                width: 15px;
+            }

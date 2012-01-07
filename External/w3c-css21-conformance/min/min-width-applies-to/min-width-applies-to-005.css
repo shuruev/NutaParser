@@ -1,0 +1,20 @@
+#test
+            {
+                display: table-column-group;
+                min-width: 1in;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                background: black;
+                display: table-cell;
+                height: 1in;
+            }

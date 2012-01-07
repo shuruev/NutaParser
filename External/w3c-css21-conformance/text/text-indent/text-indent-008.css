@@ -1,0 +1,12 @@
+#parent
+            {
+                font: 16px/1em Ahem;
+            }
+            #reference
+            {
+                margin-left: 96px;
+            }
+            #test
+            {
+                text-indent: +96px;
+            }

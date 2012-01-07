@@ -1,0 +1,29 @@
+#table
+            {
+                display: table;
+            }
+            #caption
+            {
+                background: red;
+                visibility: hidden;
+                display: table-caption;
+                height: 1in;
+                width: 1in;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                background: black;
+                display: table-cell;
+                height: 1em;
+                width: 1in;
+            }
+            #box
+            {
+                background: black;
+                height: 1em;
+                width: 1in;
+            }

@@ -1,0 +1,12 @@
+div
+  {
+  font: 200px/1 Ahem;
+  height: 200px;
+  max-width: 200px;
+  overflow: auto;
+  position: absolute;
+  }
+
+  div#test-red-overlapped {color: red;}
+
+  div#control-green-overlapping {color: green;}

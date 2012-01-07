@@ -1,0 +1,23 @@
+#div1
+            {
+                height: 2in;
+                position: relative;
+            }
+            div div
+            {
+                width: 1in;
+            }
+            #div2
+            {
+                background: blue;
+                height: 2in;
+                max-height: 50%;
+            }
+            #div3
+            {
+                background: orange;
+                height: 1in;
+                left: 1in;
+                position: absolute;
+                top: 0;
+            }

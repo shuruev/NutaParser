@@ -1,0 +1,23 @@
+#test
+            {
+                background-color: orange;
+                background-image: url('support/blue96x96.png');
+                background-attachment: fixed;
+                background-repeat: repeat-x;
+                display: table-column;
+            }
+            #table
+            {
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 2in;
+                width: 1in;
+            }

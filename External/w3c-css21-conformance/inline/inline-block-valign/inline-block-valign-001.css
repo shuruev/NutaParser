@@ -1,0 +1,2 @@
+span { display: inline-block; }
+span > span { display: block; visibility: hidden; }

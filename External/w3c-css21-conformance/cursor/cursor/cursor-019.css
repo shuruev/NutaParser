@@ -1,0 +1,13 @@
+div
+            {
+                cursor: text;
+            }
+            div div
+            {
+                border: 2px solid blue;
+                cursor: inherit;
+            }
+            #div1
+            {
+                cursor: pointer;
+            }

@@ -1,0 +1,17 @@
+#table
+            {
+                display: table;
+            }
+            #test
+            {
+                display: table-footer-group;
+                text-transform: capitalize;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

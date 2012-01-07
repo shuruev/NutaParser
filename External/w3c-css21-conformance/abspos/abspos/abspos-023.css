@@ -1,0 +1,5 @@
+body { color: navy; }
+   .control { margin-left: 50%; border-top: 1em solid red; width: 1em; }
+   .container { position: absolute; left: 50%; }
+   .test { position: fixed; left: auto; width: 1em; height: 1em;
+           background: green; color: white; }

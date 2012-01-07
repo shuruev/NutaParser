@@ -1,0 +1,15 @@
+table
+            {
+                background-color: blue;
+            }
+            caption
+            {
+                caption-side: bottom;
+                text-align: left;
+                width: auto;
+            }
+            td
+            {
+                height: 10em;
+                width: 20em;
+            }

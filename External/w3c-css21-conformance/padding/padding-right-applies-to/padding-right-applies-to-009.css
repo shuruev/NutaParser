@@ -1,0 +1,18 @@
+div
+            {
+                width: 200px;
+            }
+            span
+            {
+                display: block;
+                height: 200px;
+            }
+            #span1
+            {
+                border-right: 10px solid blue;
+                padding-right: 50px;
+            }
+            span span
+            {
+                border-right: 10px solid orange;
+            }

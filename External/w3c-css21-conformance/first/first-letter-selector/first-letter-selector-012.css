@@ -1,0 +1,5 @@
+div p:first-letter, span
+            {
+                color: green;
+                margin: 15px;
+            }

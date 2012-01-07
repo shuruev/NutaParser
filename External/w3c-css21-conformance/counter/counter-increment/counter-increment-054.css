@@ -1,0 +1,13 @@
+#wrapper
+            {
+                counter-increment: ident 5;
+            }
+            #test
+            {
+                counter-increment: inherit;
+            }
+            div:before
+            {
+                font-size: 30px;
+                content: counter(ident);
+            }

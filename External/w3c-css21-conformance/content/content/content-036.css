@@ -1,0 +1,11 @@
+div:before
+            {
+                content: counters(test, ".", none);
+                counter-increment: test;
+                counter-reset: test;
+                color: red;
+            }
+            #div1
+            {
+                border: 2px solid black;
+            }

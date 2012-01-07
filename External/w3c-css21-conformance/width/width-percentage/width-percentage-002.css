@@ -1,0 +1,29 @@
+#div1
+            {
+                background: orange;
+                width: 1in;
+            }
+            #div2
+            {
+                position: relative;
+            }
+            #div3
+            {
+                padding: 0 0.5in;
+                width: 1in;
+            }
+            #div4
+            {
+                width: 50%;
+                background: blue;
+            }
+            #div1, #div3, #div4
+            {
+                height: 1in;
+            }
+            #div3, #div4
+            {
+                left: 0;
+                position: absolute;
+                top: 0;
+            }

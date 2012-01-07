@@ -1,0 +1,20 @@
+div
+            {
+                font: 16px/1em Ahem;
+            }
+            #div1
+            {
+                display: inline;
+                white-space: pre;
+            }
+            #div2, #div3
+            {
+                background: black;
+                display: inline-block;
+                height: 1em;
+                width: 2em;
+            }
+            #div3
+            {
+                margin-left: 3em;
+            }

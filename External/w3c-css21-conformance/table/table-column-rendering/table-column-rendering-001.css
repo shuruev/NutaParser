@@ -1,0 +1,11 @@
+#table
+            {
+                display: table;
+            }
+            #col
+            {
+                background: red;
+                display: table-column;
+                height: 5em;
+                width: 5em;
+            }

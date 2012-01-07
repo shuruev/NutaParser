@@ -1,0 +1,22 @@
+#table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                background: red;
+                display: table-cell;
+                height: 100px;
+                width: 100px;
+            }
+            #cell div
+            {
+                background: green;
+                height: 100%;
+                position: relative;
+                width: 100%;
+            }

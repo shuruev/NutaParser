@@ -1,0 +1,4 @@
+.control { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+   .top { font: 20px/1 Ahem; }
+   .outer { width: 10em; background: red; }
+   .inner { width: 7em; color: lime; background: green; white-space: nowrap; }

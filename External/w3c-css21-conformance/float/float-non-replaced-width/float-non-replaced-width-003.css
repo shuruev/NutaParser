@@ -1,0 +1,14 @@
+#div1
+            {
+                border: solid black;
+                height: 2in;
+                width: 2in;
+            }
+            div div
+            {
+                background-color: blue;
+                float: right;
+                margin-right: auto;
+                height: 1in;
+                width: 1in;
+            }

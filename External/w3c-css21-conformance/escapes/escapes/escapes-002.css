@@ -1,0 +1,9 @@
+p.class#id { background: green; color: white; }
+
+  p\.class#id { background: red; }
+
+  p.class\#id { background: red; }
+
+  p.class#id { background: red\; }
+
+  p.class#id { background: red; }

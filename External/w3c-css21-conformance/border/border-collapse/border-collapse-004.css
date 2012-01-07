@@ -1,0 +1,9 @@
+table { border-collapse: collapse; }
+   div { margin-top: 0.25em; }
+   td, div {
+     border-left: 2em solid;
+     overflow: hidden;
+     padding-left: 0.25em;
+     font: 4em sans-serif;
+     color: navy;
+   }

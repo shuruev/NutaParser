@@ -1,0 +1,26 @@
+div
+            {
+                width: 200px;
+            }
+            #test
+            {
+                border-bottom: 10px solid blue;
+                display: table-caption;
+                padding-bottom: 50px;
+            }
+            #test div
+            {
+                border-bottom: 10px solid orange;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

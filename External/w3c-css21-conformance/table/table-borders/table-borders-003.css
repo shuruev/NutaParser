@@ -1,0 +1,13 @@
+table
+            {
+                border-collapse: collapse;
+            }
+            colgroup
+            {
+                border: 3px solid black;
+            }
+            td
+            {
+                height: 2em;
+                width: 2em;
+            }

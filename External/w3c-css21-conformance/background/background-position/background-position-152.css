@@ -1,0 +1,38 @@
+#nearest-positioned-ancestor
+  {
+  background-color: lime; /* padding box will be lime */
+  background-image: url("support/red_box.png"); /* red_box is 100px wide by 100px tall */
+  background-position: 14% 84%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  height: 100px; /* therefore padding box is 300px tall */
+  padding: 100px; 
+  position: relative;
+  width: 200px; /* therefore padding box is 400px wide */
+  }
+
+  /*
+  Calculations of red_box position coordinates within #nearest-positioned-ancestor
+  along the horizontal axis
+    56px (14% of #nearest-positioned-ancestor's padding box width)
+  - 14px (14% of red_box's width)
+  ------------------
+    42px (overlapping bright green box's left offset within #nearest-positioned-ancestor)  
+
+   42px represents exactly 10.5% of #nearest-positioned-ancestor's padding box width (400px)
+  
+  along the vertical axis
+   252px (84% of #nearest-positioned-ancestor's padding box height)
+  - 84px (84% of red_box's height)
+  ------------------
+   168px (overlapping bright green box's top offset within #nearest-positioned-ancestor)
+   
+   168px represents exactly 56% of #nearest-positioned-ancestor's padding box height (300px)
+  */
+  
+  #overlapping-abs-pos-lime-box
+  {
+  left: 10.5%; /* == 42px */
+  position: absolute;
+  top: 56%; /* == 168px */
+  }

@@ -1,0 +1,31 @@
+div {
+  width: 100px;
+  height: 100px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.positioned {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+  left: 100px;
+  top: 100px;
+}
+
+.offset {
+  left: 100px;
+  top: 100px;
+}

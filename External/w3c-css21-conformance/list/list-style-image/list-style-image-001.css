@@ -1,0 +1,13 @@
+body
+            {
+                margin: 50px;
+            }
+            #wrapper
+            {
+                list-style-image: url('support/blue15x15.png');
+            }
+            #div1
+            {
+                display: list-item;
+                list-style-image: inherit;
+            }

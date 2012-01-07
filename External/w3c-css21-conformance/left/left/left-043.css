@@ -1,0 +1,16 @@
+div
+            {
+                height: 1in;
+                position: relative;
+                width: 1in;
+            }
+            #div1
+            {
+                border-left: 2.54cm solid red;
+            }
+            div div
+            {
+                border-left: 2.54cm solid black;
+                margin-left: -5.08cm;
+                left: 2.54cm;
+            }

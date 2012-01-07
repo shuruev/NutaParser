@@ -1,0 +1,8 @@
+body { color: blue; }
+   p:first-line { color: teal; }
+   p:first-letter { color: aqua; }
+   .one:first-line { font-size: 300%; }
+   .one:first-letter { font-size: 300%; }
+   p.two:first-letter { font-size: 200%; }
+   p.two:first-line { font-variant: small-caps; }
+   /* three uses the default styles */

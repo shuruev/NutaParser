@@ -1,0 +1,21 @@
+div {
+      margin: 1em;
+      font-family: monospace;
+      page-break-inside: avoid;
+    }
+    div p {
+      margin: 0;
+    }
+
+    .control span {
+      background: blue;
+      color: blue;
+    }
+    .test span {
+      word-spacing: 4em;
+      background: orange;
+      color: orange;
+    }
+    .ws-pre p {
+      white-space: pre;
+    }

@@ -1,0 +1,27 @@
+#table
+            {
+                display: table;
+            }
+            .test
+            {
+                border-spacing: 20px;
+                display: table-row-group;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                display: table-cell;
+                height: 100px;
+                width: 100px;
+            }
+            .top
+            {
+                border: 10px solid blue;
+            }
+            .bottom
+            {
+                border: 10px solid orange;
+            }

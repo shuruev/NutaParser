@@ -1,0 +1,19 @@
+#div1
+            {
+                clear: left;
+                width: 3in;
+            }
+            div div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #div2
+            {
+                background: green;
+                float: left;
+            }
+            #div3
+            {
+                background: red;
+            }

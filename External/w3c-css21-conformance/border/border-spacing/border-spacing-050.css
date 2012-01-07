@@ -1,0 +1,21 @@
+div, table
+            {
+                font: 20px/1 Ahem;
+            }
+            div
+            {
+                background: black;
+                height: 1em;
+                left: 216px;
+                position: relative;
+                top: 25.4mm;
+                width: 25.4mm;
+            }
+            table
+            {
+                border-spacing: 25.4mm;
+            }
+            td
+            {
+                padding: 0;
+            }

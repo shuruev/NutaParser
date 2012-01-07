@@ -1,0 +1,34 @@
+#div1
+            {
+                position: relative;
+            }
+            #div2
+            {
+                background: orange;
+                height: 2in;
+                left: 1in;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }
+            #table
+            {
+                display: table;
+            }
+            #caption
+            {
+                background: blue;
+                line-height: 2in;
+                display: table-caption;
+                width: 1in;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                height: 1em;
+                width: 1in;
+            }

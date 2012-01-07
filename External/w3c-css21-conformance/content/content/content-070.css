@@ -1,0 +1,9 @@
+ins:before
+            {
+                content: attr(datetime);
+                color: green;
+            }
+            ins
+            {
+                border: 2px solid black;
+            }

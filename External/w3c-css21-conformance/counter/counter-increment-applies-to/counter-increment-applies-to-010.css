@@ -1,0 +1,10 @@
+div
+            {
+                counter-increment: test 5;
+                display: list-item;
+                margin-left: 2em;
+            }
+            div:before
+            {
+                content: counter(test);
+            }

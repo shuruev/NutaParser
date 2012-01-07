@@ -1,0 +1,17 @@
+div
+            {
+                font: 20px/1em Ahem;
+            }
+            #span1
+            {
+                margin-left: 1in;
+            }
+            #div1
+            {
+                letter-spacing: 1in;
+            }
+            #div1 div
+            {
+                letter-spacing: 0;
+                letter-spacing: inherit;
+            }

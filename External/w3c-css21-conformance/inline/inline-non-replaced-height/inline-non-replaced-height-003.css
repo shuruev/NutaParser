@@ -1,0 +1,23 @@
+#div1
+            {
+                margin-top: 1in;
+                position: relative;
+            }
+            span
+            {
+                background: blue;
+                border-bottom: 0.5in solid blue;
+                border-top: 0.5in solid blue;
+                color: blue;
+                font: 1in Ahem;
+                line-height: 1.5in;
+            }
+            div div
+            {
+                background: orange;
+                height: 2in;
+                left: 1in;
+                position: absolute;
+                top: -0.25in;
+                width: 1in;
+            }

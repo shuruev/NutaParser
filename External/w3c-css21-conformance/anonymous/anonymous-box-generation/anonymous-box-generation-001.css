@@ -1,0 +1,13 @@
+div
+            {
+                width: 2in;
+            }
+            #div1
+            {
+                text-align: center;
+            }
+            div div
+            {
+                background: blue;
+                height: 1em;
+            }

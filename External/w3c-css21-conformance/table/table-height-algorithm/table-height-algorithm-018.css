@@ -1,0 +1,9 @@
+table
+            {
+                height: 200px;
+            }
+            #cell
+            {
+                border: 1px solid black;
+                vertical-align: middle;
+            }

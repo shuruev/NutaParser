@@ -1,0 +1,6 @@
+div { font: 24px/1 Ahem; width: 12em; background: yellow; color: aqua; margin: 0 0 0 2em; }
+   .eight {word-spacing: 24px;}
+   .nine {word-spacing: normal;}
+   .ten {word-spacing: 300%;}
+   .eleven {word-spacing: -1em;}
+   .fill { color: yellow; }

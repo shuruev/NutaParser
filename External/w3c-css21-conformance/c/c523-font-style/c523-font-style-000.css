@@ -1,0 +1,4 @@
+p { color: navy; }
+   .one {font-style: italic;}
+   .two {font-style: oblique;}
+   .three, i {font-style: normal;}

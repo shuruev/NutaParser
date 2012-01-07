@@ -1,0 +1,19 @@
+#table
+            {
+                display: table;
+                width: 100%;
+            }
+            #caption
+            {
+                border: solid;
+                display: table-caption;
+                text-align: right;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

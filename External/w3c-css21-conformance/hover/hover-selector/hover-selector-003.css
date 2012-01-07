@@ -1,0 +1,6 @@
+p { color: blue; }
+   p + p { text-align: center; }
+   .serif { font: 1em serif; }
+   .sansSerif { font: 1em sans-serif; }
+   .monospace { font: 1em monospace; }
+   .test:hover { font-weight: bold; }

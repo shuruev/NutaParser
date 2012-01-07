@@ -1,0 +1,13 @@
+#table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+                text-decoration: underline;
+            }
+            #cell
+            {
+                display: table-cell;
+            }

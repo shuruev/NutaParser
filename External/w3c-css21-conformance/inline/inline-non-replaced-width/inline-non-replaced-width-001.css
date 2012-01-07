@@ -1,0 +1,15 @@
+div
+            {
+                border: solid black;
+                height: 2in;
+                width: 2in;
+            }
+            span
+            {
+                color: blue;
+                font: 1in/1em Ahem;
+                left: auto;
+                margin-left: auto;
+                position: relative;
+                right: auto;
+            }

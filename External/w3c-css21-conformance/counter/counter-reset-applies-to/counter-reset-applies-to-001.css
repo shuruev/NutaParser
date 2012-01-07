@@ -1,0 +1,21 @@
+#test
+            {
+                counter-reset: test 5;
+                display: table-row-group;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+            }
+            #cell:before
+            {
+                content: counter(test);
+            }

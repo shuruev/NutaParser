@@ -1,0 +1,20 @@
+body
+            {
+                background-color: black;
+                color: white;
+            }
+            #div1
+            {
+                outline-color: #fff;
+                outline-style: solid;
+                outline-width: 50px;
+                margin: 100px 0 0 100px;
+                width: 0;
+            }
+            #reference
+            {
+                background-color: #fff;
+                height: 100px;
+                margin: 200px 0 0 50px;
+                width: 100px;
+            }

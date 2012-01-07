@@ -1,0 +1,26 @@
+div#grand-parent-block-container
+  {
+  background-color: red;
+  border: black solid medium;
+  /* Such border prevents margin collapsing with the body vertical margins */
+  }
+
+  div#parent-block-container
+  {
+  background-color: lime;
+  padding: 2%;
+  }
+
+  div#child-block {margin: 100px 0px;}
+  
+  /*
+  In this testcase, div#child-block's vertical (top and bottom) 
+  margins should collapse with div#parent-block-container's vertical 
+  (top and bottom) margins because div#child-block has no used 
+  padding-top and no used padding-bottom. On the other hand, 
+  div#parent-block-container's vertical (top and bottom) margins 
+  should NOT collapse with div#grand-parent-block-container's vertical 
+  (top and bottom) margins because div#parent-block-container, after 
+  resolving percentage values, has an used padding-top value and an used 
+  padding-bottom value.  
+  */

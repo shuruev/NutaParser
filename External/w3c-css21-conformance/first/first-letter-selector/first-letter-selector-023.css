@@ -1,0 +1,8 @@
+div
+            {
+                direction: rtl;
+            }
+            div:first-letter
+            {
+                color: green;
+            }

@@ -1,0 +1,23 @@
+.table
+            {
+                display: table;
+            }
+            .col
+            {
+                display: table-column;
+            }
+            #test
+            {
+                background: blue;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                border: 1px solid black;
+                display: table-cell;
+                height: 2em;
+                width: 2em;
+            }

@@ -1,0 +1,3 @@
+.control { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+   .test { font: 40px/1 Ahem; border: solid; width: 17em; background: red; }
+   .test > span { background: lime; }

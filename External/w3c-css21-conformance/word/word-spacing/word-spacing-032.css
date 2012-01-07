@@ -1,0 +1,12 @@
+#wrapper
+            {
+                font: 3pc/1em Ahem;
+            }
+            #span2
+            {
+                margin-left: 9pc;
+            }
+            #test
+            {
+                word-spacing: +6pc;
+            }

@@ -1,0 +1,4 @@
+p { color: navy; }
+   img { display: inline; }
+   span { color: blue; font: 15px/1 Ahem; vertical-align: top; background: red; }
+   .b img, .b span { font-size: 4em/1; height: 1em; }

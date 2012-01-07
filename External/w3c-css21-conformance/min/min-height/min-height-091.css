@@ -1,0 +1,9 @@
+#div1
+            {
+                height: 100px;
+            }
+            div div
+            {
+                background: black;
+                min-height: 1%;
+            }

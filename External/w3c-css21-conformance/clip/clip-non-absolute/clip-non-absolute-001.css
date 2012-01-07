@@ -1,0 +1,5 @@
+div
+            {
+                clip: rect(10px, 25px, 50px, 10px);
+                color: green;
+            }

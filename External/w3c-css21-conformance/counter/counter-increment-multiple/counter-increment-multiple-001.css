@@ -1,0 +1,9 @@
+.test:before
+            {
+                content: counter(chapter);
+                counter-increment: chapter 2;
+            }
+            .test1
+            {
+                counter-increment: chapter 2;
+            }

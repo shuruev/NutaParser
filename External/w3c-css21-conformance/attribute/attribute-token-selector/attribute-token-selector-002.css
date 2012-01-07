@@ -1,0 +1,14 @@
+p {
+      color: green;
+    }
+
+    p.valid {
+      color: red;
+    }
+    [title~=""], [title~=''], p.valid {
+      color: green;
+    }
+
+    [title~=""] {
+      color: red;
+    }

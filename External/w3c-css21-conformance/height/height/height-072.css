@@ -1,0 +1,19 @@
+div
+            {
+                font: 20px/1 Ahem;
+                position: relative;
+            }
+            #div2
+            {
+                background: black;
+                height: 5em;
+                width: 1in;
+            }
+            #div3
+            {
+                border-top: 100px solid black;
+                left: 1.1in;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }

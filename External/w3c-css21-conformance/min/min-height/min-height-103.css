@@ -1,0 +1,9 @@
+#div1
+            {
+                min-height: 1px;
+            }
+            div div
+            {
+                background: black;
+                min-height: inherit;
+            }

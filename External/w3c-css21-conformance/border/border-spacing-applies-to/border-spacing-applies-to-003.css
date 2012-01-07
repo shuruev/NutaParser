@@ -1,0 +1,16 @@
+div
+            {
+                border-spacing: 20px;
+                display: list-item;
+                height: 100px;
+                margin-left: 2em;
+                width: 100px;
+            }
+            #div1
+            {
+                border: 10px solid blue;
+            }
+            #div2
+            {
+                border: 10px solid orange;
+            }

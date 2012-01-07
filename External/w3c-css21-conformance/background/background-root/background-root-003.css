@@ -1,0 +1,12 @@
+html
+  {
+  background-color: blue;
+  display: table;
+  width: 500px;
+  }
+
+  body
+  {
+  background-color: lime;
+  margin: 100px;
+  }

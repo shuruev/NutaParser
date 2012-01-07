@@ -1,0 +1,21 @@
+.table
+            {
+                background: blue;
+                border: 2px solid black;
+                display: table;
+            }
+            .footer
+            {
+                background: white;
+                display: table-footer-group;
+            }
+            .tr
+            {
+                display: table-row;
+            }
+            .td
+            {
+                display: table-cell;
+                height: 2em;
+                width: 2em;
+            }

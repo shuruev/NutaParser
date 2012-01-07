@@ -1,0 +1,3 @@
+p.one:before { content: "This "; }
+  p.two:before { content: "Th\
+is "; }

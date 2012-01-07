@@ -1,0 +1,4 @@
+div:before
+            {
+                content: 'PASS PASS';
+            }

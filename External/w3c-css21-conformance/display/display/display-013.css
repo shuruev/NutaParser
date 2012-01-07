@@ -1,0 +1,20 @@
+#table
+            {
+                display: table;
+            }
+            span
+            {
+                display: table-column;
+            }
+            #test
+            {
+                background-color: blue;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            .cell
+            {
+                display: table-cell;
+            }

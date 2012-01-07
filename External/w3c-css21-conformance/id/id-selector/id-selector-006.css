@@ -1,0 +1,8 @@
+div#div1
+            {
+                color: green;
+            }
+            div[id=div1]
+            {
+                color: red;
+            }

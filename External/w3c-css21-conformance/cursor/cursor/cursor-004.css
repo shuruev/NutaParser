@@ -1,0 +1,7 @@
+div
+            {
+                border: solid 2px blue;
+                cursor: default;
+                height: 200px;
+                width: 500px;
+            }

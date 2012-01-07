@@ -1,0 +1,8 @@
+span
+            {
+                background-color: blue;
+                cursor: pointer;
+                height: 1in;
+                display: block;
+                width: 1in;
+            }

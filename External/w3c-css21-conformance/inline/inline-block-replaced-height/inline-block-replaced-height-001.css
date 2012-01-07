@@ -1,0 +1,13 @@
+div
+            {
+                border-bottom: solid orange;
+                border-top: solid orange;
+                line-height: 0;
+                width: 1in;
+            }
+            img
+            {
+                display: inline-block;
+                margin-top: auto;
+                margin-bottom: auto;
+            }

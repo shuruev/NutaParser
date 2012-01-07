@@ -1,0 +1,45 @@
+div
+  {
+  color: white;
+  direction: ltr;
+  font: 100px/2 Ahem;
+  width: 7em;
+  }
+
+  span
+  {
+  color: red;
+  position: relative;
+  }
+
+  span span
+  {
+  background-color: green;
+  height: 1em;
+  position: absolute;
+  width: 1em;
+  }
+
+  #top-left
+  {
+  left: 0;
+  top: 0;
+  }
+
+  #top-right
+  {
+  right: 0;
+  top: 0;
+  }
+
+  #bottom-left
+  {
+  bottom: 0;
+  left: 0;
+  }
+
+  #bottom-right
+  {
+  bottom: 0;
+  right: 0;
+  }

@@ -1,0 +1,19 @@
+#test
+            {
+                direction: rtl;
+                display: table-caption;
+                unicode-bidi: bidi-override;
+            }
+            #table
+            {
+                display: table;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                width: 1in;
+            }

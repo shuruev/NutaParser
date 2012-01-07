@@ -1,0 +1,13 @@
+div
+            {
+                background-color: black;
+                height: 0.5in;
+            }
+            #div1
+            {
+                width: +1in;
+            }
+            #div2
+            {
+                width: 1in;
+            }

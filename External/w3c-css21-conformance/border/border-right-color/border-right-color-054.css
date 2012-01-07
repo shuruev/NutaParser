@@ -1,0 +1,24 @@
+body
+            {
+                background-color: black;
+            }
+            p
+            {
+                color: white;
+            }
+            div
+            {
+                height: 1in;
+                width: 1in;
+            }
+            #test
+            {
+                border-right-style: solid;
+                border-right-width: 1in;
+                border-right-color: rgb(99%, 99%, 99%);
+            }
+            #reference
+            {
+                background-color: rgb(99%, 99%, 99%);
+                margin-top: 10px;
+            }

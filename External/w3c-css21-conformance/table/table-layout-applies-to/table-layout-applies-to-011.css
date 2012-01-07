@@ -1,0 +1,29 @@
+#table
+            {
+                display: table;
+                width: 10em;
+            }
+            .colgroup
+            {
+                display: table-column-group;
+                width: 5em;
+            }
+            #test
+            {
+                display: table-row;
+                table-layout: fixed;
+            }
+            .td
+            {
+                background: black;
+                display: table-cell;
+                font: 1em Ahem;
+                overflow: hidden;
+                padding: 0;
+            }
+            #reference
+            {
+                background: blue;
+                height: 1em;
+                width: 15em;
+            }

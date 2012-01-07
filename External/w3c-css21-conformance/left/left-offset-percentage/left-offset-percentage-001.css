@@ -1,0 +1,17 @@
+#div1
+            {
+                border: solid black;
+                height: 150px;
+                padding: 25px;
+                position: relative;
+                width: 50px;
+            }
+            div div
+            {
+                background: blue;
+                height: 50px;
+                left: 50%;
+                position: absolute;
+                top: 0;
+                width: 50px;
+            }

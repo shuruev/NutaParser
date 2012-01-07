@@ -1,0 +1,24 @@
+#div1
+            {
+                margin-top: 15px;
+                width: 100px;
+            }
+            div div
+            {
+                background-color: orange;
+                border-left: 10px solid orange;
+                border-right: 10px solid orange;
+                height: 30px;
+                margin-left: auto;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 110px;
+            }
+            #div2
+            {
+                background-color: blue;
+                height: 30px;
+                position: absolute;
+                top: 82px;
+                width: 150px;
+            }

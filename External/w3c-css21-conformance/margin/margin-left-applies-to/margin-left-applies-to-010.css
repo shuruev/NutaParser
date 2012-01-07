@@ -1,0 +1,15 @@
+div
+            {
+                height: 200px;
+                width: 200px;
+            }
+            #div1
+            {
+                border-left: 10px solid blue;
+            }
+            div div
+            {
+                border-left: 10px solid orange;
+                display: list-item;
+                margin-left: 50px;
+            }

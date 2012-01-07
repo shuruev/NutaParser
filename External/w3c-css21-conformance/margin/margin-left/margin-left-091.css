@@ -1,0 +1,19 @@
+div
+            {
+                font: 20px/1 Ahem;
+                height: 1in;
+                width: 0;
+            }
+            #wrapper
+            {
+                border-left: 1ex solid red;
+            }
+            #div1
+            {
+                margin-left: 7.5ex;
+            }
+            #div2
+            {
+                border-left: 1ex solid black;
+                margin-left: -8.5ex;
+            }

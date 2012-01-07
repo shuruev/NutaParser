@@ -1,0 +1,4 @@
+.ahem { display: inline; font: 1em/1 Ahem, sans-serif; background: red; color: white; }
+   /* test */
+   .test { margin: 1em; background: green; font: 40px/1 Ahem; width: 3em; }
+   .test div { color: white; margin: 1em; }

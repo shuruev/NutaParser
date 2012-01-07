@@ -1,0 +1,12 @@
+#div1
+            {
+                height: 200px;
+                width: 200px;
+                overflow: scroll;
+            }
+            div div
+            {
+                background: fixed url("support/cat.png") green;
+                height: 300px;
+                width: 300px;
+            }

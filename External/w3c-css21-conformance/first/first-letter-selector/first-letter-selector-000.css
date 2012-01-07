@@ -1,0 +1,2 @@
+.test { float: left; font: 2em sans-serif; }
+   .test:first-letter { color: green; }

@@ -1,0 +1,7 @@
+.control {
+      text-align: right;
+      }
+      div {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      }

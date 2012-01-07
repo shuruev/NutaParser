@@ -1,0 +1,19 @@
+#div1
+            {
+                color: blue;
+                font: 1in/1em Ahem;
+                position: relative;
+            }
+            span
+            {
+                line-height: 0;
+            }
+            #div2
+            {
+                background: orange;
+                height: 2in;
+                left: 1in;
+                position: absolute;
+                top: 0;
+                width: 1in;
+            }

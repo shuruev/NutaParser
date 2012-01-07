@@ -1,0 +1,21 @@
+table
+            {
+                border: 10px solid red;
+                border-collapse: collapse;
+                margin: 15px;
+            }
+            td
+            {
+                background: blue;
+                border: 20px solid blue;
+                padding: 20px;
+            }
+            .cell
+            {
+                border: 50px solid black;
+            }
+            div
+            {
+                background: blue;
+                position: absolute;
+            }

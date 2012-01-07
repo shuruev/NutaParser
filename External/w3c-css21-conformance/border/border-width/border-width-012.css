@@ -1,0 +1,13 @@
+div#parent
+  {
+  border-color: red;
+  border-style: hidden;
+  border-width: 50px;
+  }
+
+  div#child
+  {
+  border-color: red;
+  border-style: solid;
+  border-width: inherit;
+  }

@@ -1,0 +1,31 @@
+table
+            {
+                border-collapse: collapse;
+                margin: 0;
+                table-layout: fixed;
+                width: 100px;
+            }
+            #cell1
+            {
+                background: black;
+                width: 98px;
+            }
+            td
+            {
+                height: 20px;
+                padding: 0;
+            }
+            #cell2
+            {
+                background: silver;
+            }
+            #cell3
+            {
+                background: orange;
+            }
+            #div1
+            {
+                background: blue;
+                height: 20px;
+                width: 100px;
+            }

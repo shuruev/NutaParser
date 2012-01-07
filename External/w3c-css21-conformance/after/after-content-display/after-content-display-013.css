@@ -1,0 +1,8 @@
+div:after
+  {
+  background-color: red;
+  color: yellow;
+  content: ".\0D FAIL";
+  display: table-column;
+  font-size: 2em;
+  }

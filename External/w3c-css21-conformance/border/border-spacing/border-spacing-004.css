@@ -1,0 +1,12 @@
+div, table
+            {
+                font: 20px/1 Ahem;
+            }
+            table
+            {
+                border-spacing: -0px;
+            }
+            td
+            {
+                padding: 0;
+            }

@@ -1,0 +1,6 @@
+body { white-space: nowrap; }
+
+
+  #test { counter-reset: c; }
+  #test span { counter-increment: c; }
+  #test span:before { content: counter(c, lower-alpha); }

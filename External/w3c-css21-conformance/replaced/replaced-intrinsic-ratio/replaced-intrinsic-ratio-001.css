@@ -1,0 +1,19 @@
+body { width: 15em; border: 1px silver dashed; }
+   table, td { border-spacing: 0; border-collapse: collapse; padding: 0; }
+   p, table { margin: 6em 0; height: 1em; line-height: 1em;}
+
+   /* basic tests for inline and block */
+   #img1 { margin-top: -1em; }
+   #img2 { display: block; }
+
+   /* shrinkwrapped */
+   #p3 { width: 100%; float: left; margin: 0; }
+   #t4 { width: 15em; display: table-cell; }
+   #t5 { width: 100%; }
+
+   /* controls */
+   object { background: red; }
+   object, .control { border: 1em blue solid; margin: 0 1em; }
+
+   .control { background: green; }
+   .inst { height: auto; margin: 1em 0; }

@@ -1,0 +1,20 @@
+#test
+            {
+                border-top-style: dashed;
+                display: table-column;
+            }
+            #table
+            {
+                border-collapse: collapse;
+                display: table;
+                table-layout: fixed;
+            }
+            #row
+            {
+                display: table-row;
+            }
+            #cell
+            {
+                display: table-cell;
+                width: 1in;
+            }

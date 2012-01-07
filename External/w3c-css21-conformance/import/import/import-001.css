@@ -1,0 +1,4 @@
+    @import "support/import-red.css";
+@media all {
+    p { color: green; }
+  }

@@ -1,0 +1,18 @@
+div
+            {
+                direction: rtl;
+                height: 1in;
+                width: 1in;
+            }
+            #wrapper
+            {
+                border-right: 5px solid blue;
+            }
+            #div1
+            {
+                margin-right: +0%;
+            }
+            #div2
+            {
+                border-right: 5px solid orange;
+            }

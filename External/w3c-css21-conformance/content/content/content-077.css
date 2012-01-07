@@ -1,0 +1,9 @@
+label:before
+            {
+                content: attr(for);
+                color: green;
+            }
+            label
+            {
+                border: 2px solid black;
+            }

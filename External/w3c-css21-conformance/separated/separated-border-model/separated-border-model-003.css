@@ -1,0 +1,23 @@
+table
+            {
+                border-spacing: 50px 0;
+             }
+            td
+            {
+                width: 100px;
+            }
+            div
+            {
+                background: blue;
+                height: 100px;
+            }
+            table, td
+            {
+                background: black;
+                border: 25px solid black;
+                padding: 25px;
+            }
+            div
+            {
+                width: 400px;
+            }

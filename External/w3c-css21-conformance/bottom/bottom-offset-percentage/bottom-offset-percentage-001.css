@@ -1,0 +1,23 @@
+#div1
+            {
+                border: solid black;
+                height: 200px;
+                position: relative;
+                width: 100px;
+            }
+            div div
+            {
+                height: 50px;
+                position: absolute;
+                width: 50px;
+            }
+            #test
+            {
+                background: green;
+                bottom: 50%;
+            }
+            #reference
+            {
+                background: red;
+                top: 50px;
+            }

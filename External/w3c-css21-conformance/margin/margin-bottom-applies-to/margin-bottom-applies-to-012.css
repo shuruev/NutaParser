@@ -1,0 +1,12 @@
+#wrapper
+            {
+                border-bottom: 10px solid blue;
+            }
+            div div
+            {
+                border-bottom: 10px solid orange;
+                display: inline-block;
+                height: 200px;
+                width: 200px;
+                margin-bottom: 50px;
+            }

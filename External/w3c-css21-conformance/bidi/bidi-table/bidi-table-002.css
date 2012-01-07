@@ -1,0 +1,6 @@
+table {direction: rtl;border-spacing: 0;}
+      table table {direction: ltr;}
+      td {padding:0;}
+      td.a {background-color: navy; color: navy;}
+      td.b {background-color: magenta; color: magenta;}
+      td.c {background-color: cyan; color: cyan;}

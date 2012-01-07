@@ -1,0 +1,4 @@
+.reset { counter-reset: test 5 tEsT 9; }
+    .incr  { counter-reset: TEST 0 tEsT 0; counter-increment: TEST 5 tEsT 9; }
+    span:before { content: counter(tEsT); }
+    span { color: blue; font: larger bold monospace; }

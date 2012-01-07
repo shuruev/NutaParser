@@ -1,0 +1,28 @@
+div {   page-break-inside: avoid;
+        }
+    html {  border: medium solid purple;
+        }
+    table, td, th {  
+            border: thin solid black;
+        }
+    #borders-too {
+            background: #ff9;
+            border: medium #700 solid;
+        }
+    .left-aligned {
+            float: left;
+        }
+    .right-aligned {
+        float: right;
+        }
+    img {
+        width: 25%;
+        border: medium green solid;
+        vertical-align:baseline;
+		 }
+    h2 {
+        clear: both;
+        }
+    .full-width {
+        width: 100%;
+        }
