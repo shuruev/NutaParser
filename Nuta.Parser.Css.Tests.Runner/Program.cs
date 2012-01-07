@@ -3,61 +3,94 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using Nuta.Parser.Css.Syntactic;
 
 namespace Nuta.Parser.Css.Tests.Runner
 {
 	/// <summary>
-	/// Runs W3C CSS test suites.
+	/// Runs external CSS test suites.
 	/// </summary>
 	public static class Program
 	{
+		private static readonly TimeSpan s_reportEvery = TimeSpan.FromSeconds(1);
+
+		private static List<string> s_all;
+		private static List<string> s_failed;
+		private static int s_done;
+		private static DateTime s_lastReport;
+
 		/// <summary>
 		/// Main program entry.
 		/// </summary>
 		public static void Main(string[] args)
 		{
-			string folderName = "ccs21-conformance";
-
-			int count = 0;
-			int failed = 0;
-			string failedFileName = null;
-
-			//xxx add multithreading
-			//xxx check memory leaks
-			//for (int i = 0; i < 1000; i++)
+			if (args.Length == 0)
 			{
-				foreach (string testFile in GetTestFiles(folderName)/*.Skip(8000).Take(1000)*/)
+				args = new[]
 				{
-					string data = Parser.ReadDataFromFile(testFile);
-					count += 1;
-
-					if (!CssParser.TryParse(Stylesheet.S, data))
-					{
-						failed += 1;
-						failedFileName = Path.GetFileName(testFile);
-					}
-
-					Console.WriteLine(Path.GetFileName(testFile));
-				}
-
-				//Console.WriteLine("Pass {0}...", i);
+					//"w3c-css21-conformance"
+					"my-css-random"
+				};
 			}
 
-			if (failed == 0)
+			string folderName = args[0];
+
+			s_all = GetTestFiles(folderName).ToList();
+			s_failed = new List<string>();
+			s_done = 0;
+			s_lastReport = DateTime.Now;
+
+			Console.WriteLine("{0} tests found.", s_all.Count);
+			Parallel.ForEach(s_all, CheckOne);
+			Console.WriteLine("Done.");
+			Console.WriteLine();
+
+			if (s_failed.Count == 0)
 			{
-				Console.WriteLine("OK.");
+				Console.WriteLine("OK");
 			}
 			else
 			{
 				Console.WriteLine(
-					"{0} of {1} tests are failed ({2}).",
-					failed,
-					count,
-					failedFileName);
+					"{0} of {1} tests were failed:",
+					s_failed.Count,
+					s_all.Count);
+
+				foreach (string failed in s_failed)
+				{
+					Console.WriteLine(Path.GetFileName(failed));
+				}
 			}
 
 			Console.ReadKey();
+		}
+
+		/// <summary>
+		/// Checks specified file.
+		/// </summary>
+		private static void CheckOne(string testFile)
+		{
+			string data = Parser.ReadDataFromFile(testFile);
+
+			lock (s_all)
+			{
+				s_done += 1;
+				if (DateTime.Now.Subtract(s_lastReport) > s_reportEvery)
+				{
+					Console.WriteLine(
+						"... {0} done ({1}%)",
+						s_done,
+						Convert.ToInt32((double)s_done / s_all.Count * 100));
+
+					s_lastReport = DateTime.Now;
+				}
+			}
+
+			if (!CssParser.TryParse(Stylesheet.S, data))
+			{
+				s_failed.Add(testFile);
+			}
 		}
 
 		/// <summary>
@@ -74,7 +107,7 @@ namespace Nuta.Parser.Css.Tests.Runner
 			return Directory.EnumerateFiles(
 				Path.Combine(
 					rootPath,
-					Path.Combine("W3C", folderName)),
+					Path.Combine("External", folderName)),
 				"*.css",
 				SearchOption.AllDirectories);
 		}

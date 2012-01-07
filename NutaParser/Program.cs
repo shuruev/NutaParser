@@ -19,7 +19,7 @@ namespace NutaParser
 				");
 
 			//ParseCssAll(@"C:\Users\Public\GIT\GitHub\NutaParser\W3C");
-			//ParseCss(@"D:\OLEG\Git\NutaParser\W3C\ccs21-conformance\z\z-index\z-index-020.css");
+			//ParseCss(@"D:\OLEG\Git\NutaParser\W3C\css21-conformance\z\z-index\z-index-020.css");
 
 			//ParseCSharp(@"C:\Users\Public\GIT\GitHub\NutaParser\NutaParser\Class1.cs");
 			//ParseCSharp(@"D:\OLEG\Git\NutaParser\NutaParser\Class1.cs");

@@ -60,17 +60,12 @@
     <Compile Include="Syntactic\Grammar\Animations.cs" />
     <Compile Include="Syntactic\Grammar\Pages.cs" />
     <Compile Include="Syntactic\Grammar\Fonts.cs" />
-    <Compile Include="W3C\Css21Conformance.cs" />
+    <Compile Include="External\ExernalTest.cs" />
     <Compile Include="Syntactic\Grammar\MediaQueries.cs" />
     <Compile Include="Syntactic\Grammar\Namespaces.cs" />
     <Compile Include="Syntactic\Grammar\Selectors.cs" />
     <Compile Include="Syntactic\Grammar\Declarations.cs" />
     <Compile Include="Syntactic\Grammar\Grammar.cs" />
-    <Compile Include="Syntactic\Stylesheets.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Stylesheets.resx</DependentUpon>
-    </Compile>
     <Compile Include="Syntactic\Syntactic.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,25 +88,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Syntactic\Stylesheets.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Stylesheets.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Syntactic\Syntactic.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Syntactic.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Syntactic\Stylesheets\Stylesheet8.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet1.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet2.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet3.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet4.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet5.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet6.css" />
-    <Content Include="Syntactic\Stylesheets\Stylesheet7.css" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,7 +15,6 @@ LINKS
 =====
 http://www.w3.org/Style/CSS/current-work
 
-- вынести stylesheet тесты отдельно
 - filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#efefef',endColorstr='#e6e6e6');
 - width:650px !ie7;
 - background:#FAFAFA url([% c.uri_for('/static/i/bg.png') %]) repeat-x left top;
