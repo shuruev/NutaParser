@@ -25,12 +25,16 @@ namespace Nuta.Parser.Css.Tests.Runner
 		/// </summary>
 		public static void Main(string[] args)
 		{
+			bool manual = false;
+
 			if (args.Length == 0)
 			{
+				manual = true;
+
 				args = new[]
 				{
-					//"w3c-css21-conformance"
-					"my-css-random"
+					"w3c-css21-conformance"
+					//"my-css-random"
 				};
 			}
 
@@ -48,10 +52,12 @@ namespace Nuta.Parser.Css.Tests.Runner
 
 			if (s_failed.Count == 0)
 			{
-				Console.WriteLine("OK");
+				Console.WriteLine("=== OK");
 			}
 			else
 			{
+				Console.WriteLine("=== ERROR");
+
 				Console.WriteLine(
 					"{0} of {1} tests were failed:",
 					s_failed.Count,
@@ -63,7 +69,10 @@ namespace Nuta.Parser.Css.Tests.Runner
 				}
 			}
 
-			Console.ReadKey();
+			if (manual)
+			{
+				Console.ReadKey();
+			}
 		}
 
 		/// <summary>
